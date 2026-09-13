@@ -1,35 +1,30 @@
 import { useEffect, useState, type ReactNode } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { Link } from "@tanstack/react-router";
 import { Pill, WifiOff } from "lucide-react";
 
 interface Props {
   children: ReactNode;
-  /** Page title used for the browser tab. */
-  title: string;
-  description: string;
-  canonicalPath: string;
 }
 
 const NAV = [
-  { to: "/reference", label: "Home", end: true },
-  { to: "/reference/drugs", label: "Drugs" },
-  { to: "/reference/topics", label: "Topics" },
-  { to: "/reference/monitoring", label: "Levels" },
-  { to: "/reference/infusions", label: "Infusions" },
-  { to: "/reference/about", label: "Sources" },
-];
+  { to: "/", label: "Home", exact: true },
+  { to: "/drugs", label: "Drugs" },
+  { to: "/topics", label: "Topics" },
+  { to: "/monitoring", label: "Levels" },
+  { to: "/infusions", label: "Infusions" },
+  { to: "/about", label: "Sources" },
+] as const;
 
 /**
- * Shell for the standalone Anaesthetics & Critical Care Drug Reference.
- * Deliberately independent of the main site chrome so the whole /reference
- * area behaves — and can be lifted out — as its own app.
+ * Shell for the standalone Anaesthesia & Critical Care Drugs reference app.
+ * Deliberately independent chrome so the whole app behaves as its own product.
  */
-export default function ReferenceAppLayout({ children, title, description, canonicalPath }: Props) {
-  const [offline, setOffline] = useState(() => typeof navigator !== "undefined" && !navigator.onLine);
+export default function ReferenceAppLayout({ children }: Props) {
+  const [offline, setOffline] = useState(false);
 
   useEffect(() => {
     const update = () => setOffline(!navigator.onLine);
+    update();
     window.addEventListener("online", update);
     window.addEventListener("offline", update);
     return () => {
@@ -40,19 +35,13 @@ export default function ReferenceAppLayout({ children, title, description, canon
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href={`https://anaesthesiacore.app${canonicalPath}`} />
-        <link rel="manifest" href="/drug-reference.webmanifest" />
-        <meta name="theme-color" content="#0f172a" />
-      </Helmet>
-
       <header className="sticky top-0 z-30 border-b border-border bg-card/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:px-6 lg:px-8">
-          <Link to="/reference" className="flex items-center gap-2 text-foreground">
+          <Link to="/" className="flex items-center gap-2 text-foreground">
             <Pill aria-hidden="true" className="h-5 w-5 text-primary" />
-            <span className="font-serif text-base leading-tight sm:text-lg">Drug Reference</span>
+            <span className="font-serif text-base leading-tight sm:text-lg">
+              Anaesthesia &amp; Critical Care Drugs
+            </span>
           </Link>
           {offline && (
             <span className="ml-auto inline-flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-[11px] font-medium text-muted-foreground">
@@ -64,19 +53,19 @@ export default function ReferenceAppLayout({ children, title, description, canon
           <ul className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-2 sm:px-4 lg:px-6">
             {NAV.map((item) => (
               <li key={item.to} className="shrink-0">
-                <NavLink
+                <Link
                   to={item.to}
-                  end={item.end}
-                  className={({ isActive }) =>
-                    `inline-block border-b-2 px-3 py-2 text-sm font-medium transition ${
-                      isActive
-                        ? "border-primary text-foreground"
-                        : "border-transparent text-muted-foreground hover:text-foreground"
-                    }`
-                  }
+                  activeOptions={{ exact: "exact" in item ? item.exact : false }}
+                  activeProps={{
+                    className: "border-primary text-foreground",
+                  }}
+                  inactiveProps={{
+                    className: "border-transparent text-muted-foreground hover:text-foreground",
+                  }}
+                  className="inline-block border-b-2 px-3 py-2 text-sm font-medium transition"
                 >
                   {item.label}
-                </NavLink>
+                </Link>
               </li>
             ))}
           </ul>
@@ -93,12 +82,8 @@ export default function ReferenceAppLayout({ children, title, description, canon
             local protocols before administration.
           </p>
           <p className="mt-2">
-            <Link to="/reference/about" className="underline hover:text-foreground">
+            <Link to="/about" className="underline hover:text-foreground">
               Sources and how this reference is built
-            </Link>
-            <span aria-hidden="true"> · </span>
-            <Link to="/" className="underline hover:text-foreground">
-              Back to AnaesthesiaCore
             </Link>
           </p>
         </div>
