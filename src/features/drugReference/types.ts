@@ -9,13 +9,13 @@ export interface DrugSource {
   title: string;
   publisher: string;
   url: string;
-  accessed?: string;
+  accessed?: string | undefined;
 }
 
 export interface TdmTarget {
   label: string;
   value: string;
-  note?: string;
+  note?: string | undefined;
 }
 
 export interface TdmToxicity {
@@ -25,14 +25,14 @@ export interface TdmToxicity {
 }
 
 export interface DrugTdm {
-  matrix?: string;
-  indication?: string;
-  targets?: TdmTarget[];
-  timing?: string[];
-  toxicity?: TdmToxicity[];
-  sampling?: string[];
-  adjustment?: string[];
-  sources?: DrugSource[];
+  matrix?: string | undefined;
+  indication?: string | undefined;
+  targets?: TdmTarget[] | undefined;
+  timing?: string[] | undefined;
+  toxicity?: TdmToxicity[] | undefined;
+  sampling?: string[] | undefined;
+  adjustment?: string[] | undefined;
+  sources?: DrugSource[] | undefined;
 }
 
 /** A drug monograph row as stored in the backend `drugs` table. */
@@ -84,7 +84,7 @@ export interface DrugDilution {
   minDose: number;
   maxDose: number;
   perKg: boolean;
-  notes?: string;
+  notes?: string | undefined;
   group: string;
 }
 
