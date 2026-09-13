@@ -136,3 +136,50 @@ export function useMonitoredDrugs() {
 
   return { drugs, loading, error };
 }
+
+/**
+ * Downloads every monograph and stores it locally so the whole reference
+ * works with no connection. Fetched in pages to keep memory modest.
+ */
+export async function downloadAllMonographs(
+  onProgress?: (done: number, total: number) => void,
+): Promise<{ saved: number }> {
+  const PAGE = 40;
+  const { count, error: countError } = await supabase
+    .from("drugs")
+    .select("slug", { count: "exact", head: true });
+  if (countError) throw new Error(countError.message);
+  const total = count ?? 0;
+  let saved = 0;
+  const list: DrugListItem[] = [];
+  const monitored: DrugReferenceRow[] = [];
+
+  for (let from = 0; from < total; from += PAGE) {
+    const { data, error: err } = await supabase
+      .from("drugs")
+      .select(FULL_COLUMNS)
+      .order("name")
+      .range(from, from + PAGE - 1);
+    if (err) throw new Error(err.message);
+    for (const raw of data ?? []) {
+      const row = normalise(raw as Record<string, unknown>);
+      writeCache(`drug:${row.slug}`, row);
+      list.push({
+        slug: row.slug,
+        name: row.name,
+        drug_class: row.drug_class,
+        synonyms: row.synonyms,
+        indication_oneliner: row.indication_oneliner,
+        key_warning: row.key_warning,
+        requires_tdm: row.requires_tdm,
+      });
+      if (row.requires_tdm) monitored.push(row);
+      saved += 1;
+    }
+    onProgress?.(saved, total);
+  }
+
+  writeCache("list", list);
+  writeCache("monitored", monitored);
+  return { saved };
+}
