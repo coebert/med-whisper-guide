@@ -51,11 +51,7 @@ function DrugReferenceCalculator() {
   const outOfRange = dose > 0 && (dose < dilution.minDose || dose > dilution.maxDose);
 
   return (
-    <ReferenceAppLayout
-      title="Infusion Rate Calculator | Drug Reference"
-      description="Convert a critical care infusion dose into a pump rate: enter the drug, weight and dose to get mL/h, millilitres per day and how long a 50 mL syringe lasts."
-      canonicalPath="/reference/calculator"
-    >
+    <ReferenceAppLayout>
       <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">Infusion rate calculator</h1>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

@@ -58,11 +58,7 @@ function DrugReferenceHome() {
   }, [drugs, query]);
 
   return (
-    <ReferenceAppLayout
-      title="Anaesthetics & Critical Care Drug Reference | AnaesthesiaCore"
-      description="Standalone anaesthetic and critical care drug reference: presentations, dosing, standard dilutions with pump rates, pharmacokinetics, safety and therapeutic drug level monitoring, each with BNF and SPC sources."
-      canonicalPath="/reference"
-    >
+    <ReferenceAppLayout>
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-3xl text-foreground sm:text-4xl">
           Anaesthetics &amp; Critical Care Drug Reference

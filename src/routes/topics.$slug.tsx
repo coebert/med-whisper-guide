@@ -43,11 +43,7 @@ function DrugReferenceTopic() {
 
   if (!topic) {
     return (
-      <ReferenceAppLayout
-        title="Topic not found | Drug Reference"
-        description="This drug reference topic could not be found."
-        canonicalPath="/reference/topics"
-      >
+      <ReferenceAppLayout>
         <main className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
           <h1 className="font-serif text-2xl text-foreground">Topic not found</h1>
           <Link className="mt-4 inline-block text-sm text-primary underline" to="/topics">
@@ -61,11 +57,7 @@ function DrugReferenceTopic() {
   const monitored = members.filter((d) => d.requires_tdm).length;
 
   return (
-    <ReferenceAppLayout
-      title={`${topic.title} — dosing, dilutions & safety | Drug Reference`}
-      description={`${topic.title}: ${topic.blurb} Bedside points plus every monograph in this group with presentations, dosing, standard dilutions, pump rates, safety and blood level monitoring, each referenced.`}
-      canonicalPath={`/reference/topics/${topic.slug}`}
-    >
+    <ReferenceAppLayout>
       <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
         <Link
           to="/topics"

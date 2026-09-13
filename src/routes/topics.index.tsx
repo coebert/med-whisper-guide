@@ -38,11 +38,7 @@ function DrugReferenceTopics() {
   const topics = allReferenceTopics.filter((t) => loading || (counts.get(t.slug) ?? 0) > 0);
 
   return (
-    <ReferenceAppLayout
-      title="Drug topics — vasoactive, sedation, analgesia & more | Drug Reference"
-      description="Browse the anaesthetics and critical care drug reference by topic: vasoactive support, sedation, analgesia, neuromuscular blockade, local anaesthetics, anticoagulation, fluids, antimicrobials, antidotes and more."
-      canonicalPath="/reference/topics"
-    >
+    <ReferenceAppLayout>
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-3xl text-foreground sm:text-4xl">Drug topics</h1>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
