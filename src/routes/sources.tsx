@@ -1,4 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ExternalLink } from "lucide-react";
+
+import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 
 export const Route = createFileRoute("/sources")({
   ssr: false,
