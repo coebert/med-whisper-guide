@@ -1,6 +1,26 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
+import { SourceChips, standardRefs } from "@/features/drugReference/references";
+import type { DrugSource } from "@/features/drugReference/types";
+
+const nicePaedSedation: DrugSource = {
+  title: "Sedation in under 19s: using sedation for diagnostic and therapeutic procedures (CG112)",
+  publisher: "NICE",
+  url: "https://www.nice.org.uk/guidance/cg112",
+};
+
+const apaGuidelines: DrugSource = {
+  title: "Clinical guidelines and resources",
+  publisher: "Association of Paediatric Anaesthetists of Great Britain and Ireland",
+  url: "https://www.apagbi.org.uk/guidelines",
+};
+
+const rcoaGpas: DrugSource = {
+  title: "Guidelines for the Provision of Anaesthesia Services (GPAS)",
+  publisher: "Royal College of Anaesthetists",
+  url: "https://rcoa.ac.uk/gpas",
+};
 
 export const Route = createFileRoute("/premedication")({
   ssr: false,
@@ -91,6 +111,7 @@ function DrugReferencePremedication() {
               obstruction risk, and in raised intracranial pressure.
             </li>
           </ul>
+          <SourceChips sources={[nicePaedSedation, apaGuidelines, rcoaGpas]} />
         </section>
 
         <section className="mt-6 rounded-lg border border-border bg-card p-5">
@@ -128,6 +149,7 @@ function DrugReferencePremedication() {
             <li>Buccal route has faster onset than swallowed oral dosing; do not combine both.</li>
             <li>Caution with other CNS depressants (opioids, antihistamines); recovery may be delayed after day-case surgery.</li>
           </ul>
+          <SourceChips sources={[...standardRefs("Midazolam"), nicePaedSedation]} />
         </section>
 
         <section className="mt-6 rounded-lg border border-border bg-card p-5">
@@ -160,6 +182,7 @@ function DrugReferencePremedication() {
             <li>Reduces volatile and opioid requirements; plan induction and analgesia doses accordingly.</li>
             <li>Longer sedation than midazolam — allow for a slower recovery in day-case pathways.</li>
           </ul>
+          <SourceChips sources={[...standardRefs("Clonidine"), apaGuidelines]} />
         </section>
 
         <section className="mt-6 rounded-lg border border-border bg-card p-5">
@@ -198,6 +221,7 @@ function DrugReferencePremedication() {
             <li>Bradycardia and hypotension occur — avoid in heart block, severe ventricular dysfunction and hypovolaemia, and use caution with other rate-slowing drugs.</li>
             <li>Particularly useful where midazolam has failed or caused paradoxical reactions, and in children with neurodevelopmental disorders.</li>
           </ul>
+          <SourceChips sources={[...standardRefs("Dexmedetomidine"), apaGuidelines]} />
         </section>
 
         <p className="mt-8 rounded-md border border-border bg-muted/50 p-3 text-xs leading-relaxed text-muted-foreground">

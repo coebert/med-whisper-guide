@@ -25,6 +25,7 @@ import {
   formatRate,
   round,
 } from "@/features/drugReference/dilutions";
+import { SourceChips, standardRefs } from "@/features/drugReference/references";
 
 function DrugReferenceCalculator() {
   const params = useSearch({ strict: false }) as Record<string, string | undefined>;
@@ -123,6 +124,7 @@ function DrugReferenceCalculator() {
             <strong className="text-foreground">Preparation:</strong> {dilution.drawUp} in{" "}
             {dilution.diluent} ({dilution.concentrationLabel}).
           </p>
+          <SourceChips sources={standardRefs(dilution.drug)} label="Check against" />
         </div>
 
         {outOfRange && (

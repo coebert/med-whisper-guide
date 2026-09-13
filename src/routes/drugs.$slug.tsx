@@ -29,7 +29,8 @@ import {
   isUnitDrug,
   round,
 } from "@/features/drugReference/dilutions";
-import type { DrugDilution } from "@/features/drugReference/types";
+import type { DrugDilution, DrugSource } from "@/features/drugReference/types";
+import { SourceChips, sectionSources } from "@/features/drugReference/references";
 
 function Prose({ text }: { text: string }) {
   const lines = text.split("\n").filter((l) => l.trim().length > 0);
@@ -46,15 +47,18 @@ function Section({
   title,
   children,
   id,
+  refs,
 }: {
   title: string;
   children: React.ReactNode;
   id?: string;
+  refs?: DrugSource[];
 }) {
   return (
     <section id={id} className="rounded-lg border border-border bg-card p-5">
       <h2 className="font-serif text-xl text-foreground">{title}</h2>
       <div className="mt-3">{children}</div>
+      {refs && <SourceChips sources={refs} />}
     </section>
   );
 }
@@ -246,11 +250,12 @@ function DrugReferenceEntry() {
               <span>{drug.key_warning}</span>
             </p>
           )}
+          <SourceChips sources={sectionSources(drug.sources, "overview")} label="Referenced from" />
         </div>
       </header>
 
       <main className="mx-auto max-w-4xl space-y-5 px-4 py-8 sm:px-6">
-        <Section title="Dosing">
+        <Section title="Dosing" refs={sectionSources(drug.sources, "dosing")}>
           <dl className="grid gap-3 sm:grid-cols-2">
             <div>
               <dt className="text-xs uppercase tracking-wide text-muted-foreground">Adult bolus</dt>
@@ -269,7 +274,11 @@ function DrugReferenceEntry() {
         </Section>
 
         {dilutions.length > 0 && (
-          <Section title="Standard dilutions and pump rates" id="dilutions">
+          <Section
+            title="Standard dilutions and pump rates"
+            id="dilutions"
+            refs={sectionSources(drug.sources, "dilutions")}
+          >
             <div className="rounded-md bg-muted/50 p-3">
               <label className="text-xs font-medium text-muted-foreground" htmlFor="weight">
                 Patient weight (kg)
@@ -292,16 +301,27 @@ function DrugReferenceEntry() {
           </Section>
         )}
 
-        <Section title="Presentation">
+        <Section title="Presentation" refs={sectionSources(drug.sources, "presentation")}>
           <Prose text={drug.presentation} />
         </Section>
 
-        <Section title="Preparation and administration">
+        <Section
+          title="Preparation and administration"
+          refs={sectionSources(drug.sources, "preparation")}
+        >
           <Prose text={drug.preparation} />
         </Section>
 
         {tdm && (
-          <Section title="Therapeutic drug level monitoring" id="monitoring-levels">
+          <Section
+            title="Therapeutic drug level monitoring"
+            id="monitoring-levels"
+            refs={
+              tdm.sources && tdm.sources.length > 0
+                ? tdm.sources
+                : sectionSources(drug.sources, "tdm")
+            }
+          >
             {tdm.indication && <p className="text-sm text-foreground">{tdm.indication}</p>}
             {tdm.matrix && (
               <p className="mt-2 text-sm text-muted-foreground">
@@ -380,27 +400,30 @@ function DrugReferenceEntry() {
           </Section>
         )}
 
-        <Section title="Mechanism of action">
+        <Section title="Mechanism of action" refs={sectionSources(drug.sources, "mechanism")}>
           <Prose text={drug.mechanism_of_action} />
         </Section>
 
-        <Section title="Pharmacokinetics">
+        <Section title="Pharmacokinetics" refs={sectionSources(drug.sources, "pharmacokinetics")}>
           <Prose text={drug.pharmacokinetics} />
         </Section>
 
-        <Section title="Monitoring">
+        <Section title="Monitoring" refs={sectionSources(drug.sources, "monitoring")}>
           <Prose text={drug.monitoring} />
         </Section>
 
-        <Section title="Adverse effects">
+        <Section title="Adverse effects" refs={sectionSources(drug.sources, "side_effects")}>
           <Prose text={drug.side_effects} />
         </Section>
 
-        <Section title="Contraindications and cautions">
+        <Section
+          title="Contraindications and cautions"
+          refs={sectionSources(drug.sources, "contraindications")}
+        >
           <Prose text={drug.contraindications} />
         </Section>
 
-        <Section title="Interactions">
+        <Section title="Interactions" refs={sectionSources(drug.sources, "interactions")}>
           <Prose text={drug.interactions} />
         </Section>
 
