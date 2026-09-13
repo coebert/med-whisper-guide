@@ -65,7 +65,7 @@ const referenceGroups: ReferenceGroup[] = [
       {
         title: "Injectable Medicines Guide (Medusa)",
         publisher: "NHS",
-        url: "https://medusa.wales.nhs.uk/",
+        url: "https://www.medusaimg.nhs.uk/",
         note: "Reconstitution, dilution, compatibility and administration for injectable medicines. Local access may be required.",
       },
       {
@@ -167,7 +167,7 @@ const referenceGroups: ReferenceGroup[] = [
       {
         title: "Intensive Care Society guidelines and standards",
         publisher: "Intensive Care Society",
-        url: "https://ics.ac.uk/resource/guidelines-standards.html",
+        url: "https://ics.ac.uk/guidance.html",
         note: "Critical care standards including sedation, analgesia and delirium practice.",
       },
       {
