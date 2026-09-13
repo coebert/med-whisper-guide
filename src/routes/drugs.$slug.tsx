@@ -17,7 +17,7 @@ export const Route = createFileRoute("/drugs/$slug")({
 
 import { useMemo, useState } from "react";
 import { Link, useParams } from "@tanstack/react-router";
-import { AlertTriangle, ArrowLeft, ExternalLink } from "lucide-react";
+import { AlertTriangle, ArrowLeft, ExternalLink, Eye } from "lucide-react";
 
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 import { useDrugEntry } from "@/features/drugReference/useDrugReference";
@@ -31,6 +31,40 @@ import {
 } from "@/features/drugReference/dilutions";
 import type { DrugDilution, DrugSource } from "@/features/drugReference/types";
 import { SourceChips, sectionSources } from "@/features/drugReference/references";
+import { APPEARANCE_CAUTION, describeAppearance } from "@/features/drugReference/appearance";
+
+function AppearancePanel({ presentation }: { presentation?: string | null }) {
+  const summary = useMemo(() => describeAppearance(presentation), [presentation]);
+  if (!summary) return null;
+
+  const rows: Array<[string, string]> = [];
+  if (summary.colour) rows.push(["Colour / clarity", summary.colour]);
+  if (summary.form) rows.push(["Form", summary.form]);
+  if (summary.containers.length) rows.push(["Container", summary.containers.join(", ")]);
+  if (summary.strengths.length) rows.push(["Label states", summary.strengths.join(" · ")]);
+  if (summary.storage.length) rows.push(["Storage", summary.storage.join(" · ")]);
+
+  return (
+    <div className="mb-4 rounded-md border border-border bg-background/60 p-4">
+      <h3 className="flex items-center gap-2 text-sm font-semibold text-foreground">
+        <Eye className="h-4 w-4 text-primary" aria-hidden="true" />
+        How it looks
+      </h3>
+      <dl className="mt-3 grid gap-x-6 gap-y-2 sm:grid-cols-2">
+        {rows.map(([label, value]) => (
+          <div key={label}>
+            <dt className="text-xs uppercase tracking-wide text-muted-foreground">{label}</dt>
+            <dd className="text-sm text-foreground">{value}</dd>
+          </div>
+        ))}
+      </dl>
+      <p className="mt-3 flex gap-2 text-xs leading-relaxed text-muted-foreground">
+        <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-destructive" aria-hidden="true" />
+        <span>{APPEARANCE_CAUTION}</span>
+      </p>
+    </div>
+  );
+}
 
 function Prose({ text }: { text: string }) {
   const lines = text.split("\n").filter((l) => l.trim().length > 0);
