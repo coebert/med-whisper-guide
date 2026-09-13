@@ -33,6 +33,17 @@ function DrugReferenceHome() {
   const monitoredCount = useMemo(() => drugs.filter((d) => d.requires_tdm).length, [drugs]);
   const savedCount = cachedMonographCount();
 
+  const topicCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const d of drugs) {
+      const slug = topicForClass(d.drug_class).slug;
+      counts.set(slug, (counts.get(slug) ?? 0) + 1);
+    }
+    return allReferenceTopics
+      .map((t) => ({ topic: t, count: counts.get(t.slug) ?? 0 }))
+      .filter(({ count }) => count > 0);
+  }, [drugs]);
+
   const suggestions = useMemo(() => {
     const needle = query.trim().toLowerCase();
     if (needle.length < 2) return [];
