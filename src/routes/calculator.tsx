@@ -123,6 +123,7 @@ function DrugReferenceCalculator() {
             <strong className="text-foreground">Preparation:</strong> {dilution.drawUp} in{" "}
             {dilution.diluent} ({dilution.concentrationLabel}).
           </p>
+          <SourceChips sources={standardRefs(dilution.drug)} label="Check against" />
         </div>
 
         {outOfRange && (
