@@ -4,6 +4,10 @@ import { Pill, WifiOff } from "lucide-react";
 
 interface Props {
   children: ReactNode;
+  /** Accepted for compatibility; page metadata now lives in each route's head(). */
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
 }
 
 const NAV = [
