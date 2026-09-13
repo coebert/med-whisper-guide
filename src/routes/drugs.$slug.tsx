@@ -480,6 +480,11 @@ function DrugReferenceEntry() {
               </li>
             ))}
           </ul>
+          <p className="mt-4 text-sm">
+            <Link to="/sources" className="text-primary underline">
+              See the full list of clinical sources (BNF, SPC, NICE, RCoA)
+            </Link>
+          </p>
           <p className="mt-4 text-xs text-muted-foreground">
             Educational reference for trained clinicians. Always confirm doses, dilutions and
             monitoring targets against the BNF, the product SPC, your smart-pump drug library and
