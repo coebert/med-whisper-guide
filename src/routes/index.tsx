@@ -121,7 +121,7 @@ function DrugReferenceHome() {
 
         <h2 className="mt-10 font-serif text-xl text-foreground">Where to go</h2>
         <ul className="mt-3 grid gap-3 sm:grid-cols-2">
-          {[
+          {([
             {
               to: "/drugs",
               icon: Pill,
