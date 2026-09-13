@@ -61,6 +61,9 @@ export function isUnitDrug(unit: InfusionUnit): boolean {
  */
 export function amountPerHour(unit: InfusionUnit, dose: number, weightKg: number): number {
   switch (unit) {
+    case "nanograms/kg/min":
+      // ng -> micrograms, because concentrations are held in micrograms/mL.
+      return (dose * weightKg * 60) / 1000;
     case "micrograms/kg/min":
       return dose * weightKg * 60;
     case "micrograms/kg/h":

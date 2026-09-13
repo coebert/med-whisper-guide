@@ -207,7 +207,7 @@ function DrugReferenceEntry() {
 
   return (
     <ReferenceAppLayout
-      title={`${drug.name} — dosing, dilutions & monitoring | AnaesthesiaCore`}
+      title={`${drug.name} — dosing, dilutions & monitoring | Drug Reference`}
       description={`${drug.name}: ${drug.indication_oneliner} Presentation, preparation, dosing, standard dilutions and pump rates, pharmacokinetics, adverse effects, interactions${
         drug.requires_tdm ? " and therapeutic drug level monitoring" : ""
       }, with referenced sources.`}

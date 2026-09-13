@@ -8,7 +8,7 @@ export interface Infusion {
   concentrationPerMl: number;
   concentrationLabel: string;
   /** Dosing unit for the range */
-  unit: "micrograms/kg/min" | "micrograms/kg/h" | "micrograms/min" | "units/min" | "units/h" | "units/kg/h" | "mg/kg/h";
+  unit: "nanograms/kg/min" | "micrograms/kg/min" | "micrograms/kg/h" | "micrograms/min" | "units/min" | "units/h" | "units/kg/h" | "mg/kg/h";
   startDose: number;
   minDose: number;
   maxDose: number;
@@ -100,10 +100,10 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationLabel: "200 micrograms/mL",
         unit: "micrograms/kg/min",
         startDose: 0.5,
-        minDose: 0.2,
-        maxDose: 5,
+        minDose: 0.1,
+        maxDose: 2,
         perKg: true,
-        notes: "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. May drop cardiac output by reflex bradycardia and afterload rise.",
+        notes: "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. Usual range 0.1–2 micrograms/kg/min (≈25–100 micrograms/min in theatre); higher rates occasionally used in refractory vasoplegia. May drop cardiac output by reflex bradycardia and afterload rise.",
         topicIds: ["vasoactive-agents"],
       },
       {
@@ -221,7 +221,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
       {
         drug: "Fentanyl",
         diluent: "Undiluted, or dilute in 0.9% sodium chloride or 5% glucose",
-        drawUp: "2500 micrograms (50 mL of 50 micrograms/mL) neat, or 1000 micrograms in 50 mL",
+        drawUp: "2500 micrograms in 50 mL — neat (50 mL of 50 micrograms/mL ampoules)",
         concentrationPerMl: 50,
         concentrationLabel: "50 micrograms/mL (neat)",
         unit: "micrograms/kg/h",
@@ -229,7 +229,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.5,
         maxDose: 4,
         perKg: true,
-        notes: "Lipophilic with marked accumulation on prolonged infusion; wean gradually after days of therapy to avoid withdrawal.",
+        notes: "Rates shown are for the NEAT 50 micrograms/mL syringe. Some units run a diluted 1000 micrograms in 50 mL (20 micrograms/mL) syringe — the mL/h is then 2.5 times higher; never mix the two. Lipophilic with marked accumulation on prolonged infusion; wean gradually after days of therapy to avoid withdrawal.",
         topicIds: ["icu-sedation-delirium", "opioids"],
       },
       {
@@ -315,12 +315,12 @@ export const icuInfusionGroups: InfusionGroup[] = [
         drawUp: "500 micrograms vial reconstituted and made to 50 mL with buffer (10 micrograms/mL)",
         concentrationPerMl: 10,
         concentrationLabel: "10 micrograms/mL",
-        unit: "micrograms/kg/min",
-        startDose: 0.005,
-        minDose: 0.002,
-        maxDose: 0.02,
+        unit: "nanograms/kg/min",
+        startDose: 5,
+        minDose: 2,
+        maxDose: 20,
         perKg: true,
-        notes: "Inhaled/IV pulmonary vasodilator also used as extracorporeal-circuit anticoagulant. Very short half-life — interruptions cause rebound pulmonary hypertension; hypotension limits IV use.",
+        notes: "Dosed in NANOGRAMS/kg/min (1 microgram = 1000 nanograms) — a common source of 1000-fold errors. Inhaled/IV pulmonary vasodilator also used as extracorporeal-circuit anticoagulant. Very short half-life — interruptions cause rebound pulmonary hypertension; hypotension limits IV use.",
         topicIds: ["pulmonary-hypertension", "rrt-icu"],
       },
     ],
@@ -343,9 +343,10 @@ export function mlPerHour(infusion: Infusion, dose: number, weightKg: number): n
     infusion.unit === "micrograms/kg/min" ||
     infusion.unit === "micrograms/min" ||
     infusion.unit === "units/min";
-  // concentrationPerMl is in micrograms (or units) per mL — convert mg doses
+  // concentrationPerMl is in micrograms (or units) per mL — convert mg and ng doses
   let amount = infusion.perKg ? dose * weightKg : dose;
   if (infusion.unit === "mg/kg/h") amount *= 1000;
+  if (infusion.unit === "nanograms/kg/min") amount /= 1000;
   const perHour = perMinute ? amount * 60 : amount;
   return perHour / infusion.concentrationPerMl;
 }

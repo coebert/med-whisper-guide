@@ -61,6 +61,7 @@ export interface DrugReferenceRow {
 
 /** Dosing unit used by the standard infusion recipes. */
 export type InfusionUnit =
+  | "nanograms/kg/min"
   | "micrograms/kg/min"
   | "micrograms/kg/h"
   | "micrograms/min"
