@@ -25,6 +25,7 @@ import {
   drugDilutions,
   formatRate,
 } from "@/features/drugReference/dilutions";
+import { SourceChips, standardRefs } from "@/features/drugReference/references";
 
 function DrugReferenceInfusions() {
   const [query, setQuery] = useState("");
@@ -143,6 +144,7 @@ function DrugReferenceInfusions() {
                     {d.notes && (
                       <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{d.notes}</p>
                     )}
+                    <SourceChips sources={standardRefs(d.drug)} label="Check against" />
                     <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
                       <Link
                         to="/calculator" search={{ drug: d.drug, weight: safeWeight }}
