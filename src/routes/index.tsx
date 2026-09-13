@@ -151,7 +151,7 @@ function DrugReferenceHome() {
               title: "Infusion rate calculator",
               body: "Enter weight and dose to get mL/h, mL/day and syringe run time.",
             },
-          ].map((card) => (
+          ] as const).map((card) => (
             <li key={card.to}>
               <Link
                 to={card.to}
