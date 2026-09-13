@@ -26,6 +26,22 @@ const SLUG_BY_INFUSION_NAME: Record<string, string | null> = {
   "Insulin (Actrapid)": "insulin-actrapid",
   "Heparin (unfractionated)": "unfractionated-heparin",
   "Epoprostenol (prostacyclin)": null,
+  Rocuronium: "rocuronium",
+  Atracurium: "atracurium",
+  Cisatracurium: "cisatracurium",
+  Vecuronium: "vecuronium",
+  "Glyceryl trinitrate (GTN)": "glyceryl-trinitrate",
+  "Sodium nitroprusside": "sodium-nitroprusside",
+  Labetalol: "labetalol",
+  Esmolol: "esmolol",
+  Hydralazine: "hydralazine",
+  Morphine: "morphine",
+  "Lidocaine (IV analgesia)": "lidocaine",
+  "Magnesium sulphate": "magnesium-sulphate",
+  Salbutamol: "salbutamol",
+  Aminophylline: "aminophylline",
+  Oxytocin: "oxytocin",
+  "Tranexamic acid": "tranexamic-acid",
 };
 
 /** All standard infusion recipes, flattened and slug-tagged. */
