@@ -12,6 +12,7 @@ interface Props {
 
 const NAV = [
   { to: "/", label: "Home", exact: true },
+  { to: "/search", label: "Search" },
   { to: "/drugs", label: "Drugs" },
   { to: "/topics", label: "Topics" },
   { to: "/monitoring", label: "Levels" },
