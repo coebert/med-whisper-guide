@@ -422,7 +422,7 @@ function DrugReferencePremedication() {
             rows={[
               {
                 group: "EMLA (lidocaine 2.5% + prilocaine 2.5%)",
-                dose: "Thick blob under an occlusive dressing; from 1 month (caution in neonates — methaemoglobinaemia)",
+                dose: "Thick blob under an occlusive dressing; licensed from birth in term infants but under 3 months: max one application per 24 h, ≤1 g, ≤1 h (methaemoglobinaemia risk)",
                 timing: "Apply 60 min before, lasts up to 5 h",
               },
               {
