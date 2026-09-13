@@ -29,11 +29,6 @@ export const Route = createFileRoute("/sources")({
   component: ClinicalSourcesPage,
 });
 
-import { ExternalLink } from "lucide-react";
-import { Link } from "@tanstack/react-router";
-
-import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
-
 type Reference = {
   title: string;
   publisher: string;
