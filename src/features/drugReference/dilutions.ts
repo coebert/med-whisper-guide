@@ -25,7 +25,7 @@ const SLUG_BY_INFUSION_NAME: Record<string, string | null> = {
   Ketamine: "ketamine",
   "Insulin (Actrapid)": "insulin-actrapid",
   "Heparin (unfractionated)": "unfractionated-heparin",
-  "Epoprostenol (prostacyclin)": null,
+  "Epoprostenol (prostacyclin)": "epoprostenol",
   Rocuronium: "rocuronium",
   Atracurium: "atracurium",
   Cisatracurium: "cisatracurium",
