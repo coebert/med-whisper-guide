@@ -37,7 +37,42 @@ function DrugReferenceAbout() {
           Sources and how this reference works
         </h1>
 
-        <section className="mt-6 space-y-3 text-sm leading-relaxed text-muted-foreground">
+        <section className="mt-6 space-y-3 rounded-lg border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground">
+          <h2 className="font-serif text-lg text-foreground">Why there are no drug photographs</h2>
+          <p>
+            Each monograph carries a written <strong className="text-foreground">How it looks</strong>{" "}
+            summary — form, container, the strength printed on the label, and storage — taken from
+            the manufacturer&apos;s product information. Photographs are deliberately not included:
+            a picture of one manufacturer&apos;s ampoule can look nothing like the one on your
+            trolley, and relying on colour or shape to identify a drug is a recognised cause of
+            administration error.
+          </p>
+          <p className="text-foreground">If you do want photographs, source them safely:</p>
+          <ul className="list-inside list-disc space-y-1">
+            <li>
+              Photograph the stock your own department actually holds, and re-check the pictures
+              whenever the supplier or pack design changes.
+            </li>
+            <li>
+              Use images from the manufacturer&apos;s Summary of Product Characteristics or patient
+              information leaflet on the electronic Medicines Compendium, within their terms of use.
+            </li>
+            <li>
+              Never use images found through a general web search, an image library or an AI image
+              generator — the strength, label and pack may be wrong, or from another country.
+            </li>
+            <li>
+              Keep patient details, names and any handwriting out of frame, and label every photo
+              with the drug, strength and the date it was taken.
+            </li>
+            <li>
+              Treat photographs as an aid to familiarisation only. The label on the ampoule in your
+              hand is the identification check, every time.
+            </li>
+          </ul>
+        </section>
+
+        <section className="mt-8 space-y-3 text-sm leading-relaxed text-muted-foreground">
           <h2 className="font-serif text-lg text-foreground">Where the information comes from</h2>
           <p>
             Every monograph carries its own source list, shown at the bottom of the drug page. The
