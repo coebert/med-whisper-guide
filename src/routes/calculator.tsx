@@ -25,6 +25,7 @@ import {
   formatRate,
   round,
 } from "@/features/drugReference/dilutions";
+import { SourceChips, standardRefs } from "@/features/drugReference/references";
 
 function DrugReferenceCalculator() {
   const params = useSearch({ strict: false }) as Record<string, string | undefined>;
