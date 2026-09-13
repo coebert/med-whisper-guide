@@ -249,7 +249,13 @@ function DrugReferencePremedication() {
             <li>Anxiolysis is milder than midazolam but with no respiratory depression and quicker recovery.</li>
             <li>Effect is inconsistent — have a plan if the child is still distressed at induction.</li>
           </ul>
-          <SourceChips sources={[nicePaedSedation, apaGuidelines]} />
+          <p className="mt-2 text-sm">
+            <Link to="/drugs/$slug" params={{ slug: "melatonin" }} className="text-primary underline">
+              Melatonin monograph
+            </Link>
+          </p>
+          <SourceChips sources={[...standardRefs("Melatonin"), nicePaedSedation, apaGuidelines]} />
+
         </section>
 
         <section className="mt-6 rounded-lg border border-border bg-card p-5">
@@ -431,11 +437,20 @@ function DrugReferencePremedication() {
             <li>Do not apply to broken skin, mucous membranes or the eye, and remove tetracaine on time to avoid blistering.</li>
           </ul>
           <p className="mt-2 text-sm">
+            <Link to="/drugs/$slug" params={{ slug: "emla-lidocaine-prilocaine" }} className="text-primary underline">
+              EMLA monograph
+            </Link>{" "}
+            ·{" "}
+            <Link to="/drugs/$slug" params={{ slug: "tetracaine" }} className="text-primary underline">
+              Tetracaine (Ametop) monograph
+            </Link>{" "}
+            ·{" "}
             <Link to="/drugs/$slug" params={{ slug: "lidocaine" }} className="text-primary underline">
               Lidocaine monograph
             </Link>
           </p>
-          <SourceChips sources={[...standardRefs("Lidocaine"), apaGuidelines]} />
+          <SourceChips sources={[...standardRefs("Lidocaine with prilocaine"), apaGuidelines]} />
+
         </section>
 
         <p className="mt-8 rounded-md border border-border bg-muted/50 p-3 text-xs leading-relaxed text-muted-foreground">
