@@ -18,6 +18,7 @@ const SLUG_BY_INFUSION_NAME: Record<string, string | null> = {
   "Propofol 1%": "propofol",
   Midazolam: "midazolam",
   Dexmedetomidine: "dexmedetomidine",
+  Clonidine: "clonidine",
   Fentanyl: "fentanyl",
   Alfentanil: "alfentanil",
   Remifentanil: "remifentanil",
