@@ -505,10 +505,10 @@ export const icuInfusionGroups: InfusionGroup[] = [
         unit: "micrograms/kg/h",
         startDose: 20,
         minDose: 10,
-        maxDose: 70,
+        maxDose: 100,
         perKg: true,
         notes:
-          "Roughly 1–5 mg/h in an average adult. The active metabolite morphine-6-glucuronide accumulates in renal impairment — reduce the rate and consider fentanyl or alfentanil instead. Nurse-controlled or patient-controlled analgesia is preferred where the patient can use it.",
+          "Roughly 1–7 mg/h in an average adult; the monograph quotes 0.8–10 mg/h post-operatively. The active metabolite morphine-6-glucuronide accumulates in renal impairment — reduce the rate and consider fentanyl or alfentanil instead. Nurse-controlled or patient-controlled analgesia is preferred where the patient can use it.",
         topicIds: ["opioids", "acute-pain"],
       },
       {
@@ -519,11 +519,11 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationLabel: "10 mg/mL (1%)",
         unit: "mg/kg/h",
         startDose: 1.5,
-        minDose: 1,
-        maxDose: 1.5,
+        minDose: 0.5,
+        maxDose: 2,
         perKg: true,
         notes:
-          "Opioid-sparing intravenous lidocaine for major abdominal surgery. Use ideal (not actual) body weight, never run alongside another local anaesthetic technique, and stop if there are any signs of local anaesthetic systemic toxicity. Most protocols limit the infusion to 24 h in a monitored area; lipid emulsion must be available.",
+          "Opioid-sparing intravenous lidocaine for major abdominal surgery; systemic analgesia range 0.5–2 mg/kg/h, most protocols running 1–1.5 mg/kg/h. Use ideal (not actual) body weight, never run alongside another local anaesthetic technique, and stop if there are any signs of local anaesthetic systemic toxicity. Most protocols limit the infusion to 24 h in a monitored area; lipid emulsion must be available.",
         topicIds: ["local-anaesthetics", "acute-pain"],
       },
       {
@@ -533,12 +533,12 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationPerMl: 200000,
         concentrationLabel: "200 mg/mL (20%)",
         unit: "mg/kg/h",
-        startDose: 15,
+        startDose: 14,
         minDose: 10,
-        maxDose: 30,
+        maxDose: 20,
         perKg: true,
         notes:
-          "About 1 g/h at 70 kg; eclampsia prophylaxis is prescribed as a fixed 1 g/h after a 4 g loading dose over 20 min. Monitor patellar reflexes, respiratory rate and urine output; halve the rate in renal impairment. Calcium gluconate is the antidote for toxicity.",
+          "About 1 g/h at 70 kg; eclampsia prophylaxis is prescribed as a fixed 1 g/h after a 4 g loading dose over 20 min. Keep the 24 h total within the BNF maximum of 120 mmol (about 30 g) — at 70 kg, 20 mg/kg/h is already 1.4 g/h. Monitor patellar reflexes, respiratory rate and urine output; halve the rate in renal impairment (max 40 mmol/24 h if CrCl <30 mL/min). Calcium gluconate is the antidote for toxicity.",
         topicIds: ["obstetric-anaesthesia", "electrolytes"],
       },
       {
@@ -564,11 +564,11 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationLabel: "10 mg/mL",
         unit: "mg/kg/h",
         startDose: 0.5,
-        minDose: 0.3,
-        maxDose: 0.7,
+        minDose: 0.1,
+        maxDose: 0.5,
         perKg: true,
         notes:
-          "Give the 5 mg/kg loading dose over 20 min ONLY if the patient is not already on oral theophylline. Maintenance 0.5 mg/kg/h, reduced to 0.3 mg/kg/h in the elderly, heart failure or liver disease. Narrow therapeutic index — check theophylline levels and watch for arrhythmias, vomiting and seizures.",
+          "Give the 5 mg/kg loading dose over 20 min ONLY if the patient is not already on oral theophylline. Maintenance 0.5 mg/kg/h for the first 12 h, then 0.3 mg/kg/h; 0.1–0.3 mg/kg/h in the elderly, heart failure or liver disease. Narrow therapeutic index — check theophylline levels and watch for arrhythmias, vomiting and seizures.",
         topicIds: ["bronchospasm", "therapeutic-drug-monitoring"],
       },
       {
