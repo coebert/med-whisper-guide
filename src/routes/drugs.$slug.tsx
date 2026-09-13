@@ -30,7 +30,7 @@ import {
   round,
 } from "@/features/drugReference/dilutions";
 import type { DrugDilution, DrugSource } from "@/features/drugReference/types";
-import { SourceChips, sectionSources, standardRefs } from "@/features/drugReference/references";
+import { SourceChips, sectionSources } from "@/features/drugReference/references";
 
 function Prose({ text }: { text: string }) {
   const lines = text.split("\n").filter((l) => l.trim().length > 0);
