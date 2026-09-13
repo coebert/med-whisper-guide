@@ -15,6 +15,7 @@ const NAV = [
   { to: "/search", label: "Search" },
   { to: "/drugs", label: "Drugs" },
   { to: "/topics", label: "Topics" },
+  { to: "/premedication", label: "Premed" },
   { to: "/monitoring", label: "Levels" },
   { to: "/infusions", label: "Infusions" },
   { to: "/about", label: "Sources" },
