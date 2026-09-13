@@ -224,6 +224,220 @@ function DrugReferencePremedication() {
           <SourceChips sources={[...standardRefs("Dexmedetomidine"), apaGuidelines]} />
         </section>
 
+        <section className="mt-6 rounded-lg border border-border bg-card p-5">
+          <h2 className="font-serif text-xl text-foreground">Melatonin — oral</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            Chronobiotic used as a gentle anxiolytic premed, particularly in children with autism or
+            learning disability and in the elderly where sedatives risk delirium. Off-label for this
+            indication; immediate-release preparations are used.
+          </p>
+          <DoseTable
+            rows={[
+              {
+                group: "Child — oral",
+                dose: "0.5 mg/kg (commonly 2–6 mg; max 10 mg)",
+                timing: "45–60 min before induction",
+              },
+              {
+                group: "Adult — oral",
+                dose: "3–6 mg immediate-release",
+                timing: "60–90 min before induction",
+              },
+            ]}
+          />
+          <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-muted-foreground">
+            <li>Anxiolysis is milder than midazolam but with no respiratory depression and quicker recovery.</li>
+            <li>Effect is inconsistent — have a plan if the child is still distressed at induction.</li>
+          </ul>
+          <SourceChips sources={[nicePaedSedation, apaGuidelines]} />
+        </section>
+
+        <section className="mt-6 rounded-lg border border-border bg-card p-5">
+          <h2 className="font-serif text-xl text-foreground">
+            Gabapentinoids —{" "}
+            <Link to="/drugs/$slug" params={{ slug: "gabapentin" }} className="hover:underline">
+              gabapentin
+            </Link>{" "}
+            and{" "}
+            <Link to="/drugs/$slug" params={{ slug: "pregabalin" }} className="hover:underline">
+              pregabalin
+            </Link>
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            Given pre-operatively to reduce opioid requirements and the risk of chronic
+            post-surgical pain, mainly in major or nerve-injury-prone surgery. Routine use in
+            day-case and elderly patients is discouraged because of sedation and dizziness.
+          </p>
+          <DoseTable
+            rows={[
+              { group: "Adult — gabapentin", dose: "300–600 mg oral", timing: "1–2 h before surgery" },
+              { group: "Adult — pregabalin", dose: "75–150 mg oral", timing: "1–2 h before surgery" },
+            ]}
+          />
+          <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-muted-foreground">
+            <li>Avoid or halve the dose in the elderly, obstructive sleep apnoea and renal impairment (both are renally cleared).</li>
+            <li>Additive sedation and respiratory depression with opioids — a recognised cause of post-operative desaturation.</li>
+          </ul>
+          <SourceChips sources={[...standardRefs("Pregabalin"), rcoaGpas]} />
+        </section>
+
+        <section className="mt-6 rounded-lg border border-border bg-card p-5">
+          <h2 className="font-serif text-xl text-foreground">Pre-emptive simple analgesia</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            Oral paracetamol and an NSAID given with the pre-operative sip of water reduce
+            post-operative pain scores and opioid use, and are the backbone of most enhanced
+            recovery pathways.
+          </p>
+          <DoseTable
+            rows={[
+              {
+                group: "Adult — paracetamol",
+                dose: "1 g oral (500 mg–1 g if under 50 kg: 15 mg/kg)",
+                timing: "1–2 h before surgery",
+              },
+              {
+                group: "Child — paracetamol",
+                dose: "15–20 mg/kg oral (max 1 g)",
+                timing: "1–2 h before induction",
+              },
+              {
+                group: "Adult — ibuprofen",
+                dose: "400 mg oral (omit if NSAIDs contraindicated)",
+                timing: "1–2 h before surgery",
+              },
+            ]}
+          />
+          <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-muted-foreground">
+            <li>Record the pre-operative dose clearly so the total 24-hour paracetamol limit is not exceeded in theatre or recovery.</li>
+            <li>Avoid NSAIDs in renal impairment, active peptic ulceration, significant bleeding risk, severe asthma with known sensitivity and some bowel and bone-graft surgery.</li>
+          </ul>
+          <p className="mt-2 text-sm">
+            <Link to="/drugs/$slug" params={{ slug: "paracetamol" }} className="text-primary underline">
+              Paracetamol monograph
+            </Link>{" "}
+            ·{" "}
+            <Link to="/drugs/$slug" params={{ slug: "ibuprofen" }} className="text-primary underline">
+              Ibuprofen monograph
+            </Link>
+          </p>
+          <SourceChips sources={standardRefs("Paracetamol")} />
+        </section>
+
+        <section className="mt-6 rounded-lg border border-border bg-card p-5">
+          <h2 className="font-serif text-xl text-foreground">Aspiration prophylaxis</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            Used where the risk of regurgitation is raised: emergency surgery, obstetrics, reflux,
+            hiatus hernia, obesity, gastroparesis and difficult-airway plans.
+          </p>
+          <DoseTable
+            rows={[
+              {
+                group: "Omeprazole — oral",
+                dose: "40 mg (adult); 0.5–1 mg/kg in children",
+                timing: "Evening before and/or 2–4 h pre-op",
+              },
+              {
+                group: "Ranitidine — oral",
+                dose: "150 mg (where still stocked locally)",
+                timing: "Evening before and 2 h pre-op",
+              },
+              {
+                group: "Sodium citrate 0.3 M — oral",
+                dose: "30 mL",
+                timing: "Immediately before induction (obstetric RSI)",
+              },
+              {
+                group: "Metoclopramide — oral/IV",
+                dose: "10 mg (adult)",
+                timing: "30–60 min before induction",
+              },
+            ]}
+          />
+          <p className="mt-2 text-sm">
+            <Link to="/drugs/$slug" params={{ slug: "omeprazole" }} className="text-primary underline">
+              Omeprazole
+            </Link>{" "}
+            ·{" "}
+            <Link to="/drugs/$slug" params={{ slug: "sodium-citrate" }} className="text-primary underline">
+              Sodium citrate
+            </Link>{" "}
+            ·{" "}
+            <Link to="/drugs/$slug" params={{ slug: "metoclopramide" }} className="text-primary underline">
+              Metoclopramide
+            </Link>
+          </p>
+          <SourceChips sources={[...standardRefs("Omeprazole"), rcoaGpas]} />
+        </section>
+
+        <section className="mt-6 rounded-lg border border-border bg-card p-5">
+          <h2 className="font-serif text-xl text-foreground">Antiemetic prophylaxis</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            Risk-scored prophylaxis (Apfel) is usually given at induction rather than as a true
+            premed, but oral dosing on the ward is an option in high-risk patients and in those with
+            severe previous post-operative nausea and vomiting.
+          </p>
+          <DoseTable
+            rows={[
+              {
+                group: "Ondansetron",
+                dose: "4 mg IV at induction, or 8 mg oral (child 0.1 mg/kg IV, max 4 mg)",
+                timing: "Oral 1 h pre-op; IV at induction",
+              },
+              {
+                group: "Dexamethasone",
+                dose: "3.3–8 mg IV (child 150 micrograms/kg, max 8 mg)",
+                timing: "At induction, not on the ward",
+              },
+            ]}
+          />
+          <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-muted-foreground">
+            <li>Ondansetron prolongs the QT interval — avoid combining with other QT-prolonging drugs and correct electrolytes.</li>
+            <li>Warn the patient that dexamethasone commonly causes a brief perineal burning sensation if given awake, and check the glucose in diabetes.</li>
+          </ul>
+          <p className="mt-2 text-sm">
+            <Link to="/drugs/$slug" params={{ slug: "ondansetron" }} className="text-primary underline">
+              Ondansetron
+            </Link>{" "}
+            ·{" "}
+            <Link to="/drugs/$slug" params={{ slug: "dexamethasone" }} className="text-primary underline">
+              Dexamethasone
+            </Link>
+          </p>
+          <SourceChips sources={[...standardRefs("Ondansetron"), rcoaGpas]} />
+        </section>
+
+        <section className="mt-6 rounded-lg border border-border bg-card p-5">
+          <h2 className="font-serif text-xl text-foreground">Topical local anaesthetic for cannulation</h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            Applied on the ward to two potential cannulation sites; the single most effective
+            "premed" for most children having an intravenous induction.
+          </p>
+          <DoseTable
+            rows={[
+              {
+                group: "EMLA (lidocaine 2.5% + prilocaine 2.5%)",
+                dose: "Thick blob under an occlusive dressing; from 1 month (caution in neonates — methaemoglobinaemia)",
+                timing: "Apply 60 min before, lasts up to 5 h",
+              },
+              {
+                group: "Ametop (tetracaine 4% gel)",
+                dose: "Contents of one tube under an occlusive dressing; from 1 month",
+                timing: "Apply 30–45 min before; remove after 45 min",
+              },
+            ]}
+          />
+          <ul className="mt-3 list-inside list-disc space-y-1 text-sm text-muted-foreground">
+            <li>EMLA causes vasoconstriction and can make veins harder to see; tetracaine causes vasodilatation and mild erythema, which usually helps.</li>
+            <li>Do not apply to broken skin, mucous membranes or the eye, and remove tetracaine on time to avoid blistering.</li>
+          </ul>
+          <p className="mt-2 text-sm">
+            <Link to="/drugs/$slug" params={{ slug: "lidocaine" }} className="text-primary underline">
+              Lidocaine monograph
+            </Link>
+          </p>
+          <SourceChips sources={[...standardRefs("Lidocaine"), apaGuidelines]} />
+        </section>
+
         <p className="mt-8 rounded-md border border-border bg-muted/50 p-3 text-xs leading-relaxed text-muted-foreground">
           This guidance summarises common practice and is not a substitute for local paediatric
           sedation policies, the BNF for Children, or the product literature. Several regimens are
