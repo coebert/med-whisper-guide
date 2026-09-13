@@ -336,6 +336,7 @@ function DrugReferenceEntry() {
         )}
 
         <Section title="Presentation" refs={sectionSources(drug.sources, "presentation")}>
+          <AppearancePanel presentation={drug.presentation} />
           <Prose text={drug.presentation} />
         </Section>
 
