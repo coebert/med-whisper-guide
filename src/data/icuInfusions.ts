@@ -369,25 +369,25 @@ export const icuInfusionGroups: InfusionGroup[] = [
         unit: "mg/kg/h",
         startDose: 0.3,
         minDose: 0.3,
-        maxDose: 0.6,
+        maxDose: 0.9,
         perKg: true,
         notes:
-          "Hofmann elimination and ester hydrolysis — organ-independent, so the drug of choice in combined hepatic and renal failure. Histamine release can cause flushing and hypotension at higher doses. Store the ampoules in a fridge.",
+          "Usual 0.3–0.6 mg/kg/h, up to 0.9 mg/kg/h if required. Hofmann elimination and ester hydrolysis — organ-independent, so the drug of choice in combined hepatic and renal failure. Histamine release can cause flushing and hypotension at higher doses. Store the ampoules in a fridge.",
         topicIds: ["neuromuscular-blockade", "icu-sedation-delirium"],
       },
       {
         drug: "Cisatracurium",
         diluent: "0.9% sodium chloride or 5% glucose",
-        drawUp: "150 mg (75 mL of 2 mg/mL) — commonly 100 mg made up to 50 mL",
+        drawUp: "100 mg (50 mL of 2 mg/mL) neat in a 50 mL syringe",
         concentrationPerMl: 2000,
         concentrationLabel: "2 mg/mL",
         unit: "micrograms/kg/min",
         startDose: 3,
-        minDose: 1,
+        minDose: 0.5,
         maxDose: 10,
         perKg: true,
         notes:
-          "Isomer of atracurium with Hofmann elimination and no clinically significant histamine release; the usual choice for severe ARDS. Dosed in MICROGRAMS/kg/min — 3 micrograms/kg/min is roughly 0.18 mg/kg/h. Keep refrigerated.",
+          "Isomer of atracurium with Hofmann elimination and no clinically significant histamine release; the usual choice for severe ARDS. Dosed in MICROGRAMS/kg/min — 3 micrograms/kg/min is roughly 0.18 mg/kg/h; ICU maintenance is often 0.5–2 micrograms/kg/min within an overall 0.5–10 range. Keep refrigerated.",
         topicIds: ["neuromuscular-blockade", "ards"],
       },
       {
@@ -421,11 +421,11 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationLabel: "1 mg/mL",
         unit: "micrograms/min",
         startDose: 10,
-        minDose: 5,
+        minDose: 10,
         maxDose: 200,
         perKg: false,
         notes:
-          "Fixed-dose (not weight-based) infusion titrated to blood pressure or chest pain. Predominantly venodilator at low rates; headache is common and tachyphylaxis develops within 24–48 h. Avoid with phosphodiesterase-5 inhibitors and in severe aortic stenosis or hypovolaemia.",
+          "Fixed-dose (not weight-based) infusion titrated to blood pressure or chest pain: start 10–20 micrograms/min, usual range 10–200 micrograms/min, with up to 400 micrograms/min for short periods. Predominantly venodilator at low rates; headache is common and tachyphylaxis develops within 24–48 h. Avoid with phosphodiesterase-5 inhibitors and in severe aortic stenosis or hypovolaemia.",
         topicIds: ["vasoactive-agents", "acute-coronary-syndrome"],
       },
       {
@@ -436,11 +436,11 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationLabel: "1 mg/mL",
         unit: "micrograms/kg/min",
         startDose: 0.3,
-        minDose: 0.3,
+        minDose: 0.2,
         maxDose: 1.5,
         perKg: true,
         notes:
-          "Immediate-onset arterial and venous dilator for hypertensive emergencies and controlled hypotension. Cyanide toxicity limits use: keep below 1.5 micrograms/kg/min and limit total duration; watch for unexplained metabolic acidosis and rising lactate. Discard if the solution discolours.",
+          "Immediate-onset arterial and venous dilator for hypertensive emergencies and controlled hypotension. The licensed range extends to 8 micrograms/kg/min, but cyanide toxicity limits use: keep below 1.5 micrograms/kg/min for maintenance and limit total duration; watch for unexplained metabolic acidosis and rising lactate. Discard if the solution discolours.",
         topicIds: ["vasoactive-agents", "hypertensive-emergency"],
       },
       {
@@ -452,10 +452,10 @@ export const icuInfusionGroups: InfusionGroup[] = [
         unit: "mg/kg/h",
         startDose: 0.5,
         minDose: 0.25,
-        maxDose: 3,
+        maxDose: 2,
         perKg: true,
         notes:
-          "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. 0.5 mg/kg/h is about 35 mg/h at 70 kg — many units instead prescribe a fixed 20–160 mg/h. Avoid in asthma, decompensated heart failure and heart block.",
+          "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. 0.5 mg/kg/h is about 35 mg/h at 70 kg and 2 mg/kg/h about 140 mg/h — many units instead prescribe a fixed 20–160 mg/h, and the monograph quotes 50–200 mg/h with a 300 mg cumulative limit in 24 h. Avoid in asthma, decompensated heart failure and heart block.",
         topicIds: ["vasoactive-agents", "obstetric-anaesthesia"],
       },
       {
@@ -466,11 +466,11 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationLabel: "10 mg/mL",
         unit: "micrograms/kg/min",
         startDose: 50,
-        minDose: 50,
+        minDose: 25,
         maxDose: 200,
         perKg: true,
         notes:
-          "Ultra-short-acting cardioselective β blocker (half-life ~9 min) — ideal when β blockade may need to be withdrawn quickly. Dosed in MICROGRAMS/kg/min. Hypotension is the main limitation; extravasation can cause skin necrosis.",
+          "Ultra-short-acting cardioselective β blocker (half-life ~9 min) — ideal when β blockade may need to be withdrawn quickly. Dosed in MICROGRAMS/kg/min, usual 25–200 with up to 300 for short periods in life-threatening situations. Hypotension is the main limitation; extravasation can cause skin necrosis.",
         topicIds: ["vasoactive-agents", "arrhythmias"],
       },
       {
