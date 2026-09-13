@@ -14,7 +14,93 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      drugs: {
+        Row: {
+          adult_bolus_dose: string
+          contraindications: string
+          created_at: string
+          dilutions: Json
+          dosing: string
+          drug_class: string
+          id: string
+          indication_oneliner: string
+          infusion_range: string
+          infusion_standard: Json
+          interactions: string
+          key_warning: string
+          mechanism_of_action: string
+          monitoring: string
+          name: string
+          pharmacokinetics: string
+          preparation: string
+          presentation: string
+          related_topic_ids: string[]
+          requires_tdm: boolean
+          side_effects: string
+          slug: string
+          sources: Json
+          synonyms: string[]
+          tdm: Json
+          updated_at: string
+        }
+        Insert: {
+          adult_bolus_dose?: string
+          contraindications?: string
+          created_at?: string
+          dilutions?: Json
+          dosing?: string
+          drug_class: string
+          id?: string
+          indication_oneliner?: string
+          infusion_range?: string
+          infusion_standard?: Json
+          interactions?: string
+          key_warning?: string
+          mechanism_of_action?: string
+          monitoring?: string
+          name: string
+          pharmacokinetics?: string
+          preparation?: string
+          presentation?: string
+          related_topic_ids?: string[]
+          requires_tdm?: boolean
+          side_effects?: string
+          slug: string
+          sources?: Json
+          synonyms?: string[]
+          tdm?: Json
+          updated_at?: string
+        }
+        Update: {
+          adult_bolus_dose?: string
+          contraindications?: string
+          created_at?: string
+          dilutions?: Json
+          dosing?: string
+          drug_class?: string
+          id?: string
+          indication_oneliner?: string
+          infusion_range?: string
+          infusion_standard?: Json
+          interactions?: string
+          key_warning?: string
+          mechanism_of_action?: string
+          monitoring?: string
+          name?: string
+          pharmacokinetics?: string
+          preparation?: string
+          presentation?: string
+          related_topic_ids?: string[]
+          requires_tdm?: boolean
+          side_effects?: string
+          slug?: string
+          sources?: Json
+          synonyms?: string[]
+          tdm?: Json
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
