@@ -149,7 +149,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationLabel: "400 micrograms/mL",
         unit: "micrograms/kg/min",
         startDose: 0.375,
-        minDose: 0.125,
+        minDose: 0.375,
         maxDose: 0.75,
         perKg: true,
         notes: "PDE-3 inhibitor; inodilator useful in pulmonary hypertension/right ventricular failure. Long half-life — accumulates in renal failure; often started without a loading dose in ICU to avoid hypotension.",
@@ -466,7 +466,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationLabel: "10 mg/mL",
         unit: "micrograms/kg/min",
         startDose: 50,
-        minDose: 25,
+        minDose: 50,
         maxDose: 200,
         perKg: true,
         notes:
@@ -574,7 +574,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
       {
         drug: "Oxytocin",
         diluent: "0.9% sodium chloride or Hartmann's (avoid large volumes of glucose)",
-        drawUp: "40 units in 40 mL (1 unit/mL) — commonly 40 units in 500 mL over 4 h",
+        drawUp: "40 units made up to 40 mL (1 unit/mL). If using the alternative 40 units in 500 mL bag (0.08 units/mL), run at 125 mL/h — do not use the rates below",
         concentrationPerMl: 1,
         concentrationLabel: "1 unit/mL",
         unit: "units/h",
@@ -589,7 +589,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
       {
         drug: "Tranexamic acid",
         diluent: "0.9% sodium chloride",
-        drawUp: "1 g in 50 mL (20 mg/mL); trauma maintenance is 1 g in 250 mL over 8 h",
+        drawUp: "1 g made up to 50 mL (20 mg/mL). If using the alternative trauma dilution of 1 g in 250 mL over 8 h (4 mg/mL), run at ~31 mL/h — do not use the rates below",
         concentrationPerMl: 20000,
         concentrationLabel: "20 mg/mL",
         unit: "mg/kg/h",
@@ -618,6 +618,7 @@ export const icuInfusionCount = icuInfusionGroups.reduce(
  */
 export function mlPerHour(infusion: Infusion, dose: number, weightKg: number): number {
   const perMinute =
+    infusion.unit === "nanograms/kg/min" ||
     infusion.unit === "micrograms/kg/min" ||
     infusion.unit === "micrograms/min" ||
     infusion.unit === "units/min";
