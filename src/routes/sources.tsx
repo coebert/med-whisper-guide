@@ -220,11 +220,7 @@ const referenceGroups: ReferenceGroup[] = [
 
 function ClinicalSourcesPage() {
   return (
-    <ReferenceAppLayout
-      title="Clinical Sources — BNF, SPC, NICE and RCoA | Drug Reference"
-      description="The clinical references behind every drug monograph in this reference: BNF, BNF for Children, product SPCs, NICE guidance, RCoA and Association of Anaesthetists standards, and UK laboratory standards."
-      canonicalPath="/reference/sources"
-    >
+    <ReferenceAppLayout>
       <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">Clinical sources</h1>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

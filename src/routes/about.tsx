@@ -27,11 +27,7 @@ function DrugReferenceAbout() {
   const [saved, setSaved] = useState(cachedMonographCount());
 
   return (
-    <ReferenceAppLayout
-      title="Sources & How This Reference Works | Drug Reference"
-      description="How the anaesthetics and critical care drug reference is sourced from the BNF, BNF for Children, product SPCs and national guidelines, and how to use it offline."
-      canonicalPath="/reference/about"
-    >
+    <ReferenceAppLayout>
       <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">
           Sources and how this reference works

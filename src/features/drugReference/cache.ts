@@ -26,14 +26,17 @@ export function readCache<T>(key: string): { data: T; savedAt: number } | null {
   }
 }
 
-export function writeCache<T>(key: string, data: T): void {
+/** Returns false when the browser refused the write (storage full / private mode). */
+export function writeCache<T>(key: string, data: T): boolean {
   try {
     const envelope: Envelope<T> = { savedAt: Date.now(), data };
     localStorage.setItem(PREFIX + key, JSON.stringify(envelope));
+    return true;
   } catch {
-    // Storage full or unavailable (private mode) — caching is best-effort.
+    return false;
   }
 }
+
 
 export function cachedMonographCount(): number {
   try {

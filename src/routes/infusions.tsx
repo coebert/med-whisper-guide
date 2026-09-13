@@ -53,11 +53,7 @@ function DrugReferenceInfusions() {
   const matchCount = groups.reduce((sum, [, list]) => sum + list.length, 0);
 
   return (
-    <ReferenceAppLayout
-      title="Standard Infusions & Dilutions | Drug Reference"
-      description="Standard critical care infusion recipes: safe diluents, how to draw each syringe up, resulting concentration, starting dose, dose range and the equivalent pump rate in mL/h."
-      canonicalPath="/reference/infusions"
-    >
+    <ReferenceAppLayout>
       <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">
           Standard infusions and dilutions

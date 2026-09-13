@@ -68,11 +68,7 @@ function DoseTable({
 
 function DrugReferencePremedication() {
   return (
-    <ReferenceAppLayout
-      title="Anaesthetic Premedication | Drug Reference"
-      description="Practical guidance on anaesthetic premedication in children and adults: oral and buccal midazolam, oral clonidine, and oral and intranasal dexmedetomidine."
-      canonicalPath="/premedication"
-    >
+    <ReferenceAppLayout>
       <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">
           Anaesthetic premedication

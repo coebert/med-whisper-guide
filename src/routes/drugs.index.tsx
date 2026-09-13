@@ -62,11 +62,7 @@ function DrugReferenceLibrary() {
   const hasFilters = Boolean(query || letter || drugClass || onlyMonitored || onlyInfusions);
 
   return (
-    <ReferenceAppLayout
-      title="Drug Reference — Anaesthesia &amp; Critical Care | AnaesthesiaCore"
-      description="Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions and pump rates, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources."
-      canonicalPath="/reference/drugs"
-    >
+    <ReferenceAppLayout>
       <header className="border-b border-border bg-card">
         <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">

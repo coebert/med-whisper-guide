@@ -208,11 +208,7 @@ function DrugReferenceEntry() {
 
   if (loading) {
     return (
-      <ReferenceAppLayout
-        title="Loading drug… | Drug Reference"
-        description="Anaesthetic and critical care drug monograph."
-        canonicalPath={`/reference/drugs/${slug ?? ""}`}
-      >
+      <ReferenceAppLayout>
         <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
           <p className="text-sm text-muted-foreground">Loading the drug entry…</p>
         </main>
@@ -222,11 +218,7 @@ function DrugReferenceEntry() {
 
   if (error || !drug) {
     return (
-      <ReferenceAppLayout
-        title="Drug not found | Drug Reference"
-        description="Anaesthetic and critical care drug monograph."
-        canonicalPath={`/reference/drugs/${slug ?? ""}`}
-      >
+      <ReferenceAppLayout>
         <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
           <h1 className="font-serif text-2xl text-foreground">Drug not found</h1>
           <p className="mt-2 text-sm text-muted-foreground">
@@ -244,13 +236,7 @@ function DrugReferenceEntry() {
   const tdm = drug.tdm;
 
   return (
-    <ReferenceAppLayout
-      title={`${drug.name} — dosing, dilutions & monitoring | Drug Reference`}
-      description={`${drug.name}: ${drug.indication_oneliner} Presentation, preparation, dosing, standard dilutions and pump rates, pharmacokinetics, adverse effects, interactions${
-        drug.requires_tdm ? " and therapeutic drug level monitoring" : ""
-      }, with referenced sources.`}
-      canonicalPath={`/reference/drugs/${drug.slug}`}
-    >
+    <ReferenceAppLayout>
       <header className="border-b border-border bg-card">
         <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
           <Link

@@ -38,11 +38,7 @@ function DrugReferenceMonitoring() {
   }, [drugs, query]);
 
   return (
-    <ReferenceAppLayout
-      title="Therapeutic Drug Level Monitoring | Drug Reference"
-      description="Therapeutic drug monitoring reference: target ranges, sampling timing, toxicity thresholds and actions, and dose adjustment guidance for anaesthetic and critical care drugs."
-      canonicalPath="/reference/monitoring"
-    >
+    <ReferenceAppLayout>
       <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">
           Therapeutic drug level monitoring
@@ -103,8 +99,8 @@ function DrugReferenceMonitoring() {
 
               {d.tdm?.targets && d.tdm.targets.length > 0 && (
                 <dl className="mt-3 grid gap-2 sm:grid-cols-2">
-                  {d.tdm.targets.map((t) => (
-                    <div key={t.label} className="rounded-md border border-border bg-background p-3">
+                  {d.tdm.targets.map((t, i) => (
+                    <div key={`${t.label}-${i}`} className="rounded-md border border-border bg-background p-3">
                       <dt className="text-xs text-muted-foreground">{t.label}</dt>
                       <dd className="mt-0.5 text-sm font-semibold text-foreground">{t.value}</dd>
                       {t.note && (
@@ -121,8 +117,8 @@ function DrugReferenceMonitoring() {
                     When to sample
                   </h3>
                   <ul className="mt-1 list-inside list-disc space-y-1 text-sm text-muted-foreground">
-                    {d.tdm.timing.map((line) => (
-                      <li key={line}>{line}</li>
+                    {d.tdm.timing.map((line, i) => (
+                      <li key={`${line}-${i}`}>{line}</li>
                     ))}
                   </ul>
                 </section>
@@ -134,8 +130,8 @@ function DrugReferenceMonitoring() {
                     Toxicity thresholds and actions
                   </h3>
                   <ul className="mt-1 space-y-2 text-sm text-muted-foreground">
-                    {d.tdm.toxicity.map((t) => (
-                      <li key={t.threshold} className="rounded-md border border-border p-2.5">
+                    {d.tdm.toxicity.map((t, i) => (
+                      <li key={`${t.threshold}-${i}`} className="rounded-md border border-border p-2.5">
                         <span className="font-medium text-foreground">{t.threshold}</span> —{" "}
                         {t.features}
                         <span className="mt-1 block">
@@ -153,8 +149,8 @@ function DrugReferenceMonitoring() {
                     Sampling practicalities
                   </h3>
                   <ul className="mt-1 list-inside list-disc space-y-1 text-sm text-muted-foreground">
-                    {d.tdm.sampling.map((line) => (
-                      <li key={line}>{line}</li>
+                    {d.tdm.sampling.map((line, i) => (
+                      <li key={`${line}-${i}`}>{line}</li>
                     ))}
                   </ul>
                 </section>
@@ -166,8 +162,8 @@ function DrugReferenceMonitoring() {
                     Dose adjustment
                   </h3>
                   <ul className="mt-1 list-inside list-disc space-y-1 text-sm text-muted-foreground">
-                    {d.tdm.adjustment.map((line) => (
-                      <li key={line}>{line}</li>
+                    {d.tdm.adjustment.map((line, i) => (
+                      <li key={`${line}-${i}`}>{line}</li>
                     ))}
                   </ul>
                 </section>
@@ -175,9 +171,9 @@ function DrugReferenceMonitoring() {
 
               {(d.tdm?.sources ?? []).length > 0 && (
                 <footer className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
-                  {(d.tdm?.sources ?? []).map((s) => (
+                  {(d.tdm?.sources ?? []).map((s, i) => (
                     <a
-                      key={`${s.title}-${s.url}`}
+                      key={`${s.title}-${s.url}-${i}`}
                       href={s.url}
                       target="_blank"
                       rel="noopener noreferrer"

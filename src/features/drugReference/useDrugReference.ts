@@ -143,7 +143,7 @@ export function useMonitoredDrugs() {
  */
 export async function downloadAllMonographs(
   onProgress?: (done: number, total: number) => void,
-): Promise<{ saved: number }> {
+): Promise<{ saved: number; total: number }> {
   const PAGE = 40;
   const { count, error: countError } = await supabase
     .from("drugs")
@@ -151,6 +151,7 @@ export async function downloadAllMonographs(
   if (countError) throw new Error(countError.message);
   const total = count ?? 0;
   let saved = 0;
+  let seen = 0;
   const list: DrugListItem[] = [];
   const monitored: DrugReferenceRow[] = [];
 
@@ -163,7 +164,15 @@ export async function downloadAllMonographs(
     if (err) throw new Error(err.message);
     for (const raw of data ?? []) {
       const row = normalise(raw as Record<string, unknown>);
-      writeCache(`drug:${row.slug}`, row);
+      seen += 1;
+      // A refused write means the device storage is full — stop and report honestly
+      // rather than claiming a complete offline copy.
+      if (!writeCache(`drug:${row.slug}`, row)) {
+        throw new Error(
+          `This device ran out of storage after saving ${saved} of ${total} monographs. Free up space in your browser and try again.`,
+        );
+      }
+      saved += 1;
       list.push({
         slug: row.slug,
         name: row.name,
@@ -174,12 +183,13 @@ export async function downloadAllMonographs(
         requires_tdm: row.requires_tdm,
       });
       if (row.requires_tdm) monitored.push(row);
-      saved += 1;
     }
     onProgress?.(saved, total);
+    if (seen >= total) break;
   }
 
   writeCache("list", list);
   writeCache("monitored", monitored);
-  return { saved };
+  return { saved, total };
 }
+

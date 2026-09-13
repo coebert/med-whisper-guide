@@ -610,28 +610,7 @@ export const icuInfusionCount = icuInfusionGroups.reduce(
   0,
 );
 
-/**
- * mL per hour for a given dose index value and patient weight.
- * rate (unit/kg/min) → mL/h = rate × 60 × weight / concentration (unit/mL)
- * rate (unit/kg/h)  → mL/h = rate × weight / concentration
- * non-weight-based mcg/min or units/min → × 60 / concentration
- */
-export function mlPerHour(infusion: Infusion, dose: number, weightKg: number): number {
-  const perMinute =
-    infusion.unit === "nanograms/kg/min" ||
-    infusion.unit === "micrograms/kg/min" ||
-    infusion.unit === "micrograms/min" ||
-    infusion.unit === "units/min";
-  // concentrationPerMl is in micrograms (or units) per mL — convert mg and ng doses
-  let amount = infusion.perKg ? dose * weightKg : dose;
-  if (infusion.unit === "mg/kg/h") amount *= 1000;
-  if (infusion.unit === "nanograms/kg/min") amount /= 1000;
-  const perHour = perMinute ? amount * 60 : amount;
-  return perHour / infusion.concentrationPerMl;
-}
+// Pump-rate maths lives in a single place — src/features/drugReference/dilutions.ts
+// (calculateRate / formatRate). Do not add a second implementation here: two
+// copies can drift apart and disagree about a dose.
 
-export function formatMlPerHour(value: number): string {
-  if (value >= 20) return value.toFixed(0);
-  if (value >= 2) return value.toFixed(1);
-  return value.toFixed(2);
-}
