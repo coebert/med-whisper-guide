@@ -48,6 +48,39 @@ export function cachedMonographCount(): number {
   }
 }
 
+/** Newest savedAt across everything stored, or null when nothing is saved. */
+export function cacheLastUpdated(): number | null {
+  try {
+    let newest: number | null = null;
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const key = localStorage.key(i);
+      if (!key || !key.startsWith(PREFIX)) continue;
+      const raw = localStorage.getItem(key);
+      if (!raw) continue;
+      const savedAt = (JSON.parse(raw) as Envelope<unknown>).savedAt;
+      if (typeof savedAt === "number" && (newest === null || savedAt > newest)) newest = savedAt;
+    }
+    return newest;
+  } catch {
+    return null;
+  }
+}
+
+/** Rough size of the saved copy, in kilobytes. */
+export function cacheSizeKb(): number {
+  try {
+    let chars = 0;
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const key = localStorage.key(i);
+      if (!key || !key.startsWith(PREFIX)) continue;
+      chars += (localStorage.getItem(key) ?? "").length + key.length;
+    }
+    return Math.round((chars * 2) / 1024);
+  } catch {
+    return 0;
+  }
+}
+
 export function clearDrugReferenceCache(): void {
   try {
     const keys: string[] = [];
