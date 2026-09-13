@@ -17,12 +17,13 @@ export const Route = createFileRoute("/")({
 
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { BookOpen, Calculator, Download, FlaskConical, Pill, Search, Syringe } from "lucide-react";
+import { ArrowRight, BookOpen, Calculator, Download, FlaskConical, Pill, Search, Syringe } from "lucide-react";
 
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 import { useDrugList } from "@/features/drugReference/useDrugReference";
 import { drugDilutions } from "@/features/drugReference/dilutions";
 import { cachedMonographCount } from "@/features/drugReference/cache";
+import { allReferenceTopics, topicForClass } from "@/features/drugReference/topics";
 
 function DrugReferenceHome() {
   const { drugs, loading } = useDrugList();
