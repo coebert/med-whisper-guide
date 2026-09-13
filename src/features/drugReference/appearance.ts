@@ -10,8 +10,8 @@
  */
 
 export type AppearanceSummary = {
-  colour?: string;
-  form?: string;
+  colour?: string | undefined;
+  form?: string | undefined;
   containers: string[];
   strengths: string[];
   storage: string[];
