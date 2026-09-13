@@ -131,7 +131,36 @@ function DrugReferenceHome() {
           ))}
         </dl>
 
-        <h2 className="mt-10 font-serif text-xl text-foreground">Where to go</h2>
+        <h2 className="mt-10 font-serif text-xl text-foreground">Browse by category</h2>
+        <p className="mt-1 text-sm text-muted-foreground">
+          {loading && !drugs.length
+            ? "Loading the drug library…"
+            : `${drugs.length} monographs grouped by clinical area.`}
+        </p>
+        <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {topicCounts.map(({ topic, count }) => (
+            <li key={topic.slug}>
+              <Link
+                to="/topics/$slug"
+                params={{ slug: topic.slug }}
+                className="flex h-full flex-col rounded-lg border border-border bg-card p-4 transition hover:border-primary hover:shadow-sm"
+              >
+                <span className="flex items-center justify-between gap-2">
+                  <span className="font-semibold leading-snug text-foreground">{topic.title}</span>
+                  <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">
+                    {count}
+                  </span>
+                </span>
+                <span className="mt-1 block text-sm text-muted-foreground">{topic.blurb}</span>
+                <span className="mt-auto inline-flex items-center gap-1 pt-2 text-xs font-medium text-primary">
+                  Open category <ArrowRight aria-hidden="true" className="h-3 w-3" />
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <h2 className="mt-10 font-serif text-xl text-foreground">Tools</h2>
         <ul className="mt-3 grid gap-3 sm:grid-cols-2">
           {([
             {
