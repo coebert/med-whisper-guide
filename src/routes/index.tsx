@@ -122,31 +122,31 @@ function DrugReferenceHome() {
         <ul className="mt-3 grid gap-3 sm:grid-cols-2">
           {[
             {
-              to: "/reference/drugs",
+              to: "/drugs",
               icon: Pill,
               title: "Browse all drugs",
               body: "Search by name, brand, class or indication, or jump straight to a letter.",
             },
             {
-              to: "/reference/topics",
+              to: "/topics",
               icon: BookOpen,
               title: "Browse by topic",
               body: "Vasoactive support, sedation, analgesia, anticoagulation and more, each with bedside points.",
             },
             {
-              to: "/reference/monitoring",
+              to: "/monitoring",
               icon: FlaskConical,
               title: "Blood level monitoring",
               body: "Target ranges, sampling timing, toxicity thresholds and dose adjustment.",
             },
             {
-              to: "/reference/infusions",
+              to: "/infusions",
               icon: Syringe,
               title: "Infusions and dilutions",
               body: "Standard diluents, how to draw each syringe up, and the resulting mL/h.",
             },
             {
-              to: "/reference/calculator",
+              to: "/calculator",
               icon: Calculator,
               title: "Infusion rate calculator",
               body: "Enter weight and dose to get mL/h, mL/day and syringe run time.",
