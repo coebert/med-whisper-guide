@@ -1,4 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ExternalLink } from "lucide-react";
+
+import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 
 export const Route = createFileRoute("/sources")({
   ssr: false,
@@ -25,11 +28,6 @@ export const Route = createFileRoute("/sources")({
   }),
   component: ClinicalSourcesPage,
 });
-
-import { ExternalLink } from "lucide-react";
-import { Link } from "@tanstack/react-router";
-
-import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 
 type Reference = {
   title: string;
