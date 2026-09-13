@@ -66,7 +66,8 @@ function DrugReferenceHome() {
           className="mt-6"
           onSubmit={(e) => {
             e.preventDefault();
-            if (suggestions.length > 0) navigate({ to: "/drugs/$slug", params: { slug: suggestions[0].slug } });
+            const first = suggestions[0];
+            if (first) navigate({ to: "/drugs/$slug", params: { slug: first.slug } });
             else navigate({ to: "/drugs", search: { q: query } });
           }}
         >

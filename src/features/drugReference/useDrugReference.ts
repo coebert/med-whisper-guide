@@ -26,8 +26,8 @@ function asTdm(value: unknown): DrugTdm | null {
 function normalise(row: Record<string, unknown>): DrugReferenceRow {
   return {
     ...(row as unknown as DrugReferenceRow),
-    sources: asSources(row.sources),
-    tdm: asTdm(row.tdm),
+    sources: asSources(row["sources"]),
+    tdm: asTdm(row["tdm"]),
   };
 }
 

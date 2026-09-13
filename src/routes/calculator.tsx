@@ -28,8 +28,8 @@ import {
 
 function DrugReferenceCalculator() {
   const params = useSearch({ strict: false }) as Record<string, string | undefined>;
-  const prefillDrug = params.drug;
-  const prefillWeight = Number(params.weight);
+  const prefillDrug = params["drug"];
+  const prefillWeight = Number(params["weight"]);
 
   const initialIndex = Math.max(
     0,
@@ -39,7 +39,7 @@ function DrugReferenceCalculator() {
   const [weight, setWeight] = useState(
     Number.isFinite(prefillWeight) && prefillWeight > 0 ? prefillWeight : 70,
   );
-  const dilution = drugDilutions[index];
+  const dilution = drugDilutions[index] ?? drugDilutions[0]!;
   const [dose, setDose] = useState(dilution.startDose);
 
   const result = useMemo(
@@ -70,7 +70,8 @@ function DrugReferenceCalculator() {
               onChange={(e) => {
                 const next = Number(e.target.value);
                 setIndex(next);
-                setDose(drugDilutions[next].startDose);
+                const next_d = drugDilutions[next];
+                if (next_d) setDose(next_d.startDose);
               }}
               className="mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             >

@@ -30,7 +30,7 @@ const slugsWithRecipes = new Set(drugDilutions.map((d) => d.slug).filter(Boolean
 function DrugReferenceLibrary() {
   const { drugs, loading, error } = useDrugList();
   const params = useSearch({ strict: false }) as Record<string, string | undefined>;
-  const [query, setQuery] = useState(params.q ?? "");
+  const [query, setQuery] = useState(params["q"] ?? "");
   const [letter, setLetter] = useState<string | null>(null);
   const [drugClass, setDrugClass] = useState<string | null>(null);
   const [onlyMonitored, setOnlyMonitored] = useState(false);
