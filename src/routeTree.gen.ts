@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CalculatorRouteImport } from './routes/calculator'
 import { Route as InfusionsRouteImport } from './routes/infusions'
 import { Route as MonitoringRouteImport } from './routes/monitoring'
+import { Route as PremedicationRouteImport } from './routes/premedication'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as DrugsIndexRouteImport } from './routes/drugs.index'
 import { Route as DrugsSlugRouteImport } from './routes/drugs.$slug'
@@ -43,6 +44,11 @@ const InfusionsRoute = InfusionsRouteImport.update({
 const MonitoringRoute = MonitoringRouteImport.update({
   id: '/monitoring',
   path: '/monitoring',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PremedicationRoute = PremedicationRouteImport.update({
+  id: '/premedication',
+  path: '/premedication',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SearchRoute = SearchRouteImport.update({
@@ -77,6 +83,7 @@ export interface FileRoutesByFullPath {
   '/calculator': typeof CalculatorRoute
   '/infusions': typeof InfusionsRoute
   '/monitoring': typeof MonitoringRoute
+  '/premedication': typeof PremedicationRoute
   '/search': typeof SearchRoute
   '/drugs/$slug': typeof DrugsSlugRoute
   '/topics/$slug': typeof TopicsSlugRoute
@@ -89,6 +96,7 @@ export interface FileRoutesByTo {
   '/calculator': typeof CalculatorRoute
   '/infusions': typeof InfusionsRoute
   '/monitoring': typeof MonitoringRoute
+  '/premedication': typeof PremedicationRoute
   '/search': typeof SearchRoute
   '/drugs/$slug': typeof DrugsSlugRoute
   '/topics/$slug': typeof TopicsSlugRoute
@@ -102,6 +110,7 @@ export interface FileRoutesById {
   '/calculator': typeof CalculatorRoute
   '/infusions': typeof InfusionsRoute
   '/monitoring': typeof MonitoringRoute
+  '/premedication': typeof PremedicationRoute
   '/search': typeof SearchRoute
   '/drugs/$slug': typeof DrugsSlugRoute
   '/topics/$slug': typeof TopicsSlugRoute
@@ -116,6 +125,7 @@ export interface FileRouteTypes {
     | '/calculator'
     | '/infusions'
     | '/monitoring'
+    | '/premedication'
     | '/search'
     | '/drugs/$slug'
     | '/topics/$slug'
@@ -128,6 +138,7 @@ export interface FileRouteTypes {
     | '/calculator'
     | '/infusions'
     | '/monitoring'
+    | '/premedication'
     | '/search'
     | '/drugs/$slug'
     | '/topics/$slug'
@@ -140,6 +151,7 @@ export interface FileRouteTypes {
     | '/calculator'
     | '/infusions'
     | '/monitoring'
+    | '/premedication'
     | '/search'
     | '/drugs/$slug'
     | '/topics/$slug'
@@ -153,6 +165,7 @@ export interface RootRouteChildren {
   CalculatorRoute: typeof CalculatorRoute
   InfusionsRoute: typeof InfusionsRoute
   MonitoringRoute: typeof MonitoringRoute
+  PremedicationRoute: typeof PremedicationRoute
   SearchRoute: typeof SearchRoute
   DrugsSlugRoute: typeof DrugsSlugRoute
   TopicsSlugRoute: typeof TopicsSlugRoute
@@ -195,6 +208,13 @@ declare module '@tanstack/react-router' {
       path: '/monitoring'
       fullPath: '/monitoring'
       preLoaderRoute: typeof MonitoringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/premedication': {
+      id: '/premedication'
+      path: '/premedication'
+      fullPath: '/premedication'
+      preLoaderRoute: typeof PremedicationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/search': {
@@ -241,6 +261,7 @@ const rootRouteChildren: RootRouteChildren = {
   CalculatorRoute: CalculatorRoute,
   InfusionsRoute: InfusionsRoute,
   MonitoringRoute: MonitoringRoute,
+  PremedicationRoute: PremedicationRoute,
   SearchRoute: SearchRoute,
   DrugsSlugRoute: DrugsSlugRoute,
   TopicsSlugRoute: TopicsSlugRoute,
