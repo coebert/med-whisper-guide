@@ -258,17 +258,32 @@ function DrugReferenceEntry() {
 
   const tdm = drug.tdm;
 
+  const jumpItems = [
+    { id: "dosing", label: "Dosing" },
+    ...(dilutions.length > 0 ? [{ id: "dilutions", label: "Dilutions" }] : []),
+    { id: "presentation", label: "Presentation" },
+    { id: "preparation", label: "Preparation" },
+    ...(tdm ? [{ id: "monitoring-levels", label: "Blood levels" }] : []),
+    { id: "mechanism", label: "Mechanism" },
+    { id: "pharmacokinetics", label: "PK" },
+    { id: "monitoring", label: "Monitoring" },
+    { id: "side-effects", label: "Adverse effects" },
+    { id: "contraindications", label: "Cautions" },
+    { id: "interactions", label: "Interactions" },
+    { id: "sources", label: "Sources" },
+  ];
+
   return (
     <ReferenceAppLayout>
       <header className="border-b border-border bg-card">
-        <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-8">
           <Link
             to="/drugs"
             className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft aria-hidden="true" className="h-4 w-4" /> Drug reference library
           </Link>
-          <h1 className="mt-3 font-serif text-3xl text-foreground">{drug.name}</h1>
+          <h1 className="mt-3 font-serif text-2xl text-foreground sm:text-3xl">{drug.name}</h1>
           <p className="mt-1 text-sm uppercase tracking-wide text-muted-foreground">
             {drug.drug_class}
           </p>
