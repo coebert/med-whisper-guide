@@ -18,6 +18,7 @@ const NAV = [
   { to: "/", label: "Home", exact: true },
   { to: "/search", label: "Search" },
   { to: "/drugs", label: "Drugs" },
+  { to: "/compare", label: "Compare" },
   { to: "/topics", label: "Topics" },
   { to: "/premedication", label: "Premed" },
   { to: "/monitoring", label: "Levels" },
