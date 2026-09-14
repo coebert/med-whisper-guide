@@ -197,7 +197,7 @@ function DrugReferencePremedication() {
             rows={[
               {
                 group: "Child — intranasal",
-                dose: "1–2 micrograms/kg via mucosal atomiser (split between nostrils)",
+                dose: "2–3 micrograms/kg via mucosal atomiser (split between nostrils); maximum 3 micrograms/kg",
                 timing: "30–45 min before induction",
               },
               {
