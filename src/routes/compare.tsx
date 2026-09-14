@@ -179,7 +179,7 @@ function DrugPicker({
 function Cell({ children, muted }: { children: React.ReactNode; muted?: boolean }) {
   return (
     <div
-      className={`whitespace-pre-line px-3 py-3 text-sm leading-relaxed ${
+      className={`min-w-0 break-words whitespace-pre-line px-3 py-3 text-sm leading-relaxed ${
         muted ? "text-muted-foreground" : "text-foreground"
       }`}
     >
@@ -293,16 +293,16 @@ function ComparePage() {
 
         {both && (
           <div className="mt-6 overflow-hidden rounded-xl border border-border bg-card">
-            <div className="grid grid-cols-[minmax(6.5rem,0.6fr)_1fr_1fr] border-b border-border bg-muted/40">
+            <div className="grid grid-cols-[4.5rem_1fr_1fr] sm:grid-cols-[minmax(6.5rem,0.6fr)_1fr_1fr] border-b border-border bg-muted/40">
               <div className="px-3 py-3 text-[11px] uppercase tracking-wide text-muted-foreground">
                 Field
               </div>
               {[a.drug!, b.drug!].map((d) => (
-                <div key={d.slug} className="px-3 py-3">
+                <div key={d.slug} className="min-w-0 px-3 py-3">
                   <Link
                     to="/drugs/$slug"
                     params={{ slug: d.slug }}
-                    className="font-semibold text-primary hover:underline"
+                    className="break-words font-semibold text-primary hover:underline"
                   >
                     {d.name}
                   </Link>
@@ -318,7 +318,7 @@ function ComparePage() {
               return (
                 <div
                   key={row.key}
-                  className="grid grid-cols-[minmax(6.5rem,0.6fr)_1fr_1fr] border-b border-border last:border-b-0"
+                  className="grid grid-cols-[4.5rem_1fr_1fr] sm:grid-cols-[minmax(6.5rem,0.6fr)_1fr_1fr] border-b border-border last:border-b-0"
                 >
                   <div className="bg-muted/20 px-3 py-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
                     {row.label}
@@ -329,7 +329,7 @@ function ComparePage() {
               );
             })}
 
-            <div className="grid grid-cols-[minmax(6.5rem,0.6fr)_1fr_1fr] border-b border-border">
+            <div className="grid grid-cols-[4.5rem_1fr_1fr] sm:grid-cols-[minmax(6.5rem,0.6fr)_1fr_1fr] border-b border-border">
               <div className="bg-muted/20 px-3 py-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
                 Infusion recipe
               </div>
@@ -337,7 +337,7 @@ function ComparePage() {
               <RecipeCell recipes={recipesFor(b.drug!.slug)} />
             </div>
 
-            <div className="grid grid-cols-[minmax(6.5rem,0.6fr)_1fr_1fr]">
+            <div className="grid grid-cols-[4.5rem_1fr_1fr] sm:grid-cols-[minmax(6.5rem,0.6fr)_1fr_1fr]">
               <div className="bg-muted/20 px-3 py-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
                 Sources
               </div>
