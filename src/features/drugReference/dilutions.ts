@@ -6,7 +6,9 @@ import type { DrugDilution, InfusionUnit, RateResult } from "./types";
  * Names that have no monograph map to null so the recipe still displays.
  */
 const SLUG_BY_INFUSION_NAME: Record<string, string | null> = {
-  "Noradrenaline (norepinephrine)": "noradrenaline",
+  "Noradrenaline (4 mg/50 mL)": "noradrenaline",
+  "Noradrenaline (8 mg/50 mL)": "noradrenaline",
+  "Noradrenaline (16 mg/50 mL)": "noradrenaline",
   "Adrenaline (epinephrine)": "adrenaline",
   Vasopressin: "vasopressin",
   Metaraminol: "metaraminol",
