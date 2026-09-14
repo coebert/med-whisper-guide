@@ -121,6 +121,8 @@ export function amountPerHour(unit: InfusionUnit, dose: number, weightKg: number
     case "mg/kg/h":
       // mg -> micrograms, because concentrations are held in micrograms/mL.
       return dose * weightKg * 1000;
+    case "mg/h":
+      return dose * 1000;
     case "units/min":
       return dose * 60;
     case "units/kg/h":

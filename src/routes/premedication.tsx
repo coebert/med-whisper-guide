@@ -382,7 +382,7 @@ function DrugReferencePremedication() {
             rows={[
               {
                 group: "Ondansetron",
-                dose: "4 mg IV at induction, or 8 mg oral (child 0.1 mg/kg IV, max 4 mg)",
+                dose: "Adult 4 mg IV at induction, or 8–16 mg oral 1 h pre-op (BNF); child 0.1 mg/kg IV, max 4 mg (BNFC)",
                 timing: "Oral 1 h pre-op; IV at induction",
               },
               {

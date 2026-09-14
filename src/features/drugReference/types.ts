@@ -68,7 +68,8 @@ export type InfusionUnit =
   | "units/min"
   | "units/h"
   | "units/kg/h"
-  | "mg/kg/h";
+  | "mg/kg/h"
+  | "mg/h";
 
 /** A practical, ready-to-draw-up infusion recipe. */
 export interface DrugDilution {
