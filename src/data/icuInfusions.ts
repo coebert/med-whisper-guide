@@ -131,7 +131,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.25,
         maxDose: 3,
         perKg: true,
-        notes: "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. Common theatre dilution is 10 mg in 100 mL = 100 micrograms/mL. Usual range 0.25–3 micrograms/kg/min (≈18–210 micrograms/min at 70 kg), matching the 35–180 micrograms/min quoted in the monograph; rates up to 6 micrograms/kg/min are described in refractory vasoplegia. At this concentration doses above ~1 micrograms/kg/min exceed 40 mL/h — use a more concentrated mix (e.g. 10 mg in 50 mL) or change to noradrenaline. May drop cardiac output by reflex bradycardia and afterload rise.",
+        notes: "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. Common theatre dilution is 10 mg in 100 mL = 100 micrograms/mL. Usual range 0.25–3 micrograms/kg/min (≈18–210 micrograms/min at 70 kg) — which brackets the 35–180 micrograms/min quoted in the monograph; rates up to 6 micrograms/kg/min are described in refractory vasoplegia. At this concentration doses above ~1 micrograms/kg/min exceed 40 mL/h — use a more concentrated mix (e.g. 10 mg in 50 mL) or change to noradrenaline. May drop cardiac output by reflex bradycardia and afterload rise.",
         topicIds: ["vasoactive-agents"],
       },
       {
@@ -497,7 +497,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 160,
         perKg: false,
         notes:
-          "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. UK practice is a fixed rate: start 20 mg/h (4 mL/h of neat 5 mg/mL), doubling every 30 min to a usual maximum of 160 mg/h; the BNF regimen of 2 mg/min (120 mg/h) is for acute hypertensive emergencies. Usual total dose by infusion 50–200 mg, cumulative maximum 300 mg in 24 h. Paediatric infusions are dosed 0.25–3 mg/kg/h (BNFC). Avoid in asthma, decompensated heart failure and heart block.",
+          "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. UK practice is a fixed rate: start 20 mg/h (4 mL/h of neat 5 mg/mL), doubling every 30 min to a usual maximum of 160 mg/h; the BNF regimen of 2 mg/min (120 mg/h) is for acute hypertensive emergencies. The BNF quotes a usual total dose of 50–200 mg (up to 300 mg) for the short infusion regimen; continuous infusions in dissection or pre-eclampsia run longer under senior review with continuous BP monitoring. Paediatric infusions are dosed 0.25–3 mg/kg/h (BNFC). Avoid in asthma, decompensated heart failure and heart block.",
         topicIds: ["vasoactive-agents", "obstetric-anaesthesia"],
       },
       {

@@ -117,7 +117,7 @@ function DrugReferenceCalculator() {
 
   const months = ageInMonths(age, ageUnit);
   const band = bandFor(months);
-  const paediatric = months > 0 && months < 216;
+  const paediatric = months >= 0 && months < 216;
   const weightEstimate = estimatedWeight(months);
 
   const result = useMemo(
