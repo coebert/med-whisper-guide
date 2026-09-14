@@ -89,11 +89,34 @@ function Section({
   refs?: DrugSource[];
 }) {
   return (
-    <section id={id} className="rounded-lg border border-border bg-card p-5">
-      <h2 className="font-serif text-xl text-foreground">{title}</h2>
+    <section
+      id={id}
+      className="scroll-mt-28 rounded-lg border border-border bg-card p-4 sm:p-5 md:scroll-mt-40"
+    >
+      <h2 className="font-serif text-lg text-foreground sm:text-xl">{title}</h2>
       <div className="mt-3">{children}</div>
       {refs && <SourceChips sources={refs} />}
     </section>
+  );
+}
+
+/** Horizontal jump links: monographs are long, and scrolling one-handed is slow. */
+function JumpBar({ items }: { items: Array<{ id: string; label: string }> }) {
+  return (
+    <div className="sticky top-[3.25rem] z-20 border-b border-border bg-background/95 backdrop-blur md:top-[6.5rem]">
+      <ul className="mx-auto flex max-w-4xl gap-2 overflow-x-auto px-4 py-2 sm:px-6">
+        {items.map((item) => (
+          <li key={item.id} className="shrink-0">
+            <a
+              href={`#${item.id}`}
+              className="inline-block rounded-full border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground active:bg-muted"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
