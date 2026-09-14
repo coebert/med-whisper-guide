@@ -290,6 +290,10 @@ function ClinicalSourcesPage() {
             <li>Blood levels: your own laboratory&apos;s reported range takes precedence.</li>
           </ul>
           <p>
+            <Link to="/references" className="text-primary underline">
+              Drug-by-drug dose references
+            </Link>{" "}
+            ·{" "}
             <Link to="/about" className="text-primary underline">
               How this reference is built and maintained
             </Link>{" "}
