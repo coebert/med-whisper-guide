@@ -299,7 +299,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 10,
         maxDose: 120,
         perKg: true,
-        notes: "Light analgesia from about 10 micrograms/kg/h; ventilated patients: 0.5–1 micrograms/kg/min equals 30–60 micrograms/kg/h; short bursts to about 4 micrograms/kg/min (240 micrograms/kg/h) are used for intensely stimulating surgery. Useful in renal failure (inactive metabolites); still accumulates with very long infusions but less than fentanyl.",
+        notes: "Light analgesia from about 10 micrograms/kg/h; ventilated patients: 0.5–1 micrograms/kg/min equals 30–60 micrograms/kg/h; the calculator caps at 2 micrograms/kg/min (120 micrograms/kg/h) — brief intra-operative peaks above this for intensely stimulating surgery are an anaesthetist-titrated bolus decision, not a maintenance rate. Useful in renal failure (inactive metabolites); still accumulates with very long infusions but less than fentanyl.",
         topicIds: ["icu-sedation-delirium", "opioids"],
       },
       {
