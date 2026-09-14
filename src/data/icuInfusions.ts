@@ -477,12 +477,12 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationPerMl: 1000,
         concentrationLabel: "1 mg/mL",
         unit: "micrograms/kg/min",
-        startDose: 0.3,
+        startDose: 0.5,
         minDose: 0.2,
         maxDose: 1.5,
         perKg: true,
         notes:
-          "Immediate-onset arterial and venous dilator for hypertensive emergencies and controlled hypotension. The licensed range extends to 8 micrograms/kg/min, but cyanide toxicity limits use: keep below 1.5 micrograms/kg/min for maintenance and limit total duration; watch for unexplained metabolic acidosis and rising lactate. Discard if the solution discolours.",
+          "Immediate-onset arterial and venous dilator for hypertensive emergencies and controlled hypotension. BNF: start 0.5–1.5 micrograms/kg/min, increase in 500 nanograms/kg/min steps every 5 min; usual 0.5–8 micrograms/kg/min, maximum 8 (stop if no response within 10 min at maximum). Rates shown here are capped at 1.5 micrograms/kg/min — the controlled-hypotension ceiling and a sensible maintenance limit because cyanide toxicity rises with dose and duration; watch for unexplained metabolic acidosis and rising lactate. Discard if the solution discolours.",
         topicIds: ["vasoactive-agents", "hypertensive-emergency"],
       },
       {
