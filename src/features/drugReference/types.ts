@@ -87,6 +87,8 @@ export interface DrugDilution {
   perKg: boolean;
   notes?: string | undefined;
   group: string;
+  /** Total prepared volume of the recipe in mL (syringe or bag). */
+  volumeMl: number;
 }
 
 export interface RateResult {
@@ -99,6 +101,8 @@ export interface RateResult {
   mlPerHour: number;
   /** Millilitres delivered in 24 hours at this rate. */
   mlPerDay: number;
-  /** Hours a 50 mL syringe lasts at this rate (null when the rate is zero). */
+  /** Hours the prepared volume (syringe or bag) lasts at this rate (null when the rate is zero). */
   syringeHours: number | null;
+  /** The prepared volume used for syringeHours, in mL. */
+  volumeMl: number;
 }

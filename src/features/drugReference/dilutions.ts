@@ -44,6 +44,29 @@ const SLUG_BY_INFUSION_NAME: Record<string, string | null> = {
   "Tranexamic acid": "tranexamic-acid",
 };
 
+/**
+ * Total prepared volume of a recipe, read from its draw-up text.
+ * Prefers "made up to N mL" / "N mL total", then "in N mL" / "N mL vial";
+ * falls back to a 50 mL syringe.
+ */
+export function volumeFromDrawUp(drawUp: string): number {
+  const first = drawUp.split(/\.\s|—\s*If|\bIf using\b/)[0] ?? drawUp;
+  const patterns = [
+    /made\s+(?:up\s+)?to\s+([\d.]+)\s*mL/i,
+    /([\d.]+)\s*mL\s+total/i,
+    /in\s+(?:a\s+)?([\d.]+)\s*mL/i,
+    /([\d.]+)\s*mL\s+vial/i,
+  ];
+  for (const re of patterns) {
+    const m = first.match(re);
+    if (m && m[1]) {
+      const v = Number(m[1]);
+      if (Number.isFinite(v) && v > 0) return v;
+    }
+  }
+  return 50;
+}
+
 /** All standard infusion recipes, flattened and slug-tagged. */
 export const drugDilutions: DrugDilution[] = icuInfusionGroups.flatMap((group) =>
   group.infusions.map((infusion) => ({
@@ -60,8 +83,16 @@ export const drugDilutions: DrugDilution[] = icuInfusionGroups.flatMap((group) =
     perKg: infusion.perKg,
     notes: infusion.notes,
     group: group.title,
+    volumeMl: volumeFromDrawUp(infusion.drawUp),
   })),
 );
+
+/** Human label for a concentration held in micrograms/mL (or units/mL). */
+export function formatConcentration(perMl: number, unit: InfusionUnit): string {
+  if (isUnitDrug(unit)) return `${round(perMl, 3)} units/mL`;
+  if (perMl >= 1000) return `${round(perMl / 1000, 3)} mg/mL`;
+  return `${round(perMl, 3)} micrograms/mL`;
+}
 
 export function dilutionsForSlug(slug: string): DrugDilution[] {
   return drugDilutions.filter((d) => d.slug === slug);
@@ -115,13 +146,15 @@ export function calculateRate(
       ? `${round(perHour / 1000, 2)} mg/h`
       : `${round(perHour, 1)} micrograms/h`;
 
+  const volumeMl = dilution.volumeMl > 0 ? dilution.volumeMl : 50;
   return {
     doseLabel: `${dose} ${dilution.unit}${dilution.perKg ? "" : " (fixed dose)"}`,
     perHour,
     perHourLabel,
     mlPerHour,
     mlPerDay: mlPerHour * 24,
-    syringeHours: mlPerHour > 0 ? 50 / mlPerHour : null,
+    syringeHours: mlPerHour > 0 ? volumeMl / mlPerHour : null,
+    volumeMl,
   };
 }
 
