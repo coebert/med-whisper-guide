@@ -210,7 +210,7 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
           <span className="font-semibold">{formatRate(result.mlPerHour)}</span> — delivers{" "}
           {result.perHourLabel}
           {dilution.perKg ? ` at ${weightKg} kg` : ""}. {round(result.mlPerDay, 1)} mL in 24 h
-          {result.syringeHours ? `; a 50 mL syringe lasts ${round(result.syringeHours, 1)} h` : ""}.
+          {result.syringeHours ? `; the ${result.volumeMl} mL preparation lasts ${round(result.syringeHours, 1)} h` : ""}.
         </p>
         {unitDrug && (
           <p className="mt-1 text-xs text-muted-foreground">

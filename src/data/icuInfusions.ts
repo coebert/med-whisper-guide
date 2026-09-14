@@ -8,7 +8,7 @@ export interface Infusion {
   concentrationPerMl: number;
   concentrationLabel: string;
   /** Dosing unit for the range */
-  unit: "nanograms/kg/min" | "micrograms/kg/min" | "micrograms/kg/h" | "micrograms/min" | "units/min" | "units/h" | "units/kg/h" | "mg/kg/h";
+  unit: "nanograms/kg/min" | "micrograms/kg/min" | "micrograms/kg/h" | "micrograms/min" | "units/min" | "units/h" | "units/kg/h" | "mg/kg/h" | "mg/h";
   startDose: number;
   minDose: number;
   maxDose: number;
@@ -47,7 +47,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.01,
         maxDose: 1.5,
         perKg: true,
-        notes: "First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; 1.5 micrograms/kg/min is the maximum licensed rate. Predominant α₁ effect with some β₁; watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+        notes: "First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; there is no licensed ceiling — rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Predominant α₁ effect with some β₁; watch for reflex bradycardia, limb and gut ischaemia at high doses.",
         topicIds: ["vasoactive-agents", "sepsis", "circulatory-failure"],
       },
       {
@@ -103,7 +103,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.25,
         maxDose: 3,
         perKg: true,
-        notes: "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. Common theatre dilution is 10 mg in 100 mL = 100 micrograms/mL. Usual range 0.25–3 micrograms/kg/min (≈18–210 micrograms/min at 70 kg), matching the 35–180 micrograms/min quoted in the monograph; rates up to 6 micrograms/kg/min are described in refractory vasoplegia. May drop cardiac output by reflex bradycardia and afterload rise.",
+        notes: "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. Common theatre dilution is 10 mg in 100 mL = 100 micrograms/mL. Usual range 0.25–3 micrograms/kg/min (≈18–210 micrograms/min at 70 kg), matching the 35–180 micrograms/min quoted in the monograph; rates up to 6 micrograms/kg/min are described in refractory vasoplegia. At this concentration doses above ~1 micrograms/kg/min exceed 40 mL/h — use a more concentrated mix (e.g. 10 mg in 50 mL) or change to noradrenaline. May drop cardiac output by reflex bradycardia and afterload rise.",
         topicIds: ["vasoactive-agents"],
       },
       {
@@ -207,7 +207,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
       {
         drug: "Dexmedetomidine",
         diluent: "0.9% sodium chloride or 5% glucose",
-        drawUp: "400 micrograms (4 mL of 100 micrograms/mL) in 48 mL → 50 mL total",
+        drawUp: "400 micrograms (4 mL of 100 micrograms/mL) made up to 50 mL total",
         concentrationPerMl: 8,
         concentrationLabel: "8 micrograms/mL",
         unit: "micrograms/kg/h",
@@ -268,7 +268,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationLabel: "100 micrograms/mL",
         unit: "micrograms/kg/min",
         startDose: 0.05,
-        minDose: 0.025,
+        minDose: 0.006,
         maxDose: 2,
         perKg: true,
         notes: "ICU sedation 0.006–0.75 micrograms/kg/min; general anaesthesia 0.025–2 micrograms/kg/min. Esterase-metabolised — no accumulation and predictable offset (context-sensitive half-time ~4 min) whatever the infusion length. Plan post-stop analgesia before discontinuing.",
@@ -449,13 +449,13 @@ export const icuInfusionGroups: InfusionGroup[] = [
         drawUp: "250 mg (50 mL of 5 mg/mL) neat in a 50 mL syringe",
         concentrationPerMl: 5000,
         concentrationLabel: "5 mg/mL (neat)",
-        unit: "mg/kg/h",
-        startDose: 0.5,
-        minDose: 0.25,
-        maxDose: 2,
-        perKg: true,
+        unit: "mg/h",
+        startDose: 20,
+        minDose: 20,
+        maxDose: 160,
+        perKg: false,
         notes:
-          "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. 0.5 mg/kg/h is about 35 mg/h at 70 kg and 2 mg/kg/h about 140 mg/h — many units instead prescribe a fixed 20–160 mg/h, and the monograph quotes 50–200 mg/h with a 300 mg cumulative limit in 24 h. Avoid in asthma, decompensated heart failure and heart block.",
+          "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. UK practice is a fixed rate: start 20 mg/h (4 mL/h of neat 5 mg/mL), doubling every 30 min to a usual maximum of 160 mg/h; the BNF regimen of 2 mg/min (120 mg/h) is for acute hypertensive emergencies. Usual total dose by infusion 50–200 mg, cumulative maximum 300 mg in 24 h. Paediatric infusions are dosed 0.25–3 mg/kg/h (BNFC). Avoid in asthma, decompensated heart failure and heart block.",
         topicIds: ["vasoactive-agents", "obstetric-anaesthesia"],
       },
       {

@@ -30,6 +30,7 @@ import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 import {
   calculateRate,
   drugDilutions,
+  formatConcentration,
   formatRate,
   round,
 } from "@/features/drugReference/dilutions";
@@ -272,7 +273,9 @@ function DrugReferenceCalculator() {
             </dd>
           </div>
           <div className="rounded-lg border border-border bg-card p-4">
-            <dt className="text-xs text-muted-foreground">A 50 mL syringe lasts</dt>
+            <dt className="text-xs text-muted-foreground">
+              The {result.volumeMl} mL {result.volumeMl > 60 ? "bag" : "syringe"} lasts
+            </dt>
             <dd className="mt-1 text-lg font-semibold text-foreground">
               {result.syringeHours ? `${round(result.syringeHours, 1)} h` : "—"}
             </dd>
@@ -282,14 +285,11 @@ function DrugReferenceCalculator() {
         {needsWeakerMix && (
           <p className="mt-4 rounded-md border border-border bg-muted/30 p-3 text-sm leading-relaxed text-foreground">
             At {formatRate(result.mlPerHour)} this adult-strength mix runs below the rate most pumps
-            deliver reliably. For a patient this size, dilute the same recipe ten-fold (one tenth of
-            the drug in the same total volume, giving{" "}
-            {dilution.concentrationLabel.replace(/^\S+/, (n) => {
-              const v = Number(n);
-              return Number.isFinite(v) ? String(round(v / 10, 4)) : n;
-            })}
-            ) and run at {formatRate(dilutedRate)}. Check the concentration against your local
-            paediatric infusion chart.
+            deliver reliably. One option is a ten-fold weaker mix (one tenth of the drug in the same
+            total volume, giving {formatConcentration(dilution.concentrationPerMl / 10, dilution.unit)}
+            ) run at {formatRate(dilutedRate)} — but this is a generic suggestion only. Use your
+            unit&apos;s paediatric infusion chart (weight-banded or &quot;rule of six&quot; recipes),
+            which also accounts for fluid-volume limits in small infants and drug-specific practice.
           </p>
         )}
 
