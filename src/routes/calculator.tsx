@@ -99,9 +99,12 @@ function DrugReferenceCalculator() {
   const prefillDrug = params["drug"];
   const prefillWeight = Number(params["weight"]);
 
+  const wanted = prefillDrug?.toLowerCase();
   const initialIndex = Math.max(
     0,
-    drugDilutions.findIndex((d) => d.drug === prefillDrug),
+    drugDilutions.findIndex(
+      (d) => d.drug.toLowerCase() === wanted || (d.slug !== null && d.slug === wanted),
+    ),
   );
   const [index, setIndex] = useState(initialIndex);
   const [weight, setWeight] = useState(
