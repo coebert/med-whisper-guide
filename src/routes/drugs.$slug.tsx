@@ -203,7 +203,8 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
           step="any"
           value={Number.isFinite(dose) ? dose : ""}
           onChange={(e) => setDose(Number(e.target.value))}
-          className="mt-1 w-32 rounded-md border border-input bg-background px-3 py-1.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          inputMode="decimal"
+          className="mt-1 w-32 rounded-md border border-input bg-background px-3 py-2 text-base text-foreground sm:py-1.5 sm:text-sm focus:outline-none focus:ring-2 focus:ring-ring"
         />
         <p className="mt-2 text-sm text-foreground">
           <span className="font-semibold">{formatRate(result.mlPerHour)}</span> — delivers{" "}
@@ -350,7 +351,8 @@ function DrugReferenceEntry() {
                 max={250}
                 value={Number.isFinite(weightKg) ? weightKg : ""}
                 onChange={(e) => setWeightKg(Number(e.target.value))}
-                className="mt-1 block w-28 rounded-md border border-input bg-background px-3 py-1.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                inputMode="decimal"
+                className="mt-1 block w-28 rounded-md border border-input bg-background px-3 py-2 text-base text-foreground sm:py-1.5 sm:text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div className="mt-3 space-y-4">
@@ -361,13 +363,14 @@ function DrugReferenceEntry() {
           </Section>
         )}
 
-        <Section title="Presentation" refs={sectionSources(drug.sources, "presentation")}>
+        <Section title="Presentation" id="presentation" refs={sectionSources(drug.sources, "presentation")}>
           <AppearancePanel presentation={drug.presentation} />
           <Prose text={drug.presentation} />
         </Section>
 
         <Section
           title="Preparation and administration"
+          id="preparation"
           refs={sectionSources(drug.sources, "preparation")}
         >
           <Prose text={drug.preparation} />
@@ -461,30 +464,31 @@ function DrugReferenceEntry() {
           </Section>
         )}
 
-        <Section title="Mechanism of action" refs={sectionSources(drug.sources, "mechanism")}>
+        <Section title="Mechanism of action" id="mechanism" refs={sectionSources(drug.sources, "mechanism")}>
           <Prose text={drug.mechanism_of_action} />
         </Section>
 
-        <Section title="Pharmacokinetics" refs={sectionSources(drug.sources, "pharmacokinetics")}>
+        <Section title="Pharmacokinetics" id="pharmacokinetics" refs={sectionSources(drug.sources, "pharmacokinetics")}>
           <Prose text={drug.pharmacokinetics} />
         </Section>
 
-        <Section title="Monitoring" refs={sectionSources(drug.sources, "monitoring")}>
+        <Section title="Monitoring" id="monitoring" refs={sectionSources(drug.sources, "monitoring")}>
           <Prose text={drug.monitoring} />
         </Section>
 
-        <Section title="Adverse effects" refs={sectionSources(drug.sources, "side_effects")}>
+        <Section title="Adverse effects" id="side-effects" refs={sectionSources(drug.sources, "side_effects")}>
           <Prose text={drug.side_effects} />
         </Section>
 
         <Section
           title="Contraindications and cautions"
+          id="contraindications"
           refs={sectionSources(drug.sources, "contraindications")}
         >
           <Prose text={drug.contraindications} />
         </Section>
 
-        <Section title="Interactions" refs={sectionSources(drug.sources, "interactions")}>
+        <Section title="Interactions" id="interactions" refs={sectionSources(drug.sources, "interactions")}>
           <Prose text={drug.interactions} />
         </Section>
 
