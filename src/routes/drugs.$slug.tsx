@@ -89,11 +89,34 @@ function Section({
   refs?: DrugSource[];
 }) {
   return (
-    <section id={id} className="rounded-lg border border-border bg-card p-5">
-      <h2 className="font-serif text-xl text-foreground">{title}</h2>
+    <section
+      id={id}
+      className="scroll-mt-28 rounded-lg border border-border bg-card p-4 sm:p-5 md:scroll-mt-40"
+    >
+      <h2 className="font-serif text-lg text-foreground sm:text-xl">{title}</h2>
       <div className="mt-3">{children}</div>
       {refs && <SourceChips sources={refs} />}
     </section>
+  );
+}
+
+/** Horizontal jump links: monographs are long, and scrolling one-handed is slow. */
+function JumpBar({ items }: { items: Array<{ id: string; label: string }> }) {
+  return (
+    <div className="sticky top-[2.8rem] z-20 border-b border-border bg-background/95 backdrop-blur md:top-[5.2rem]">
+      <ul className="mx-auto flex max-w-4xl gap-2 overflow-x-auto px-4 py-2 sm:px-6">
+        {items.map((item) => (
+          <li key={item.id} className="shrink-0">
+            <a
+              href={`#${item.id}`}
+              className="inline-block rounded-full border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground active:bg-muted"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -130,7 +153,7 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
       </dl>
 
       <div className="mt-3 overflow-x-auto">
-        <table className="w-full min-w-[420px] text-sm">
+        <table className="w-full text-sm sm:min-w-[420px]">
           <caption className="sr-only">
             Pump rates for {dilution.drug} at {weightKg} kg
           </caption>
@@ -142,7 +165,7 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
               <th scope="col" className="py-1.5 pr-3">
                 Dose
               </th>
-              <th scope="col" className="py-1.5 pr-3">
+              <th scope="col" className="hidden py-1.5 pr-3 sm:table-cell">
                 Per hour
               </th>
               <th scope="col" className="py-1.5">
@@ -161,7 +184,7 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
                 <td className="py-1.5 pr-3">
                   {row.dose} {dilution.unit}
                 </td>
-                <td className="py-1.5 pr-3">{row.r.perHourLabel}</td>
+                <td className="hidden py-1.5 pr-3 sm:table-cell">{row.r.perHourLabel}</td>
                 <td className="py-1.5 font-medium">{formatRate(row.r.mlPerHour)}</td>
               </tr>
             ))}
@@ -180,7 +203,8 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
           step="any"
           value={Number.isFinite(dose) ? dose : ""}
           onChange={(e) => setDose(Number(e.target.value))}
-          className="mt-1 w-32 rounded-md border border-input bg-background px-3 py-1.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          inputMode="decimal"
+          className="mt-1 w-32 rounded-md border border-input bg-background px-3 py-2 text-base text-foreground sm:py-1.5 sm:text-sm focus:outline-none focus:ring-2 focus:ring-ring"
         />
         <p className="mt-2 text-sm text-foreground">
           <span className="font-semibold">{formatRate(result.mlPerHour)}</span> — delivers{" "}
@@ -235,17 +259,32 @@ function DrugReferenceEntry() {
 
   const tdm = drug.tdm;
 
+  const jumpItems = [
+    { id: "dosing", label: "Dosing" },
+    ...(dilutions.length > 0 ? [{ id: "dilutions", label: "Dilutions" }] : []),
+    { id: "presentation", label: "Presentation" },
+    { id: "preparation", label: "Preparation" },
+    ...(tdm ? [{ id: "monitoring-levels", label: "Blood levels" }] : []),
+    { id: "mechanism", label: "Mechanism" },
+    { id: "pharmacokinetics", label: "PK" },
+    { id: "monitoring", label: "Monitoring" },
+    { id: "side-effects", label: "Adverse effects" },
+    { id: "contraindications", label: "Cautions" },
+    { id: "interactions", label: "Interactions" },
+    { id: "sources", label: "Sources" },
+  ];
+
   return (
     <ReferenceAppLayout>
       <header className="border-b border-border bg-card">
-        <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+        <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-8">
           <Link
             to="/drugs"
             className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft aria-hidden="true" className="h-4 w-4" /> Drug reference library
           </Link>
-          <h1 className="mt-3 font-serif text-3xl text-foreground">{drug.name}</h1>
+          <h1 className="mt-3 font-serif text-2xl text-foreground sm:text-3xl">{drug.name}</h1>
           <p className="mt-1 text-sm uppercase tracking-wide text-muted-foreground">
             {drug.drug_class}
           </p>
@@ -274,8 +313,10 @@ function DrugReferenceEntry() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-4xl space-y-5 px-4 py-8 sm:px-6">
-        <Section title="Dosing" refs={sectionSources(drug.sources, "dosing")}>
+      <JumpBar items={jumpItems} />
+
+      <main className="mx-auto max-w-4xl space-y-4 px-4 py-6 sm:space-y-5 sm:px-6 sm:py-8">
+        <Section title="Dosing" id="dosing" refs={sectionSources(drug.sources, "dosing")}>
           <dl className="grid gap-3 sm:grid-cols-2">
             <div>
               <dt className="text-xs uppercase tracking-wide text-muted-foreground">Adult bolus</dt>
@@ -310,7 +351,8 @@ function DrugReferenceEntry() {
                 max={250}
                 value={Number.isFinite(weightKg) ? weightKg : ""}
                 onChange={(e) => setWeightKg(Number(e.target.value))}
-                className="mt-1 block w-28 rounded-md border border-input bg-background px-3 py-1.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                inputMode="decimal"
+                className="mt-1 block w-28 rounded-md border border-input bg-background px-3 py-2 text-base text-foreground sm:py-1.5 sm:text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <div className="mt-3 space-y-4">
@@ -321,13 +363,14 @@ function DrugReferenceEntry() {
           </Section>
         )}
 
-        <Section title="Presentation" refs={sectionSources(drug.sources, "presentation")}>
+        <Section title="Presentation" id="presentation" refs={sectionSources(drug.sources, "presentation")}>
           <AppearancePanel presentation={drug.presentation} />
           <Prose text={drug.presentation} />
         </Section>
 
         <Section
           title="Preparation and administration"
+          id="preparation"
           refs={sectionSources(drug.sources, "preparation")}
         >
           <Prose text={drug.preparation} />
@@ -421,30 +464,31 @@ function DrugReferenceEntry() {
           </Section>
         )}
 
-        <Section title="Mechanism of action" refs={sectionSources(drug.sources, "mechanism")}>
+        <Section title="Mechanism of action" id="mechanism" refs={sectionSources(drug.sources, "mechanism")}>
           <Prose text={drug.mechanism_of_action} />
         </Section>
 
-        <Section title="Pharmacokinetics" refs={sectionSources(drug.sources, "pharmacokinetics")}>
+        <Section title="Pharmacokinetics" id="pharmacokinetics" refs={sectionSources(drug.sources, "pharmacokinetics")}>
           <Prose text={drug.pharmacokinetics} />
         </Section>
 
-        <Section title="Monitoring" refs={sectionSources(drug.sources, "monitoring")}>
+        <Section title="Monitoring" id="monitoring" refs={sectionSources(drug.sources, "monitoring")}>
           <Prose text={drug.monitoring} />
         </Section>
 
-        <Section title="Adverse effects" refs={sectionSources(drug.sources, "side_effects")}>
+        <Section title="Adverse effects" id="side-effects" refs={sectionSources(drug.sources, "side_effects")}>
           <Prose text={drug.side_effects} />
         </Section>
 
         <Section
           title="Contraindications and cautions"
+          id="contraindications"
           refs={sectionSources(drug.sources, "contraindications")}
         >
           <Prose text={drug.contraindications} />
         </Section>
 
-        <Section title="Interactions" refs={sectionSources(drug.sources, "interactions")}>
+        <Section title="Interactions" id="interactions" refs={sectionSources(drug.sources, "interactions")}>
           <Prose text={drug.interactions} />
         </Section>
 

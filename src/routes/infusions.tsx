@@ -64,7 +64,8 @@ function DrugReferenceInfusions() {
           own concentrations and smart-pump library — concentrations differ between hospitals.
         </p>
 
-        <div className="mt-6 grid gap-3 sm:grid-cols-[1fr_auto]">
+        {/* Search and weight stay in view while scrolling so rates can be re-read one-handed. */}
+        <div className="sticky top-[2.8rem] z-20 -mx-4 mt-6 grid gap-3 border-b border-border bg-background/95 px-4 py-3 backdrop-blur sm:static sm:mx-0 sm:grid-cols-[1fr_auto] sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:backdrop-blur-none md:top-[5.2rem]">
           <label className="relative block">
             <span className="sr-only">Search infusions</span>
             <Search
@@ -76,18 +77,19 @@ function DrugReferenceInfusions() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search drug, group or diluent…"
-              className="w-full rounded-md border border-input bg-background py-2 pl-9 pr-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              className="w-full rounded-md border border-input bg-background py-2.5 pl-9 pr-3 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2 sm:text-sm"
             />
           </label>
           <label className="flex items-center gap-2 text-sm text-muted-foreground">
             Weight
             <input
               type="number"
+              inputMode="decimal"
               min={1}
               max={250}
               value={weight}
               onChange={(e) => setWeight(Number(e.target.value))}
-              className="w-20 rounded-md border border-input bg-background px-2 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+              className="w-20 rounded-md border border-input bg-background px-2 py-2.5 text-base text-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2 sm:text-sm"
             />
             kg
           </label>
