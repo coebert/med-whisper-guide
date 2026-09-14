@@ -153,7 +153,7 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
       </dl>
 
       <div className="mt-3 overflow-x-auto">
-        <table className="w-full min-w-[420px] text-sm">
+        <table className="w-full text-sm sm:min-w-[420px]">
           <caption className="sr-only">
             Pump rates for {dilution.drug} at {weightKg} kg
           </caption>
@@ -165,7 +165,7 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
               <th scope="col" className="py-1.5 pr-3">
                 Dose
               </th>
-              <th scope="col" className="py-1.5 pr-3">
+              <th scope="col" className="hidden py-1.5 pr-3 sm:table-cell">
                 Per hour
               </th>
               <th scope="col" className="py-1.5">
@@ -184,7 +184,7 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
                 <td className="py-1.5 pr-3">
                   {row.dose} {dilution.unit}
                 </td>
-                <td className="py-1.5 pr-3">{row.r.perHourLabel}</td>
+                <td className="hidden py-1.5 pr-3 sm:table-cell">{row.r.perHourLabel}</td>
                 <td className="py-1.5 font-medium">{formatRate(row.r.mlPerHour)}</td>
               </tr>
             ))}
