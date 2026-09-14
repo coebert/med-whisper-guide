@@ -339,11 +339,6 @@ function DrugReferencePremedication() {
                 timing: "Evening before and/or 2–4 h pre-op",
               },
               {
-                group: "Ranitidine — oral",
-                dose: "150 mg (where still stocked locally)",
-                timing: "Evening before and 2 h pre-op",
-              },
-              {
                 group: "Sodium citrate 0.3 M — oral",
                 dose: "30 mL",
                 timing: "Immediately before induction (obstetric RSI)",
