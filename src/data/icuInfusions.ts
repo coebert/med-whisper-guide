@@ -299,7 +299,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 10,
         maxDose: 120,
         perKg: true,
-        notes: "Ventilated patients: 0.5–1 micrograms/kg/min equals 30–60 micrograms/kg/h; short bursts to about 4 micrograms/kg/min (240 micrograms/kg/h) are used for intensely stimulating surgery. Useful in renal failure (inactive metabolites); still accumulates with very long infusions but less than fentanyl.",
+        notes: "Light analgesia from about 10 micrograms/kg/h; ventilated patients: 0.5–1 micrograms/kg/min equals 30–60 micrograms/kg/h; short bursts to about 4 micrograms/kg/min (240 micrograms/kg/h) are used for intensely stimulating surgery. Useful in renal failure (inactive metabolites); still accumulates with very long infusions but less than fentanyl.",
         topicIds: ["icu-sedation-delirium", "opioids"],
       },
       {
@@ -345,10 +345,10 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationLabel: "1 unit/mL",
         unit: "units/h",
         startDose: 2,
-        minDose: 0.5,
+        minDose: 0.1,
         maxDose: 10,
         perKg: false,
-        notes: "Typical range 0.05–10 units/h, titrated to a written blood-glucose protocol (commonly target 6–10 mmol/L on ICU; tighter ranges intra-operatively). Flush the line first — insulin adsorbs to plastic.",
+        notes: "Typical range 0.1–10 units/h (as low as 0.05 units/h in some protocols), titrated to a written blood-glucose protocol (commonly target 6–10 mmol/L on ICU; tighter ranges intra-operatively). Flush the line first — insulin adsorbs to plastic.",
         topicIds: ["diabetic-emergencies"],
       },
       {
@@ -550,7 +550,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 100,
         perKg: true,
         notes:
-          "Roughly 1–7 mg/h in an average adult; the monograph quotes 0.8–10 mg/h post-operatively. The active metabolite morphine-6-glucuronide accumulates in renal impairment — reduce the rate and consider fentanyl or alfentanil instead. Nurse-controlled or patient-controlled analgesia is preferred where the patient can use it.",
+          "Roughly 1–7 mg/h in an average adult (the monograph quotes 0.8–10 mg/h post-operatively; higher rates need senior review). The active metabolite morphine-6-glucuronide accumulates in renal impairment — reduce the rate and consider fentanyl or alfentanil instead. Nurse-controlled or patient-controlled analgesia is preferred where the patient can use it.",
         topicIds: ["opioids", "acute-pain"],
       },
       {
