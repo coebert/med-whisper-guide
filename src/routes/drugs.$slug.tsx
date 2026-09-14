@@ -103,7 +103,7 @@ function Section({
 /** Horizontal jump links: monographs are long, and scrolling one-handed is slow. */
 function JumpBar({ items }: { items: Array<{ id: string; label: string }> }) {
   return (
-    <div className="sticky top-[3.25rem] z-20 border-b border-border bg-background/95 backdrop-blur md:top-[6.5rem]">
+    <div className="sticky top-[2.8rem] z-20 border-b border-border bg-background/95 backdrop-blur md:top-[5.2rem]">
       <ul className="mx-auto flex max-w-4xl gap-2 overflow-x-auto px-4 py-2 sm:px-6">
         {items.map((item) => (
           <li key={item.id} className="shrink-0">

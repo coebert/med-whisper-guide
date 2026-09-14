@@ -65,7 +65,7 @@ function DrugReferenceInfusions() {
         </p>
 
         {/* Search and weight stay in view while scrolling so rates can be re-read one-handed. */}
-        <div className="sticky top-[3.25rem] z-20 -mx-4 mt-6 grid gap-3 border-b border-border bg-background/95 px-4 py-3 backdrop-blur sm:static sm:mx-0 sm:grid-cols-[1fr_auto] sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:backdrop-blur-none md:top-[6.5rem]">
+        <div className="sticky top-[2.8rem] z-20 -mx-4 mt-6 grid gap-3 border-b border-border bg-background/95 px-4 py-3 backdrop-blur sm:static sm:mx-0 sm:grid-cols-[1fr_auto] sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:backdrop-blur-none md:top-[5.2rem]">
           <label className="relative block">
             <span className="sr-only">Search infusions</span>
             <Search
