@@ -71,7 +71,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationPerMl: 320,
         concentrationLabel: "320 micrograms/mL",
         unit: "micrograms/kg/min",
-        startDose: 0.2,
+        startDose: 0.05,
         minDose: 0.01,
         maxDose: 1.5,
         perKg: true,
@@ -580,7 +580,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 20,
         perKg: true,
         notes:
-          "About 1 g/h at 70 kg; eclampsia prophylaxis is prescribed as a fixed 1 g/h after a 4 g loading dose over 20 min. Keep the 24 h total within the BNF maximum of 120 mmol (about 30 g) — at 70 kg, 20 mg/kg/h is already 1.4 g/h. Monitor patellar reflexes, respiratory rate and urine output; halve the rate in renal impairment (max 40 mmol/24 h if CrCl <30 mL/min). Calcium gluconate is the antidote for toxicity.",
+          "About 1 g/h at 70 kg; eclampsia prophylaxis is prescribed as a fixed 1 g/h after a 4 g loading dose over 5–15 min. Keep the 24 h total within the BNF maximum of 120 mmol (about 30 g) — at 70 kg, 20 mg/kg/h is already 1.4 g/h. Monitor patellar reflexes, respiratory rate and urine output; halve the rate in renal impairment (max 40 mmol/24 h if CrCl <30 mL/min). Calcium gluconate is the antidote for toxicity.",
         topicIds: ["obstetric-anaesthesia", "electrolytes"],
       },
       {
