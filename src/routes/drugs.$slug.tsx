@@ -312,8 +312,10 @@ function DrugReferenceEntry() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-4xl space-y-5 px-4 py-8 sm:px-6">
-        <Section title="Dosing" refs={sectionSources(drug.sources, "dosing")}>
+      <JumpBar items={jumpItems} />
+
+      <main className="mx-auto max-w-4xl space-y-4 px-4 py-6 sm:space-y-5 sm:px-6 sm:py-8">
+        <Section title="Dosing" id="dosing" refs={sectionSources(drug.sources, "dosing")}>
           <dl className="grid gap-3 sm:grid-cols-2">
             <div>
               <dt className="text-xs uppercase tracking-wide text-muted-foreground">Adult bolus</dt>
