@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CalculatorRouteImport } from './routes/calculator'
+import { Route as CompareRouteImport } from './routes/compare'
 import { Route as InfusionsRouteImport } from './routes/infusions'
 import { Route as MonitoringRouteImport } from './routes/monitoring'
 import { Route as OfflineRouteImport } from './routes/offline'
@@ -37,6 +38,11 @@ const AboutRoute = AboutRouteImport.update({
 const CalculatorRoute = CalculatorRouteImport.update({
   id: '/calculator',
   path: '/calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompareRoute = CompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InfusionsRoute = InfusionsRouteImport.update({
@@ -99,6 +105,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/calculator': typeof CalculatorRoute
+  '/compare': typeof CompareRoute
   '/infusions': typeof InfusionsRoute
   '/monitoring': typeof MonitoringRoute
   '/offline': typeof OfflineRoute
@@ -115,6 +122,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/calculator': typeof CalculatorRoute
+  '/compare': typeof CompareRoute
   '/infusions': typeof InfusionsRoute
   '/monitoring': typeof MonitoringRoute
   '/offline': typeof OfflineRoute
@@ -132,6 +140,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/calculator': typeof CalculatorRoute
+  '/compare': typeof CompareRoute
   '/infusions': typeof InfusionsRoute
   '/monitoring': typeof MonitoringRoute
   '/offline': typeof OfflineRoute
@@ -150,6 +159,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/calculator'
+    | '/compare'
     | '/infusions'
     | '/monitoring'
     | '/offline'
@@ -166,6 +176,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/calculator'
+    | '/compare'
     | '/infusions'
     | '/monitoring'
     | '/offline'
@@ -182,6 +193,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/calculator'
+    | '/compare'
     | '/infusions'
     | '/monitoring'
     | '/offline'
@@ -199,6 +211,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   CalculatorRoute: typeof CalculatorRoute
+  CompareRoute: typeof CompareRoute
   InfusionsRoute: typeof InfusionsRoute
   MonitoringRoute: typeof MonitoringRoute
   OfflineRoute: typeof OfflineRoute
@@ -233,6 +246,13 @@ declare module '@tanstack/react-router' {
       path: '/calculator'
       fullPath: '/calculator'
       preLoaderRoute: typeof CalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare': {
+      id: '/compare'
+      path: '/compare'
+      fullPath: '/compare'
+      preLoaderRoute: typeof CompareRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/infusions': {
@@ -319,6 +339,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   CalculatorRoute: CalculatorRoute,
+  CompareRoute: CompareRoute,
   InfusionsRoute: InfusionsRoute,
   MonitoringRoute: MonitoringRoute,
   OfflineRoute: OfflineRoute,
