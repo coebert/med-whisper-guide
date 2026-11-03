@@ -61,6 +61,7 @@ export const drugDilutions: DrugDilution[] = icuInfusionGroups.flatMap((group) =
     maxDose: infusion.maxDose,
     perKg: infusion.perKg,
     notes: infusion.notes,
+    sources: infusion.sources,
     group: group.title,
   })),
 );

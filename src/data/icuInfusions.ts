@@ -1,3 +1,6 @@
+import { CITE } from "@/features/drugReference/citations";
+import type { DrugSource } from "@/features/drugReference/types";
+
 export interface Infusion {
   drug: string;
   /** Safe diluent(s) */
@@ -15,6 +18,8 @@ export interface Infusion {
   /** true if the dose is weight-based (per kg) */
   perKg: boolean;
   notes?: string;
+  /** Direct citations for facts revised in the source-level correction pass. */
+  sources?: DrugSource[];
   topicIds?: string[];
 }
 
@@ -38,7 +43,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
     infusions: [
       {
         drug: "Noradrenaline (4 mg/50 mL)",
-        diluent: "5% glucose or 0.9% sodium chloride (5% glucose preferred — oxidation in saline over time)",
+        diluent: "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base.",
+        sources: [CITE.noradSpc],
         drawUp: "4 mg (one 4 mg/4 mL ampoule) made up to 50 mL",
         concentrationPerMl: 80,
         concentrationLabel: "80 micrograms/mL",
@@ -52,7 +58,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
       },
       {
         drug: "Noradrenaline (8 mg/50 mL)",
-        diluent: "5% glucose or 0.9% sodium chloride (5% glucose preferred — oxidation in saline over time)",
+        diluent: "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base.",
+        sources: [CITE.noradSpc],
         drawUp: "8 mg (two 4 mg/4 mL ampoules) made up to 50 mL",
         concentrationPerMl: 160,
         concentrationLabel: "160 micrograms/mL",
@@ -66,7 +73,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
       },
       {
         drug: "Noradrenaline (16 mg/50 mL)",
-        diluent: "5% glucose or 0.9% sodium chloride (5% glucose preferred — oxidation in saline over time)",
+        diluent: "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base.",
+        sources: [CITE.noradSpc],
         drawUp: "16 mg (four 4 mg/4 mL ampoules) made up to 50 mL",
         concentrationPerMl: 320,
         concentrationLabel: "320 micrograms/mL",
@@ -103,7 +111,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.01,
         maxDose: 0.04,
         perKg: false,
-        notes: "Fixed (non-weight-based) dose; usual vasodilatory-shock range 0.01–0.04 units/min (SPC permits up to 0.06 units/min) — higher rates cause coronary, splanchnic and digital ischaemia. Second agent in vasodilatory shock per Surviving Sepsis guidance. Variceal haemorrhage uses far higher rates (0.2–0.4 units/min).",
+        notes: "Fixed (non-weight-based) dose. Shock dosing is product- and protocol-specific: use the local critical-care vasopressin regimen; a common starting dose is 0.03 units/min. The UK argipressin 20 IU/mL products cited here are licensed for diabetes insipidus and oesophageal variceal bleeding, so shock use is off-label for those products. Higher rates cause coronary, splanchnic and digital ischaemia.",
+        sources: [CITE.highlandVasopressin, CITE.argipressinSpc1, CITE.argipressinSpc2],
         topicIds: ["vasoactive-agents", "sepsis"],
       },
       {
@@ -215,7 +224,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.3,
         maxDose: 4,
         perKg: true,
-        notes: "Keep under ~4 mg/kg/h and review after 48 h: propofol-related infusion syndrome (lactic acidosis, rhabdomyolysis, hypertriglyceridaemia). Lipid load ~1.1 kcal/mL.",
+        notes: "For adult ICU sedation use the lowest effective rate within the product's recommended range, generally 0.3–4 mg/kg/h. Review continuously and monitor for propofol infusion syndrome (lactic acidosis, rhabdomyolysis, hypertriglyceridaemia); risk increases with higher doses and prolonged use, especially above 4 mg/kg/h for more than 48 hours. Suspected toxicity requires prompt action, not waiting until 48 hours. Lipid load ~1.1 kcal/mL.",
+        sources: [CITE.propofolSpc],
         topicIds: ["icu-sedation-delirium", "intravenous-anaesthetics"],
       },
       {
@@ -243,7 +253,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.2,
         maxDose: 1.4,
         perKg: true,
-        notes: "α₂ agonist producing 'rousable' sedation without respiratory depression; bradycardia and hypotension are dose-limiting. Do not give a loading bolus on ICU.",
+        notes: "Alpha-2 agonist used for rousable sedation. Bradycardia and hypotension are important adverse effects; respiratory depression, airway obstruction and apnoea can also occur. Continuous cardiac monitoring and appropriate respiratory monitoring are required. A loading dose is not recommended for ICU sedation.",
+        sources: [CITE.dexmedSpc],
         topicIds: ["icu-sedation-delirium"],
       },
       {
@@ -362,21 +373,23 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 12,
         maxDose: 25,
         perKg: true,
-        notes: "Weight-based nomogram starting at 18 units/kg/h with aPTT (or anti-Xa) monitoring 6-hourly after changes; total should not exceed 45,000 units/24 h. Stop and check platelets if HIT is suspected.",
+        notes: "Adjust the infusion using the indication-specific local nomogram and aPTT or anti-Xa results. There is no universal 45,000-unit daily ceiling; unexpectedly high requirements need senior review for heparin resistance and monitoring problems. Assess urgently for HIT if suspected.",
+        sources: [CITE.heparinSpc],
         topicIds: ["anticoagulants", "transfusion-coagulation"],
       },
       {
         drug: "Epoprostenol (prostacyclin)",
-        diluent: "Supplied glycine buffer only (never 0.9% saline or glucose)",
-        drawUp: "500 micrograms vial reconstituted and made to 50 mL with buffer (10 micrograms/mL)",
+        diluent: "Brand-specific — follow the exact product's SmPC; do not interchange diluents",
+        drawUp: "No generic recipe given. Preparation is brand-specific: follow the exact epoprostenol product's SmPC and specialist protocol",
         concentrationPerMl: 10,
-        concentrationLabel: "10 micrograms/mL",
+        concentrationLabel: "Product-specific (see SmPC)",
         unit: "nanograms/kg/min",
         startDose: 5,
         minDose: 2,
         maxDose: 20,
         perKg: true,
-        notes: "Dosed in NANOGRAMS/kg/min (1 microgram = 1000 nanograms) — a common source of 1000-fold errors. Inhaled/IV pulmonary vasodilator also used as extracorporeal-circuit anticoagulant. Very short half-life — interruptions cause rebound pulmonary hypertension; hypotension limits IV use.",
+        sources: [CITE.veletriSpc],
+        notes: "Preparation is brand-specific. Veletri is reconstituted and further diluted with sterile water for injections or 0.9% sodium chloride; a glycine-buffer recipe must identify the matching product explicitly. Dosed in NANOGRAMS/kg/min (1 microgram = 1000 nanograms) — a common source of 1000-fold errors. Inhaled/IV pulmonary vasodilator also used as extracorporeal-circuit anticoagulant. Very short half-life — interruptions cause rebound pulmonary hypertension; hypotension limits IV use.",
         topicIds: ["pulmonary-hypertension", "rrt-icu"],
       },
     ],
@@ -399,7 +412,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 0.6,
         perKg: true,
         notes:
-          "Aminosteroid NMBA; largely hepatic elimination so accumulates in liver failure and, to a lesser extent, renal failure. Fully reversible with sugammadex even at deep block. Titrate to 1–2 twitches on train-of-four.",
+          "Aminosteroid NMBA; largely hepatic elimination so accumulates in liver failure and, to a lesser extent, renal failure. Sugammadex can reverse rocuronium block; the dose depends on block depth — follow the SmPC and confirm recovery with neuromuscular monitoring. Titrate to 1–2 twitches on train-of-four.",
         topicIds: ["neuromuscular-blockade", "icu-sedation-delirium"],
       },
       {
@@ -497,7 +510,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 160,
         perKg: false,
         notes:
-          "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. UK practice is a fixed rate: start 20 mg/h (4 mL/h of neat 5 mg/mL), doubling every 30 min to a usual maximum of 160 mg/h; the BNF regimen of 2 mg/min (120 mg/h) is for acute hypertensive emergencies. The BNF quotes a usual total dose of 50–200 mg (up to 300 mg) for the short infusion regimen; continuous infusions in dissection or pre-eclampsia run longer under senior review with continuous BP monitoring. Paediatric infusions are dosed 0.25–3 mg/kg/h (BNFC). Avoid in asthma, decompensated heart failure and heart block.",
+          "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. UK practice is a fixed rate: start 20 mg/h (4 mL/h of neat 5 mg/mL), doubling every 30 min to a usual maximum of 160 mg/h; the BNF regimen of 2 mg/min (120 mg/h) is for acute hypertensive emergencies. The BNF quotes a usual total dose of 50–200 mg (up to 300 mg) for the short infusion regimen; continuous infusions in dissection or pre-eclampsia run longer under senior review with continuous BP monitoring. Avoid in asthma, decompensated heart failure and heart block.",
         topicIds: ["vasoactive-agents", "obstetric-anaesthesia"],
       },
       {
@@ -527,7 +540,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 300,
         perKg: false,
         notes:
-          "Direct arteriolar dilator used mainly in severe pre-eclampsia. Fixed-dose infusion: start 200–300 micrograms/min, maintenance usually 50–150 micrograms/min. Reflex tachycardia and hypotension are common — co-load with fluid in pre-eclampsia and monitor the fetus.",
+          "Direct arteriolar dilator used mainly in severe pre-eclampsia. Fixed-dose infusion: start 200–300 micrograms/min, maintenance usually 50–150 micrograms/min. Monitor maternal blood pressure and, where appropriate, fetal response. In the antenatal period, NICE advises considering up to 500 mL crystalloid before or with the first IV hydralazine dose. Avoid automatic fluid loading: severe pre-eclampsia requires careful fluid balance because of pulmonary oedema risk.",
+        sources: [CITE.niceNg133],
         topicIds: ["vasoactive-agents", "obstetric-anaesthesia"],
       },
     ],
@@ -560,12 +574,13 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationPerMl: 10000,
         concentrationLabel: "10 mg/mL (1%)",
         unit: "mg/kg/h",
-        startDose: 1.5,
+        startDose: 1,
         minDose: 0.5,
-        maxDose: 2,
+        maxDose: 1.5,
         perKg: true,
         notes:
-          "Opioid-sparing intravenous lidocaine for major abdominal surgery; systemic analgesia range 0.5–2 mg/kg/h, most protocols running 1–1.5 mg/kg/h. Use ideal (not actual) body weight, never run alongside another local anaesthetic technique, and stop if there are any signs of local anaesthetic systemic toxicity. Most protocols limit the infusion to 24 h in a monitored area; lipid emulsion must be available.",
+          "Opioid-sparing intravenous lidocaine. Maximum 1.5 mg/kg/h using ideal body weight, with an absolute maximum of 120 mg/h; do not use in patients below 40 kg under the cited consensus. Limit to 24 hours with review. If a loading dose is used, no more than 1.5 mg/kg over 10 minutes. Follow local governance, dedicated infusion and monitoring requirements. Avoid overlapping other local anaesthetic interventions; the consensus specifies a 4-hour interval around nerve blocks. Stop if there are any signs of local anaesthetic systemic toxicity; lipid emulsion must be available.",
+        sources: [CITE.ivLidocaineConsensus],
         topicIds: ["local-anaesthetics", "acute-pain"],
       },
       {
@@ -574,13 +589,14 @@ export const icuInfusionGroups: InfusionGroup[] = [
         drawUp: "10 g (20 mL of 50%) made up to 50 mL (200 mg/mL)",
         concentrationPerMl: 200000,
         concentrationLabel: "200 mg/mL (20%)",
-        unit: "mg/kg/h",
-        startDose: 14,
-        minDose: 10,
-        maxDose: 20,
-        perKg: true,
+        unit: "mg/h",
+        startDose: 1000,
+        minDose: 1000,
+        maxDose: 1000,
+        perKg: false,
         notes:
-          "About 1 g/h at 70 kg; eclampsia prophylaxis is prescribed as a fixed 1 g/h after a 4 g loading dose over 5–15 min. Keep the 24 h total within the BNF maximum of 120 mmol (about 30 g) — at 70 kg, 20 mg/kg/h is already 1.4 g/h. Monitor patellar reflexes, respiratory rate and urine output; halve the rate in renal impairment (max 40 mmol/24 h if CrCl <30 mL/min). Calcium gluconate is the antidote for toxicity.",
+          "Eclampsia / severe pre-eclampsia (NICE): loading dose 4 g IV over 5–15 minutes (given separately), then a fixed maintenance infusion of 1 g/h (1000 mg/h) for 24 hours. Monitor patellar reflexes, respiratory rate and urine output, and adjust in renal impairment per local protocol. Calcium gluconate is the antidote for toxicity.",
+        sources: [CITE.niceNg133],
         topicIds: ["obstetric-anaesthesia", "electrolytes"],
       },
       {
@@ -631,16 +647,16 @@ export const icuInfusionGroups: InfusionGroup[] = [
       {
         drug: "Tranexamic acid",
         diluent: "0.9% sodium chloride",
-        drawUp: "1 g made up to 50 mL (20 mg/mL). If using the alternative trauma dilution of 1 g in 250 mL over 8 h (4 mg/mL), run at ~31 mL/h — do not use the rates below",
+        drawUp: "Major trauma: 1 g IV over 10 minutes, then 1 g over 8 hours (prepared per local protocol, e.g. 1 g made up to 50 mL = 20 mg/mL)",
         concentrationPerMl: 20000,
         concentrationLabel: "20 mg/mL",
-        unit: "mg/kg/h",
-        startDose: 2,
-        minDose: 1,
-        maxDose: 2,
-        perKg: true,
+        unit: "mg/h",
+        startDose: 125,
+        minDose: 125,
+        maxDose: 125,
+        perKg: false,
         notes:
-          "In major trauma give 1 g over 10 min within 3 h of injury, then 1 g over 8 h (about 2 mg/kg/h at 70 kg). Reduce the dose in renal impairment. Never give by the intrathecal or epidural route — accidental spinal administration is fatal.",
+          "TRAUMA regimen (not postpartum haemorrhage — see the Obstetric topic for that regimen): 1 g over 10 min within 3 h of injury, then 1 g over 8 h, a fixed 125 mg/h maintenance. Direct current trauma-guideline citation pending source review. Reduce the dose in renal impairment. Never give by the intrathecal or epidural route — accidental spinal administration is fatal.",
         topicIds: ["transfusion-coagulation", "haemorrhage"],
       },
     ],
