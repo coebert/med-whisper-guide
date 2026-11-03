@@ -79,9 +79,14 @@ function DrugReferenceAbout() {
             standards for blood level monitoring.
           </p>
           <p>
-            Standard dilutions and pump rates reflect common UK critical care practice.
-            Concentrations vary between hospitals, so they are presented as worked recipes to check
-            against your own smart-pump drug library, not as a substitute for it.
+            Standard dilutions reflect common UK adult critical care practice. Concentrations vary
+            between hospitals, so they are presented as static recipes to check against your own
+            smart-pump drug library, not as a substitute for it. This app does not calculate
+            patient-specific doses or pump rates.
+          </p>
+          <p>
+            Content is under ongoing source-level review. It is not certified or guaranteed to be
+            error-free; always check the original source.
           </p>
         </section>
 
@@ -124,7 +129,7 @@ function DrugReferenceAbout() {
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-muted-foreground">
           <h2 className="font-serif text-lg text-foreground">Safety</h2>
           <p>
-            This is an educational reference for trained clinicians. It does not replace clinical
+            Adult UK reference. Not for paediatric use. This is an educational reference for trained clinicians. It does not replace clinical
             judgement, prescribing checks or local protocols. Verify every dose, dilution and
             monitoring target before administration, and report anything that looks wrong so it can
             be corrected.
