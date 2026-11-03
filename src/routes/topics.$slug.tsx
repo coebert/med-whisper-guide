@@ -77,9 +77,12 @@ function DrugReferenceTopic() {
           <h2 className="font-serif text-lg text-foreground">Bedside points</h2>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
             {topic.keyPoints.map((point) => (
-              <li key={point} className="flex gap-2">
+              <li key={keyPointText(point)} className="flex gap-2">
                 <span aria-hidden="true" className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span>{point}</span>
+                <span>
+                  {keyPointText(point)}
+                  <SourceChips sources={keyPointSources(point)} label="Cited" />
+                </span>
               </li>
             ))}
           </ul>
