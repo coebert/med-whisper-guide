@@ -22,7 +22,13 @@ import { AlertTriangle, ArrowLeft, FlaskConical, Syringe } from "lucide-react";
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 import { useDrugList } from "@/features/drugReference/useDrugReference";
 import { drugDilutions } from "@/features/drugReference/dilutions";
-import { topicBySlug, topicForClass } from "@/features/drugReference/topics";
+import {
+  keyPointSources,
+  keyPointText,
+  topicBySlug,
+  topicForClass,
+} from "@/features/drugReference/topics";
+import { SourceChips } from "@/features/drugReference/references";
 
 function DrugReferenceTopic() {
   const { slug } = useParams({ strict: false }) as { slug?: string };
@@ -79,10 +85,10 @@ function DrugReferenceTopic() {
             {topic.keyPoints.map((point) => (
               <li key={keyPointText(point)} className="flex gap-2">
                 <span aria-hidden="true" className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span>
+                <div>
                   {keyPointText(point)}
                   <SourceChips sources={keyPointSources(point)} label="Cited" />
-                </span>
+                </div>
               </li>
             ))}
           </ul>
