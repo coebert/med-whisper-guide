@@ -117,7 +117,9 @@ export default function ReferenceAppLayout({ children }: Props) {
 
       <footer className="border-t border-border bg-card">
         <div className="mx-auto max-w-6xl px-4 py-6 text-xs leading-relaxed text-muted-foreground sm:px-6 lg:px-8">
-          <p className="font-semibold text-foreground">Adult UK reference. Not for paediatric use.</p>
+          <p className="font-semibold text-foreground">
+            Adult UK reference. Not for paediatric use.
+          </p>
           <p className="mt-2">
             Educational reference for trained clinicians. Always check doses, dilutions and
             monitoring targets against the BNF, the product SPC, your smart-pump drug library and

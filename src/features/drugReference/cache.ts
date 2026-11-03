@@ -54,7 +54,6 @@ export function writeCache<T>(key: string, data: T): boolean {
   }
 }
 
-
 export function cachedMonographCount(): number {
   try {
     let count = 0;

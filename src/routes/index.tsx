@@ -5,9 +5,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Anaesthesia & Critical Care Drugs — Drug Reference" },
-      { name: "description", content: "Bedside drug reference for anaesthesia and critical care: presentations, dosing, standard dilutions, pharmacokinetics, safety and therapeutic drug monitoring, each monograph referenced." },
+      {
+        name: "description",
+        content:
+          "Bedside drug reference for anaesthesia and critical care: presentations, dosing, standard dilutions, pharmacokinetics, safety and therapeutic drug monitoring, each monograph referenced.",
+      },
       { property: "og:title", content: "Anaesthesia & Critical Care Drugs — Drug Reference" },
-      { property: "og:description", content: "Bedside drug reference for anaesthesia and critical care: presentations, dosing, standard dilutions, pharmacokinetics, safety and therapeutic drug monitoring, each monograph referenced." },
+      {
+        property: "og:description",
+        content:
+          "Bedside drug reference for anaesthesia and critical care: presentations, dosing, standard dilutions, pharmacokinetics, safety and therapeutic drug monitoring, each monograph referenced.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -17,7 +25,16 @@ export const Route = createFileRoute("/")({
 
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Columns2, Download, FlaskConical, Pill, Search, Syringe } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpen,
+  Columns2,
+  Download,
+  FlaskConical,
+  Pill,
+  Search,
+  Syringe,
+} from "lucide-react";
 
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 import { useDrugList } from "@/features/drugReference/useDrugReference";
@@ -64,10 +81,9 @@ function DrugReferenceHome() {
           Anaesthetics &amp; Critical Care Drug Reference
         </h1>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-          An adult UK drug reference: presentation and preparation, adult and
-          infusion dosing, standard draw-up dilutions, pharmacokinetics,
-          adverse effects, interactions, and full blood level monitoring where it matters. Every
-          monograph lists its own sources.
+          An adult UK drug reference: presentation and preparation, adult and infusion dosing,
+          standard draw-up dilutions, pharmacokinetics, adverse effects, interactions, and full
+          blood level monitoring where it matters. Every monograph lists its own sources.
         </p>
 
         <form
@@ -100,7 +116,8 @@ function DrugReferenceHome() {
             {suggestions.map((d) => (
               <li key={d.slug}>
                 <Link
-                  to="/drugs/$slug" params={{ slug: d.slug }}
+                  to="/drugs/$slug"
+                  params={{ slug: d.slug }}
                   className="flex items-baseline justify-between gap-3 px-4 py-2.5 text-sm hover:bg-muted"
                 >
                   <span className="font-medium text-foreground">{d.name}</span>
@@ -158,38 +175,40 @@ function DrugReferenceHome() {
 
         <h2 className="mt-10 font-serif text-xl text-foreground">Tools</h2>
         <ul className="mt-3 grid gap-3 sm:grid-cols-2">
-          {([
-            {
-              to: "/drugs",
-              icon: Pill,
-              title: "Browse all drugs",
-              body: "Search by name, brand, class or indication, or jump straight to a letter.",
-            },
-            {
-              to: "/topics",
-              icon: BookOpen,
-              title: "Browse by topic",
-              body: "Vasoactive support, sedation, analgesia, anticoagulation and more, each with bedside points.",
-            },
-            {
-              to: "/monitoring",
-              icon: FlaskConical,
-              title: "Blood level monitoring",
-              body: "Target ranges, sampling timing, toxicity thresholds and dose adjustment.",
-            },
-            {
-              to: "/infusions",
-              icon: Syringe,
-              title: "Infusions and dilutions",
-              body: "Standard diluents, how to draw each syringe up, and the final concentration.",
-            },
-            {
-              to: "/compare",
-              icon: Columns2,
-              title: "Compare two drugs",
-              body: "See doses, standard dilutions and sources side by side.",
-            },
-          ] as const).map((card) => (
+          {(
+            [
+              {
+                to: "/drugs",
+                icon: Pill,
+                title: "Browse all drugs",
+                body: "Search by name, brand, class or indication, or jump straight to a letter.",
+              },
+              {
+                to: "/topics",
+                icon: BookOpen,
+                title: "Browse by topic",
+                body: "Vasoactive support, sedation, analgesia, anticoagulation and more, each with bedside points.",
+              },
+              {
+                to: "/monitoring",
+                icon: FlaskConical,
+                title: "Blood level monitoring",
+                body: "Target ranges, sampling timing, toxicity thresholds and dose adjustment.",
+              },
+              {
+                to: "/infusions",
+                icon: Syringe,
+                title: "Infusions and dilutions",
+                body: "Standard diluents, how to draw each syringe up, and the final concentration.",
+              },
+              {
+                to: "/compare",
+                icon: Columns2,
+                title: "Compare two drugs",
+                body: "See doses, standard dilutions and sources side by side.",
+              },
+            ] as const
+          ).map((card) => (
             <li key={card.to}>
               <Link
                 to={card.to}
@@ -208,9 +227,9 @@ function DrugReferenceHome() {
         <section className="mt-10 flex gap-3 rounded-lg border border-border bg-muted/40 p-4">
           <Download aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
           <p className="text-sm leading-relaxed text-muted-foreground">
-            <strong className="text-foreground">Use it offline.</strong> Every drug you open is saved
-            on this device for 30 days, so it stays readable with no signal. On a phone, use your
-            browser&apos;s <em>Add to Home Screen</em> to open it like an app.
+            <strong className="text-foreground">Use it offline.</strong> Every drug you open is
+            saved on this device for 30 days, so it stays readable with no signal. On a phone, use
+            your browser&apos;s <em>Add to Home Screen</em> to open it like an app.
           </p>
         </section>
       </main>

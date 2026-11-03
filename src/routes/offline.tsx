@@ -80,7 +80,8 @@ function OfflinePage() {
     }
   };
 
-  const pct = progress && progress.total > 0 ? Math.round((progress.done / progress.total) * 100) : 0;
+  const pct =
+    progress && progress.total > 0 ? Math.round((progress.done / progress.total) * 100) : 0;
 
   return (
     <ReferenceAppLayout>
@@ -145,11 +146,7 @@ function OfflinePage() {
             </p>
           )}
 
-          {error && (
-            <p className="mt-4 text-sm text-destructive">
-              {error}
-            </p>
-          )}
+          {error && <p className="mt-4 text-sm text-destructive">{error}</p>}
 
           <dl className="mt-5 grid gap-4 border-t border-border pt-5 text-sm sm:grid-cols-3">
             <div>
@@ -179,8 +176,8 @@ function OfflinePage() {
               offline, and avoid private browsing, which is cleared when you close it.
             </li>
             <li>
-              Infusion recipes and the premedication guidance are built into
-              the app and always work offline.
+              Infusion recipes and the premedication guidance are built into the app and always work
+              offline.
             </li>
             <li>
               Saved content expires after 30 days. Tap “Update saved copy” from time to time so you

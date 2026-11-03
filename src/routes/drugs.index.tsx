@@ -5,9 +5,9 @@ export const Route = createFileRoute("/drugs/")({
   head: () => ({
     meta: [
       { title: "Drug Library — Anaesthesia & Critical Care Drugs" },
-      { name: "description", content: "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions and pump rates, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources." },
+      { name: "description", content: "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources." },
       { property: "og:title", content: "Drug Library — Anaesthesia & Critical Care Drugs" },
-      { property: "og:description", content: "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions and pump rates, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources." },
+      { property: "og:description", content: "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],

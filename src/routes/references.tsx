@@ -159,10 +159,16 @@ function DoseReferencesPage() {
         </label>
 
         <nav aria-label="Sections" className="mt-4 flex flex-wrap gap-2">
-          <a href="#monographs" className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground hover:text-foreground">
+          <a
+            href="#monographs"
+            className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground hover:text-foreground"
+          >
             Monographs
           </a>
-          <a href="#recipes" className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground hover:text-foreground">
+          <a
+            href="#recipes"
+            className="rounded-full border border-border bg-card px-3 py-1 text-xs text-muted-foreground hover:text-foreground"
+          >
             Infusion recipes
           </a>
         </nav>
@@ -170,8 +176,8 @@ function DoseReferencesPage() {
         <section id="monographs" className="mt-8 scroll-mt-24">
           <h2 className="font-serif text-lg text-foreground">Monograph doses</h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Sources stored with each monograph. Adult doses follow the BNF, paediatric doses the
-            BNF for Children, and presentation, dilution and licensed wording the product SPC.
+            Sources stored with each monograph. Adult doses follow the BNF, paediatric doses the BNF
+            for Children, and presentation, dilution and licensed wording the product SPC.
           </p>
           {loading && rows.length === 0 && (
             <p className="mt-4 text-sm text-muted-foreground">Loading references…</p>
@@ -184,7 +190,11 @@ function DoseReferencesPage() {
           )}
           <ul className="mt-4 space-y-3">
             {drugs.map((d) => (
-              <li key={d.slug} id={`ref-${d.slug}`} className="rounded-lg border border-border bg-card p-4 scroll-mt-24">
+              <li
+                key={d.slug}
+                id={`ref-${d.slug}`}
+                className="rounded-lg border border-border bg-card p-4 scroll-mt-24"
+              >
                 <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                   <Link
                     to="/drugs/$slug"
@@ -210,10 +220,9 @@ function DoseReferencesPage() {
         <section id="recipes" className="mt-10 scroll-mt-24">
           <h2 className="font-serif text-lg text-foreground">Infusion recipes</h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Recipe concentrations reflect common UK critical care practice and must match your
-            local smart-pump library. Dose ranges are referenced to the linked monograph&apos;s
-            sources; where a recipe has no monograph, the standard BNF, BNFC and SPC lookups are
-            given.
+            Recipe concentrations reflect common UK critical care practice and must match your local
+            smart-pump library. Dose ranges are referenced to the linked monograph&apos;s sources;
+            where a recipe has no monograph, the standard BNF, BNFC and SPC lookups are given.
           </p>
           {recipes.length === 0 && (
             <p className="mt-4 text-sm text-muted-foreground">No recipes match “{query}”.</p>
@@ -236,7 +245,11 @@ function DoseReferencesPage() {
                       <>
                         {" "}
                         ·{" "}
-                        <Link to="/drugs/$slug" params={{ slug: r.slug }} className="text-primary underline">
+                        <Link
+                          to="/drugs/$slug"
+                          params={{ slug: r.slug }}
+                          className="text-primary underline"
+                        >
                           monograph
                         </Link>
                       </>

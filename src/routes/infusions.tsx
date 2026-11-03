@@ -5,9 +5,17 @@ export const Route = createFileRoute("/infusions")({
   head: () => ({
     meta: [
       { title: "Infusion Recipes — Anaesthesia & Critical Care Drugs" },
-      { name: "description", content: "Standard infusion recipes for critical care: concentrations, diluents, draw-up instructions and usual adult dose ranges." },
+      {
+        name: "description",
+        content:
+          "Standard infusion recipes for critical care: concentrations, diluents, draw-up instructions and usual adult dose ranges.",
+      },
       { property: "og:title", content: "Infusion Recipes — Anaesthesia & Critical Care Drugs" },
-      { property: "og:description", content: "Standard infusion recipes for critical care: concentrations, diluents, draw-up instructions and usual adult dose ranges." },
+      {
+        property: "og:description",
+        content:
+          "Standard infusion recipes for critical care: concentrations, diluents, draw-up instructions and usual adult dose ranges.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -54,8 +62,8 @@ function DrugReferenceInfusions() {
         </h1>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
           Static adult draw-up recipes with the resulting concentration, a starting dose and usual
-          dose range. Pump rates are not calculated here. Confirm against your unit&apos;s
-          own concentrations and smart-pump library — concentrations differ between hospitals.
+          dose range. Pump rates are not calculated here. Confirm against your unit&apos;s own
+          concentrations and smart-pump library — concentrations differ between hospitals.
         </p>
 
         {/* Search stays in view while scrolling so rates can be re-read one-handed. */}
@@ -117,12 +125,18 @@ function DrugReferenceInfusions() {
                       </div>
                     </dl>
                     {d.notes && (
-                      <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{d.notes}</p>
+                      <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+                        {d.notes}
+                      </p>
                     )}
                     <SourceChips sources={standardRefs(d.drug)} label="Check against" />
                     <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
                       {d.slug && (
-                        <Link to="/drugs/$slug" params={{ slug: d.slug }} className="text-primary underline">
+                        <Link
+                          to="/drugs/$slug"
+                          params={{ slug: d.slug }}
+                          className="text-primary underline"
+                        >
                           Full monograph
                         </Link>
                       )}
