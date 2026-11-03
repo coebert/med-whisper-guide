@@ -6,6 +6,7 @@ import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 import { drugDilutions } from "@/features/drugReference/dilutions";
 import { classifySource, sourceKindLabel, standardRefs } from "@/features/drugReference/references";
 import { readCache, writeCache } from "@/features/drugReference/cache";
+import { adultSources, EXCLUDED_SLUG_FILTER, isInScope } from "@/features/drugReference/scope";
 import type { DrugSource } from "@/features/drugReference/types";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -13,17 +14,17 @@ export const Route = createFileRoute("/references")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Dose References — every monograph and recipe | Anaesthesia & Critical Care Drugs" },
+      { title: "Dose References — monographs and recipes | Anaesthesia & Critical Care Drugs" },
       {
         name: "description",
         content:
-          "The specific guideline, BNF or product-licence reference behind each drug monograph dose and each infusion recipe, with links to the original documents.",
+          "The sources listed with each adult drug monograph and infusion recipe, with links. Search links are lookups, not claim-level validation.",
       },
       { property: "og:title", content: "Dose References | Anaesthesia & Critical Care Drugs" },
       {
         property: "og:description",
         content:
-          "Drug-by-drug and recipe-by-recipe list of the sources used, each linking to the original guideline.",
+          "Drug-by-drug and recipe-by-recipe list of listed sources and lookups for the adult UK reference.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -36,7 +37,9 @@ type DrugRefs = { slug: string; name: string; drug_class: string; sources: DrugS
 
 function useAllDrugSources() {
   const cached = readCache<DrugRefs[]>("sources-index");
-  const [rows, setRows] = useState<DrugRefs[]>(cached?.data ?? []);
+  const [rows, setRows] = useState<DrugRefs[]>(
+    (cached?.data ?? []).filter((r) => isInScope(r.slug)),
+  );
   const [loading, setLoading] = useState(!cached);
   const [error, setError] = useState<string | null>(null);
 
@@ -46,17 +49,22 @@ function useAllDrugSources() {
       const { data, error: err } = await supabase
         .from("drugs")
         .select("slug,name,drug_class,sources")
+        .not("slug", "in", EXCLUDED_SLUG_FILTER)
         .order("name");
       if (!active) return;
       if (err) {
         if (!cached) setError(err.message);
       } else {
-        const next = (data ?? []).map((r) => ({
-          slug: r.slug,
-          name: r.name,
-          drug_class: r.drug_class,
-          sources: Array.isArray(r.sources) ? (r.sources as unknown as DrugSource[]) : [],
-        }));
+        const next = (data ?? [])
+          .filter((r) => isInScope(r.slug))
+          .map((r) => ({
+            slug: r.slug,
+            name: r.name,
+            drug_class: r.drug_class,
+            sources: adultSources(
+              Array.isArray(r.sources) ? (r.sources as unknown as DrugSource[]) : [],
+            ),
+          }));
         setRows(next);
         writeCache("sources-index", next);
       }
@@ -74,10 +82,10 @@ function useAllDrugSources() {
 function SourceList({ sources }: { sources: DrugSource[] }) {
   return (
     <ul className="mt-2 space-y-1.5">
-      {sources.map((s) => (
+      {adultSources(sources).map((s) => (
         <li key={s.url + s.title} className="flex items-start gap-2 text-sm">
           <span className="mt-0.5 shrink-0 rounded border border-border bg-background px-1.5 py-px text-[10px] uppercase tracking-wide text-muted-foreground">
-            {sourceKindLabel[classifySource(s)]}
+            {s.label ?? sourceKindLabel[classifySource(s)]}
           </span>
           <span className="min-w-0">
             <a
@@ -131,7 +139,13 @@ function DoseReferencesPage() {
       <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">Dose references</h1>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-          The reference behind every monograph dose and every infusion recipe, drug by drug.
+          The sources listed with each adult monograph and infusion recipe, drug by drug. A listed
+          source is not evidence that every statement has been checked against it; clinical
+          verification is in progress (see{" "}
+          <Link to="/review-status" className="text-primary underline">
+            Source review status
+          </Link>
+          ). &quot;BNF search&quot; and &quot;SmPC search&quot; entries are lookup links only.
           {rows.length > 0 && (
             <>
               {" "}
@@ -176,8 +190,8 @@ function DoseReferencesPage() {
         <section id="monographs" className="mt-8 scroll-mt-24">
           <h2 className="font-serif text-lg text-foreground">Monograph doses</h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Sources stored with each monograph. Adult doses follow the BNF, paediatric doses the BNF
-            for Children, and presentation, dilution and licensed wording the product SPC.
+            Sources stored with each monograph (adult scope; paediatric formulary links are not
+            shown). Listing a source does not mean each statement has been verified against it.
           </p>
           {loading && rows.length === 0 && (
             <p className="mt-4 text-sm text-muted-foreground">Loading references…</p>
@@ -221,8 +235,9 @@ function DoseReferencesPage() {
           <h2 className="font-serif text-lg text-foreground">Infusion recipes</h2>
           <p className="mt-1 text-sm text-muted-foreground">
             Recipe concentrations reflect common UK critical care practice and must match your local
-            smart-pump library. Dose ranges are referenced to the linked monograph&apos;s sources;
-            where a recipe has no monograph, the standard BNF, BNFC and SPC lookups are given.
+            smart-pump library. Recipes revised in the current correction pass show their direct
+            citations first; otherwise the linked monograph&apos;s sources, or BNF and SmPC search
+            links, are given as places to check.
           </p>
           {recipes.length === 0 && (
             <p className="mt-4 text-sm text-muted-foreground">No recipes match “{query}”.</p>
@@ -230,7 +245,8 @@ function DoseReferencesPage() {
           <ul className="mt-4 space-y-3">
             {recipes.map((r) => {
               const mono = r.slug ? bySlug.get(r.slug) : undefined;
-              const sources = mono && mono.sources.length > 0 ? mono.sources : standardRefs(r.drug);
+              const fallback = mono && mono.sources.length > 0 ? mono.sources : standardRefs(r.drug);
+              const sources = [...(r.sources ?? []), ...fallback];
               return (
                 <li key={r.drug} className="rounded-lg border border-border bg-card p-4">
                   <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
