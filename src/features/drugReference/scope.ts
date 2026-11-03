@@ -7,7 +7,7 @@
 import type { DrugSource } from "./types";
 
 /** Monographs outside the adult scope (e.g. neonatal-only indications). */
-export const EXCLUDED_SLUGS: readonly string[] = ["caffeine-citrate"];
+export const EXCLUDED_SLUGS: readonly string[] = ["caffeine-citrate", "inhaled-nitric-oxide"];
 
 /** PostgREST filter value for `.not("slug", "in", ...)`. */
 export const EXCLUDED_SLUG_FILTER = `(${EXCLUDED_SLUGS.join(",")})`;

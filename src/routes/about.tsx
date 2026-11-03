@@ -149,6 +149,15 @@ function DrugReferenceAbout() {
             report anything that looks wrong so it can be corrected.
           </p>
           <p>
+            <strong className="text-foreground">Outside the UK:</strong> the app is available
+            worldwide, but its content follows UK adult practice. Users in other countries must
+            check local product licences, formularies and protocols, which may differ. Questions:{" "}
+            <Link to="/support" className="text-primary underline">
+              Support
+            </Link>
+            .
+          </p>
+          <p>
             <Link to="/drugs" className="text-primary underline">
               Back to the drug library
             </Link>

@@ -84,8 +84,8 @@ export interface DrugDilution {
   drawUp: string;
   concentrationLabel: string;
   unit: InfusionUnit;
-  startDose: number;
-  minDose: number;
+  startDose?: number | undefined;
+  minDose?: number | undefined;
   maxDose: number;
   perKg: boolean;
   notes?: string | undefined;

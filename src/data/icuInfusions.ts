@@ -21,8 +21,10 @@ export interface Infusion {
     | "units/kg/h"
     | "mg/kg/h"
     | "mg/h";
-  startDose: number;
-  minDose: number;
+  /** Omitted when no source-backed starting dose exists. */
+  startDose?: number;
+  /** Omitted when only a ceiling is source-backed. */
+  minDose?: number;
   maxDose: number;
   /** true if the dose is weight-based (per kg) */
   perKg: boolean;
@@ -82,7 +84,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 1.5,
         perKg: true,
         notes:
-          "Double-strength syringe (160 micrograms/mL) — the common ICU default. The same dose runs at half the mL/h of the 4 mg/50 mL syringe and twice that of 16 mg/50 mL; label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+          "Double-strength syringe (160 micrograms/mL) — the common ICU default. Label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
         topicIds: ["vasoactive-agents", "sepsis", "circulatory-failure"],
       },
       {
@@ -99,7 +101,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 1.5,
         perKg: true,
         notes:
-          "Quadruple-strength syringe (320 micrograms/mL) for high-dose requirements or fluid restriction — the same dose runs at a quarter of the mL/h of the 4 mg/50 mL syringe. Central access essential; label clearly and never mix strengths on one pump. Rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+          "Quadruple-strength syringe (320 micrograms/mL) for high-dose requirements or fluid restriction. Central access essential; label clearly and never mix strengths on one pump. Rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
         topicIds: ["vasoactive-agents", "sepsis", "circulatory-failure"],
       },
       {
@@ -145,7 +147,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 83,
         perKg: false,
         notes:
-          "Predominantly α₁ agonist with indirect action. Usual infusion 0.5–5 mg/h (≈8–83 micrograms/min), i.e. 1–10 mL/h of this 0.5 mg/mL syringe. Often run peripherally short-term; handy bridge while central access is established. Also given as 0.5–1 mg boluses.",
+          "Predominantly α₁ agonist with indirect action. Usual infusion 0.5–5 mg/h (≈8–83 micrograms/min). Often run peripherally short-term; handy bridge while central access is established. Also given as 0.5–1 mg boluses.",
         topicIds: ["vasoactive-agents"],
       },
       {
@@ -160,7 +162,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 3,
         perKg: true,
         notes:
-          "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. Common theatre dilution is 10 mg in 100 mL = 100 micrograms/mL. Usual range 0.25–3 micrograms/kg/min (≈18–210 micrograms/min at 70 kg) — which brackets the 35–180 micrograms/min quoted in the monograph; rates up to 6 micrograms/kg/min are described in refractory vasoplegia. At this concentration doses above ~1 micrograms/kg/min exceed 40 mL/h — use a more concentrated mix (e.g. 10 mg in 50 mL) or change to noradrenaline. May drop cardiac output by reflex bradycardia and afterload rise.",
+          "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. Common theatre dilution is 10 mg in 100 mL = 100 micrograms/mL. Usual range 0.25–3 micrograms/kg/min (≈18–210 micrograms/min at 70 kg) — which brackets the 35–180 micrograms/min quoted in the monograph; rates up to 6 micrograms/kg/min are described in refractory vasoplegia. High requirements may need a more concentrated preparation per local protocol, or a change to noradrenaline. May drop cardiac output by reflex bradycardia and afterload rise.",
         topicIds: ["vasoactive-agents"],
       },
       {
@@ -298,7 +300,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 2,
         perKg: true,
         notes:
-          "Standard-strength syringe (30 micrograms/mL). A half-strength 750 micrograms/50 mL syringe is also listed — check which your unit uses; the mL/h differs two-fold. α₂ agonist adjunct for sedation, withdrawal and agitation; useful in opioid/benzodiazepine weaning. Bradycardia and hypotension are dose-limiting — give loading doses slowly. Do not stop abruptly after prolonged use (rebound hypertension).",
+          "Standard-strength syringe (30 micrograms/mL). A half-strength 750 micrograms/50 mL syringe is also listed — check which your unit uses and label the strength clearly. α₂ agonist adjunct for sedation, withdrawal and agitation; useful in opioid/benzodiazepine weaning. Bradycardia and hypotension are dose-limiting — give loading doses slowly. Do not stop abruptly after prolonged use (rebound hypertension).",
         topicIds: ["icu-sedation-delirium"],
       },
       {
@@ -313,7 +315,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 2,
         perKg: true,
         notes:
-          "Half-strength syringe (15 micrograms/mL) — the same dose runs at twice the mL/h of the 1500 micrograms/50 mL syringe; never mix the two on one pump. Same indications and cautions as the standard-strength recipe: bradycardia and hypotension are dose-limiting, and avoid abrupt withdrawal after prolonged use.",
+          "Half-strength syringe (15 micrograms/mL); never mix the two on one pump. Same indications and cautions as the standard-strength recipe: bradycardia and hypotension are dose-limiting, and avoid abrupt withdrawal after prolonged use.",
         topicIds: ["icu-sedation-delirium"],
       },
       {
@@ -328,7 +330,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 10,
         perKg: true,
         notes:
-          "Rates shown are for the NEAT 50 micrograms/mL syringe. Critical care sedation 0.7–10 micrograms/kg/h; peri-operative analgesia 0.5–2 micrograms/kg/h. Some units run a diluted 1000 micrograms in 50 mL (20 micrograms/mL) syringe — the mL/h is then 2.5 times higher; never mix the two. Lipophilic with marked accumulation on prolonged infusion; wean gradually after days of therapy to avoid withdrawal.",
+          "Rates shown are for the NEAT 50 micrograms/mL syringe. Critical care sedation 0.7–10 micrograms/kg/h; peri-operative analgesia 0.5–2 micrograms/kg/h. Some units run a diluted 1000 micrograms in 50 mL (20 micrograms/mL) syringe — never mix the two strengths. Lipophilic with marked accumulation on prolonged infusion; wean gradually after days of therapy to avoid withdrawal.",
         topicIds: ["icu-sedation-delirium", "opioids"],
       },
       {
@@ -551,7 +553,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 160,
         perKg: false,
         notes:
-          "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. UK practice is a fixed rate: start 20 mg/h (4 mL/h of neat 5 mg/mL), doubling every 30 min to a usual maximum of 160 mg/h; the BNF regimen of 2 mg/min (120 mg/h) is for acute hypertensive emergencies. The BNF quotes a usual total dose of 50–200 mg (up to 300 mg) for the short infusion regimen; continuous infusions in dissection or pre-eclampsia run longer under senior review with continuous BP monitoring. Avoid in asthma, decompensated heart failure and heart block.",
+          "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. UK practice is a fixed rate: start 20 mg/h, doubling every 30 min to a usual maximum of 160 mg/h; the BNF regimen of 2 mg/min (120 mg/h) is for acute hypertensive emergencies. The BNF quotes a usual total dose of 50–200 mg (up to 300 mg) for the short infusion regimen; continuous infusions in dissection or pre-eclampsia run longer under senior review with continuous BP monitoring. Avoid in asthma, decompensated heart failure and heart block.",
         topicIds: ["vasoactive-agents", "obstetric-anaesthesia"],
       },
       {
@@ -615,8 +617,6 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationPerMl: 10000,
         concentrationLabel: "10 mg/mL (1%)",
         unit: "mg/kg/h",
-        startDose: 1,
-        minDose: 0.5,
         maxDose: 1.5,
         perKg: true,
         notes:
@@ -674,7 +674,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         drug: "Oxytocin",
         diluent: "0.9% sodium chloride or Hartmann's (avoid large volumes of glucose)",
         drawUp:
-          "40 units made up to 40 mL (1 unit/mL). If using the alternative 40 units in 500 mL bag (0.08 units/mL), run at 125 mL/h — do not use the rates below",
+          "40 units made up to 40 mL (1 unit/mL). If using the alternative 40 units in 500 mL bag (0.08 units/mL), infuse over 4 hours per local protocol",
         concentrationPerMl: 1,
         concentrationLabel: "1 unit/mL",
         unit: "units/h",
@@ -699,7 +699,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 125,
         perKg: false,
         notes:
-          "TRAUMA regimen (not postpartum haemorrhage — see the Obstetric topic for that regimen): 1 g over 10 min within 3 h of injury, then 1 g over 8 h, a fixed 125 mg/h maintenance. Direct current trauma-guideline citation pending source review. Reduce the dose in renal impairment. Never give by the intrathecal or epidural route — accidental spinal administration is fatal.",
+          "TRAUMA regimen (not postpartum haemorrhage — see the Obstetric topic for that regimen). Current UK guideline: NICE NG39 recommends IV tranexamic acid as soon as possible in major trauma with active or suspected active bleeding, and not more than 3 hours after injury unless there is evidence of hyperfibrinolysis. Dosing regimen: 1 g over 10 minutes then 1 g over 8 hours (fixed 125 mg/h maintenance), as used in the CRASH-2 randomised trial — a trial regimen, not itself a guideline; follow your local major-haemorrhage protocol. Reduce the dose in renal impairment. Never give by the intrathecal or epidural route — accidental spinal administration is fatal.",
+        sources: [CITE.niceNg39, CITE.crash2],
         topicIds: ["transfusion-coagulation", "haemorrhage"],
       },
     ],

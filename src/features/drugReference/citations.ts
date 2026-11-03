@@ -174,4 +174,16 @@ export const CITE = {
     "emc",
     "https://www.medicines.org.uk/emc/product/9616/smpc",
   ),
+  niceNg39: c(
+    "NICE NG39",
+    "Major trauma: assessment and initial management — recommendations",
+    "NICE",
+    "https://www.nice.org.uk/guidance/ng39/chapter/recommendations",
+  ),
+  crash2: c(
+    "CRASH-2 trial",
+    "CRASH-2: tranexamic acid in bleeding trauma patients (Lancet 2010) — trial, not a guideline",
+    "CRASH-2 collaborators, LSHTM",
+    "https://crash2.lshtm.ac.uk/CRASH2_Lancet.pdf",
+  ),
 } satisfies Record<string, DrugSource>;

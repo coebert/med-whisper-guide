@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CalculatorRouteImport } from './routes/calculator'
 import { Route as CompareRouteImport } from './routes/compare'
 import { Route as InfusionsRouteImport } from './routes/infusions'
+import { Route as IosPrivacyRouteImport } from './routes/ios-privacy'
 import { Route as MonitoringRouteImport } from './routes/monitoring'
 import { Route as OfflineRouteImport } from './routes/offline'
 import { Route as PremedicationRouteImport } from './routes/premedication'
@@ -21,6 +22,7 @@ import { Route as ReferencesRouteImport } from './routes/references'
 import { Route as ReviewStatusRouteImport } from './routes/review-status'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as SourcesRouteImport } from './routes/sources'
+import { Route as SupportRouteImport } from './routes/support'
 import { Route as DrugsIndexRouteImport } from './routes/drugs.index'
 import { Route as DrugsSlugRouteImport } from './routes/drugs.$slug'
 import { Route as TopicsIndexRouteImport } from './routes/topics.index'
@@ -49,6 +51,11 @@ const CompareRoute = CompareRouteImport.update({
 const InfusionsRoute = InfusionsRouteImport.update({
   id: '/infusions',
   path: '/infusions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IosPrivacyRoute = IosPrivacyRouteImport.update({
+  id: '/ios-privacy',
+  path: '/ios-privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MonitoringRoute = MonitoringRouteImport.update({
@@ -86,6 +93,11 @@ const SourcesRoute = SourcesRouteImport.update({
   path: '/sources',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SupportRoute = SupportRouteImport.update({
+  id: '/support',
+  path: '/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DrugsIndexRoute = DrugsIndexRouteImport.update({
   id: '/drugs/',
   path: '/drugs/',
@@ -113,6 +125,7 @@ export interface FileRoutesByFullPath {
   '/calculator': typeof CalculatorRoute
   '/compare': typeof CompareRoute
   '/infusions': typeof InfusionsRoute
+  '/ios-privacy': typeof IosPrivacyRoute
   '/monitoring': typeof MonitoringRoute
   '/offline': typeof OfflineRoute
   '/premedication': typeof PremedicationRoute
@@ -120,6 +133,7 @@ export interface FileRoutesByFullPath {
   '/review-status': typeof ReviewStatusRoute
   '/search': typeof SearchRoute
   '/sources': typeof SourcesRoute
+  '/support': typeof SupportRoute
   '/drugs/$slug': typeof DrugsSlugRoute
   '/topics/$slug': typeof TopicsSlugRoute
   '/drugs/': typeof DrugsIndexRoute
@@ -131,6 +145,7 @@ export interface FileRoutesByTo {
   '/calculator': typeof CalculatorRoute
   '/compare': typeof CompareRoute
   '/infusions': typeof InfusionsRoute
+  '/ios-privacy': typeof IosPrivacyRoute
   '/monitoring': typeof MonitoringRoute
   '/offline': typeof OfflineRoute
   '/premedication': typeof PremedicationRoute
@@ -138,6 +153,7 @@ export interface FileRoutesByTo {
   '/review-status': typeof ReviewStatusRoute
   '/search': typeof SearchRoute
   '/sources': typeof SourcesRoute
+  '/support': typeof SupportRoute
   '/drugs/$slug': typeof DrugsSlugRoute
   '/topics/$slug': typeof TopicsSlugRoute
   '/drugs': typeof DrugsIndexRoute
@@ -150,6 +166,7 @@ export interface FileRoutesById {
   '/calculator': typeof CalculatorRoute
   '/compare': typeof CompareRoute
   '/infusions': typeof InfusionsRoute
+  '/ios-privacy': typeof IosPrivacyRoute
   '/monitoring': typeof MonitoringRoute
   '/offline': typeof OfflineRoute
   '/premedication': typeof PremedicationRoute
@@ -157,6 +174,7 @@ export interface FileRoutesById {
   '/review-status': typeof ReviewStatusRoute
   '/search': typeof SearchRoute
   '/sources': typeof SourcesRoute
+  '/support': typeof SupportRoute
   '/drugs/$slug': typeof DrugsSlugRoute
   '/topics/$slug': typeof TopicsSlugRoute
   '/drugs/': typeof DrugsIndexRoute
@@ -170,6 +188,7 @@ export interface FileRouteTypes {
     | '/calculator'
     | '/compare'
     | '/infusions'
+    | '/ios-privacy'
     | '/monitoring'
     | '/offline'
     | '/premedication'
@@ -177,6 +196,7 @@ export interface FileRouteTypes {
     | '/review-status'
     | '/search'
     | '/sources'
+    | '/support'
     | '/drugs/$slug'
     | '/topics/$slug'
     | '/drugs/'
@@ -188,6 +208,7 @@ export interface FileRouteTypes {
     | '/calculator'
     | '/compare'
     | '/infusions'
+    | '/ios-privacy'
     | '/monitoring'
     | '/offline'
     | '/premedication'
@@ -195,6 +216,7 @@ export interface FileRouteTypes {
     | '/review-status'
     | '/search'
     | '/sources'
+    | '/support'
     | '/drugs/$slug'
     | '/topics/$slug'
     | '/drugs'
@@ -206,6 +228,7 @@ export interface FileRouteTypes {
     | '/calculator'
     | '/compare'
     | '/infusions'
+    | '/ios-privacy'
     | '/monitoring'
     | '/offline'
     | '/premedication'
@@ -213,6 +236,7 @@ export interface FileRouteTypes {
     | '/review-status'
     | '/search'
     | '/sources'
+    | '/support'
     | '/drugs/$slug'
     | '/topics/$slug'
     | '/drugs/'
@@ -225,6 +249,7 @@ export interface RootRouteChildren {
   CalculatorRoute: typeof CalculatorRoute
   CompareRoute: typeof CompareRoute
   InfusionsRoute: typeof InfusionsRoute
+  IosPrivacyRoute: typeof IosPrivacyRoute
   MonitoringRoute: typeof MonitoringRoute
   OfflineRoute: typeof OfflineRoute
   PremedicationRoute: typeof PremedicationRoute
@@ -232,6 +257,7 @@ export interface RootRouteChildren {
   ReviewStatusRoute: typeof ReviewStatusRoute
   SearchRoute: typeof SearchRoute
   SourcesRoute: typeof SourcesRoute
+  SupportRoute: typeof SupportRoute
   DrugsSlugRoute: typeof DrugsSlugRoute
   TopicsSlugRoute: typeof TopicsSlugRoute
   DrugsIndexRoute: typeof DrugsIndexRoute
@@ -273,6 +299,13 @@ declare module '@tanstack/react-router' {
       path: '/infusions'
       fullPath: '/infusions'
       preLoaderRoute: typeof InfusionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ios-privacy': {
+      id: '/ios-privacy'
+      path: '/ios-privacy'
+      fullPath: '/ios-privacy'
+      preLoaderRoute: typeof IosPrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/monitoring': {
@@ -324,6 +357,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SourcesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/support': {
+      id: '/support'
+      path: '/support'
+      fullPath: '/support'
+      preLoaderRoute: typeof SupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/drugs/': {
       id: '/drugs/'
       path: '/drugs'
@@ -361,6 +401,7 @@ const rootRouteChildren: RootRouteChildren = {
   CalculatorRoute: CalculatorRoute,
   CompareRoute: CompareRoute,
   InfusionsRoute: InfusionsRoute,
+  IosPrivacyRoute: IosPrivacyRoute,
   MonitoringRoute: MonitoringRoute,
   OfflineRoute: OfflineRoute,
   PremedicationRoute: PremedicationRoute,
@@ -368,6 +409,7 @@ const rootRouteChildren: RootRouteChildren = {
   ReviewStatusRoute: ReviewStatusRoute,
   SearchRoute: SearchRoute,
   SourcesRoute: SourcesRoute,
+  SupportRoute: SupportRoute,
   DrugsSlugRoute: DrugsSlugRoute,
   TopicsSlugRoute: TopicsSlugRoute,
   DrugsIndexRoute: DrugsIndexRoute,

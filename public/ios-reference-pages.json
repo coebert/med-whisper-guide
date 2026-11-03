@@ -1,0 +1,2104 @@
+[
+  {
+    "id": "topic-vasoactive-support",
+    "title": "Vasopressors, inotropes & vasodilators",
+    "category": "Topic",
+    "summary": "Circulatory support agents with standard dilutions.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Give peripheral vasopressor only as a bridge through a large, well-sited cannula with frequent site checks under local policy; move to central access as soon as it is safe.",
+          "Titrate to a mean arterial pressure target set for the patient, not to a fixed rate, and reassess volume state and cardiac output before adding a second agent.",
+          "Double-strength bags exist for fluid-restricted patients — always confirm the concentration on the syringe label against the pump library before handover.",
+          "Vasodilator infusions need continuous arterial pressure monitoring; stop rather than titrate down when pressure falls abruptly."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "topic-sedation-anaesthesia",
+    "title": "Sedation & anaesthesia",
+    "category": "Topic",
+    "summary": "Induction agents, volatiles, sedative infusions and their antagonists.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Set a sedation target (for example RASS −1 to 0) and assess it at least once a nursing shift; daily interruption shortens ventilation where it is safe.",
+          "Watch cumulative propofol dose, triglycerides and lactate for propofol-related infusion syndrome in prolonged high-dose use.",
+          "Sedative effects may be prolonged by drug accumulation and organ impairment. Unexpected failure to wake requires prompt assessment for drug effects and other causes, including hypoxia, metabolic disturbance and neurological pathology; do not assume accumulation is the explanation.",
+          "Sedation is not analgesia: treat pain first, then add sedation only if a target is still unmet."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "topic-analgesia",
+    "title": "Opioids & analgesia",
+    "category": "Topic",
+    "summary": "Opioids, NSAIDs and adjuncts, with equivalence and safety limits.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Use multimodal analgesia — paracetamol plus an NSAID where safe reduces opioid need and opioid-related adverse effects.",
+          "Morphine and its active metabolites can accumulate in renal impairment. Choose the opioid and adjust the dose and/or lengthen the dosing interval using renal guidance; oxycodone also requires caution and dose adjustment. Monitor closely for sedation and respiratory depression.",
+          "Convert between opioids using published equivalence, then reduce by 25–50% for incomplete cross-tolerance and re-titrate.",
+          "After more than a week of opioid or alpha-2 agonist infusion, plan a taper — abrupt discontinuation causes agitation, tachycardia and diarrhoea."
+        ],
+        "sources": [
+          {
+            "title": "Oral analgesic dose adjustments in renal impairment — Oxford University Hospitals",
+            "url": "https://ouh.quris.com/hospital-guidelines/pain-guidelines/body-systems/special-populations/renal-failure/oral-analgesic-dose-adjustments-in-renal-impairment/",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Oxycodone — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/7677/smpc",
+            "accessed": "not recorded"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Oral analgesic dose adjustments in renal impairment — Oxford University Hospitals",
+        "url": "https://ouh.quris.com/hospital-guidelines/pain-guidelines/body-systems/special-populations/renal-failure/oral-analgesic-dose-adjustments-in-renal-impairment/",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Oxycodone — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/7677/smpc",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "topic-neuromuscular-blockade",
+    "title": "Neuromuscular blockers & reversal",
+    "category": "Topic",
+    "summary": "Depolarising and non-depolarising blockers with reversal agents.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Never give a neuromuscular blocker without a secured or immediately securable airway and a working means of ventilation.",
+          "Monitor depth with a nerve stimulator whenever a blocker is infused; aim for a documented train-of-four target.",
+          "Ensure adequate sedation and analgesia before paralysis — paralysis hides awareness and pain.",
+          "Suxamethonium is contraindicated where hyperkalaemia is likely (burns beyond 24 hours, prolonged immobility, denervation, established critical illness)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "topic-local-anaesthetics",
+    "title": "Local anaesthetics & toxicity rescue",
+    "category": "Topic",
+    "summary": "Dose limits, adjuncts and lipid emulsion rescue.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Check the drug-specific maximum dose in the product information and local guidance before drawing up, and state it during the block checklist.",
+          "Aspirate and inject incrementally with continuous verbal contact; early signs are perioral tingling, tinnitus, metallic taste and agitation.",
+          "For suspected severe local anaesthetic systemic toxicity, stop local anaesthetic administration, summon help, support oxygenation and ventilation, and follow the current Association of Anaesthetists emergency algorithm. Its initial 20% lipid regimen is 1.5 mL/kg IV over 2–3 minutes followed by 15 mL/kg/h; follow the algorithm for repeat doses and escalation, without exceeding a cumulative 12 mL/kg.",
+          "Continue resuscitation well beyond the usual duration — recovery after bupivacaine arrest can take over an hour."
+        ],
+        "sources": [
+          {
+            "title": "Quick Reference Handbook 3-10: Local anaesthetic toxicity (v2, June 2023) — Association of Anaesthetists",
+            "url": "https://anaesthetists.org/Portals/0/PDFs/QRH/QRH_3-10_Local_anaesthetic_toxicity_v2_June%202023.pdf?ver=2023-06-23-141010-760",
+            "accessed": "not recorded"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Quick Reference Handbook 3-10: Local anaesthetic toxicity (v2, June 2023) — Association of Anaesthetists",
+        "url": "https://anaesthetists.org/Portals/0/PDFs/QRH/QRH_3-10_Local_anaesthetic_toxicity_v2_June%202023.pdf?ver=2023-06-23-141010-760",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "topic-cardiac-rhythm",
+    "title": "Antiarrhythmics & rate control",
+    "category": "Topic",
+    "summary": "Rhythm and rate control agents, including beta-blockade.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Correct potassium, magnesium, hypoxia, pain and hypovolaemia before escalating antiarrhythmic drugs — new atrial fibrillation in critical illness is usually secondary.",
+          "In an unstable tachyarrhythmia, synchronised cardioversion comes before any drug.",
+          "For a regular narrow-complex tachyarrhythmia without life-threatening features, follow the current RCUK algorithm: vagal manoeuvres, then adenosine if there is no pre-excitation, using 6 mg, 12 mg and 18 mg rapid IV boluses if preceding doses are unsuccessful, with continuous ECG monitoring and appropriate resuscitation facilities. This is guideline dosing and may differ from the product licence; check contraindications and patient-specific dose adjustments.",
+          "Amiodarone by peripheral vein causes phlebitis — use central access for anything beyond a single loading dose."
+        ],
+        "sources": [
+          {
+            "title": "Adult tachyarrhythmia algorithm (V2, January 2026) — Resuscitation Council UK",
+            "url": "https://www.resus.org.uk/sites/default/files/2026-01/Adult%20tachyarrhythmia%20algorithm%20V2%20January%202026.pdf",
+            "accessed": "not recorded"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Adult tachyarrhythmia algorithm (V2, January 2026) — Resuscitation Council UK",
+        "url": "https://www.resus.org.uk/sites/default/files/2026-01/Adult%20tachyarrhythmia%20algorithm%20V2%20January%202026.pdf",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "topic-coagulation",
+    "title": "Anticoagulation, antiplatelets & reversal",
+    "category": "Topic",
+    "summary": "Thromboprophylaxis, treatment doses, thrombolysis and reversal agents.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Confirm the indication and the target (prophylaxis versus treatment) before prescribing — the doses differ several-fold.",
+          "Low molecular weight heparin needs dose reduction and, in some settings, anti-Xa monitoring in renal impairment and extremes of weight.",
+          "Know the reversal pathway for every agent you start: protamine, vitamin K with prothrombin complex, idarucizumab or andexanet.",
+          "Record the last dose time before any neuraxial procedure and apply the published interval — this is the commonest avoidable harm."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "topic-fluids-electrolytes",
+    "title": "Fluids, blood products & electrolytes",
+    "category": "Topic",
+    "summary": "Crystalloids, colloids, blood components, diuretics and electrolyte replacement.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Prescribe fluid as a named indication (resuscitation, replacement or maintenance) with a volume and a rate, then reassess after each bolus.",
+          "Balanced crystalloid is the default resuscitation fluid; large-volume 0.9% sodium chloride causes hyperchloraemic acidosis.",
+          "Give concentrated potassium only by a monitored central route at an agreed maximum rate; correct magnesium at the same time.",
+          "Blood components need a documented threshold or bleeding indication, positive patient identification and observation for the first 15 minutes."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "topic-antimicrobials",
+    "title": "Antimicrobials & antifungals",
+    "category": "Topic",
+    "summary": "Antibacterials, antifungals and antivirals with level monitoring where needed.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Take appropriate microbiological samples before antibiotics where this will not delay urgent treatment. For adults at high risk of severe illness or death from suspected sepsis, give IV antibiotics within 1 hour under NICE NG253. Moderate- and low-risk presentations require the guideline's risk-stratified assessment and treatment timings.",
+          "Dose by mechanism — time-dependent agents need frequent or extended infusions, concentration-dependent agents need adequate peak doses.",
+          "Loading and maintenance dose changes in renal impairment are drug-specific — check the product information and local antimicrobial guidance for each agent.",
+          "Review at 48–72 hours against culture results and set a stop or step-down date at the time of prescribing."
+        ],
+        "sources": [
+          {
+            "title": "Suspected sepsis — managing suspected sepsis — NICE",
+            "url": "https://www.nice.org.uk/guidance/NG253/chapter/managing-suspected-sepsis",
+            "accessed": "not recorded"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Suspected sepsis — managing suspected sepsis — NICE",
+        "url": "https://www.nice.org.uk/guidance/NG253/chapter/managing-suspected-sepsis",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "topic-respiratory",
+    "title": "Respiratory drugs",
+    "category": "Topic",
+    "summary": "Bronchodilators, methylxanthines and respiratory stimulants.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Give nebulised or inhaled bronchodilator by the route that reaches the airway — in ventilated patients use an in-circuit device and check the dose reaching the patient.",
+          "Repeated beta-2 agonist causes tachycardia, tremor, hypokalaemia and lactataemia; recheck potassium after back-to-back nebulisers.",
+          "Magnesium sulfate is an adjunct in severe acute asthma, not a first-line bronchodilator.",
+          "Aminophylline and theophylline have a narrow therapeutic window and need blood level monitoring."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "topic-gastrointestinal",
+    "title": "Antiemetics & gastrointestinal drugs",
+    "category": "Topic",
+    "summary": "Antiemetics, acid suppression, prokinetics and splanchnic agents.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Combine antiemetics from different receptor classes rather than repeating the same class for breakthrough nausea.",
+          "Check the QT interval and other QT-prolonging drugs before repeated ondansetron, droperidol or metoclopramide.",
+          "Use stress-ulcer prophylaxis for critically ill adults with relevant bleeding risk factors. Enteral feeding alone is not a reason to stop it while those risk factors persist. Review daily and discontinue when the critical illness or relevant risk factors resolve, unless another indication remains.",
+          "Prokinetics are a short trial for feed intolerance — review at 48 hours and stop if ineffective."
+        ],
+        "sources": [
+          {
+            "title": "Guideline for the prevention of upper gastrointestinal bleeding in critically ill adults — SCCM / ASHP",
+            "url": "https://www.sccm.org/clinical-resources/guidelines/guidelines/sccm-ashp-guideline-prevention-of-ugib",
+            "accessed": "not recorded"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guideline for the prevention of upper gastrointestinal bleeding in critically ill adults — SCCM / ASHP",
+        "url": "https://www.sccm.org/clinical-resources/guidelines/guidelines/sccm-ashp-guideline-prevention-of-ugib",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "topic-endocrine-metabolic",
+    "title": "Endocrine & metabolic drugs",
+    "category": "Topic",
+    "summary": "Insulin, corticosteroids and other hormonal agents.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Run variable-rate insulin against an agreed glucose target with hourly monitoring; avoid tight control, which causes hypoglycaemia.",
+          "Never stop long-acting basal insulin in type 1 diabetes, even when the patient is nil by mouth.",
+          "Assess the risk of adrenal insufficiency in patients receiving or recently exposed to glucocorticoids. Those with adrenal insufficiency or clinically significant adrenal suppression need an agreed perioperative steroid plan, in addition to their usual treatment; requirements depend on exposure and surgical stress.",
+          "Check the steroid indication and duration — low-dose hydrocortisone in septic shock is a defined course, not an open-ended prescription."
+        ],
+        "sources": [
+          {
+            "title": "Guidelines for the management of glucocorticoids during the peri-operative period — Anaesthesia (Association of Anaesthetists)",
+            "url": "https://doi.org/10.1111/anae.14963",
+            "accessed": "not recorded"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guidelines for the management of glucocorticoids during the peri-operative period — Anaesthesia (Association of Anaesthetists)",
+        "url": "https://doi.org/10.1111/anae.14963",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "topic-neurological",
+    "title": "Anticonvulsants & neurological drugs",
+    "category": "Topic",
+    "summary": "Status epilepticus and maintenance anticonvulsants, several needing blood levels.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "In status epilepticus give a benzodiazepine first, twice at most, then a second-line agent — levetiracetam, phenytoin or sodium valproate — and plan anaesthesia if seizures continue.",
+          "Phenytoin needs a rate limit, cardiac monitoring during loading and level monitoring corrected for albumin.",
+          "Look for and treat the cause alongside the drug: glucose, sodium, calcium, eclampsia, drug withdrawal, infection and structural lesions.",
+          "Continue established anticonvulsants through critical illness, converting to an equivalent parenteral dose where one exists."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "topic-antidotes",
+    "title": "Antidotes & emergency drugs",
+    "category": "Topic",
+    "summary": "Antidotes, anticholinergics and rescue agents kept for emergencies.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Know where the malignant hyperthermia, cyanide and lipid emulsion boxes are kept and who reconstitutes them — dantrolene needs several pairs of hands.",
+          "Give the antidote alongside supportive care, never instead of it: airway, oxygen, circulation and decontamination come first.",
+          "Contact the national poisons service early for any unfamiliar or mixed overdose.",
+          "Check antidote stock and expiry as part of the routine emergency equipment check."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "topic-obstetric",
+    "title": "Obstetric drugs",
+    "category": "Topic",
+    "summary": "Uterotonics and prostaglandins for postpartum haemorrhage.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Escalate through the uterotonic ladder while treating the other causes of postpartum haemorrhage — tone, tissue, trauma and thrombin.",
+          "Oxytocin bolus causes vasodilatation and tachycardia: give slowly, and follow with an infusion rather than repeated boluses.",
+          "Ergometrine is contraindicated in hypertension and pre-eclampsia; carboprost is contraindicated in asthma.",
+          "Postpartum haemorrhage (separate from the trauma regimen): for clinically diagnosed PPH, give tranexamic acid 1 g IV over 10 minutes as soon as possible and within 3 hours of birth, alongside standard haemorrhage care. A second 1 g dose may be given if bleeding continues after 30 minutes or restarts within 24 hours."
+        ],
+        "sources": [
+          {
+            "title": "WHO recommendation on tranexamic acid for the treatment of postpartum haemorrhage — World Health Organization",
+            "url": "https://iris.who.int/bitstream/handle/10665/259379/WHO-RHR-17.21-eng.pdf",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "WHO recommendations for the prevention and treatment of postpartum haemorrhage — World Health Organization",
+            "url": "https://www.who.int/publications/i/item/9789241550154",
+            "accessed": "not recorded"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "WHO recommendation on tranexamic acid for the treatment of postpartum haemorrhage — World Health Organization",
+        "url": "https://iris.who.int/bitstream/handle/10665/259379/WHO-RHR-17.21-eng.pdf",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "WHO recommendations for the prevention and treatment of postpartum haemorrhage — World Health Organization",
+        "url": "https://www.who.int/publications/i/item/9789241550154",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "topic-immunosuppression",
+    "title": "Immunosuppressants",
+    "category": "Topic",
+    "summary": "Transplant immunosuppression; several agents need blood level monitoring.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Never omit or delay transplant immunosuppression without transplant team advice — rejection risk outweighs most perioperative concerns.",
+          "Calcineurin inhibitors interact heavily through CYP3A4: check every new antifungal, macrolide and antiepileptic against them.",
+          "Take trough levels immediately before the dose and record the exact sampling and dosing times on the request.",
+          "Watch renal function, magnesium, potassium, glucose and blood pressure while levels are being adjusted."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "topic-other-agents",
+    "title": "Other agents",
+    "category": "Topic",
+    "summary": "Remaining monographs that do not sit inside a single topic.",
+    "sections": [
+      {
+        "title": "Key points",
+        "items": [
+          "Each monograph lists its sources — check the dose against the BNF or product SPC and your local protocol before use."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "infusions-vasopressors",
+    "title": "Infusions — Vasopressors",
+    "category": "Infusions",
+    "summary": "Catecholamine infusions should run through a central line where possible; peripheral use requires a large proximal vein and frequent site checks. Titrate to a target MAP (usually 65–75 mmHg).",
+    "sections": [
+      {
+        "title": "Noradrenaline (4 mg/50 mL)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base."
+          },
+          {
+            "label": "Draw up",
+            "value": "4 mg (one 4 mg/4 mL ampoule) made up to 50 mL"
+          },
+          {
+            "label": "Final concentration",
+            "value": "80 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.05 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.01–1.5 micrograms/kg/min"
+          }
+        ],
+        "text": "Single-strength syringe (80 micrograms/mL) — usual starting concentration; suits low to moderate doses and smaller patients. Double (8 mg/50 mL) and quadruple (16 mg/50 mL) strengths are listed separately for escalating requirements; label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+        "sources": [
+          {
+            "title": "Noradrenaline — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/13172/smpc",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Noradrenaline (8 mg/50 mL)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base."
+          },
+          {
+            "label": "Draw up",
+            "value": "8 mg (two 4 mg/4 mL ampoules) made up to 50 mL"
+          },
+          {
+            "label": "Final concentration",
+            "value": "160 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.05 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.01–1.5 micrograms/kg/min"
+          }
+        ],
+        "text": "Double-strength syringe (160 micrograms/mL) — the common ICU default. Label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+        "sources": [
+          {
+            "title": "Noradrenaline — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/13172/smpc",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Noradrenaline (16 mg/50 mL)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base."
+          },
+          {
+            "label": "Draw up",
+            "value": "16 mg (four 4 mg/4 mL ampoules) made up to 50 mL"
+          },
+          {
+            "label": "Final concentration",
+            "value": "320 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.05 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.01–1.5 micrograms/kg/min"
+          }
+        ],
+        "text": "Quadruple-strength syringe (320 micrograms/mL) for high-dose requirements or fluid restriction. Central access essential; label clearly and never mix strengths on one pump. Rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+        "sources": [
+          {
+            "title": "Noradrenaline — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/13172/smpc",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Adrenaline (epinephrine)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "5% glucose or 0.9% sodium chloride"
+          },
+          {
+            "label": "Draw up",
+            "value": "4 mg in 50 mL"
+          },
+          {
+            "label": "Final concentration",
+            "value": "80 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.05 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.01–1 micrograms/kg/min"
+          }
+        ],
+        "text": "Second-line inotrope/vasopressor; 0.01–0.1 micrograms/kg/min usual, up to 1 microgram/kg/min in critical care. Causes tachycardia, hyperlactataemia (β₂ effect) and hyperglycaemia. Also used undiluted 1:10,000 in cardiac arrest."
+      },
+      {
+        "title": "Vasopressin",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "5% glucose or 0.9% sodium chloride"
+          },
+          {
+            "label": "Draw up",
+            "value": "20 units in 20 mL (1 unit/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "1 unit/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.03 units/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.01–0.04 units/min"
+          }
+        ],
+        "text": "Fixed (non-weight-based) dose. Shock dosing is product- and protocol-specific: use the local critical-care vasopressin regimen; a common starting dose is 0.03 units/min. The UK argipressin 20 IU/mL products cited here are licensed for diabetes insipidus and oesophageal variceal bleeding, so shock use is off-label for those products. Higher rates cause coronary, splanchnic and digital ischaemia.",
+        "sources": [
+          {
+            "title": "Vasopressin (argipressin) for septic shock — critical care formulary — NHS Highland (Right Decisions)",
+            "url": "https://www.rightdecisions.scot.nhs.uk/tam-treatments-and-medicines-nhs-highland/formularies/ancillary-formularies/critical-care-formulary/vasopressin-argipressin-for-septic-shock-critical-care-formulary/",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Argipressin 20 IU/mL — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/4117/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Argipressin 20 IU/mL — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/10362/smpc",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Metaraminol",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "20 mg in 40 mL (0.5 mg/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "500 micrograms/mL (0.5 mg/mL)"
+          },
+          {
+            "label": "Starting dose",
+            "value": "20 micrograms/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "8–83 micrograms/min"
+          }
+        ],
+        "text": "Predominantly α₁ agonist with indirect action. Usual infusion 0.5–5 mg/h (≈8–83 micrograms/min). Often run peripherally short-term; handy bridge while central access is established. Also given as 0.5–1 mg boluses."
+      },
+      {
+        "title": "Phenylephrine",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride (or 5% glucose)"
+          },
+          {
+            "label": "Draw up",
+            "value": "10 mg in 100 mL"
+          },
+          {
+            "label": "Final concentration",
+            "value": "100 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.5 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.25–3 micrograms/kg/min"
+          }
+        ],
+        "text": "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. Common theatre dilution is 10 mg in 100 mL = 100 micrograms/mL. Usual range 0.25–3 micrograms/kg/min (≈18–210 micrograms/min at 70 kg) — which brackets the 35–180 micrograms/min quoted in the monograph; rates up to 6 micrograms/kg/min are described in refractory vasoplegia. High requirements may need a more concentrated preparation per local protocol, or a change to noradrenaline. May drop cardiac output by reflex bradycardia and afterload rise."
+      },
+      {
+        "title": "Dopamine",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "200 mg in 50 mL (4 mg/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "4 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "5 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "2–20 micrograms/kg/min"
+          }
+        ],
+        "text": "Largely superseded by noradrenaline for shock (more arrhythmia). 'Renal-dose' dopamine has no evidence base and should not be used."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Noradrenaline — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/13172/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Vasopressin (argipressin) for septic shock — critical care formulary — NHS Highland (Right Decisions)",
+        "url": "https://www.rightdecisions.scot.nhs.uk/tam-treatments-and-medicines-nhs-highland/formularies/ancillary-formularies/critical-care-formulary/vasopressin-argipressin-for-septic-shock-critical-care-formulary/",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Argipressin 20 IU/mL — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/4117/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Argipressin 20 IU/mL — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/10362/smpc",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "infusions-inotropes",
+    "title": "Infusions — Inotropes",
+    "category": "Infusions",
+    "summary": "Inotropes increase contractility at the cost of myocardial oxygen demand and arrhythmia. Central access is preferred, and titrate to cardiac output/perfusion markers rather than blood pressure alone.",
+    "sections": [
+      {
+        "title": "Dobutamine",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "250 mg in 50 mL (5 mg/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "5 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "5 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "2.5–20 micrograms/kg/min"
+          }
+        ],
+        "text": "β₁-predominant; causes vasodilatation and tachycardia — may need co-infusion of noradrenaline to support MAP. Standard inotrope for low-output heart failure."
+      },
+      {
+        "title": "Milrinone",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "20 mg in 50 mL (400 micrograms/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "400 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.375 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.375–0.75 micrograms/kg/min"
+          }
+        ],
+        "text": "PDE-3 inhibitor; inodilator useful in pulmonary hypertension/right ventricular failure. Long half-life — accumulates in renal failure; often started without a loading dose in ICU to avoid hypotension."
+      },
+      {
+        "title": "Levosimendan",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "5% glucose only"
+          },
+          {
+            "label": "Draw up",
+            "value": "12.5 mg in 500 mL (25 micrograms/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "25 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.1 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.05–0.2 micrograms/kg/min"
+          }
+        ],
+        "text": "Calcium sensitiser given as a 24 h infusion; active metabolite persists ~7 days. Skip the loading bolus in hypotensive patients. Avoid in severe renal/hepatic failure."
+      }
+    ]
+  },
+  {
+    "id": "infusions-sedation-analgesia",
+    "title": "Infusions — Sedation and analgesia",
+    "category": "Infusions",
+    "summary": "Analgesia first, then sedative titrated to a target score (e.g. RASS 0 to −2) with daily review. Infusion rates below are adult starting points — obesity, age and organ failure all change requirements.",
+    "sections": [
+      {
+        "title": "Propofol 1%",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "Undiluted (supplied as 1% or 2% lipid emulsion)"
+          },
+          {
+            "label": "Draw up",
+            "value": "Neat — 50 mL vial of 1% (10 mg/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "10 mg/mL (1%)"
+          },
+          {
+            "label": "Starting dose",
+            "value": "1 mg/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.3–4 mg/kg/h"
+          }
+        ],
+        "text": "For adult ICU sedation use the lowest effective rate within the product's recommended range, generally 0.3–4 mg/kg/h. Review continuously and monitor for propofol infusion syndrome (lactic acidosis, rhabdomyolysis, hypertriglyceridaemia); risk increases with higher doses and prolonged use, especially above 4 mg/kg/h for more than 48 hours. Suspected toxicity requires prompt action, not waiting until 48 hours. Lipid load ~1.1 kcal/mL.",
+        "sources": [
+          {
+            "title": "Propofol 1% — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/15153/smpc",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Midazolam",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "50 mg in 50 mL (1 mg/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "1 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "30 micrograms/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "30–200 micrograms/kg/h"
+          }
+        ],
+        "text": "Monograph range 0.03–0.2 mg/kg/h (30–200 micrograms/kg/h); BNF suggests 0.03–0.1 mg/kg/h under 60 years. Accumulates with prolonged infusion (context-sensitive half-time rises), especially in renal failure and obesity — not ideal beyond 48–72 h. Status epilepticus doses are higher."
+      },
+      {
+        "title": "Dexmedetomidine",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "400 micrograms (4 mL of 100 micrograms/mL) made up to 50 mL total"
+          },
+          {
+            "label": "Final concentration",
+            "value": "8 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.7 micrograms/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.2–1.4 micrograms/kg/h"
+          }
+        ],
+        "text": "Alpha-2 agonist used for rousable sedation. Bradycardia and hypotension are important adverse effects; respiratory depression, airway obstruction and apnoea can also occur. Continuous cardiac monitoring and appropriate respiratory monitoring are required. A loading dose is not recommended for ICU sedation.",
+        "sources": [
+          {
+            "title": "Dexmedetomidine — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/4783/smpc",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Clonidine (1500 micrograms/50 mL)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "1500 micrograms (10 × 150 micrograms/mL ampoules) made up to 50 mL"
+          },
+          {
+            "label": "Final concentration",
+            "value": "30 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.5 micrograms/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.2–2 micrograms/kg/h"
+          }
+        ],
+        "text": "Standard-strength syringe (30 micrograms/mL). A half-strength 750 micrograms/50 mL syringe is also listed — check which your unit uses and label the strength clearly. α₂ agonist adjunct for sedation, withdrawal and agitation; useful in opioid/benzodiazepine weaning. Bradycardia and hypotension are dose-limiting — give loading doses slowly. Do not stop abruptly after prolonged use (rebound hypertension)."
+      },
+      {
+        "title": "Clonidine (750 micrograms/50 mL)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "750 micrograms (5 × 150 micrograms/mL ampoules) made up to 50 mL"
+          },
+          {
+            "label": "Final concentration",
+            "value": "15 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.5 micrograms/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.2–2 micrograms/kg/h"
+          }
+        ],
+        "text": "Half-strength syringe (15 micrograms/mL); never mix the two on one pump. Same indications and cautions as the standard-strength recipe: bradycardia and hypotension are dose-limiting, and avoid abrupt withdrawal after prolonged use."
+      },
+      {
+        "title": "Fentanyl",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "Undiluted, or dilute in 0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "2500 micrograms in 50 mL — neat (50 mL of 50 micrograms/mL ampoules)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "50 micrograms/mL (neat)"
+          },
+          {
+            "label": "Starting dose",
+            "value": "1 micrograms/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.7–10 micrograms/kg/h"
+          }
+        ],
+        "text": "Rates shown are for the NEAT 50 micrograms/mL syringe. Critical care sedation 0.7–10 micrograms/kg/h; peri-operative analgesia 0.5–2 micrograms/kg/h. Some units run a diluted 1000 micrograms in 50 mL (20 micrograms/mL) syringe — never mix the two strengths. Lipophilic with marked accumulation on prolonged infusion; wean gradually after days of therapy to avoid withdrawal."
+      },
+      {
+        "title": "Alfentanil",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "Undiluted, or dilute in 0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "25 mg in 50 mL (500 micrograms/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "500 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "30 micrograms/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "10–120 micrograms/kg/h"
+          }
+        ],
+        "text": "Light analgesia from about 10 micrograms/kg/h; ventilated patients: 0.5–1 micrograms/kg/min equals 30–60 micrograms/kg/h; the upper end of the listed range is 2 micrograms/kg/min (120 micrograms/kg/h) — brief intra-operative peaks above this for intensely stimulating surgery are an anaesthetist-titrated bolus decision, not a maintenance rate. Useful in renal failure (inactive metabolites); still accumulates with very long infusions but less than fentanyl."
+      },
+      {
+        "title": "Remifentanil",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride, 5% glucose or water for injection"
+          },
+          {
+            "label": "Draw up",
+            "value": "5 mg in 50 mL (100 micrograms/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "100 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.05 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.006–2 micrograms/kg/min"
+          }
+        ],
+        "text": "ICU sedation 0.006–0.75 micrograms/kg/min; general anaesthesia 0.025–2 micrograms/kg/min. Esterase-metabolised — no accumulation and predictable offset (context-sensitive half-time ~4 min) whatever the infusion length. Plan post-stop analgesia before discontinuing."
+      },
+      {
+        "title": "Ketamine",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "500 mg (10 mL of 50 mg/mL) in 50 mL total"
+          },
+          {
+            "label": "Final concentration",
+            "value": "10 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.5 mg/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.05–4.5 mg/kg/h"
+          }
+        ],
+        "text": "Adjunct for analgosedation, especially with opioid tolerance or severe bronchospasm. Analgesic (opioid-sparing) doses are 0.05–0.2 mg/kg/h; sedation and anaesthesia 0.5–4.5 mg/kg/h. Psychotomimetic effects less prominent at infusion rates."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Propofol 1% — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/15153/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Dexmedetomidine — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/4783/smpc",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "infusions-other",
+    "title": "Infusions — Other common ICU infusions",
+    "category": "Infusions",
+    "summary": "Frequently run continuous infusions in neurocritical care, endocrine emergencies and anticoagulation.",
+    "sections": [
+      {
+        "title": "Insulin (Actrapid)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride"
+          },
+          {
+            "label": "Draw up",
+            "value": "50 units in 50 mL (1 unit/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "1 unit/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "2 units/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.1–10 units/h"
+          }
+        ],
+        "text": "Typical range 0.1–10 units/h (as low as 0.05 units/h in some protocols), titrated to a written blood-glucose protocol (commonly target 6–10 mmol/L on ICU; tighter ranges intra-operatively). Flush the line first — insulin adsorbs to plastic."
+      },
+      {
+        "title": "Heparin (unfractionated)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "25,000 units in 50 mL (500 units/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "500 units/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "18 units/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "12–25 units/kg/h"
+          }
+        ],
+        "text": "Adjust the infusion using the indication-specific local nomogram and aPTT or anti-Xa results. There is no universal 45,000-unit daily ceiling; unexpectedly high requirements need senior review for heparin resistance and monitoring problems. Assess urgently for HIT if suspected.",
+        "sources": [
+          {
+            "title": "Heparin sodium — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/1682/smpc",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Epoprostenol (prostacyclin)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "Brand-specific — follow the exact product's SmPC; do not interchange diluents"
+          },
+          {
+            "label": "Draw up",
+            "value": "No generic recipe given. Preparation is brand-specific: follow the exact epoprostenol product's SmPC and specialist protocol"
+          },
+          {
+            "label": "Final concentration",
+            "value": "Product-specific (see SmPC)"
+          },
+          {
+            "label": "Starting dose",
+            "value": "5 nanograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "2–20 nanograms/kg/min"
+          }
+        ],
+        "text": "Preparation is brand-specific. Veletri is reconstituted and further diluted with sterile water for injections or 0.9% sodium chloride; a glycine-buffer recipe must identify the matching product explicitly. Dosed in NANOGRAMS/kg/min (1 microgram = 1000 nanograms) — a common source of 1000-fold errors. Inhaled/IV pulmonary vasodilator also used as extracorporeal-circuit anticoagulant. Very short half-life — interruptions cause rebound pulmonary hypertension; hypotension limits IV use.",
+        "sources": [
+          {
+            "title": "Veletri (epoprostenol) — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/3112/smpc",
+            "accessed": "not recorded"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Heparin sodium — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/1682/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Veletri (epoprostenol) — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/3112/smpc",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "infusions-neuromuscular-blockade",
+    "title": "Infusions — Neuromuscular blockade",
+    "category": "Infusions",
+    "summary": "Only ever run with adequate sedation and analgesia confirmed first, with train-of-four monitoring and a documented indication (severe ARDS, ventilator dyssynchrony, raised ICP, shivering during targeted temperature management). Review daily and stop at the earliest opportunity.",
+    "sections": [
+      {
+        "title": "Rocuronium",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "500 mg (50 mL of 10 mg/mL) neat in a 50 mL syringe"
+          },
+          {
+            "label": "Final concentration",
+            "value": "10 mg/mL (neat)"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.3 mg/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.3–0.6 mg/kg/h"
+          }
+        ],
+        "text": "Aminosteroid NMBA; largely hepatic elimination so accumulates in liver failure and, to a lesser extent, renal failure. Sugammadex can reverse rocuronium block; the dose depends on block depth — follow the SmPC and confirm recovery with neuromuscular monitoring. Titrate to 1–2 twitches on train-of-four."
+      },
+      {
+        "title": "Atracurium",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride (do not use alkaline solutions)"
+          },
+          {
+            "label": "Draw up",
+            "value": "250 mg (25 mL of 10 mg/mL) made up to 50 mL"
+          },
+          {
+            "label": "Final concentration",
+            "value": "5 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.3 mg/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.3–0.9 mg/kg/h"
+          }
+        ],
+        "text": "Usual 0.3–0.6 mg/kg/h, up to 0.9 mg/kg/h if required. Hofmann elimination and ester hydrolysis — organ-independent, so the drug of choice in combined hepatic and renal failure. Histamine release can cause flushing and hypotension at higher doses. Store the ampoules in a fridge."
+      },
+      {
+        "title": "Cisatracurium",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "100 mg (50 mL of 2 mg/mL) neat in a 50 mL syringe"
+          },
+          {
+            "label": "Final concentration",
+            "value": "2 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "3 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.5–10 micrograms/kg/min"
+          }
+        ],
+        "text": "Isomer of atracurium with Hofmann elimination and no clinically significant histamine release; the usual choice for severe ARDS. Dosed in MICROGRAMS/kg/min — 3 micrograms/kg/min is roughly 0.18 mg/kg/h; ICU maintenance is often 0.5–2 micrograms/kg/min within an overall 0.5–10 range. Keep refrigerated."
+      },
+      {
+        "title": "Vecuronium",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "Water for injection to reconstitute, then 0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "50 mg (5 × 10 mg vials) made up to 50 mL"
+          },
+          {
+            "label": "Final concentration",
+            "value": "1 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "1 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.8–1.4 micrograms/kg/min"
+          }
+        ],
+        "text": "Aminosteroid with an active 3-desacetyl metabolite that accumulates in renal failure and can cause prolonged paralysis — avoid prolonged infusion in renal impairment. Reversible with sugammadex."
+      }
+    ]
+  },
+  {
+    "id": "infusions-cardiovascular-control",
+    "title": "Infusions — Vasodilators and rate control",
+    "category": "Infusions",
+    "summary": "Short-acting titratable agents for hypertensive emergencies, aortic and neurosurgical cases, and perioperative tachyarrhythmias. Invasive arterial monitoring is strongly advised for all of these.",
+    "sections": [
+      {
+        "title": "Glyceryl trinitrate (GTN)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose (use polyethylene or glass giving sets — GTN adsorbs to PVC)"
+          },
+          {
+            "label": "Draw up",
+            "value": "50 mg in 50 mL (1 mg/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "1 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "10 micrograms/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "10–200 micrograms/min"
+          }
+        ],
+        "text": "Fixed-dose (not weight-based) infusion titrated to blood pressure or chest pain: start 10–20 micrograms/min, usual range 10–200 micrograms/min, with up to 400 micrograms/min for short periods. Predominantly venodilator at low rates; headache is common and tachyphylaxis develops within 24–48 h. Avoid with phosphodiesterase-5 inhibitors and in severe aortic stenosis or hypovolaemia."
+      },
+      {
+        "title": "Sodium nitroprusside",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "5% glucose only"
+          },
+          {
+            "label": "Draw up",
+            "value": "50 mg in 50 mL (1 mg/mL) — protect the syringe and line from light"
+          },
+          {
+            "label": "Final concentration",
+            "value": "1 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.5 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.2–1.5 micrograms/kg/min"
+          }
+        ],
+        "text": "Immediate-onset arterial and venous dilator for hypertensive emergencies and controlled hypotension. BNF: start 0.5–1.5 micrograms/kg/min, increase in 500 nanograms/kg/min steps every 5 min; usual 0.5–8 micrograms/kg/min, maximum 8 (stop if no response within 10 min at maximum). Rates shown here are capped at 1.5 micrograms/kg/min — the controlled-hypotension ceiling and a sensible maintenance limit because cyanide toxicity rises with dose and duration; watch for unexplained metabolic acidosis and rising lactate. Discard if the solution discolours."
+      },
+      {
+        "title": "Labetalol",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "5% glucose (or 0.9% sodium chloride)"
+          },
+          {
+            "label": "Draw up",
+            "value": "250 mg (50 mL of 5 mg/mL) neat in a 50 mL syringe"
+          },
+          {
+            "label": "Final concentration",
+            "value": "5 mg/mL (neat)"
+          },
+          {
+            "label": "Starting dose",
+            "value": "20 mg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "20–160 mg/h"
+          }
+        ],
+        "text": "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. UK practice is a fixed rate: start 20 mg/h, doubling every 30 min to a usual maximum of 160 mg/h; the BNF regimen of 2 mg/min (120 mg/h) is for acute hypertensive emergencies. The BNF quotes a usual total dose of 50–200 mg (up to 300 mg) for the short infusion regimen; continuous infusions in dissection or pre-eclampsia run longer under senior review with continuous BP monitoring. Avoid in asthma, decompensated heart failure and heart block."
+      },
+      {
+        "title": "Esmolol",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose (10 mg/mL ready-diluted bags also available)"
+          },
+          {
+            "label": "Draw up",
+            "value": "500 mg (5 mL of 100 mg/mL) made up to 50 mL"
+          },
+          {
+            "label": "Final concentration",
+            "value": "10 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "50 micrograms/kg/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "25–200 micrograms/kg/min"
+          }
+        ],
+        "text": "Ultra-short-acting cardioselective β blocker (half-life ~9 min) — ideal when β blockade may need to be withdrawn quickly. Dosed in MICROGRAMS/kg/min, usual 25–200 with up to 300 for short periods in life-threatening situations. Hypotension is the main limitation; extravasation can cause skin necrosis."
+      },
+      {
+        "title": "Hydralazine",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride only (reacts with glucose)"
+          },
+          {
+            "label": "Draw up",
+            "value": "20 mg (1 × 20 mg vial) made up to 40 mL (500 micrograms/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "500 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "200 micrograms/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "50–300 micrograms/min"
+          }
+        ],
+        "text": "Direct arteriolar dilator used mainly in severe pre-eclampsia. Fixed-dose infusion: start 200–300 micrograms/min, maintenance usually 50–150 micrograms/min. Monitor maternal blood pressure and, where appropriate, fetal response. In the antenatal period, NICE advises considering up to 500 mL crystalloid before or with the first IV hydralazine dose. Avoid automatic fluid loading: severe pre-eclampsia requires careful fluid balance because of pulmonary oedema risk.",
+        "sources": [
+          {
+            "title": "Hypertension in pregnancy: diagnosis and management — NICE",
+            "url": "https://www.nice.org.uk/guidance/ng133/chapter/recommendations",
+            "accessed": "not recorded"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Hypertension in pregnancy: diagnosis and management — NICE",
+        "url": "https://www.nice.org.uk/guidance/ng133/chapter/recommendations",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "infusions-anaesthetic-adjuncts",
+    "title": "Infusions — Anaesthetic and peri-operative adjuncts",
+    "category": "Infusions",
+    "summary": "Infusions commonly started in theatre and continued into recovery or critical care. Prescribe the total dose limit as well as the rate — several of these have a ceiling dose per 24 hours.",
+    "sections": [
+      {
+        "title": "Morphine",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "50 mg in 50 mL (1 mg/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "1 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "20 micrograms/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "10–100 micrograms/kg/h"
+          }
+        ],
+        "text": "Roughly 1–7 mg/h in an average adult (the monograph quotes 0.8–10 mg/h post-operatively; higher rates need senior review). The active metabolite morphine-6-glucuronide accumulates in renal impairment — reduce the rate and consider fentanyl or alfentanil instead. Nurse-controlled or patient-controlled analgesia is preferred where the patient can use it."
+      },
+      {
+        "title": "Lidocaine (IV analgesia)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride"
+          },
+          {
+            "label": "Draw up",
+            "value": "500 mg (25 mL of 2%) made up to 50 mL (10 mg/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "10 mg/mL (1%)"
+          },
+          {
+            "label": "Starting dose",
+            "value": "Per local protocol"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "Up to 1.5 mg/kg/h"
+          }
+        ],
+        "text": "Opioid-sparing intravenous lidocaine. Maximum 1.5 mg/kg/h using ideal body weight, with an absolute maximum of 120 mg/h; do not use in patients below 40 kg under the cited consensus. Limit to 24 hours with review. If a loading dose is used, no more than 1.5 mg/kg over 10 minutes. Follow local governance, dedicated infusion and monitoring requirements. Avoid overlapping other local anaesthetic interventions; the consensus specifies a 4-hour interval around nerve blocks. Stop if there are any signs of local anaesthetic systemic toxicity; lipid emulsion must be available.",
+        "sources": [
+          {
+            "title": "International consensus statement on the peri-operative use of intravenous lidocaine — Anaesthesia (Association of Anaesthetists)",
+            "url": "https://onlinelibrary.wiley.com/doi/10.1111/anae.15270",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Magnesium sulphate",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "10 g (20 mL of 50%) made up to 50 mL (200 mg/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "200 mg/mL (20%)"
+          },
+          {
+            "label": "Starting dose",
+            "value": "1000 mg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "1000 mg/h (fixed)"
+          }
+        ],
+        "text": "Eclampsia / severe pre-eclampsia (NICE): loading dose 4 g IV over 5–15 minutes (given separately), then a fixed maintenance infusion of 1 g/h (1000 mg/h) for 24 hours. Monitor patellar reflexes, respiratory rate and urine output, and adjust in renal impairment per local protocol. Calcium gluconate is the antidote for toxicity.",
+        "sources": [
+          {
+            "title": "Hypertension in pregnancy: diagnosis and management — NICE",
+            "url": "https://www.nice.org.uk/guidance/ng133/chapter/recommendations",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Salbutamol",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "5 mg (5 mL of 1 mg/mL) made up to 50 mL (100 micrograms/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "100 micrograms/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "5 micrograms/min"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "3–20 micrograms/min"
+          }
+        ],
+        "text": "Intravenous rescue in life-threatening asthma when nebulised therapy is failing. Fixed-dose infusion. Causes tachycardia, tremor, lactic acidosis and hypokalaemia — check potassium and lactate regularly."
+      },
+      {
+        "title": "Aminophylline",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or 5% glucose"
+          },
+          {
+            "label": "Draw up",
+            "value": "500 mg (20 mL of 25 mg/mL) made up to 50 mL (10 mg/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "10 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "0.5 mg/kg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "0.1–0.5 mg/kg/h"
+          }
+        ],
+        "text": "Give the 5 mg/kg loading dose over 20 min ONLY if the patient is not already on oral theophylline. Maintenance 0.5 mg/kg/h for the first 12 h, then 0.3 mg/kg/h; 0.1–0.3 mg/kg/h in the elderly, heart failure or liver disease. Narrow therapeutic index — check theophylline levels and watch for arrhythmias, vomiting and seizures."
+      },
+      {
+        "title": "Oxytocin",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride or Hartmann's (avoid large volumes of glucose)"
+          },
+          {
+            "label": "Draw up",
+            "value": "40 units made up to 40 mL (1 unit/mL). If using the alternative 40 units in 500 mL bag (0.08 units/mL), infuse over 4 hours per local protocol"
+          },
+          {
+            "label": "Final concentration",
+            "value": "1 unit/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "10 units/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "5–10 units/h"
+          }
+        ],
+        "text": "Post-partum haemorrhage maintenance after the initial slow 5 unit bolus: 40 units over 4 h (10 units/h). Give boluses slowly — rapid injection causes profound vasodilatation, hypotension and tachycardia. Watch for hyponatraemia with prolonged high-volume infusions."
+      },
+      {
+        "title": "Tranexamic acid (major trauma)",
+        "rows": [
+          {
+            "label": "Diluent",
+            "value": "0.9% sodium chloride"
+          },
+          {
+            "label": "Draw up",
+            "value": "Major trauma: 1 g IV over 10 minutes, then 1 g over 8 hours (prepared per local protocol, e.g. 1 g made up to 50 mL = 20 mg/mL)"
+          },
+          {
+            "label": "Final concentration",
+            "value": "20 mg/mL"
+          },
+          {
+            "label": "Starting dose",
+            "value": "125 mg/h"
+          },
+          {
+            "label": "Usual adult range",
+            "value": "125 mg/h (fixed)"
+          }
+        ],
+        "text": "TRAUMA regimen (not postpartum haemorrhage — see the Obstetric topic for that regimen). Current UK guideline: NICE NG39 recommends IV tranexamic acid as soon as possible in major trauma with active or suspected active bleeding, and not more than 3 hours after injury unless there is evidence of hyperfibrinolysis. Dosing regimen: 1 g over 10 minutes then 1 g over 8 hours (fixed 125 mg/h maintenance), as used in the CRASH-2 randomised trial — a trial regimen, not itself a guideline; follow your local major-haemorrhage protocol. Reduce the dose in renal impairment. Never give by the intrathecal or epidural route — accidental spinal administration is fatal.",
+        "sources": [
+          {
+            "title": "Major trauma: assessment and initial management — recommendations — NICE",
+            "url": "https://www.nice.org.uk/guidance/ng39/chapter/recommendations",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "CRASH-2: tranexamic acid in bleeding trauma patients (Lancet 2010) — trial, not a guideline — CRASH-2 collaborators, LSHTM",
+            "url": "https://crash2.lshtm.ac.uk/CRASH2_Lancet.pdf",
+            "accessed": "not recorded"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "International consensus statement on the peri-operative use of intravenous lidocaine — Anaesthesia (Association of Anaesthetists)",
+        "url": "https://onlinelibrary.wiley.com/doi/10.1111/anae.15270",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Hypertension in pregnancy: diagnosis and management — NICE",
+        "url": "https://www.nice.org.uk/guidance/ng133/chapter/recommendations",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Major trauma: assessment and initial management — recommendations — NICE",
+        "url": "https://www.nice.org.uk/guidance/ng39/chapter/recommendations",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "CRASH-2: tranexamic acid in bleeding trauma patients (Lancet 2010) — trial, not a guideline — CRASH-2 collaborators, LSHTM",
+        "url": "https://crash2.lshtm.ac.uk/CRASH2_Lancet.pdf",
+        "accessed": "not recorded"
+      }
+    ]
+  },
+  {
+    "id": "premedication-adult",
+    "title": "Adult anaesthetic premedication",
+    "category": "Premedication",
+    "summary": "For adults aged 18 years and over. Premedication is given before induction to reduce anxiety and smooth the induction itself. It is used selectively — most fit adults need none. Doses below summarise common UK practice; several uses are off-label and should follow local policy. Clinical verification of this page is in progress.",
+    "sections": [
+      {
+        "title": "General principles",
+        "items": [
+          "Choose the agent to match the goal: anxiolysis and amnesia (midazolam) versus rousable sedation with analgesic sparing (clonidine, dexmedetomidine).",
+          "Anyone given a sedative premed needs documented monitoring (SpO₂, respiratory rate, level of consciousness) and a named person responsible until handover to the anaesthetic team. Flumazenil must be immediately available when midazolam is used.",
+          "Reduce doses in older and frail adults, obstructive sleep apnoea, and significant cardiac, respiratory, hepatic or renal impairment.",
+          "Avoid routine sedative premedication where a rapid wake-up is needed, in airway obstruction risk, and in raised intracranial pressure.",
+          "In pregnancy and breastfeeding, check each drug's product information and local obstetric guidance before use."
+        ],
+        "sources": [
+          {
+            "title": "Guidelines for the Provision of Anaesthesia Services (GPAS) — Royal College of Anaesthetists",
+            "url": "https://rcoa.ac.uk/gpas",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Midazolam — oral",
+        "text": "Benzodiazepine giving anxiolysis and anterograde amnesia. Onset 15–30 minutes.",
+        "items": [
+          "Paradoxical agitation or disinhibition can occur — observe, do not re-dose automatically.",
+          "Caution with other CNS depressants (opioids, antihistamines); recovery may be delayed after day-case surgery."
+        ],
+        "rows": [
+          {
+            "label": "Adult — oral",
+            "value": "7.5–15 mg (oral solution/tablet); halve in older or frail adults. Timing: 30–60 min before induction"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Lookup only (not claim-level evidence): Search the BNF for Midazolam",
+            "url": "https://bnf.nice.org.uk/search/?q=midazolam",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the emc for Midazolam product information (SmPC)",
+            "url": "https://www.medicines.org.uk/emc/search?q=midazolam",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Clonidine — oral",
+        "text": "Alpha-2 agonist used off-label for sedative premedication. Bradycardia, hypotension and excessive sedation are important risks; appropriate airway and respiratory monitoring remain necessary. Slower onset than midazolam, so it suits planned rather than last-minute premedication.",
+        "items": [
+          "Avoid or reduce the dose in conduction disease, hypovolaemia or with other negative chronotropes.",
+          "Reduces volatile and opioid requirements; plan induction and analgesia doses accordingly.",
+          "Longer sedation than midazolam — allow for a slower recovery in day-case pathways."
+        ],
+        "rows": [
+          {
+            "label": "Adult — oral",
+            "value": "150–300 micrograms. Timing: 60–90 min before induction"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Summary of Product Characteristics (emc product 9616) — emc",
+            "url": "https://www.medicines.org.uk/emc/product/9616/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the BNF for Clonidine",
+            "url": "https://bnf.nice.org.uk/search/?q=clonidine",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the emc for Clonidine product information (SmPC)",
+            "url": "https://www.medicines.org.uk/emc/search?q=clonidine",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Dexmedetomidine — intranasal",
+        "text": "Selective alpha-2 agonist used off-label by this route. Bradycardia and hypotension are important adverse effects; respiratory depression, airway obstruction and apnoea can also occur, so cardiac and respiratory monitoring are required. The IV solution (100 micrograms/mL) is used undiluted via an atomiser.",
+        "items": [
+          "Avoid in heart block, severe ventricular dysfunction and hypovolaemia, and use caution with other rate-slowing drugs."
+        ],
+        "rows": [
+          {
+            "label": "Adult — intranasal (selected cases)",
+            "value": "1–1.5 micrograms/kg. Timing: 30–45 min before induction"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Dexmedetomidine — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/4783/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the BNF for Dexmedetomidine",
+            "url": "https://bnf.nice.org.uk/search/?q=dexmedetomidine",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the emc for Dexmedetomidine product information (SmPC)",
+            "url": "https://www.medicines.org.uk/emc/search?q=dexmedetomidine",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Melatonin — oral",
+        "text": "Used off-label as a mild anxiolytic premedication; immediate-release preparations are used.",
+        "items": [
+          "Effect is inconsistent — have a plan if the patient is still anxious at induction. Monitor as for any sedative premedication."
+        ],
+        "rows": [
+          {
+            "label": "Adult — oral",
+            "value": "3–6 mg immediate-release. Timing: 60–90 min before induction"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Lookup only (not claim-level evidence): Search the BNF for Melatonin",
+            "url": "https://bnf.nice.org.uk/search/?q=melatonin",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the emc for Melatonin product information (SmPC)",
+            "url": "https://www.medicines.org.uk/emc/search?q=melatonin",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Gabapentinoids — gabapentin and pregabalin",
+        "text": "Gabapentinoids are not a routine premedication choice. Potential analgesic benefit must be weighed against sedation, dizziness and respiratory depression; evidence does not establish a single optimal perioperative dose or timing. Use only an individualised plan under local guidance; prevention of chronic postsurgical pain is not established.",
+        "items": [
+          "Assess whether use is appropriate in older or frail adults, sleep apnoea and respiratory disease. Adjust gabapentin or pregabalin using the medicine-specific renal-function dosing table and monitor sedation and breathing; a universal 50% dose reduction is not appropriate.",
+          "Additive sedation and respiratory depression with opioids; severe respiratory depression has also been reported without opioids."
+        ],
+        "sources": [
+          {
+            "title": "Perioperative care in adults — recommendations — NICE",
+            "url": "https://www.nice.org.uk/guidance/ng180/chapter/Recommendations",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Gabapentin (Neurontin): risk of severe respiratory depression — MHRA Drug Safety Update",
+            "url": "https://www.gov.uk/drug-safety-update/gabapentin-neurontin-risk-of-severe-respiratory-depression",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Drug Safety Update, February 2021 (PDF) — MHRA",
+            "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/962557/Feb-2021-DSU-PDF_final.pdf",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Summary of Product Characteristics (emc product 15628) — emc",
+            "url": "https://www.medicines.org.uk/emc/product/15628/smpc",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Pre-emptive simple analgesia",
+        "text": "Oral paracetamol and an NSAID given with the pre-operative sip of water are part of most multimodal and enhanced recovery pathways.",
+        "items": [
+          "Count all oral, IV and combination-product paracetamol doses, and record the pre-operative dose clearly so the daily maximum is not exceeded.",
+          "Avoid NSAIDs in renal impairment, active peptic ulceration, significant bleeding risk, severe asthma with known sensitivity and some bowel and bone-graft surgery. Check product information for use in pregnancy and breastfeeding."
+        ],
+        "rows": [
+          {
+            "label": "Adult — paracetamol",
+            "value": "Use the current oral product guidance and local adult weight/risk-adjusted regimen. Adults below 50 kg or with hepatic, nutritional or alcohol-related risk factors need an individualised dose and daily maximum. Timing: 1–2 h before surgery"
+          },
+          {
+            "label": "Adult — ibuprofen",
+            "value": "400 mg oral (omit if NSAIDs contraindicated). Timing: 1–2 h before surgery"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Perioperative care in adults — recommendations — NICE",
+            "url": "https://www.nice.org.uk/guidance/ng180/chapter/Recommendations",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the BNF for Paracetamol",
+            "url": "https://bnf.nice.org.uk/search/?q=paracetamol",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the emc for Paracetamol product information (SmPC)",
+            "url": "https://www.medicines.org.uk/emc/search?q=paracetamol",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Aspiration prophylaxis",
+        "text": "Used where the risk of regurgitation is raised: emergency surgery, obstetrics, reflux, hiatus hernia, obesity, gastroparesis and difficult-airway plans.",
+        "rows": [
+          {
+            "label": "Omeprazole — oral",
+            "value": "40 mg. Timing: Evening before and/or 2–4 h pre-op"
+          },
+          {
+            "label": "Sodium citrate 0.3 M — oral",
+            "value": "30 mL. Timing: Immediately before induction (obstetric RSI)"
+          },
+          {
+            "label": "Metoclopramide — oral/IV",
+            "value": "10 mg. Timing: 30–60 min before induction"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Lookup only (not claim-level evidence): Search the BNF for Omeprazole",
+            "url": "https://bnf.nice.org.uk/search/?q=omeprazole",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the emc for Omeprazole product information (SmPC)",
+            "url": "https://www.medicines.org.uk/emc/search?q=omeprazole",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Guidelines for the Provision of Anaesthesia Services (GPAS) — Royal College of Anaesthetists",
+            "url": "https://rcoa.ac.uk/gpas",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Antiemetic prophylaxis",
+        "text": "Risk-scored prophylaxis (Apfel) is usually given at induction rather than as a true premed, but oral dosing on the ward is an option in high-risk patients and in those with severe previous post-operative nausea and vomiting.",
+        "items": [
+          "Ondansetron prolongs the QT interval — avoid combining with other QT-prolonging drugs and correct electrolytes.",
+          "Warn the patient that dexamethasone commonly causes a brief perineal burning sensation if given awake, and check the glucose in diabetes."
+        ],
+        "rows": [
+          {
+            "label": "Ondansetron",
+            "value": "Adult 4 mg IV at induction, or 16 mg oral 1 h pre-op (BNF). Timing: Oral 1 h pre-op; IV at induction"
+          },
+          {
+            "label": "Dexamethasone",
+            "value": "Adult PONV prophylaxis: 3.3–6.6 mg dexamethasone base IV (equivalent to 4–8 mg dexamethasone phosphate), according to local protocol. Verify how the preparation and prescription express the dose. Timing: At induction, not on the ward"
+          }
+        ],
+        "sources": [
+          {
+            "title": "Dexamethasone injection — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/9378/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Post-operative nausea and vomiting clinical guideline — Royal Cornwall Hospitals NHS Trust",
+            "url": "https://doclibrary-rcht.cornwall.nhs.uk/DocumentsLibrary/RoyalCornwallHospitalsTrust/Clinical/Anaesthetics/PostOperativeNauseaAndVomitingClinicalGuideline.pdf",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the BNF for Ondansetron",
+            "url": "https://bnf.nice.org.uk/search/?q=ondansetron",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the emc for Ondansetron product information (SmPC)",
+            "url": "https://www.medicines.org.uk/emc/search?q=ondansetron",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Guidelines for the Provision of Anaesthesia Services (GPAS) — Royal College of Anaesthetists",
+            "url": "https://rcoa.ac.uk/gpas",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Topical local anaesthetic for cannulation",
+        "text": "Can be applied on the ward to potential cannulation sites before intravenous induction.",
+        "items": [
+          "EMLA causes vasoconstriction and can make veins harder to see; tetracaine causes vasodilatation and mild erythema, which usually helps.",
+          "Do not apply to broken skin, mucous membranes or the eye, and remove tetracaine on time to avoid blistering."
+        ],
+        "rows": [
+          {
+            "label": "EMLA (lidocaine 2.5% + prilocaine 2.5%)",
+            "value": "Thick layer under an occlusive dressing, as specified in the product information. Timing: For intact-skin needle procedures, allow the application time in the product information; after a 1–2-hour application, anaesthesia usually persists for at least 2 hours after removal (shorter on the face)"
+          },
+          {
+            "label": "Ametop (tetracaine 4% gel)",
+            "value": "Contents of one tube under an occlusive dressing. Timing: Apply 30–45 min before; remove after 45 min"
+          }
+        ],
+        "sources": [
+          {
+            "title": "EMLA cream — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/871/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the BNF for Tetracaine",
+            "url": "https://bnf.nice.org.uk/search/?q=tetracaine",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Lookup only (not claim-level evidence): Search the emc for Tetracaine product information (SmPC)",
+            "url": "https://www.medicines.org.uk/emc/search?q=tetracaine",
+            "accessed": "not recorded"
+          }
+        ]
+      },
+      {
+        "title": "Scope",
+        "text": "Adult UK reference. Not for paediatric use. This page summarises common practice and is not a substitute for local policy or the product literature. Several regimens are off-label; prescribing remains the responsibility of the attending clinician."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guidelines for the Provision of Anaesthesia Services (GPAS) — Royal College of Anaesthetists",
+        "url": "https://rcoa.ac.uk/gpas",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the BNF for Midazolam",
+        "url": "https://bnf.nice.org.uk/search/?q=midazolam",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the emc for Midazolam product information (SmPC)",
+        "url": "https://www.medicines.org.uk/emc/search?q=midazolam",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Summary of Product Characteristics (emc product 9616) — emc",
+        "url": "https://www.medicines.org.uk/emc/product/9616/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the BNF for Clonidine",
+        "url": "https://bnf.nice.org.uk/search/?q=clonidine",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the emc for Clonidine product information (SmPC)",
+        "url": "https://www.medicines.org.uk/emc/search?q=clonidine",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Dexmedetomidine — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/4783/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the BNF for Dexmedetomidine",
+        "url": "https://bnf.nice.org.uk/search/?q=dexmedetomidine",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the emc for Dexmedetomidine product information (SmPC)",
+        "url": "https://www.medicines.org.uk/emc/search?q=dexmedetomidine",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the BNF for Melatonin",
+        "url": "https://bnf.nice.org.uk/search/?q=melatonin",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the emc for Melatonin product information (SmPC)",
+        "url": "https://www.medicines.org.uk/emc/search?q=melatonin",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Perioperative care in adults — recommendations — NICE",
+        "url": "https://www.nice.org.uk/guidance/ng180/chapter/Recommendations",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Gabapentin (Neurontin): risk of severe respiratory depression — MHRA Drug Safety Update",
+        "url": "https://www.gov.uk/drug-safety-update/gabapentin-neurontin-risk-of-severe-respiratory-depression",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Drug Safety Update, February 2021 (PDF) — MHRA",
+        "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/962557/Feb-2021-DSU-PDF_final.pdf",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Summary of Product Characteristics (emc product 15628) — emc",
+        "url": "https://www.medicines.org.uk/emc/product/15628/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the BNF for Paracetamol",
+        "url": "https://bnf.nice.org.uk/search/?q=paracetamol",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the emc for Paracetamol product information (SmPC)",
+        "url": "https://www.medicines.org.uk/emc/search?q=paracetamol",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the BNF for Omeprazole",
+        "url": "https://bnf.nice.org.uk/search/?q=omeprazole",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the emc for Omeprazole product information (SmPC)",
+        "url": "https://www.medicines.org.uk/emc/search?q=omeprazole",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Dexamethasone injection — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/9378/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Post-operative nausea and vomiting clinical guideline — Royal Cornwall Hospitals NHS Trust",
+        "url": "https://doclibrary-rcht.cornwall.nhs.uk/DocumentsLibrary/RoyalCornwallHospitalsTrust/Clinical/Anaesthetics/PostOperativeNauseaAndVomitingClinicalGuideline.pdf",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the BNF for Ondansetron",
+        "url": "https://bnf.nice.org.uk/search/?q=ondansetron",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the emc for Ondansetron product information (SmPC)",
+        "url": "https://www.medicines.org.uk/emc/search?q=ondansetron",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "EMLA cream — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/871/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the BNF for Tetracaine",
+        "url": "https://bnf.nice.org.uk/search/?q=tetracaine",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Lookup only (not claim-level evidence): Search the emc for Tetracaine product information (SmPC)",
+        "url": "https://www.medicines.org.uk/emc/search?q=tetracaine",
+        "accessed": "not recorded"
+      }
+    ]
+  }
+]

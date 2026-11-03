@@ -28,7 +28,7 @@ import { Link } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
-import { drugDilutions } from "@/features/drugReference/dilutions";
+import { drugDilutions, rangeText, startText } from "@/features/drugReference/dilutions";
 import { SourceChips, standardRefs } from "@/features/drugReference/references";
 
 function DrugReferenceInfusions() {
@@ -113,15 +113,11 @@ function DrugReferenceInfusions() {
                       </div>
                       <div>
                         <dt className="text-xs text-muted-foreground">Starting dose</dt>
-                        <dd className="text-sm text-foreground">
-                          {d.startDose} {d.unit}
-                        </dd>
+                        <dd className="text-sm text-foreground">{startText(d)}</dd>
                       </div>
                       <div>
                         <dt className="text-xs text-muted-foreground">Usual range</dt>
-                        <dd className="text-sm text-foreground">
-                          {d.minDose}–{d.maxDose} {d.unit}
-                        </dd>
+                        <dd className="text-sm text-foreground">{rangeText(d)}</dd>
                       </div>
                     </dl>
                     {d.notes && (

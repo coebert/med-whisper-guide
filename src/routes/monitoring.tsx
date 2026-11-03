@@ -5,9 +5,20 @@ export const Route = createFileRoute("/monitoring")({
   head: () => ({
     meta: [
       { title: "Therapeutic Drug Level Monitoring — Anaesthesia & Critical Care Drugs" },
-      { name: "description", content: "Therapeutic drug monitoring reference: target ranges, sampling timing, toxicity thresholds and actions, and dose adjustment guidance for anaesthetic and critical care drugs." },
-      { property: "og:title", content: "Therapeutic Drug Level Monitoring — Anaesthesia & Critical Care Drugs" },
-      { property: "og:description", content: "Therapeutic drug monitoring reference: target ranges, sampling timing, toxicity thresholds and actions, and dose adjustment guidance for anaesthetic and critical care drugs." },
+      {
+        name: "description",
+        content:
+          "Therapeutic drug monitoring reference: target ranges, sampling timing, toxicity thresholds and actions, and dose adjustment guidance for anaesthetic and critical care drugs.",
+      },
+      {
+        property: "og:title",
+        content: "Therapeutic Drug Level Monitoring — Anaesthesia & Critical Care Drugs",
+      },
+      {
+        property: "og:description",
+        content:
+          "Therapeutic drug monitoring reference: target ranges, sampling timing, toxicity thresholds and actions, and dose adjustment guidance for anaesthetic and critical care drugs.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -100,12 +111,13 @@ function DrugReferenceMonitoring() {
               {d.tdm?.targets && d.tdm.targets.length > 0 && (
                 <dl className="mt-3 grid gap-2 sm:grid-cols-2">
                   {d.tdm.targets.map((t, i) => (
-                    <div key={`${t.label}-${i}`} className="rounded-md border border-border bg-background p-3">
+                    <div
+                      key={`${t.label}-${i}`}
+                      className="rounded-md border border-border bg-background p-3"
+                    >
                       <dt className="text-xs text-muted-foreground">{t.label}</dt>
                       <dd className="mt-0.5 text-sm font-semibold text-foreground">{t.value}</dd>
-                      {t.note && (
-                        <dd className="mt-1 text-xs text-muted-foreground">{t.note}</dd>
-                      )}
+                      {t.note && <dd className="mt-1 text-xs text-muted-foreground">{t.note}</dd>}
                     </div>
                   ))}
                 </dl>
@@ -131,7 +143,10 @@ function DrugReferenceMonitoring() {
                   </h3>
                   <ul className="mt-1 space-y-2 text-sm text-muted-foreground">
                     {d.tdm.toxicity.map((t, i) => (
-                      <li key={`${t.threshold}-${i}`} className="rounded-md border border-border p-2.5">
+                      <li
+                        key={`${t.threshold}-${i}`}
+                        className="rounded-md border border-border p-2.5"
+                      >
                         <span className="font-medium text-foreground">{t.threshold}</span> —{" "}
                         {t.features}
                         <span className="mt-1 block">

@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ExternalLink } from "lucide-react";
 
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
-import { drugDilutions } from "@/features/drugReference/dilutions";
+import { drugDilutions, rangeText } from "@/features/drugReference/dilutions";
 import { classifySource, sourceKindLabel, standardRefs } from "@/features/drugReference/references";
 import { readCache, writeCache } from "@/features/drugReference/cache";
 import { adultSources, EXCLUDED_SLUG_FILTER, isInScope } from "@/features/drugReference/scope";
@@ -257,7 +257,7 @@ function DoseReferencesPage() {
                     </span>
                   </div>
                   <p className="mt-1 text-xs text-muted-foreground">
-                    {r.drawUp} — {r.concentrationLabel}; {r.minDose}–{r.maxDose} {r.unit}
+                    {r.drawUp} — {r.concentrationLabel}; {rangeText(r)}
                     {r.slug && (
                       <>
                         {" "}

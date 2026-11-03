@@ -69,3 +69,17 @@ export const drugDilutions: DrugDilution[] = icuInfusionGroups.flatMap((group) =
 export function dilutionsForSlug(slug: string): DrugDilution[] {
   return drugDilutions.filter((d) => d.slug === slug);
 }
+
+/** Display text for a recipe's dose range (formatting only, no arithmetic). */
+export function rangeText(d: Pick<DrugDilution, "minDose" | "maxDose" | "unit">): string {
+  return d.minDose === undefined
+    ? `Up to ${d.maxDose} ${d.unit}`
+    : d.minDose === d.maxDose
+      ? `${d.maxDose} ${d.unit} (fixed)`
+      : `${d.minDose}–${d.maxDose} ${d.unit}`;
+}
+
+/** Display text for a recipe's starting dose, or a protocol pointer when none is sourced. */
+export function startText(d: Pick<DrugDilution, "startDose" | "unit">): string {
+  return d.startDose === undefined ? "Per local protocol" : `${d.startDose} ${d.unit}`;
+}

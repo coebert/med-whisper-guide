@@ -5,9 +5,17 @@ export const Route = createFileRoute("/topics/")({
   head: () => ({
     meta: [
       { title: "Drug Topics — Anaesthesia & Critical Care Drugs" },
-      { name: "description", content: "Browse the anaesthetics and critical care drug reference by topic: vasoactive support, sedation, analgesia, neuromuscular blockade, local anaesthetics, anticoagulation, fluids, antimicrobials, antidotes and more." },
+      {
+        name: "description",
+        content:
+          "Browse the anaesthetics and critical care drug reference by topic: vasoactive support, sedation, analgesia, neuromuscular blockade, local anaesthetics, anticoagulation, fluids, antimicrobials, antidotes and more.",
+      },
       { property: "og:title", content: "Drug Topics — Anaesthesia & Critical Care Drugs" },
-      { property: "og:description", content: "Browse the anaesthetics and critical care drug reference by topic: vasoactive support, sedation, analgesia, neuromuscular blockade, local anaesthetics, anticoagulation, fluids, antimicrobials, antidotes and more." },
+      {
+        property: "og:description",
+        content:
+          "Browse the anaesthetics and critical care drug reference by topic: vasoactive support, sedation, analgesia, neuromuscular blockade, local anaesthetics, anticoagulation, fluids, antimicrobials, antidotes and more.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -55,7 +63,8 @@ function DrugReferenceTopics() {
           {topics.map((topic) => (
             <li key={topic.slug}>
               <Link
-                to="/topics/$slug" params={{ slug: topic.slug }}
+                to="/topics/$slug"
+                params={{ slug: topic.slug }}
                 className="flex h-full flex-col rounded-lg border border-border bg-card p-4 transition hover:border-primary hover:shadow-sm"
               >
                 <span className="flex items-center gap-2 font-semibold text-foreground">

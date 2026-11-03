@@ -37,9 +37,7 @@ import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 import { useDrugList, type DrugListItem } from "@/features/drugReference/useDrugReference";
 import { drugDilutions } from "@/features/drugReference/dilutions";
 
-const slugsWithRecipes = new Set(
-  drugDilutions.map((d) => d.slug).filter(Boolean) as string[],
-);
+const slugsWithRecipes = new Set(drugDilutions.map((d) => d.slug).filter(Boolean) as string[]);
 
 /** Ranks a drug against the search text; lower is better, -1 means no match. */
 function score(drug: DrugListItem, needle: string): number {
@@ -123,7 +121,9 @@ function DrugSearchPage() {
       setHighlight((h) => (suggestions.length ? (h + 1) % suggestions.length : 0));
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
-      setHighlight((h) => (suggestions.length ? (h - 1 + suggestions.length) % suggestions.length : 0));
+      setHighlight((h) =>
+        suggestions.length ? (h - 1 + suggestions.length) % suggestions.length : 0,
+      );
     } else if (e.key === "Enter") {
       const pick = suggestions[highlight] ?? suggestions[0];
       if (showMenu && pick) {
@@ -143,7 +143,9 @@ function DrugSearchPage() {
   return (
     <ReferenceAppLayout>
       <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
-        <h1 className="font-serif text-3xl text-foreground sm:text-4xl">Search the drug reference</h1>
+        <h1 className="font-serif text-3xl text-foreground sm:text-4xl">
+          Search the drug reference
+        </h1>
         <p className="mt-2 text-sm text-muted-foreground">
           Start typing a drug name, brand name, class or indication — suggestions appear as you type
           and Enter opens the monograph.

@@ -30,7 +30,7 @@ import { AlertTriangle, ArrowLeft, ExternalLink, Eye } from "lucide-react";
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 import { useDrugEntry } from "@/features/drugReference/useDrugReference";
 import { topicForClass } from "@/features/drugReference/topics";
-import { dilutionsForSlug } from "@/features/drugReference/dilutions";
+import { dilutionsForSlug, rangeText, startText } from "@/features/drugReference/dilutions";
 import type { DrugDilution, DrugSource } from "@/features/drugReference/types";
 import { SourceChips, sectionSources } from "@/features/drugReference/references";
 import { APPEARANCE_CAUTION, describeAppearance } from "@/features/drugReference/appearance";
@@ -146,7 +146,7 @@ function DilutionCard({ dilution }: { dilution: DrugDilution }) {
         <div>
           <dt className="text-muted-foreground">Usual adult dose range</dt>
           <dd className="text-foreground">
-            {dilution.minDose}–{dilution.maxDose} {dilution.unit} (start {dilution.startDose})
+            {rangeText(dilution)} (start: {startText(dilution)})
           </dd>
         </div>
       </dl>
