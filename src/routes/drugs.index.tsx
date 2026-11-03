@@ -73,7 +73,7 @@ function DrugReferenceLibrary() {
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
             Every drug monograph in one searchable library: presentation and preparation, adult and
-            infusion dosing, standard dilutions with pump rates in mL/h, pharmacokinetics, adverse
+            infusion dosing, standard dilutions, pharmacokinetics, adverse
             effects, interactions and — where relevant — full therapeutic drug level monitoring.
             Each entry lists its own sources (BNF, BNF for Children, the product SPC and national
             guidelines).

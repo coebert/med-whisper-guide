@@ -179,7 +179,7 @@ function OfflinePage() {
               offline, and avoid private browsing, which is cleared when you close it.
             </li>
             <li>
-              Infusion recipes, the rate calculator and the premedication guidance are built into
+              Infusion recipes and the premedication guidance are built into
               the app and always work offline.
             </li>
             <li>

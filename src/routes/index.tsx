@@ -5,9 +5,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Anaesthesia & Critical Care Drugs — Drug Reference" },
-      { name: "description", content: "Bedside drug reference for anaesthesia and critical care: presentations, dosing, standard dilutions with pump rates, pharmacokinetics, safety and therapeutic drug monitoring, each monograph referenced." },
+      { name: "description", content: "Bedside drug reference for anaesthesia and critical care: presentations, dosing, standard dilutions, pharmacokinetics, safety and therapeutic drug monitoring, each monograph referenced." },
       { property: "og:title", content: "Anaesthesia & Critical Care Drugs — Drug Reference" },
-      { property: "og:description", content: "Bedside drug reference for anaesthesia and critical care: presentations, dosing, standard dilutions with pump rates, pharmacokinetics, safety and therapeutic drug monitoring, each monograph referenced." },
+      { property: "og:description", content: "Bedside drug reference for anaesthesia and critical care: presentations, dosing, standard dilutions, pharmacokinetics, safety and therapeutic drug monitoring, each monograph referenced." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
 
 import { useMemo, useState } from "react";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { ArrowRight, BookOpen, Calculator, Download, FlaskConical, Pill, Search, Syringe } from "lucide-react";
+import { ArrowRight, BookOpen, Columns2, Download, FlaskConical, Pill, Search, Syringe } from "lucide-react";
 
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 import { useDrugList } from "@/features/drugReference/useDrugReference";
@@ -64,8 +64,8 @@ function DrugReferenceHome() {
           Anaesthetics &amp; Critical Care Drug Reference
         </h1>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-          A bedside drug library you can use on its own: presentation and preparation, adult and
-          infusion dosing, ready-to-draw-up dilutions with pump rates in mL/h, pharmacokinetics,
+          An adult UK drug reference: presentation and preparation, adult and
+          infusion dosing, standard draw-up dilutions, pharmacokinetics,
           adverse effects, interactions, and full blood level monitoring where it matters. Every
           monograph lists its own sources.
         </p>
@@ -181,13 +181,13 @@ function DrugReferenceHome() {
               to: "/infusions",
               icon: Syringe,
               title: "Infusions and dilutions",
-              body: "Standard diluents, how to draw each syringe up, and the resulting mL/h.",
+              body: "Standard diluents, how to draw each syringe up, and the final concentration.",
             },
             {
-              to: "/calculator",
-              icon: Calculator,
-              title: "Infusion rate calculator",
-              body: "Enter weight and dose to get mL/h, mL/day and syringe run time.",
+              to: "/compare",
+              icon: Columns2,
+              title: "Compare two drugs",
+              body: "See doses, standard dilutions and sources side by side.",
             },
           ] as const).map((card) => (
             <li key={card.to}>

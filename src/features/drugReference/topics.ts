@@ -24,7 +24,7 @@ export const referenceTopics: ReferenceTopic[] = [
   {
     slug: "vasoactive-support",
     title: "Vasopressors, inotropes & vasodilators",
-    blurb: "Circulatory support agents with standard dilutions and mL/h pump rates.",
+    blurb: "Circulatory support agents with standard dilutions.",
     keyPoints: [
       "Give peripheral vasopressor only as a bridge through a large, well-sited cannula that is checked hourly; move to central access as soon as it is safe.",
       "Titrate to a mean arterial pressure target set for the patient, not to a fixed rate, and reassess volume state and cardiac output before adding a second agent.",
