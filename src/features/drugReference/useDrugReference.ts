@@ -4,14 +4,19 @@ import { readCache, writeCache } from "./cache";
 import { adultSources, EXCLUDED_SLUG_FILTER, isInScope } from "./scope";
 import type { DrugReferenceRow, DrugSource, DrugTdm } from "./types";
 
-const LIST_COLUMNS =
-  "slug,name,drug_class,synonyms,indication_oneliner,key_warning,requires_tdm";
+const LIST_COLUMNS = "slug,name,drug_class,synonyms,indication_oneliner,key_warning,requires_tdm";
 
 const FULL_COLUMNS = `${LIST_COLUMNS},adult_bolus_dose,infusion_range,presentation,mechanism_of_action,pharmacokinetics,preparation,dosing,monitoring,side_effects,contraindications,interactions,tdm,sources`;
 
 export type DrugListItem = Pick<
   DrugReferenceRow,
-  "slug" | "name" | "drug_class" | "synonyms" | "indication_oneliner" | "key_warning" | "requires_tdm"
+  | "slug"
+  | "name"
+  | "drug_class"
+  | "synonyms"
+  | "indication_oneliner"
+  | "key_warning"
+  | "requires_tdm"
 >;
 
 function asSources(value: unknown): DrugSource[] {
@@ -211,4 +216,3 @@ export async function downloadAllMonographs(
   writeCache("monitored", monitored);
   return { saved, total };
 }
-

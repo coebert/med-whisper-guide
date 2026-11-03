@@ -82,11 +82,10 @@ function DrugReferenceAbout() {
             Each monograph shows the sources listed with it at the bottom of the drug page. Some are
             direct citations; others are BNF or emc search links, which are places to check rather
             than evidence that a statement has been validated. The main sources are the British
-            National Formulary, the
-            manufacturer&apos;s Summary of Product Characteristics on the electronic Medicines
-            Compendium, and national guidance — for example NICE, the Intensive Care Society, the
-            Association of Anaesthetists, the Resuscitation Council UK, and UK laboratory medicine
-            standards for blood level monitoring.
+            National Formulary, the manufacturer&apos;s Summary of Product Characteristics on the
+            electronic Medicines Compendium, and national guidance — for example NICE, the Intensive
+            Care Society, the Association of Anaesthetists, the Resuscitation Council UK, and UK
+            laboratory medicine standards for blood level monitoring.
           </p>
           <p>
             Standard dilutions reflect common UK adult critical care practice. Concentrations vary

@@ -45,7 +45,13 @@ export const referenceTopics: ReferenceTopic[] = [
       "Double-strength bags exist for fluid-restricted patients — always confirm the concentration on the syringe label against the pump library before handover.",
       "Vasodilator infusions need continuous arterial pressure monitoring; stop rather than titrate down when pressure falls abruptly.",
     ],
-    patterns: ["vasopressor", "inotrope", "vasodilator", "vasopressin analogue", "pulmonary vasodilator"],
+    patterns: [
+      "vasopressor",
+      "inotrope",
+      "vasodilator",
+      "vasopressin analogue",
+      "pulmonary vasodilator",
+    ],
   },
   {
     slug: "sedation-anaesthesia",

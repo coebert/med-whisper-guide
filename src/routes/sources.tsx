@@ -212,9 +212,8 @@ function ClinicalSourcesPage() {
           <Link to="/review-status" className="text-primary underline">
             Source review status
           </Link>
-          ). Guidance is revised regularly — where a dose
-          or threshold matters, open the source and confirm the current version before you act on
-          it.
+          ). Guidance is revised regularly — where a dose or threshold matters, open the source and
+          confirm the current version before you act on it.
         </p>
 
         <nav aria-label="Sections" className="mt-5 flex flex-wrap gap-2">
@@ -262,9 +261,7 @@ function ClinicalSourcesPage() {
         <section className="mt-8 space-y-3 rounded-lg border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground">
           <h2 className="font-serif text-lg text-foreground">How to use these sources</h2>
           <ul className="list-inside list-disc space-y-1">
-            <li>
-              Dose queries: the BNF first, then the product SPC for the licensed wording.
-            </li>
+            <li>Dose queries: the BNF first, then the product SPC for the licensed wording.</li>
             <li>
               Dilution, diluent compatibility and stability: the SPC and the Injectable Medicines
               Guide, checked against your own smart-pump drug library.

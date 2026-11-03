@@ -11,7 +11,16 @@ export interface Infusion {
   concentrationPerMl: number;
   concentrationLabel: string;
   /** Dosing unit for the range */
-  unit: "nanograms/kg/min" | "micrograms/kg/min" | "micrograms/kg/h" | "micrograms/min" | "units/min" | "units/h" | "units/kg/h" | "mg/kg/h" | "mg/h";
+  unit:
+    | "nanograms/kg/min"
+    | "micrograms/kg/min"
+    | "micrograms/kg/h"
+    | "micrograms/min"
+    | "units/min"
+    | "units/h"
+    | "units/kg/h"
+    | "mg/kg/h"
+    | "mg/h";
   startDose: number;
   minDose: number;
   maxDose: number;
@@ -39,11 +48,13 @@ export const icuInfusionGroups: InfusionGroup[] = [
   {
     id: "vasopressors",
     title: "Vasopressors",
-    blurb: "Catecholamine infusions should run through a central line where possible; peripheral use requires a large proximal vein and frequent site checks. Titrate to a target MAP (usually 65–75 mmHg).",
+    blurb:
+      "Catecholamine infusions should run through a central line where possible; peripheral use requires a large proximal vein and frequent site checks. Titrate to a target MAP (usually 65–75 mmHg).",
     infusions: [
       {
         drug: "Noradrenaline (4 mg/50 mL)",
-        diluent: "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base.",
+        diluent:
+          "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base.",
         sources: [CITE.noradSpc],
         drawUp: "4 mg (one 4 mg/4 mL ampoule) made up to 50 mL",
         concentrationPerMl: 80,
@@ -53,12 +64,14 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.01,
         maxDose: 1.5,
         perKg: true,
-        notes: "Single-strength syringe (80 micrograms/mL) — usual starting concentration; suits low to moderate doses and smaller patients. Double (8 mg/50 mL) and quadruple (16 mg/50 mL) strengths are listed separately for escalating requirements; label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+        notes:
+          "Single-strength syringe (80 micrograms/mL) — usual starting concentration; suits low to moderate doses and smaller patients. Double (8 mg/50 mL) and quadruple (16 mg/50 mL) strengths are listed separately for escalating requirements; label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
         topicIds: ["vasoactive-agents", "sepsis", "circulatory-failure"],
       },
       {
         drug: "Noradrenaline (8 mg/50 mL)",
-        diluent: "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base.",
+        diluent:
+          "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base.",
         sources: [CITE.noradSpc],
         drawUp: "8 mg (two 4 mg/4 mL ampoules) made up to 50 mL",
         concentrationPerMl: 160,
@@ -68,12 +81,14 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.01,
         maxDose: 1.5,
         perKg: true,
-        notes: "Double-strength syringe (160 micrograms/mL) — the common ICU default. The same dose runs at half the mL/h of the 4 mg/50 mL syringe and twice that of 16 mg/50 mL; label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+        notes:
+          "Double-strength syringe (160 micrograms/mL) — the common ICU default. The same dose runs at half the mL/h of the 4 mg/50 mL syringe and twice that of 16 mg/50 mL; label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
         topicIds: ["vasoactive-agents", "sepsis", "circulatory-failure"],
       },
       {
         drug: "Noradrenaline (16 mg/50 mL)",
-        diluent: "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base.",
+        diluent:
+          "Use a diluent approved for the exact noradrenaline product and local preparation protocol; compatible diluents and stability vary by formulation. Confirm the labelled strength and prescribed dose are expressed as noradrenaline base.",
         sources: [CITE.noradSpc],
         drawUp: "16 mg (four 4 mg/4 mL ampoules) made up to 50 mL",
         concentrationPerMl: 320,
@@ -83,7 +98,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.01,
         maxDose: 1.5,
         perKg: true,
-        notes: "Quadruple-strength syringe (320 micrograms/mL) for high-dose requirements or fluid restriction — the same dose runs at a quarter of the mL/h of the 4 mg/50 mL syringe. Central access essential; label clearly and never mix strengths on one pump. Rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+        notes:
+          "Quadruple-strength syringe (320 micrograms/mL) for high-dose requirements or fluid restriction — the same dose runs at a quarter of the mL/h of the 4 mg/50 mL syringe. Central access essential; label clearly and never mix strengths on one pump. Rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
         topicIds: ["vasoactive-agents", "sepsis", "circulatory-failure"],
       },
       {
@@ -97,7 +113,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.01,
         maxDose: 1,
         perKg: true,
-        notes: "Second-line inotrope/vasopressor; 0.01–0.1 micrograms/kg/min usual, up to 1 microgram/kg/min in critical care. Causes tachycardia, hyperlactataemia (β₂ effect) and hyperglycaemia. Also used undiluted 1:10,000 in cardiac arrest.",
+        notes:
+          "Second-line inotrope/vasopressor; 0.01–0.1 micrograms/kg/min usual, up to 1 microgram/kg/min in critical care. Causes tachycardia, hyperlactataemia (β₂ effect) and hyperglycaemia. Also used undiluted 1:10,000 in cardiac arrest.",
         topicIds: ["vasoactive-agents", "anaphylaxis"],
       },
       {
@@ -111,7 +128,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.01,
         maxDose: 0.04,
         perKg: false,
-        notes: "Fixed (non-weight-based) dose. Shock dosing is product- and protocol-specific: use the local critical-care vasopressin regimen; a common starting dose is 0.03 units/min. The UK argipressin 20 IU/mL products cited here are licensed for diabetes insipidus and oesophageal variceal bleeding, so shock use is off-label for those products. Higher rates cause coronary, splanchnic and digital ischaemia.",
+        notes:
+          "Fixed (non-weight-based) dose. Shock dosing is product- and protocol-specific: use the local critical-care vasopressin regimen; a common starting dose is 0.03 units/min. The UK argipressin 20 IU/mL products cited here are licensed for diabetes insipidus and oesophageal variceal bleeding, so shock use is off-label for those products. Higher rates cause coronary, splanchnic and digital ischaemia.",
         sources: [CITE.highlandVasopressin, CITE.argipressinSpc1, CITE.argipressinSpc2],
         topicIds: ["vasoactive-agents", "sepsis"],
       },
@@ -126,7 +144,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 8,
         maxDose: 83,
         perKg: false,
-        notes: "Predominantly α₁ agonist with indirect action. Usual infusion 0.5–5 mg/h (≈8–83 micrograms/min), i.e. 1–10 mL/h of this 0.5 mg/mL syringe. Often run peripherally short-term; handy bridge while central access is established. Also given as 0.5–1 mg boluses.",
+        notes:
+          "Predominantly α₁ agonist with indirect action. Usual infusion 0.5–5 mg/h (≈8–83 micrograms/min), i.e. 1–10 mL/h of this 0.5 mg/mL syringe. Often run peripherally short-term; handy bridge while central access is established. Also given as 0.5–1 mg boluses.",
         topicIds: ["vasoactive-agents"],
       },
       {
@@ -140,7 +159,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.25,
         maxDose: 3,
         perKg: true,
-        notes: "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. Common theatre dilution is 10 mg in 100 mL = 100 micrograms/mL. Usual range 0.25–3 micrograms/kg/min (≈18–210 micrograms/min at 70 kg) — which brackets the 35–180 micrograms/min quoted in the monograph; rates up to 6 micrograms/kg/min are described in refractory vasoplegia. At this concentration doses above ~1 micrograms/kg/min exceed 40 mL/h — use a more concentrated mix (e.g. 10 mg in 50 mL) or change to noradrenaline. May drop cardiac output by reflex bradycardia and afterload rise.",
+        notes:
+          "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. Common theatre dilution is 10 mg in 100 mL = 100 micrograms/mL. Usual range 0.25–3 micrograms/kg/min (≈18–210 micrograms/min at 70 kg) — which brackets the 35–180 micrograms/min quoted in the monograph; rates up to 6 micrograms/kg/min are described in refractory vasoplegia. At this concentration doses above ~1 micrograms/kg/min exceed 40 mL/h — use a more concentrated mix (e.g. 10 mg in 50 mL) or change to noradrenaline. May drop cardiac output by reflex bradycardia and afterload rise.",
         topicIds: ["vasoactive-agents"],
       },
       {
@@ -154,7 +174,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 2,
         maxDose: 20,
         perKg: true,
-        notes: "Largely superseded by noradrenaline for shock (more arrhythmia). 'Renal-dose' dopamine has no evidence base and should not be used.",
+        notes:
+          "Largely superseded by noradrenaline for shock (more arrhythmia). 'Renal-dose' dopamine has no evidence base and should not be used.",
         topicIds: ["vasoactive-agents"],
       },
     ],
@@ -162,7 +183,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
   {
     id: "inotropes",
     title: "Inotropes",
-    blurb: "Inotropes increase contractility at the cost of myocardial oxygen demand and arrhythmia. Central access is preferred, and titrate to cardiac output/perfusion markers rather than blood pressure alone.",
+    blurb:
+      "Inotropes increase contractility at the cost of myocardial oxygen demand and arrhythmia. Central access is preferred, and titrate to cardiac output/perfusion markers rather than blood pressure alone.",
     infusions: [
       {
         drug: "Dobutamine",
@@ -175,7 +197,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 2.5,
         maxDose: 20,
         perKg: true,
-        notes: "β₁-predominant; causes vasodilatation and tachycardia — may need co-infusion of noradrenaline to support MAP. Standard inotrope for low-output heart failure.",
+        notes:
+          "β₁-predominant; causes vasodilatation and tachycardia — may need co-infusion of noradrenaline to support MAP. Standard inotrope for low-output heart failure.",
         topicIds: ["vasoactive-agents", "heart-failure-icu"],
       },
       {
@@ -189,7 +212,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.375,
         maxDose: 0.75,
         perKg: true,
-        notes: "PDE-3 inhibitor; inodilator useful in pulmonary hypertension/right ventricular failure. Long half-life — accumulates in renal failure; often started without a loading dose in ICU to avoid hypotension.",
+        notes:
+          "PDE-3 inhibitor; inodilator useful in pulmonary hypertension/right ventricular failure. Long half-life — accumulates in renal failure; often started without a loading dose in ICU to avoid hypotension.",
         topicIds: ["vasoactive-agents", "pulmonary-hypertension"],
       },
       {
@@ -203,7 +227,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.05,
         maxDose: 0.2,
         perKg: true,
-        notes: "Calcium sensitiser given as a 24 h infusion; active metabolite persists ~7 days. Skip the loading bolus in hypotensive patients. Avoid in severe renal/hepatic failure.",
+        notes:
+          "Calcium sensitiser given as a 24 h infusion; active metabolite persists ~7 days. Skip the loading bolus in hypotensive patients. Avoid in severe renal/hepatic failure.",
         topicIds: ["vasoactive-agents", "heart-failure-icu"],
       },
     ],
@@ -211,7 +236,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
   {
     id: "sedation-analgesia",
     title: "Sedation and analgesia",
-    blurb: "Analgesia first, then sedative titrated to a target score (e.g. RASS 0 to −2) with daily review. Infusion rates below are adult starting points — obesity, age and organ failure all change requirements.",
+    blurb:
+      "Analgesia first, then sedative titrated to a target score (e.g. RASS 0 to −2) with daily review. Infusion rates below are adult starting points — obesity, age and organ failure all change requirements.",
     infusions: [
       {
         drug: "Propofol 1%",
@@ -224,7 +250,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.3,
         maxDose: 4,
         perKg: true,
-        notes: "For adult ICU sedation use the lowest effective rate within the product's recommended range, generally 0.3–4 mg/kg/h. Review continuously and monitor for propofol infusion syndrome (lactic acidosis, rhabdomyolysis, hypertriglyceridaemia); risk increases with higher doses and prolonged use, especially above 4 mg/kg/h for more than 48 hours. Suspected toxicity requires prompt action, not waiting until 48 hours. Lipid load ~1.1 kcal/mL.",
+        notes:
+          "For adult ICU sedation use the lowest effective rate within the product's recommended range, generally 0.3–4 mg/kg/h. Review continuously and monitor for propofol infusion syndrome (lactic acidosis, rhabdomyolysis, hypertriglyceridaemia); risk increases with higher doses and prolonged use, especially above 4 mg/kg/h for more than 48 hours. Suspected toxicity requires prompt action, not waiting until 48 hours. Lipid load ~1.1 kcal/mL.",
         sources: [CITE.propofolSpc],
         topicIds: ["icu-sedation-delirium", "intravenous-anaesthetics"],
       },
@@ -239,7 +266,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 30,
         maxDose: 200,
         perKg: true,
-        notes: "Monograph range 0.03–0.2 mg/kg/h (30–200 micrograms/kg/h); BNF suggests 0.03–0.1 mg/kg/h under 60 years. Accumulates with prolonged infusion (context-sensitive half-time rises), especially in renal failure and obesity — not ideal beyond 48–72 h. Status epilepticus doses are higher.",
+        notes:
+          "Monograph range 0.03–0.2 mg/kg/h (30–200 micrograms/kg/h); BNF suggests 0.03–0.1 mg/kg/h under 60 years. Accumulates with prolonged infusion (context-sensitive half-time rises), especially in renal failure and obesity — not ideal beyond 48–72 h. Status epilepticus doses are higher.",
         topicIds: ["icu-sedation-delirium", "benzodiazepines"],
       },
       {
@@ -253,7 +281,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.2,
         maxDose: 1.4,
         perKg: true,
-        notes: "Alpha-2 agonist used for rousable sedation. Bradycardia and hypotension are important adverse effects; respiratory depression, airway obstruction and apnoea can also occur. Continuous cardiac monitoring and appropriate respiratory monitoring are required. A loading dose is not recommended for ICU sedation.",
+        notes:
+          "Alpha-2 agonist used for rousable sedation. Bradycardia and hypotension are important adverse effects; respiratory depression, airway obstruction and apnoea can also occur. Continuous cardiac monitoring and appropriate respiratory monitoring are required. A loading dose is not recommended for ICU sedation.",
         sources: [CITE.dexmedSpc],
         topicIds: ["icu-sedation-delirium"],
       },
@@ -268,7 +297,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.2,
         maxDose: 2,
         perKg: true,
-        notes: "Standard-strength syringe (30 micrograms/mL). A half-strength 750 micrograms/50 mL syringe is also listed — check which your unit uses; the mL/h differs two-fold. α₂ agonist adjunct for sedation, withdrawal and agitation; useful in opioid/benzodiazepine weaning. Bradycardia and hypotension are dose-limiting — give loading doses slowly. Do not stop abruptly after prolonged use (rebound hypertension).",
+        notes:
+          "Standard-strength syringe (30 micrograms/mL). A half-strength 750 micrograms/50 mL syringe is also listed — check which your unit uses; the mL/h differs two-fold. α₂ agonist adjunct for sedation, withdrawal and agitation; useful in opioid/benzodiazepine weaning. Bradycardia and hypotension are dose-limiting — give loading doses slowly. Do not stop abruptly after prolonged use (rebound hypertension).",
         topicIds: ["icu-sedation-delirium"],
       },
       {
@@ -282,7 +312,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.2,
         maxDose: 2,
         perKg: true,
-        notes: "Half-strength syringe (15 micrograms/mL) — the same dose runs at twice the mL/h of the 1500 micrograms/50 mL syringe; never mix the two on one pump. Same indications and cautions as the standard-strength recipe: bradycardia and hypotension are dose-limiting, and avoid abrupt withdrawal after prolonged use.",
+        notes:
+          "Half-strength syringe (15 micrograms/mL) — the same dose runs at twice the mL/h of the 1500 micrograms/50 mL syringe; never mix the two on one pump. Same indications and cautions as the standard-strength recipe: bradycardia and hypotension are dose-limiting, and avoid abrupt withdrawal after prolonged use.",
         topicIds: ["icu-sedation-delirium"],
       },
       {
@@ -296,7 +327,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.7,
         maxDose: 10,
         perKg: true,
-        notes: "Rates shown are for the NEAT 50 micrograms/mL syringe. Critical care sedation 0.7–10 micrograms/kg/h; peri-operative analgesia 0.5–2 micrograms/kg/h. Some units run a diluted 1000 micrograms in 50 mL (20 micrograms/mL) syringe — the mL/h is then 2.5 times higher; never mix the two. Lipophilic with marked accumulation on prolonged infusion; wean gradually after days of therapy to avoid withdrawal.",
+        notes:
+          "Rates shown are for the NEAT 50 micrograms/mL syringe. Critical care sedation 0.7–10 micrograms/kg/h; peri-operative analgesia 0.5–2 micrograms/kg/h. Some units run a diluted 1000 micrograms in 50 mL (20 micrograms/mL) syringe — the mL/h is then 2.5 times higher; never mix the two. Lipophilic with marked accumulation on prolonged infusion; wean gradually after days of therapy to avoid withdrawal.",
         topicIds: ["icu-sedation-delirium", "opioids"],
       },
       {
@@ -310,7 +342,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 10,
         maxDose: 120,
         perKg: true,
-        notes: "Light analgesia from about 10 micrograms/kg/h; ventilated patients: 0.5–1 micrograms/kg/min equals 30–60 micrograms/kg/h; the upper end of the listed range is 2 micrograms/kg/min (120 micrograms/kg/h) — brief intra-operative peaks above this for intensely stimulating surgery are an anaesthetist-titrated bolus decision, not a maintenance rate. Useful in renal failure (inactive metabolites); still accumulates with very long infusions but less than fentanyl.",
+        notes:
+          "Light analgesia from about 10 micrograms/kg/h; ventilated patients: 0.5–1 micrograms/kg/min equals 30–60 micrograms/kg/h; the upper end of the listed range is 2 micrograms/kg/min (120 micrograms/kg/h) — brief intra-operative peaks above this for intensely stimulating surgery are an anaesthetist-titrated bolus decision, not a maintenance rate. Useful in renal failure (inactive metabolites); still accumulates with very long infusions but less than fentanyl.",
         topicIds: ["icu-sedation-delirium", "opioids"],
       },
       {
@@ -324,7 +357,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.006,
         maxDose: 2,
         perKg: true,
-        notes: "ICU sedation 0.006–0.75 micrograms/kg/min; general anaesthesia 0.025–2 micrograms/kg/min. Esterase-metabolised — no accumulation and predictable offset (context-sensitive half-time ~4 min) whatever the infusion length. Plan post-stop analgesia before discontinuing.",
+        notes:
+          "ICU sedation 0.006–0.75 micrograms/kg/min; general anaesthesia 0.025–2 micrograms/kg/min. Esterase-metabolised — no accumulation and predictable offset (context-sensitive half-time ~4 min) whatever the infusion length. Plan post-stop analgesia before discontinuing.",
         topicIds: ["icu-sedation-delirium", "opioids"],
       },
       {
@@ -338,7 +372,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.05,
         maxDose: 4.5,
         perKg: true,
-        notes: "Adjunct for analgosedation, especially with opioid tolerance or severe bronchospasm. Analgesic (opioid-sparing) doses are 0.05–0.2 mg/kg/h; sedation and anaesthesia 0.5–4.5 mg/kg/h. Psychotomimetic effects less prominent at infusion rates.",
+        notes:
+          "Adjunct for analgosedation, especially with opioid tolerance or severe bronchospasm. Analgesic (opioid-sparing) doses are 0.05–0.2 mg/kg/h; sedation and anaesthesia 0.5–4.5 mg/kg/h. Psychotomimetic effects less prominent at infusion rates.",
         topicIds: ["icu-sedation-delirium", "intravenous-anaesthetics"],
       },
     ],
@@ -346,7 +381,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
   {
     id: "other",
     title: "Other common ICU infusions",
-    blurb: "Frequently run continuous infusions in neurocritical care, endocrine emergencies and anticoagulation.",
+    blurb:
+      "Frequently run continuous infusions in neurocritical care, endocrine emergencies and anticoagulation.",
     infusions: [
       {
         drug: "Insulin (Actrapid)",
@@ -359,7 +395,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 0.1,
         maxDose: 10,
         perKg: false,
-        notes: "Typical range 0.1–10 units/h (as low as 0.05 units/h in some protocols), titrated to a written blood-glucose protocol (commonly target 6–10 mmol/L on ICU; tighter ranges intra-operatively). Flush the line first — insulin adsorbs to plastic.",
+        notes:
+          "Typical range 0.1–10 units/h (as low as 0.05 units/h in some protocols), titrated to a written blood-glucose protocol (commonly target 6–10 mmol/L on ICU; tighter ranges intra-operatively). Flush the line first — insulin adsorbs to plastic.",
         topicIds: ["diabetic-emergencies"],
       },
       {
@@ -373,14 +410,16 @@ export const icuInfusionGroups: InfusionGroup[] = [
         minDose: 12,
         maxDose: 25,
         perKg: true,
-        notes: "Adjust the infusion using the indication-specific local nomogram and aPTT or anti-Xa results. There is no universal 45,000-unit daily ceiling; unexpectedly high requirements need senior review for heparin resistance and monitoring problems. Assess urgently for HIT if suspected.",
+        notes:
+          "Adjust the infusion using the indication-specific local nomogram and aPTT or anti-Xa results. There is no universal 45,000-unit daily ceiling; unexpectedly high requirements need senior review for heparin resistance and monitoring problems. Assess urgently for HIT if suspected.",
         sources: [CITE.heparinSpc],
         topicIds: ["anticoagulants", "transfusion-coagulation"],
       },
       {
         drug: "Epoprostenol (prostacyclin)",
         diluent: "Brand-specific — follow the exact product's SmPC; do not interchange diluents",
-        drawUp: "No generic recipe given. Preparation is brand-specific: follow the exact epoprostenol product's SmPC and specialist protocol",
+        drawUp:
+          "No generic recipe given. Preparation is brand-specific: follow the exact epoprostenol product's SmPC and specialist protocol",
         concentrationPerMl: 10,
         concentrationLabel: "Product-specific (see SmPC)",
         unit: "nanograms/kg/min",
@@ -389,7 +428,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 20,
         perKg: true,
         sources: [CITE.veletriSpc],
-        notes: "Preparation is brand-specific. Veletri is reconstituted and further diluted with sterile water for injections or 0.9% sodium chloride; a glycine-buffer recipe must identify the matching product explicitly. Dosed in NANOGRAMS/kg/min (1 microgram = 1000 nanograms) — a common source of 1000-fold errors. Inhaled/IV pulmonary vasodilator also used as extracorporeal-circuit anticoagulant. Very short half-life — interruptions cause rebound pulmonary hypertension; hypotension limits IV use.",
+        notes:
+          "Preparation is brand-specific. Veletri is reconstituted and further diluted with sterile water for injections or 0.9% sodium chloride; a glycine-buffer recipe must identify the matching product explicitly. Dosed in NANOGRAMS/kg/min (1 microgram = 1000 nanograms) — a common source of 1000-fold errors. Inhaled/IV pulmonary vasodilator also used as extracorporeal-circuit anticoagulant. Very short half-life — interruptions cause rebound pulmonary hypertension; hypotension limits IV use.",
         topicIds: ["pulmonary-hypertension", "rrt-icu"],
       },
     ],
@@ -470,7 +510,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
     infusions: [
       {
         drug: "Glyceryl trinitrate (GTN)",
-        diluent: "0.9% sodium chloride or 5% glucose (use polyethylene or glass giving sets — GTN adsorbs to PVC)",
+        diluent:
+          "0.9% sodium chloride or 5% glucose (use polyethylene or glass giving sets — GTN adsorbs to PVC)",
         drawUp: "50 mg in 50 mL (1 mg/mL)",
         concentrationPerMl: 1000,
         concentrationLabel: "1 mg/mL",
@@ -632,7 +673,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
       {
         drug: "Oxytocin",
         diluent: "0.9% sodium chloride or Hartmann's (avoid large volumes of glucose)",
-        drawUp: "40 units made up to 40 mL (1 unit/mL). If using the alternative 40 units in 500 mL bag (0.08 units/mL), run at 125 mL/h — do not use the rates below",
+        drawUp:
+          "40 units made up to 40 mL (1 unit/mL). If using the alternative 40 units in 500 mL bag (0.08 units/mL), run at 125 mL/h — do not use the rates below",
         concentrationPerMl: 1,
         concentrationLabel: "1 unit/mL",
         unit: "units/h",
@@ -647,7 +689,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
       {
         drug: "Tranexamic acid (major trauma)",
         diluent: "0.9% sodium chloride",
-        drawUp: "Major trauma: 1 g IV over 10 minutes, then 1 g over 8 hours (prepared per local protocol, e.g. 1 g made up to 50 mL = 20 mg/mL)",
+        drawUp:
+          "Major trauma: 1 g IV over 10 minutes, then 1 g over 8 hours (prepared per local protocol, e.g. 1 g made up to 50 mL = 20 mg/mL)",
         concentrationPerMl: 20000,
         concentrationLabel: "20 mg/mL",
         unit: "mg/h",
@@ -663,11 +706,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
   },
 ];
 
-export const icuInfusionCount = icuInfusionGroups.reduce(
-  (n, g) => n + g.infusions.length,
-  0,
-);
+export const icuInfusionCount = icuInfusionGroups.reduce((n, g) => n + g.infusions.length, 0);
 
 // Static reference data only. The app deliberately performs no pump-rate,
 // weight-based or dose arithmetic on these recipes.
-

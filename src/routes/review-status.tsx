@@ -59,13 +59,14 @@ function ReviewStatusPage() {
               It is being carried out in passes and is not complete.
             </li>
             <li>
-              Statements revised in a review pass show a <strong className="text-foreground">Cited</strong>{" "}
-              chip linking to the specific document used.
+              Statements revised in a review pass show a{" "}
+              <strong className="text-foreground">Cited</strong> chip linking to the specific
+              document used.
             </li>
             <li>
               <strong className="text-foreground">BNF search</strong> and{" "}
-              <strong className="text-foreground">SmPC search</strong> chips are lookup links: places
-              to check, not evidence that the statement next to them has been validated.
+              <strong className="text-foreground">SmPC search</strong> chips are lookup links:
+              places to check, not evidence that the statement next to them has been validated.
             </li>
             <li>
               Sources listed on a monograph are those stored with it. A listed source does not mean

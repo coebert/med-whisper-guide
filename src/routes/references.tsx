@@ -245,7 +245,8 @@ function DoseReferencesPage() {
           <ul className="mt-4 space-y-3">
             {recipes.map((r) => {
               const mono = r.slug ? bySlug.get(r.slug) : undefined;
-              const fallback = mono && mono.sources.length > 0 ? mono.sources : standardRefs(r.drug);
+              const fallback =
+                mono && mono.sources.length > 0 ? mono.sources : standardRefs(r.drug);
               const sources = [...(r.sources ?? []), ...fallback];
               return (
                 <li key={r.drug} className="rounded-lg border border-border bg-card p-4">

@@ -79,7 +79,13 @@ export function sectionSources(all: DrugSource[], section: SectionKey): DrugSour
   return picked.length > 0 ? picked : sources;
 }
 
-const q = (name: string) => encodeURIComponent(name.toLowerCase().replace(/\s*\(.*?\)\s*/g, " ").trim());
+const q = (name: string) =>
+  encodeURIComponent(
+    name
+      .toLowerCase()
+      .replace(/\s*\(.*?\)\s*/g, " ")
+      .trim(),
+  );
 
 /**
  * BNF and emc search links for any drug name. These are lookups — a place to

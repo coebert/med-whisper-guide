@@ -80,8 +80,8 @@ function DrugReferencePremedication() {
           <h2 className="font-serif text-xl text-foreground">General principles</h2>
           <ul className="mt-3 list-inside list-disc space-y-2 text-sm leading-relaxed text-muted-foreground">
             <li>
-              Choose the agent to match the goal: anxiolysis and amnesia (midazolam) versus
-              rousable sedation with analgesic sparing (clonidine, dexmedetomidine).
+              Choose the agent to match the goal: anxiolysis and amnesia (midazolam) versus rousable
+              sedation with analgesic sparing (clonidine, dexmedetomidine).
             </li>
             <li>
               Anyone given a sedative premed needs documented monitoring (SpO₂, respiratory rate,
@@ -166,14 +166,20 @@ function DrugReferencePremedication() {
               Reduces volatile and opioid requirements; plan induction and analgesia doses
               accordingly.
             </li>
-            <li>Longer sedation than midazolam — allow for a slower recovery in day-case pathways.</li>
+            <li>
+              Longer sedation than midazolam — allow for a slower recovery in day-case pathways.
+            </li>
           </ul>
           <SourceChips sources={standardRefs("Clonidine")} label="Look up" />
         </section>
 
         <section className="mt-6 rounded-lg border border-border bg-card p-5">
           <h2 className="font-serif text-xl text-foreground">
-            <Link to="/drugs/$slug" params={{ slug: "dexmedetomidine" }} className="hover:underline">
+            <Link
+              to="/drugs/$slug"
+              params={{ slug: "dexmedetomidine" }}
+              className="hover:underline"
+            >
               Dexmedetomidine — intranasal
             </Link>
           </h2>
@@ -224,7 +230,11 @@ function DrugReferencePremedication() {
             </li>
           </ul>
           <p className="mt-2 text-sm">
-            <Link to="/drugs/$slug" params={{ slug: "melatonin" }} className="text-primary underline">
+            <Link
+              to="/drugs/$slug"
+              params={{ slug: "melatonin" }}
+              className="text-primary underline"
+            >
               Melatonin monograph
             </Link>
           </p>
@@ -299,11 +309,19 @@ function DrugReferencePremedication() {
           </ul>
           <SourceChips sources={[CITE.niceNg180]} label="Cited" />
           <p className="mt-2 text-sm">
-            <Link to="/drugs/$slug" params={{ slug: "paracetamol" }} className="text-primary underline">
+            <Link
+              to="/drugs/$slug"
+              params={{ slug: "paracetamol" }}
+              className="text-primary underline"
+            >
               Paracetamol monograph
             </Link>{" "}
             ·{" "}
-            <Link to="/drugs/$slug" params={{ slug: "ibuprofen" }} className="text-primary underline">
+            <Link
+              to="/drugs/$slug"
+              params={{ slug: "ibuprofen" }}
+              className="text-primary underline"
+            >
               Ibuprofen monograph
             </Link>
           </p>
@@ -336,7 +354,11 @@ function DrugReferencePremedication() {
             ]}
           />
           <p className="mt-2 text-sm">
-            <Link to="/drugs/$slug" params={{ slug: "omeprazole" }} className="text-primary underline">
+            <Link
+              to="/drugs/$slug"
+              params={{ slug: "omeprazole" }}
+              className="text-primary underline"
+            >
               Omeprazole
             </Link>{" "}
             ·{" "}
@@ -392,7 +414,11 @@ function DrugReferencePremedication() {
             </li>
           </ul>
           <p className="mt-2 text-sm">
-            <Link to="/drugs/$slug" params={{ slug: "ondansetron" }} className="text-primary underline">
+            <Link
+              to="/drugs/$slug"
+              params={{ slug: "ondansetron" }}
+              className="text-primary underline"
+            >
               Ondansetron
             </Link>{" "}
             ·{" "}
@@ -449,11 +475,19 @@ function DrugReferencePremedication() {
               EMLA monograph
             </Link>{" "}
             ·{" "}
-            <Link to="/drugs/$slug" params={{ slug: "tetracaine" }} className="text-primary underline">
+            <Link
+              to="/drugs/$slug"
+              params={{ slug: "tetracaine" }}
+              className="text-primary underline"
+            >
               Tetracaine (Ametop) monograph
             </Link>{" "}
             ·{" "}
-            <Link to="/drugs/$slug" params={{ slug: "lidocaine" }} className="text-primary underline">
+            <Link
+              to="/drugs/$slug"
+              params={{ slug: "lidocaine" }}
+              className="text-primary underline"
+            >
               Lidocaine monograph
             </Link>
           </p>
