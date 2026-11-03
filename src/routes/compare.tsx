@@ -12,13 +12,13 @@ export const Route = createFileRoute("/compare")({
       {
         name: "description",
         content:
-          "Pick any two anaesthetic or critical care drugs and compare their bolus doses, infusion rates, preparation, key warnings and referenced sources side by side.",
+          "Pick any two anaesthetic or critical care drugs and compare their bolus doses, infusion ranges, preparation, key warnings and referenced sources side by side.",
       },
       { property: "og:title", content: "Compare Drugs — Anaesthesia & Critical Care Drugs" },
       {
         property: "og:description",
         content:
-          "Side-by-side comparison of doses, infusion rates, preparation and sources for any two drugs in the reference.",
+          "Side-by-side comparison of doses, infusion ranges, preparation and sources for any two drugs in the reference.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -260,7 +260,7 @@ function ComparePage() {
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-3xl text-foreground sm:text-4xl">Compare two drugs</h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Pick two drugs to see their doses, infusion rates, preparation and sources side by side.
+          Pick two drugs to see their doses, infusion ranges, preparation and sources side by side.
         </p>
 
         <div className="mt-6 grid grid-cols-1 items-center gap-3 sm:grid-cols-[1fr_auto_1fr]">

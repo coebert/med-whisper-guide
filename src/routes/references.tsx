@@ -211,7 +211,7 @@ function DoseReferencesPage() {
           <h2 className="font-serif text-lg text-foreground">Infusion recipes</h2>
           <p className="mt-1 text-sm text-muted-foreground">
             Recipe concentrations reflect common UK critical care practice and must match your
-            local smart-pump library. Dose ranges are checked against the linked monograph&apos;s
+            local smart-pump library. Dose ranges are referenced to the linked monograph&apos;s
             sources; where a recipe has no monograph, the standard BNF, BNFC and SPC lookups are
             given.
           </p>
