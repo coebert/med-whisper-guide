@@ -3,4 +3,7 @@
 import { writeFileSync } from "node:fs";
 import { buildIosReferencePages } from "../src/features/drugReference/iosExport";
 
-writeFileSync("public/ios-reference-pages.json", JSON.stringify(buildIosReferencePages(), null, 2) + "\n");
+writeFileSync(
+  "public/ios-reference-pages.json",
+  JSON.stringify(buildIosReferencePages(), null, 2) + "\n",
+);

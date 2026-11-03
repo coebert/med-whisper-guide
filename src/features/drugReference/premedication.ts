@@ -75,7 +75,9 @@ export const premedSections: PremedSection[] = [
     title: "Clonidine — oral",
     links: [{ slug: "clonidine", label: "Clonidine monograph" }],
     text: "Alpha-2 agonist used off-label for sedative premedication. Bradycardia, hypotension and excessive sedation are important risks; appropriate airway and respiratory monitoring remain necessary. Slower onset than midazolam, so it suits planned rather than last-minute premedication.",
-    rows: [{ group: "Adult — oral", dose: "150–300 micrograms", timing: "60–90 min before induction" }],
+    rows: [
+      { group: "Adult — oral", dose: "150–300 micrograms", timing: "60–90 min before induction" },
+    ],
     items: [
       "Avoid or reduce the dose in conduction disease, hypovolaemia or with other negative chronotropes.",
       "Reduces volatile and opioid requirements; plan induction and analgesia doses accordingly.",
@@ -108,7 +110,11 @@ export const premedSections: PremedSection[] = [
     links: [{ slug: "melatonin", label: "Melatonin monograph" }],
     text: "Used off-label as a mild anxiolytic premedication; immediate-release preparations are used.",
     rows: [
-      { group: "Adult — oral", dose: "3–6 mg immediate-release", timing: "60–90 min before induction" },
+      {
+        group: "Adult — oral",
+        dose: "3–6 mg immediate-release",
+        timing: "60–90 min before induction",
+      },
     ],
     items: [
       "Effect is inconsistent — have a plan if the patient is still anxious at induction. Monitor as for any sedative premedication.",

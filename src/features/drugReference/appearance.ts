@@ -27,7 +27,10 @@ const COLOUR_PATTERNS: RegExp[] = [
 
 const FORM_PATTERNS: Array<[RegExp, string]> = [
   [/lyophilis(?:ed|ed)\s+powder|freeze-dried powder/i, "Lyophilised powder for reconstitution"],
-  [/powder for (?:solution|reconstitution|injection|infusion)|powder for/i, "Powder for reconstitution"],
+  [
+    /powder for (?:solution|reconstitution|injection|infusion)|powder for/i,
+    "Powder for reconstitution",
+  ],
   [/concentrate for (?:solution for )?infusion/i, "Concentrate for infusion — must be diluted"],
   [/emulsion/i, "Emulsion for injection"],
   [/solution for injection(?:\/infusion)?(?: or infusion)?/i, "Solution for injection"],
@@ -35,7 +38,10 @@ const FORM_PATTERNS: Array<[RegExp, string]> = [
   [/volatile liquid|inhalation vapour/i, "Volatile liquid for vaporiser"],
   [/metered-dose inhaler|pMDI|nebulis/i, "Inhaled / nebulised preparation"],
   [/suppositor/i, "Suppositories"],
-  [/(?:gastro-resistant |dispersible |modified-release |prolonged-release )?tablets?|capsules?/i, "Oral tablets or capsules"],
+  [
+    /(?:gastro-resistant |dispersible |modified-release |prolonged-release )?tablets?|capsules?/i,
+    "Oral tablets or capsules",
+  ],
   [/oral (?:solution|suspension|syrup)/i, "Oral liquid"],
   [/patch|transdermal/i, "Transdermal patch"],
   [/gel|cream|ointment|topical/i, "Topical preparation"],

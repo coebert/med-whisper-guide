@@ -49,7 +49,10 @@ function dedupe(sources: IosSource[]): IosSource[] {
   return sources.filter((s, i, a) => a.findIndex((o) => o.url === s.url) === i);
 }
 
-function withSources<T extends object>(obj: T, sources: IosSource[]): T & { sources?: IosSource[] } {
+function withSources<T extends object>(
+  obj: T,
+  sources: IosSource[],
+): T & { sources?: IosSource[] } {
   return sources.length ? { ...obj, sources } : obj;
 }
 

@@ -113,15 +113,11 @@ function DrugReferenceInfusions() {
                       </div>
                       <div>
                         <dt className="text-xs text-muted-foreground">Starting dose</dt>
-                        <dd className="text-sm text-foreground">
-                          {startText(d)}
-                        </dd>
+                        <dd className="text-sm text-foreground">{startText(d)}</dd>
                       </div>
                       <div>
                         <dt className="text-xs text-muted-foreground">Usual range</dt>
-                        <dd className="text-sm text-foreground">
-                          {rangeText(d)}
-                        </dd>
+                        <dd className="text-sm text-foreground">{rangeText(d)}</dd>
                       </div>
                     </dl>
                     {d.notes && (

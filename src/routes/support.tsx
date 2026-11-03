@@ -36,10 +36,11 @@ function SupportPage() {
           <h2 className="font-serif text-lg text-foreground">What this app is</h2>
           <p>
             Anaesthesia &amp; Critical Care Drugs is a reference for trained healthcare
-            professionals caring for <strong className="text-foreground">adults aged 18 and over</strong>,
-            based on UK guidance and UK product information. It is not for paediatric use and does
-            not replace clinical judgement, prescribing checks or local protocols. It contains no
-            dose calculators.
+            professionals caring for{" "}
+            <strong className="text-foreground">adults aged 18 and over</strong>, based on UK
+            guidance and UK product information. It is not for paediatric use and does not replace
+            clinical judgement, prescribing checks or local protocols. It contains no dose
+            calculators.
           </p>
           <p>
             <strong className="text-foreground">Users outside the UK:</strong> the app is available

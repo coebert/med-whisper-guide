@@ -49,11 +49,23 @@ describe("recipe corrections", () => {
   });
   it("magnesium eclampsia maintenance is fixed 1000 mg/h", () => {
     const r = recipe("Magnesium sulphate");
-    expect([r.unit, r.startDose, r.minDose, r.maxDose, r.perKg]).toEqual(["mg/h", 1000, 1000, 1000, false]);
+    expect([r.unit, r.startDose, r.minDose, r.maxDose, r.perKg]).toEqual([
+      "mg/h",
+      1000,
+      1000,
+      1000,
+      false,
+    ]);
   });
   it("trauma TXA maintenance is fixed 125 mg/h", () => {
     const r = recipe("Tranexamic acid (major trauma)");
-    expect([r.unit, r.startDose, r.minDose, r.maxDose, r.perKg]).toEqual(["mg/h", 125, 125, 125, false]);
+    expect([r.unit, r.startDose, r.minDose, r.maxDose, r.perKg]).toEqual([
+      "mg/h",
+      125,
+      125,
+      125,
+      false,
+    ]);
   });
   it("trauma TXA cites NICE NG39 and CRASH-2 (as a trial)", () => {
     const r = recipe("Tranexamic acid (major trauma)");
@@ -77,7 +89,8 @@ describe("recipe corrections", () => {
 describe("topic corrections", () => {
   const all = allReferenceTopics.flatMap((t) => t.keyPoints.map(keyPointText)).join("\n");
   it("adenosine third dose is 18 mg", () => expect(all).toContain("6 mg, 12 mg and 18 mg"));
-  it("LAST lipid bolus over 2–3 minutes", () => expect(all).toContain("1.5 mL/kg IV over 2–3 minutes"));
+  it("LAST lipid bolus over 2–3 minutes", () =>
+    expect(all).toContain("1.5 mL/kg IV over 2–3 minutes"));
   it("PPH TXA timed from birth", () => expect(all).toContain("within 3 hours of birth"));
 });
 

@@ -42,7 +42,9 @@ function IosPrivacyPage() {
           <ul className="list-inside list-disc space-y-1">
             <li>No account or login.</li>
             <li>No entry of patient information, and no dose or infusion calculators.</li>
-            <li>No analytics, advertising or tracking SDKs, and no tracking across apps or websites.</li>
+            <li>
+              No analytics, advertising or tracking SDKs, and no tracking across apps or websites.
+            </li>
             <li>
               No network requests: all reference content is bundled in the app and works offline.
             </li>
