@@ -72,10 +72,10 @@ function DrugReferenceLibrary() {
             Anaesthetics &amp; Critical Care Drug Reference
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-            Every drug monograph in one searchable library: presentation and preparation, adult and
+            Adult UK drug monographs in one searchable library: presentation and preparation, adult and
             infusion dosing, standard dilutions, pharmacokinetics, adverse
             effects, interactions and — where relevant — full therapeutic drug level monitoring.
-            Each entry lists its own sources (BNF, BNF for Children, the product SPC and national
+            Each entry lists its own sources (BNF, the product SPC and national
             guidelines).
           </p>
           <dl className="mt-5 flex flex-wrap gap-x-8 gap-y-2 text-sm">

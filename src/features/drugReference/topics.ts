@@ -276,7 +276,7 @@ export const OTHER_TOPIC: ReferenceTopic = {
   title: "Other agents",
   blurb: "Remaining monographs that do not sit inside a single topic.",
   keyPoints: [
-    "Every monograph lists its own sources — check the dose against the BNF or product SPC and your local protocol before use.",
+    "Each monograph lists its sources — check the dose against the BNF or product SPC and your local protocol before use.",
   ],
   patterns: [],
 };
