@@ -28,6 +28,8 @@ const NAV = [
   { to: "/review-status", label: "Review status" },
   { to: "/offline", label: "Offline" },
   { to: "/about", label: "About" },
+  { to: "/support", label: "Support" },
+  { to: "/ios-privacy", label: "Privacy" },
 ] as const;
 
 /** Thumb-reach tabs on phones: the four screens used at the bedside, plus everything else. */
@@ -110,7 +112,7 @@ export default function ReferenceAppLayout({ children }: Props) {
           </ul>
         </nav>
         <p className="border-t border-border bg-muted/40 px-4 py-1 text-center text-[11px] font-medium text-muted-foreground">
-          Adult UK reference. Not for paediatric use.
+          Adult (18+) UK guidance. Not for paediatric use.
         </p>
       </header>
 
@@ -124,7 +126,8 @@ export default function ReferenceAppLayout({ children }: Props) {
           <p className="mt-2">
             Educational reference for trained clinicians. Always check doses, dilutions and
             monitoring targets against the BNF, the product SPC, your smart-pump drug library and
-            local protocols before administration.
+            local protocols before administration. Available worldwide; outside the UK, check local
+            licences and protocols.
           </p>
           <p className="mt-2">
             <Link to="/about" className="underline hover:text-foreground">
@@ -133,6 +136,14 @@ export default function ReferenceAppLayout({ children }: Props) {
             ·{" "}
             <Link to="/review-status" className="underline hover:text-foreground">
               Source review status (verification in progress)
+            </Link>{" "}
+            ·{" "}
+            <Link to="/support" className="underline hover:text-foreground">
+              Support
+            </Link>{" "}
+            ·{" "}
+            <Link to="/ios-privacy" className="underline hover:text-foreground">
+              iOS privacy
             </Link>
           </p>
         </div>
