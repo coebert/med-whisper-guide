@@ -44,7 +44,7 @@ const SLUG_BY_INFUSION_NAME: Record<string, string | null> = {
   Salbutamol: "salbutamol",
   Aminophylline: "aminophylline",
   Oxytocin: "oxytocin",
-  "Tranexamic acid": "tranexamic-acid",
+  "Tranexamic acid (major trauma)": "tranexamic-acid",
 };
 
 /** All standard infusion recipes, flattened and slug-tagged. Static display data only — no rate arithmetic. */
@@ -61,6 +61,7 @@ export const drugDilutions: DrugDilution[] = icuInfusionGroups.flatMap((group) =
     maxDose: infusion.maxDose,
     perKg: infusion.perKg,
     notes: infusion.notes,
+    sources: infusion.sources,
     group: group.title,
   })),
 );

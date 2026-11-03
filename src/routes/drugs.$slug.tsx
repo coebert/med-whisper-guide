@@ -76,7 +76,7 @@ function Prose({ text }: { text: string }) {
   return (
     <div className="space-y-1.5 text-sm leading-relaxed text-muted-foreground">
       {lines.map((line, i) => (
-        <p key={i}>{line.replace(/^[•\-]\s*/, "• ")}</p>
+        <p key={i}>{line.replace(/^[•-]\s*/, "• ")}</p>
       ))}
     </div>
   );
@@ -156,6 +156,7 @@ function DilutionCard({ dilution }: { dilution: DrugDilution }) {
         </p>
       )}
       {dilution.notes && <p className="mt-3 text-sm text-muted-foreground">{dilution.notes}</p>}
+      {dilution.sources && <SourceChips sources={dilution.sources} label="Cited" />}
     </div>
   );
 }
@@ -445,6 +446,10 @@ function DrugReferenceEntry() {
         </Section>
 
         <Section title="Sources" id="sources">
+          <p className="mb-3 text-xs text-muted-foreground">
+            Sources listed with this monograph. Listing a source does not mean every statement has
+            been verified against it — clinical verification is in progress.
+          </p>
           <ul className="space-y-2 text-sm">
             {[...drug.sources, ...(tdm?.sources ?? [])].map((s) => (
               <li key={`${s.title}-${s.url}`}>
@@ -464,7 +469,7 @@ function DrugReferenceEntry() {
           </ul>
           <p className="mt-4 text-sm">
             <Link to="/sources" className="text-primary underline">
-              See the full list of clinical sources (BNF, SPC, NICE, RCoA)
+              See the full list of clinical sources
             </Link>
           </p>
           <p className="mt-4 text-xs text-muted-foreground">

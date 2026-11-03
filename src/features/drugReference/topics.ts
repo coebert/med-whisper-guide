@@ -9,13 +9,27 @@
  * Deliberately dependency-free so this folder can be lifted into its own app.
  */
 
+import { CITE } from "./citations";
+import type { DrugSource } from "./types";
+
+/** A bedside point, optionally with direct citations for the statement. */
+export type KeyPoint = string | { text: string; sources: DrugSource[] };
+
+export function keyPointText(p: KeyPoint): string {
+  return typeof p === "string" ? p : p.text;
+}
+
+export function keyPointSources(p: KeyPoint): DrugSource[] {
+  return typeof p === "string" ? [] : p.sources;
+}
+
 export interface ReferenceTopic {
   slug: string;
   title: string;
   /** One-line description used on cards and in page metadata. */
   blurb: string;
   /** Practical bedside points shown at the top of the topic page. */
-  keyPoints: string[];
+  keyPoints: KeyPoint[];
   /** Lower-case substrings matched against `drug_class`. */
   patterns: string[];
 }
@@ -26,12 +40,18 @@ export const referenceTopics: ReferenceTopic[] = [
     title: "Vasopressors, inotropes & vasodilators",
     blurb: "Circulatory support agents with standard dilutions.",
     keyPoints: [
-      "Give peripheral vasopressor only as a bridge through a large, well-sited cannula that is checked hourly; move to central access as soon as it is safe.",
+      "Give peripheral vasopressor only as a bridge through a large, well-sited cannula with frequent site checks under local policy; move to central access as soon as it is safe.",
       "Titrate to a mean arterial pressure target set for the patient, not to a fixed rate, and reassess volume state and cardiac output before adding a second agent.",
       "Double-strength bags exist for fluid-restricted patients — always confirm the concentration on the syringe label against the pump library before handover.",
       "Vasodilator infusions need continuous arterial pressure monitoring; stop rather than titrate down when pressure falls abruptly.",
     ],
-    patterns: ["vasopressor", "inotrope", "vasodilator", "vasopressin analogue", "pulmonary vasodilator"],
+    patterns: [
+      "vasopressor",
+      "inotrope",
+      "vasodilator",
+      "vasopressin analogue",
+      "pulmonary vasodilator",
+    ],
   },
   {
     slug: "sedation-anaesthesia",
@@ -40,7 +60,7 @@ export const referenceTopics: ReferenceTopic[] = [
     keyPoints: [
       "Set a sedation target (for example RASS −1 to 0) and assess it at least once a nursing shift; daily interruption shortens ventilation where it is safe.",
       "Watch cumulative propofol dose, triglycerides and lactate for propofol-related infusion syndrome in prolonged high-dose use.",
-      "Sedation clears slowly in obesity, hepatic and renal failure — expect a delayed offset rather than an unexpected neurological problem.",
+      "Sedative effects may be prolonged by drug accumulation and organ impairment. Unexpected failure to wake requires prompt assessment for drug effects and other causes, including hypoxia, metabolic disturbance and neurological pathology; do not assume accumulation is the explanation.",
       "Sedation is not analgesia: treat pain first, then add sedation only if a target is still unmet.",
     ],
     patterns: [
@@ -57,7 +77,10 @@ export const referenceTopics: ReferenceTopic[] = [
     blurb: "Opioids, NSAIDs and adjuncts, with equivalence and safety limits.",
     keyPoints: [
       "Use multimodal analgesia — paracetamol plus an NSAID where safe reduces opioid need and opioid-related adverse effects.",
-      "Renal impairment accumulates morphine metabolites: prefer fentanyl or oxycodone and reduce the dose interval rather than the drug.",
+      {
+        text: "Morphine and its active metabolites can accumulate in renal impairment. Choose the opioid and adjust the dose and/or lengthen the dosing interval using renal guidance; oxycodone also requires caution and dose adjustment. Monitor closely for sedation and respiratory depression.",
+        sources: [CITE.ouhRenalAnalgesia, CITE.oxycodoneSpc],
+      },
       "Convert between opioids using published equivalence, then reduce by 25–50% for incomplete cross-tolerance and re-titrate.",
       "After more than a week of opioid or alpha-2 agonist infusion, plan a taper — abrupt discontinuation causes agitation, tachycardia and diarrhoea.",
     ],
@@ -78,11 +101,14 @@ export const referenceTopics: ReferenceTopic[] = [
   {
     slug: "local-anaesthetics",
     title: "Local anaesthetics & toxicity rescue",
-    blurb: "Maximum safe doses, adjuncts and lipid emulsion rescue.",
+    blurb: "Dose limits, adjuncts and lipid emulsion rescue.",
     keyPoints: [
-      "Calculate the maximum dose in mg/kg on lean body weight before drawing up, and say the number out loud during the block checklist.",
+      "Check the drug-specific maximum dose in the product information and local guidance before drawing up, and state it during the block checklist.",
       "Aspirate and inject incrementally with continuous verbal contact; early signs are perioral tingling, tinnitus, metallic taste and agitation.",
-      "For local anaesthetic systemic toxicity, stop injecting, call for help, manage the airway and give lipid emulsion 20% 1.5 mL/kg over 1 minute then 15 mL/kg/h.",
+      {
+        text: "For suspected severe local anaesthetic systemic toxicity, stop local anaesthetic administration, summon help, support oxygenation and ventilation, and follow the current Association of Anaesthetists emergency algorithm. Its initial 20% lipid regimen is 1.5 mL/kg IV over 2–3 minutes followed by 15 mL/kg/h; follow the algorithm for repeat doses and escalation, without exceeding a cumulative 12 mL/kg.",
+        sources: [CITE.qrhLast],
+      },
       "Continue resuscitation well beyond the usual duration — recovery after bupivacaine arrest can take over an hour.",
     ],
     patterns: ["local anaesthetic", "la toxicity rescue"],
@@ -94,7 +120,10 @@ export const referenceTopics: ReferenceTopic[] = [
     keyPoints: [
       "Correct potassium, magnesium, hypoxia, pain and hypovolaemia before escalating antiarrhythmic drugs — new atrial fibrillation in critical illness is usually secondary.",
       "In an unstable tachyarrhythmia, synchronised cardioversion comes before any drug.",
-      "Adenosine for regular narrow-complex tachycardia is 6 mg, then 12 mg, then 12 mg by rapid intravenous push with continuous ECG recording.",
+      {
+        text: "For a regular narrow-complex tachyarrhythmia without life-threatening features, follow the current RCUK algorithm: vagal manoeuvres, then adenosine if there is no pre-excitation, using 6 mg, 12 mg and 18 mg rapid IV boluses if preceding doses are unsuccessful, with continuous ECG monitoring and appropriate resuscitation facilities. This is guideline dosing and may differ from the product licence; check contraindications and patient-specific dose adjustments.",
+        sources: [CITE.rcukTachy],
+      },
       "Amiodarone by peripheral vein causes phlebitis — use central access for anything beyond a single loading dose.",
     ],
     patterns: ["antiarrhythmic", "β-blocker", "α/β-blocker", "blocker"],
@@ -136,9 +165,12 @@ export const referenceTopics: ReferenceTopic[] = [
     title: "Antimicrobials & antifungals",
     blurb: "Antibacterials, antifungals and antivirals with level monitoring where needed.",
     keyPoints: [
-      "Take cultures then give the first dose within an hour in suspected sepsis; do not delay for line access if a peripheral route is available.",
+      {
+        text: "Take appropriate microbiological samples before antibiotics where this will not delay urgent treatment. For adults at high risk of severe illness or death from suspected sepsis, give IV antibiotics within 1 hour under NICE NG253. Moderate- and low-risk presentations require the guideline's risk-stratified assessment and treatment timings.",
+        sources: [CITE.niceNg253],
+      },
       "Dose by mechanism — time-dependent agents need frequent or extended infusions, concentration-dependent agents need adequate peak doses.",
-      "Loading doses stay the same in renal failure; only the maintenance dose or interval changes.",
+      "Loading and maintenance dose changes in renal impairment are drug-specific — check the product information and local antimicrobial guidance for each agent.",
       "Review at 48–72 hours against culture results and set a stop or step-down date at the time of prescribing.",
     ],
     patterns: ["antimicrobial", "antifungal", "antiviral"],
@@ -162,7 +194,10 @@ export const referenceTopics: ReferenceTopic[] = [
     keyPoints: [
       "Combine antiemetics from different receptor classes rather than repeating the same class for breakthrough nausea.",
       "Check the QT interval and other QT-prolonging drugs before repeated ondansetron, droperidol or metoclopramide.",
-      "Prescribe stress ulcer prophylaxis only for patients with a risk factor, and stop it when enteral feeding is established.",
+      {
+        text: "Use stress-ulcer prophylaxis for critically ill adults with relevant bleeding risk factors. Enteral feeding alone is not a reason to stop it while those risk factors persist. Review daily and discontinue when the critical illness or relevant risk factors resolve, unless another indication remains.",
+        sources: [CITE.sccmSup],
+      },
       "Prokinetics are a short trial for feed intolerance — review at 48 hours and stop if ineffective.",
     ],
     patterns: [
@@ -181,7 +216,10 @@ export const referenceTopics: ReferenceTopic[] = [
     keyPoints: [
       "Run variable-rate insulin against an agreed glucose target with hourly monitoring; avoid tight control, which causes hypoglycaemia.",
       "Never stop long-acting basal insulin in type 1 diabetes, even when the patient is nil by mouth.",
-      "Patients on long-term steroids need perioperative supplementation; document the equivalent hydrocortisone dose.",
+      {
+        text: "Assess the risk of adrenal insufficiency in patients receiving or recently exposed to glucocorticoids. Those with adrenal insufficiency or clinically significant adrenal suppression need an agreed perioperative steroid plan, in addition to their usual treatment; requirements depend on exposure and surgical stress.",
+        sources: [CITE.periopSteroids],
+      },
       "Check the steroid indication and duration — low-dose hydrocortisone in septic shock is a defined course, not an open-ended prescription.",
     ],
     patterns: ["endocrine", "corticosteroid", "hypoglycaemic", "mood stabiliser"],
@@ -218,14 +256,17 @@ export const referenceTopics: ReferenceTopic[] = [
       "Escalate through the uterotonic ladder while treating the other causes of postpartum haemorrhage — tone, tissue, trauma and thrombin.",
       "Oxytocin bolus causes vasodilatation and tachycardia: give slowly, and follow with an infusion rather than repeated boluses.",
       "Ergometrine is contraindicated in hypertension and pre-eclampsia; carboprost is contraindicated in asthma.",
-      "Give tranexamic acid 1 g early in obstetric haemorrhage — within 3 hours of onset.",
+      {
+        text: "Postpartum haemorrhage (separate from the trauma regimen): for clinically diagnosed PPH, give tranexamic acid 1 g IV over 10 minutes as soon as possible and within 3 hours of birth, alongside standard haemorrhage care. A second 1 g dose may be given if bleeding continues after 30 minutes or restarts within 24 hours.",
+        sources: [CITE.whoTxaPph, CITE.whoPph],
+      },
     ],
     patterns: ["uterotonic"],
   },
   {
     slug: "immunosuppression",
     title: "Immunosuppressants",
-    blurb: "Transplant immunosuppression, almost all requiring blood level monitoring.",
+    blurb: "Transplant immunosuppression; several agents need blood level monitoring.",
     keyPoints: [
       "Never omit or delay transplant immunosuppression without transplant team advice — rejection risk outweighs most perioperative concerns.",
       "Calcineurin inhibitors interact heavily through CYP3A4: check every new antifungal, macrolide and antiepileptic against them.",
@@ -241,7 +282,7 @@ export const OTHER_TOPIC: ReferenceTopic = {
   title: "Other agents",
   blurb: "Remaining monographs that do not sit inside a single topic.",
   keyPoints: [
-    "Every monograph lists its own sources — check the dose against the BNF or product SPC and your local protocol before use.",
+    "Each monograph lists its sources — check the dose against the BNF or product SPC and your local protocol before use.",
   ],
   patterns: [],
 };

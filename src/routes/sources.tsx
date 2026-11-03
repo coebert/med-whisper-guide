@@ -11,7 +11,7 @@ export const Route = createFileRoute("/sources")({
       {
         name: "description",
         content:
-          "The clinical references behind every monograph: the BNF and BNF for Children, manufacturers' Summaries of Product Characteristics, NICE guidance, RCoA and Association of Anaesthetists standards, and UK critical care guidelines.",
+          "The main publishers cited across the adult UK reference: the BNF, manufacturers' Summaries of Product Characteristics, NICE guidance, RCoA and Association of Anaesthetists standards, and UK critical care guidelines.",
       },
       {
         property: "og:title",
@@ -48,19 +48,13 @@ const referenceGroups: ReferenceGroup[] = [
     id: "formulary",
     heading: "Formularies",
     intro:
-      "First call for adult and paediatric dosing, cautions, interactions and licensed indications. Where a monograph's dose differs from the formulary, the difference is stated in the text.",
+      "Adult dosing, cautions, interactions and licensed indications. This is an adult UK reference; paediatric formularies are not used.",
     refs: [
       {
         title: "British National Formulary (BNF)",
         publisher: "NICE / BMJ / Royal Pharmaceutical Society",
         url: "https://bnf.nice.org.uk/",
-        note: "Adult dosing, cautions, interactions and prescribing notes. Used as the default dosing source for every adult monograph.",
-      },
-      {
-        title: "BNF for Children (BNFC)",
-        publisher: "NICE / BMJ / RPS / RCPCH",
-        url: "https://bnfc.nice.org.uk/",
-        note: "Neonatal, infant and child dosing, including weight-based and unlicensed paediatric use.",
+        note: "Adult dosing, cautions, interactions and prescribing notes. A primary adult dosing reference.",
       },
       {
         title: "Injectable Medicines Guide (Medusa)",
@@ -113,12 +107,6 @@ const referenceGroups: ReferenceGroup[] = [
         publisher: "National Institute for Health and Care Excellence",
         url: "https://www.nice.org.uk/guidance",
         note: "Clinical guidelines, technology appraisals and the NICE British National Formulary treatment summaries.",
-      },
-      {
-        title: "Sedation in under-19s (CG112)",
-        publisher: "NICE",
-        url: "https://www.nice.org.uk/guidance/cg112",
-        note: "Underpins the paediatric premedication and sedation guidance in this app.",
       },
       {
         title: "NICE Clinical Knowledge Summaries",
@@ -177,16 +165,10 @@ const referenceGroups: ReferenceGroup[] = [
         note: "Standards for critical care services and organ support.",
       },
       {
-        title: "APA — Association of Paediatric Anaesthetists",
-        publisher: "APAGBI",
-        url: "https://www.apagbi.org.uk/guidelines",
-        note: "Paediatric anaesthesia guidance, including pain management and premedication.",
-      },
-      {
         title: "Management of severe local anaesthetic toxicity",
         publisher: "Association of Anaesthetists",
         url: "https://anaesthetists.org/Home/Resources-publications/Guidelines/Management-of-severe-local-anaesthetic-toxicity",
-        note: "Maximum safe doses and lipid emulsion rescue.",
+        note: "Recognition and management of local anaesthetic systemic toxicity, including lipid emulsion.",
       },
     ],
   },
@@ -224,10 +206,14 @@ function ClinicalSourcesPage() {
       <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">Clinical sources</h1>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-          Every monograph carries its own citations, section by section. This page is the master
-          list of the works those citations point to. Guidance is revised regularly — where a dose
-          or threshold matters, open the source and confirm the current version before you act on
-          it.
+          The main publishers cited across this adult UK reference. A source appearing here or on a
+          monograph does not mean every statement has been verified against it — clinical
+          verification is in progress (see{" "}
+          <Link to="/review-status" className="text-primary underline">
+            Source review status
+          </Link>
+          ). Guidance is revised regularly — where a dose or threshold matters, open the source and
+          confirm the current version before you act on it.
         </p>
 
         <nav aria-label="Sections" className="mt-5 flex flex-wrap gap-2">
@@ -275,10 +261,7 @@ function ClinicalSourcesPage() {
         <section className="mt-8 space-y-3 rounded-lg border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground">
           <h2 className="font-serif text-lg text-foreground">How to use these sources</h2>
           <ul className="list-inside list-disc space-y-1">
-            <li>
-              Dose queries: BNF or BNF for Children first, then the product SPC for the licensed
-              wording.
-            </li>
+            <li>Dose queries: the BNF first, then the product SPC for the licensed wording.</li>
             <li>
               Dilution, diluent compatibility and stability: the SPC and the Injectable Medicines
               Guide, checked against your own smart-pump drug library.

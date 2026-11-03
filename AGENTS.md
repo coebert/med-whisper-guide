@@ -11,3 +11,6 @@
 
 - The app performs no patient-specific dose, weight or pump-rate arithmetic; infusion recipes are static display data only (App Store medical-calculator risk).
 - Bump the localStorage cache prefix in cache.ts and add the old one to LEGACY_PREFIXES whenever clinical content is corrected, so stale copies are purged.
+- Adult-only scope lives in src/features/drugReference/scope.ts (excluded slugs, paediatric-source filter); every drugs query and cached read must apply it.
+- Inline citations for revised static facts come from src/features/drugReference/citations.ts; search links are marked lookup and never presented as evidence.
+- Clinical rule tests: bunx vitest run src/features/drugReference/__tests__

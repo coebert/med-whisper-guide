@@ -25,6 +25,7 @@ const NAV = [
   { to: "/infusions", label: "Infusions" },
   { to: "/sources", label: "Sources" },
   { to: "/references", label: "References" },
+  { to: "/review-status", label: "Review status" },
   { to: "/offline", label: "Offline" },
   { to: "/about", label: "About" },
 ] as const;
@@ -128,6 +129,10 @@ export default function ReferenceAppLayout({ children }: Props) {
           <p className="mt-2">
             <Link to="/about" className="underline hover:text-foreground">
               Sources and how this reference is built
+            </Link>{" "}
+            ·{" "}
+            <Link to="/review-status" className="underline hover:text-foreground">
+              Source review status (verification in progress)
             </Link>
           </p>
         </div>

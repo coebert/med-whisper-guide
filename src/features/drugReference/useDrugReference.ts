@@ -1,26 +1,33 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { readCache, writeCache } from "./cache";
+import { adultSources, EXCLUDED_SLUG_FILTER, isInScope } from "./scope";
 import type { DrugReferenceRow, DrugSource, DrugTdm } from "./types";
 
-const LIST_COLUMNS =
-  "slug,name,drug_class,synonyms,indication_oneliner,key_warning,requires_tdm";
+const LIST_COLUMNS = "slug,name,drug_class,synonyms,indication_oneliner,key_warning,requires_tdm";
 
 const FULL_COLUMNS = `${LIST_COLUMNS},adult_bolus_dose,infusion_range,presentation,mechanism_of_action,pharmacokinetics,preparation,dosing,monitoring,side_effects,contraindications,interactions,tdm,sources`;
 
 export type DrugListItem = Pick<
   DrugReferenceRow,
-  "slug" | "name" | "drug_class" | "synonyms" | "indication_oneliner" | "key_warning" | "requires_tdm"
+  | "slug"
+  | "name"
+  | "drug_class"
+  | "synonyms"
+  | "indication_oneliner"
+  | "key_warning"
+  | "requires_tdm"
 >;
 
 function asSources(value: unknown): DrugSource[] {
-  return Array.isArray(value) ? (value as DrugSource[]) : [];
+  return adultSources(Array.isArray(value) ? (value as DrugSource[]) : []);
 }
 
 function asTdm(value: unknown): DrugTdm | null {
   if (!value || typeof value !== "object") return null;
   const tdm = value as DrugTdm;
-  return Array.isArray(tdm.targets) && tdm.targets.length > 0 ? tdm : null;
+  if (!Array.isArray(tdm.targets) || tdm.targets.length === 0) return null;
+  return { ...tdm, sources: adultSources(tdm.sources) };
 }
 
 function normalise(row: Record<string, unknown>): DrugReferenceRow {
@@ -34,7 +41,9 @@ function normalise(row: Record<string, unknown>): DrugReferenceRow {
 /** Loads the whole library index (name, class, one-liner, monitoring flag). */
 export function useDrugList() {
   const cached = readCache<DrugListItem[]>("list");
-  const [drugs, setDrugs] = useState<DrugListItem[]>(cached?.data ?? []);
+  const [drugs, setDrugs] = useState<DrugListItem[]>(
+    (cached?.data ?? []).filter((d) => isInScope(d.slug)),
+  );
   const [loading, setLoading] = useState(!cached);
   const [error, setError] = useState<string | null>(null);
   const [fromCache, setFromCache] = useState(Boolean(cached));
@@ -45,12 +54,13 @@ export function useDrugList() {
       const { data, error: err } = await supabase
         .from("drugs")
         .select(LIST_COLUMNS)
+        .not("slug", "in", EXCLUDED_SLUG_FILTER)
         .order("name");
       if (!active) return;
       if (err) {
         if (!readCache<DrugListItem[]>("list")) setError(err.message);
       } else {
-        const rows = (data ?? []) as DrugListItem[];
+        const rows = ((data ?? []) as DrugListItem[]).filter((d) => isInScope(d.slug));
         setDrugs(rows);
         setFromCache(false);
         writeCache("list", rows);
@@ -66,14 +76,20 @@ export function useDrugList() {
 }
 
 /** Loads one full monograph, including sources and monitoring data. */
-export function useDrugEntry(slug: string | undefined) {
+export function useDrugEntry(requested: string | undefined) {
+  // Out-of-scope monographs behave exactly like a missing drug.
+  const slug = isInScope(requested) ? requested : undefined;
   const cached = slug ? readCache<DrugReferenceRow>(`drug:${slug}`) : null;
   const [drug, setDrug] = useState<DrugReferenceRow | null>(cached?.data ?? null);
   const [loading, setLoading] = useState(!cached);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!slug) return;
+    if (!slug) {
+      setDrug(null);
+      setLoading(false);
+      return;
+    }
     let active = true;
     const local = readCache<DrugReferenceRow>(`drug:${slug}`);
     setDrug(local?.data ?? null);
@@ -107,7 +123,9 @@ export function useDrugEntry(slug: string | undefined) {
 /** Loads every monograph that needs blood level monitoring, with full TDM data. */
 export function useMonitoredDrugs() {
   const cached = readCache<DrugReferenceRow[]>("monitored");
-  const [drugs, setDrugs] = useState<DrugReferenceRow[]>(cached?.data ?? []);
+  const [drugs, setDrugs] = useState<DrugReferenceRow[]>(
+    (cached?.data ?? []).filter((d) => isInScope(d.slug)),
+  );
   const [loading, setLoading] = useState(!cached);
   const [error, setError] = useState<string | null>(null);
 
@@ -118,12 +136,15 @@ export function useMonitoredDrugs() {
         .from("drugs")
         .select(FULL_COLUMNS)
         .eq("requires_tdm", true)
+        .not("slug", "in", EXCLUDED_SLUG_FILTER)
         .order("name");
       if (!active) return;
       if (err) {
         if (!readCache<DrugReferenceRow[]>("monitored")) setError(err.message);
       } else {
-        const rows = (data ?? []).map((row) => normalise(row as Record<string, unknown>));
+        const rows = (data ?? [])
+          .map((row) => normalise(row as Record<string, unknown>))
+          .filter((d) => isInScope(d.slug));
         setDrugs(rows);
         writeCache("monitored", rows);
       }
@@ -147,7 +168,8 @@ export async function downloadAllMonographs(
   const PAGE = 40;
   const { count, error: countError } = await supabase
     .from("drugs")
-    .select("slug", { count: "exact", head: true });
+    .select("slug", { count: "exact", head: true })
+    .not("slug", "in", EXCLUDED_SLUG_FILTER);
   if (countError) throw new Error(countError.message);
   const total = count ?? 0;
   let saved = 0;
@@ -159,12 +181,14 @@ export async function downloadAllMonographs(
     const { data, error: err } = await supabase
       .from("drugs")
       .select(FULL_COLUMNS)
+      .not("slug", "in", EXCLUDED_SLUG_FILTER)
       .order("name")
       .range(from, from + PAGE - 1);
     if (err) throw new Error(err.message);
     for (const raw of data ?? []) {
       const row = normalise(raw as Record<string, unknown>);
       seen += 1;
+      if (!isInScope(row.slug)) continue;
       // A refused write means the device storage is full — stop and report honestly
       // rather than claiming a complete offline copy.
       if (!writeCache(`drug:${row.slug}`, row)) {
@@ -192,4 +216,3 @@ export async function downloadAllMonographs(
   writeCache("monitored", monitored);
   return { saved, total };
 }
-

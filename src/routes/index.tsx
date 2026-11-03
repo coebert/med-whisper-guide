@@ -83,7 +83,8 @@ function DrugReferenceHome() {
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
           An adult UK drug reference: presentation and preparation, adult and infusion dosing,
           standard draw-up dilutions, pharmacokinetics, adverse effects, interactions, and full
-          blood level monitoring where it matters. Every monograph lists its own sources.
+          blood level monitoring where it matters. Each monograph lists its sources; clinical
+          verification is in progress.
         </p>
 
         <form

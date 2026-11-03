@@ -5,9 +5,17 @@ export const Route = createFileRoute("/topics/$slug")({
   head: () => ({
     meta: [
       { title: "Drug Topic — Anaesthesia & Critical Care Drugs" },
-      { name: "description", content: "Bedside points plus every monograph in this drug group with presentations, dosing, standard dilutions, safety and blood level monitoring." },
+      {
+        name: "description",
+        content:
+          "Bedside points plus every monograph in this drug group with presentations, dosing, standard dilutions, safety and blood level monitoring.",
+      },
       { property: "og:title", content: "Drug Topic — Anaesthesia & Critical Care Drugs" },
-      { property: "og:description", content: "Bedside points plus every monograph in this drug group with presentations, dosing, standard dilutions, safety and blood level monitoring." },
+      {
+        property: "og:description",
+        content:
+          "Bedside points plus every monograph in this drug group with presentations, dosing, standard dilutions, safety and blood level monitoring.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -22,17 +30,20 @@ import { AlertTriangle, ArrowLeft, FlaskConical, Syringe } from "lucide-react";
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 import { useDrugList } from "@/features/drugReference/useDrugReference";
 import { drugDilutions } from "@/features/drugReference/dilutions";
-import { topicBySlug, topicForClass } from "@/features/drugReference/topics";
+import {
+  keyPointSources,
+  keyPointText,
+  topicBySlug,
+  topicForClass,
+} from "@/features/drugReference/topics";
+import { SourceChips } from "@/features/drugReference/references";
 
 function DrugReferenceTopic() {
   const { slug } = useParams({ strict: false }) as { slug?: string };
   const topic = topicBySlug(slug);
   const { drugs, loading } = useDrugList();
 
-  const slugsWithRecipes = useMemo(
-    () => new Set(drugDilutions.map((d) => d.slug)),
-    [],
-  );
+  const slugsWithRecipes = useMemo(() => new Set(drugDilutions.map((d) => d.slug)), []);
 
   const members = useMemo(() => {
     if (!topic) return [];
@@ -77,9 +88,15 @@ function DrugReferenceTopic() {
           <h2 className="font-serif text-lg text-foreground">Bedside points</h2>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
             {topic.keyPoints.map((point) => (
-              <li key={point} className="flex gap-2">
-                <span aria-hidden="true" className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span>{point}</span>
+              <li key={keyPointText(point)} className="flex gap-2">
+                <span
+                  aria-hidden="true"
+                  className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
+                />
+                <div>
+                  {keyPointText(point)}
+                  <SourceChips sources={keyPointSources(point)} label="Cited" />
+                </div>
               </li>
             ))}
           </ul>
@@ -91,7 +108,8 @@ function DrugReferenceTopic() {
             {members.map((d) => (
               <li key={d.slug}>
                 <Link
-                  to="/drugs/$slug" params={{ slug: d.slug }}
+                  to="/drugs/$slug"
+                  params={{ slug: d.slug }}
                   className="flex h-full flex-col rounded-lg border border-border bg-card p-4 transition hover:border-primary hover:shadow-sm"
                 >
                   <span className="font-semibold text-foreground">{d.name}</span>
@@ -127,8 +145,9 @@ function DrugReferenceTopic() {
         <aside className="mt-10 flex gap-3 rounded-lg border border-border bg-muted/40 p-4 text-sm text-muted-foreground">
           <AlertTriangle aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0" />
           <p>
-            Educational reference for trained clinicians. Bedside points summarise common UK practice
-            and do not replace the BNF, the product SPC or your local critical care protocols.
+            Educational reference for trained clinicians. Bedside points summarise common UK
+            practice and do not replace the BNF, the product SPC or your local critical care
+            protocols.
           </p>
         </aside>
       </main>

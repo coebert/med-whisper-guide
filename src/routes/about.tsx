@@ -8,13 +8,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "How this drug reference is built and maintained: sources including the BNF, BNF for Children, product SPCs and national guidelines.",
+          "How this drug reference is built and maintained: sources including the BNF, product SPCs and national guidelines.",
       },
       { property: "og:title", content: "Sources & Method — Anaesthesia & Critical Care Drugs" },
       {
         property: "og:description",
         content:
-          "How this drug reference is built and maintained: sources including the BNF, BNF for Children, product SPCs and national guidelines.",
+          "How this drug reference is built and maintained: sources including the BNF, product SPCs and national guidelines.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -79,12 +79,13 @@ function DrugReferenceAbout() {
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-muted-foreground">
           <h2 className="font-serif text-lg text-foreground">Where the information comes from</h2>
           <p>
-            Every monograph carries its own source list, shown at the bottom of the drug page. The
-            primary sources are the British National Formulary and BNF for Children, the
-            manufacturer&apos;s Summary of Product Characteristics on the electronic Medicines
-            Compendium, and national guidance — for example NICE, the Intensive Care Society, the
-            Association of Anaesthetists, the Resuscitation Council UK, and UK laboratory medicine
-            standards for blood level monitoring.
+            Each monograph shows the sources listed with it at the bottom of the drug page. Some are
+            direct citations; others are BNF or emc search links, which are places to check rather
+            than evidence that a statement has been validated. The main sources are the British
+            National Formulary, the manufacturer&apos;s Summary of Product Characteristics on the
+            electronic Medicines Compendium, and national guidance — for example NICE, the Intensive
+            Care Society, the Association of Anaesthetists, the Resuscitation Council UK, and UK
+            laboratory medicine standards for blood level monitoring.
           </p>
           <p>
             Standard dilutions reflect common UK adult critical care practice. Concentrations vary
@@ -93,8 +94,11 @@ function DrugReferenceAbout() {
             patient-specific doses or pump rates.
           </p>
           <p>
-            Content is under ongoing source-level review. It is not certified or guaranteed to be
-            error-free; always check the original source.
+            Content is under ongoing source-level review and clinical verification is in progress.
+            It is not certified or guaranteed to be error-free; always check the original source.{" "}
+            <Link to="/review-status" className="text-primary underline">
+              Source review status
+            </Link>
           </p>
         </section>
 

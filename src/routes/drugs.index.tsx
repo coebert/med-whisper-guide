@@ -5,9 +5,17 @@ export const Route = createFileRoute("/drugs/")({
   head: () => ({
     meta: [
       { title: "Drug Library — Anaesthesia & Critical Care Drugs" },
-      { name: "description", content: "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources." },
+      {
+        name: "description",
+        content:
+          "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources.",
+      },
       { property: "og:title", content: "Drug Library — Anaesthesia & Critical Care Drugs" },
-      { property: "og:description", content: "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources." },
+      {
+        property: "og:description",
+        content:
+          "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -72,11 +80,10 @@ function DrugReferenceLibrary() {
             Anaesthetics &amp; Critical Care Drug Reference
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-            Every drug monograph in one searchable library: presentation and preparation, adult and
-            infusion dosing, standard dilutions, pharmacokinetics, adverse
-            effects, interactions and — where relevant — full therapeutic drug level monitoring.
-            Each entry lists its own sources (BNF, BNF for Children, the product SPC and national
-            guidelines).
+            Adult UK drug monographs in one searchable library: presentation and preparation, adult
+            and infusion dosing, standard dilutions, pharmacokinetics, adverse effects, interactions
+            and — where relevant — full therapeutic drug level monitoring. Each entry lists its own
+            sources (BNF, the product SPC and national guidelines).
           </p>
           <dl className="mt-5 flex flex-wrap gap-x-8 gap-y-2 text-sm">
             <div>
@@ -210,7 +217,8 @@ function DrugReferenceLibrary() {
           {filtered.map((d) => (
             <li key={d.slug}>
               <Link
-                to="/drugs/$slug" params={{ slug: d.slug }}
+                to="/drugs/$slug"
+                params={{ slug: d.slug }}
                 className="flex h-full flex-col rounded-lg border border-border bg-card p-4 transition hover:border-primary hover:shadow-sm"
               >
                 <span className="font-semibold text-foreground">{d.name}</span>
