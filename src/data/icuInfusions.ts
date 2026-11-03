@@ -84,7 +84,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 1.5,
         perKg: true,
         notes:
-          "Double-strength syringe (160 micrograms/mL) — the common ICU default. label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+          "Double-strength syringe (160 micrograms/mL) — the common ICU default. Label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
         topicIds: ["vasoactive-agents", "sepsis", "circulatory-failure"],
       },
       {
