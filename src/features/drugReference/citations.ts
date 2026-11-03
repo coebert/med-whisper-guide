@@ -97,6 +97,6 @@ export const CITE = {
     "MHRA",
     "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/962557/Feb-2021-DSU-PDF_final.pdf",
   ),
-  gabapentinSpc: c("SmPC", "Gabapentin — Summary of Product Characteristics", "emc", "https://www.medicines.org.uk/emc/product/15628/smpc"),
-  clonidineSpc: c("SmPC", "Clonidine — Summary of Product Characteristics", "emc", "https://www.medicines.org.uk/emc/product/9616/smpc"),
+  gabapentinSpc: c("SmPC", "Summary of Product Characteristics (emc product 15628)", "emc", "https://www.medicines.org.uk/emc/product/15628/smpc"),
+  clonidineSpc: c("SmPC", "Summary of Product Characteristics (emc product 9616)", "emc", "https://www.medicines.org.uk/emc/product/9616/smpc"),
 } satisfies Record<string, DrugSource>;

@@ -1,8 +1,8 @@
 /**
  * Reference plumbing for the drug reference app.
  *
- * Every statement in the app should be traceable to a citable, verifiable
- * source. This module classifies the sources stored with each monograph,
+ * Statements should be traceable to a citable source. Generic BNF/emc search
+ * links are lookups only, not evidence for a specific claim. This module classifies the sources stored with each monograph,
  * maps them onto the individual monograph sections, and provides standard
  * reference builders for content that is not database-backed (infusion
  * recipes, premedication guidance).
@@ -10,6 +10,7 @@
 
 import { ExternalLink } from "lucide-react";
 
+import { adultSources } from "./scope";
 import type { DrugSource } from "./types";
 
 export type SourceKind = "bnf" | "bnfc" | "spc" | "guideline";
@@ -56,7 +57,7 @@ const sectionPreference: Record<SectionKey, SourceKind[]> = {
   mechanism: ["spc", "guideline"],
   pharmacokinetics: ["spc", "bnf"],
   preparation: ["spc", "bnf"],
-  dosing: ["bnf", "bnfc", "spc"],
+  dosing: ["bnf", "spc"],
   dilutions: ["spc", "bnf", "guideline"],
   monitoring: ["guideline", "bnf", "spc"],
   side_effects: ["spc", "bnf"],
@@ -67,10 +68,10 @@ const sectionPreference: Record<SectionKey, SourceKind[]> = {
 
 /**
  * Pick the sources that support a given section, in order of authority.
- * Falls back to every source held for the drug so no section is left
- * without a verifiable reference.
+ * Falls back to every (adult-scope) source held for the drug.
  */
-export function sectionSources(sources: DrugSource[], section: SectionKey): DrugSource[] {
+export function sectionSources(all: DrugSource[], section: SectionKey): DrugSource[] {
+  const sources = adultSources(all);
   const wanted = sectionPreference[section];
   const picked = wanted
     .flatMap((kind) => sources.filter((s) => classifySource(s) === kind))
@@ -80,23 +81,25 @@ export function sectionSources(sources: DrugSource[], section: SectionKey): Drug
 
 const q = (name: string) => encodeURIComponent(name.toLowerCase().replace(/\s*\(.*?\)\s*/g, " ").trim());
 
-/** BNF / BNFC / SPC lookups for any drug name — always resolvable. */
+/**
+ * BNF and emc search links for any drug name. These are lookups — a place to
+ * check — not evidence that a specific statement has been validated.
+ */
 export function standardRefs(drugName: string): DrugSource[] {
   return [
     {
-      title: `${drugName} — BNF monograph`,
+      title: `Search the BNF for ${drugName}`,
       publisher: "British National Formulary (NICE)",
       url: `https://bnf.nice.org.uk/search/?q=${q(drugName)}`,
+      label: "BNF search",
+      lookup: true,
     },
     {
-      title: `${drugName} — BNF for Children monograph`,
-      publisher: "BNF for Children (NICE)",
-      url: `https://bnfc.nice.org.uk/search/?q=${q(drugName)}`,
-    },
-    {
-      title: `${drugName} — Summary of Product Characteristics`,
+      title: `Search the emc for ${drugName} product information (SmPC)`,
       publisher: "electronic Medicines Compendium (emc), Datapharm",
       url: `https://www.medicines.org.uk/emc/search?q=${q(drugName)}`,
+      label: "SmPC search",
+      lookup: true,
     },
   ];
 }
@@ -109,20 +112,21 @@ export function SourceChips({
   sources: DrugSource[];
   label?: string;
 }) {
-  if (sources.length === 0) return null;
+  const shown = adultSources(sources);
+  if (shown.length === 0) return null;
   return (
     <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted-foreground">
       <span className="uppercase tracking-wide">{label}:</span>
-      {sources.map((s) => (
+      {shown.map((s) => (
         <a
           key={s.url + s.title}
           href={s.url}
           target="_blank"
           rel="noopener noreferrer"
-          title={`${s.title} — ${s.publisher}`}
+          title={`${s.title} — ${s.publisher}${s.lookup ? " (search link, not claim-level evidence)" : ""}`}
           className="inline-flex items-center gap-1 rounded border border-border bg-background px-1.5 py-0.5 text-foreground/80 hover:text-foreground hover:border-foreground/40"
         >
-          {sourceKindLabel[classifySource(s)]}
+          {s.label ?? sourceKindLabel[classifySource(s)]}
           <ExternalLink aria-hidden="true" className="h-3 w-3" />
         </a>
       ))}
