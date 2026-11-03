@@ -5,9 +5,9 @@ export const Route = createFileRoute("/infusions")({
   head: () => ({
     meta: [
       { title: "Infusion Recipes — Anaesthesia & Critical Care Drugs" },
-      { name: "description", content: "Standard infusion recipes for critical care: concentrations, diluents, starting doses and pump rates in mL/h, weight-adjusted." },
+      { name: "description", content: "Standard infusion recipes for critical care: concentrations, diluents, draw-up instructions and usual adult dose ranges." },
       { property: "og:title", content: "Infusion Recipes — Anaesthesia & Critical Care Drugs" },
-      { property: "og:description", content: "Standard infusion recipes for critical care: concentrations, diluents, starting doses and pump rates in mL/h, weight-adjusted." },
+      { property: "og:description", content: "Standard infusion recipes for critical care: concentrations, diluents, draw-up instructions and usual adult dose ranges." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -20,16 +20,11 @@ import { Link } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
-import {
-  calculateRate,
-  drugDilutions,
-  formatRate,
-} from "@/features/drugReference/dilutions";
+import { drugDilutions } from "@/features/drugReference/dilutions";
 import { SourceChips, standardRefs } from "@/features/drugReference/references";
 
 function DrugReferenceInfusions() {
   const [query, setQuery] = useState("");
-  const [weight, setWeight] = useState(70);
 
   const groups = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -49,7 +44,6 @@ function DrugReferenceInfusions() {
     return Array.from(byGroup.entries());
   }, [query]);
 
-  const safeWeight = weight > 0 ? weight : 70;
   const matchCount = groups.reduce((sum, [, list]) => sum + list.length, 0);
 
   return (
@@ -59,13 +53,13 @@ function DrugReferenceInfusions() {
           Standard infusions and dilutions
         </h1>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-          Practical draw-up recipes with the resulting concentration, a starting dose and dose range,
-          and the pump rate those doses produce at the weight you set. Confirm against your unit&apos;s
+          Static adult draw-up recipes with the resulting concentration, a starting dose and usual
+          dose range. Pump rates are not calculated here. Confirm against your unit&apos;s
           own concentrations and smart-pump library — concentrations differ between hospitals.
         </p>
 
-        {/* Search and weight stay in view while scrolling so rates can be re-read one-handed. */}
-        <div className="sticky top-[2.8rem] z-20 -mx-4 mt-6 grid gap-3 border-b border-border bg-background/95 px-4 py-3 backdrop-blur sm:static sm:mx-0 sm:grid-cols-[1fr_auto] sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:backdrop-blur-none md:top-[5.2rem]">
+        {/* Search stays in view while scrolling so rates can be re-read one-handed. */}
+        <div className="sticky top-[2.8rem] z-20 -mx-4 mt-6 grid gap-3 border-b border-border bg-background/95 px-4 py-3 backdrop-blur sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:backdrop-blur-none md:top-[5.2rem]">
           <label className="relative block">
             <span className="sr-only">Search infusions</span>
             <Search
@@ -80,19 +74,6 @@ function DrugReferenceInfusions() {
               className="w-full rounded-md border border-input bg-background py-2.5 pl-9 pr-3 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2 sm:text-sm"
             />
           </label>
-          <label className="flex items-center gap-2 text-sm text-muted-foreground">
-            Weight
-            <input
-              type="number"
-              inputMode="decimal"
-              min={1}
-              max={250}
-              value={weight}
-              onChange={(e) => setWeight(Number(e.target.value))}
-              className="w-20 rounded-md border border-input bg-background px-2 py-2.5 text-base text-foreground focus:outline-none focus:ring-2 focus:ring-ring sm:py-2 sm:text-sm"
-            />
-            kg
-          </label>
         </div>
 
         <p className="mt-4 text-sm text-muted-foreground" aria-live="polite">
@@ -104,9 +85,6 @@ function DrugReferenceInfusions() {
             <h2 className="font-serif text-lg text-foreground">{group}</h2>
             <div className="mt-3 space-y-3">
               {list.map((d) => {
-                const start = calculateRate(d, d.startDose, safeWeight);
-                const min = calculateRate(d, d.minDose, safeWeight);
-                const max = calculateRate(d, d.maxDose, safeWeight);
                 return (
                   <article
                     key={`${d.drug}-${d.concentrationLabel}`}
@@ -128,14 +106,13 @@ function DrugReferenceInfusions() {
                       <div>
                         <dt className="text-xs text-muted-foreground">Starting dose</dt>
                         <dd className="text-sm text-foreground">
-                          {d.startDose} {d.unit} · {formatRate(start.mlPerHour)}
+                          {d.startDose} {d.unit}
                         </dd>
                       </div>
                       <div>
                         <dt className="text-xs text-muted-foreground">Usual range</dt>
                         <dd className="text-sm text-foreground">
-                          {d.minDose}–{d.maxDose} {d.unit} · {formatRate(min.mlPerHour)} to{" "}
-                          {formatRate(max.mlPerHour)}
+                          {d.minDose}–{d.maxDose} {d.unit}
                         </dd>
                       </div>
                     </dl>
@@ -144,12 +121,6 @@ function DrugReferenceInfusions() {
                     )}
                     <SourceChips sources={standardRefs(d.drug)} label="Check against" />
                     <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-                      <Link
-                        to="/calculator" search={{ drug: d.drug, weight: safeWeight }}
-                        className="text-primary underline"
-                      >
-                        Calculate a rate
-                      </Link>
                       {d.slug && (
                         <Link to="/drugs/$slug" params={{ slug: d.slug }} className="text-primary underline">
                           Full monograph
