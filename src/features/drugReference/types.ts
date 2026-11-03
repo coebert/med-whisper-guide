@@ -10,6 +10,10 @@ export interface DrugSource {
   publisher: string;
   url: string;
   accessed?: string | undefined;
+  /** Short chip text for an inline citation (e.g. "RCUK 2026"). */
+  label?: string | undefined;
+  /** True for generic search links: a place to look, not evidence for a specific claim. */
+  lookup?: boolean | undefined;
 }
 
 export interface TdmTarget {
@@ -86,4 +90,6 @@ export interface DrugDilution {
   perKg: boolean;
   notes?: string | undefined;
   group: string;
+  /** Direct citations for facts revised in this recipe. */
+  sources?: DrugSource[] | undefined;
 }
