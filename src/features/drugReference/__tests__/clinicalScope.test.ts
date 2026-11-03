@@ -75,6 +75,9 @@ describe("recipe corrections", () => {
     expect(r.notes).not.toMatch(/citation pending/);
     expect(r.notes).not.toMatch(/CRASH-2 guideline/i);
   });
+  it("static recipes contain no pump-rate (mL/h) figures", () => {
+    for (const d of drugDilutions) expect(`${d.drawUp} ${d.notes ?? ""}`).not.toMatch(/mL\/h/);
+  });
   it("heparin has no 45,000-unit ceiling claim", () => {
     expect(recipe("Heparin (unfractionated)").notes).not.toMatch(/should not exceed 45,000/);
   });
