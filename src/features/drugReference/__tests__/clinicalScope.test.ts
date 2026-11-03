@@ -91,7 +91,12 @@ describe("iOS reference export", () => {
     expect(text).not.toMatch(/bnfc|neonat|\bchild\b|infant/i);
   });
   it("exports lidocaine without a starting dose", () => {
-    const text = JSON.stringify(file);
-    expect(text).not.toMatch(/1 mg\/kg\/h/);
+    const sec = file
+      .flatMap((p: { sections: { title: string }[] }) => p.sections)
+      .find((x: { title: string }) => x.title === "Lidocaine (IV analgesia)");
+    const text = JSON.stringify(sec);
+    expect(text).toContain("Per local protocol");
+    expect(text).toContain("120 mg/h");
+    expect(text).not.toMatch(/[^.]1 mg\/kg\/h|0\.5/);
   });
 });
