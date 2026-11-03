@@ -146,7 +146,7 @@ function DilutionCard({ dilution }: { dilution: DrugDilution }) {
         <div>
           <dt className="text-muted-foreground">Usual adult dose range</dt>
           <dd className="text-foreground">
-            {dilution.minDose}–{dilution.maxDose} {dilution.unit} (start {dilution.startDose})
+            {rangeText(dilution)} (start: {startText(dilution)})
           </dd>
         </div>
       </dl>

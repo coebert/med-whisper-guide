@@ -198,7 +198,7 @@ function RecipeCell({ recipes }: { recipes: DrugDilution[] }) {
             <span className="font-medium">{r.drawUp}</span> in {r.diluent} = {r.concentrationLabel}
             <br />
             <span className="text-muted-foreground">
-              {r.minDose}–{r.maxDose} {r.unit} (start {r.startDose})
+              {rangeText(r)} (start: {startText(r)})
             </span>
           </li>
         ))}

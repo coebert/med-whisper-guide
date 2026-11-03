@@ -21,8 +21,10 @@ export interface Infusion {
     | "units/kg/h"
     | "mg/kg/h"
     | "mg/h";
-  startDose: number;
-  minDose: number;
+  /** Omitted when no source-backed starting dose exists. */
+  startDose?: number;
+  /** Omitted when only a ceiling is source-backed. */
+  minDose?: number;
   maxDose: number;
   /** true if the dose is weight-based (per kg) */
   perKg: boolean;
@@ -615,8 +617,6 @@ export const icuInfusionGroups: InfusionGroup[] = [
         concentrationPerMl: 10000,
         concentrationLabel: "10 mg/mL (1%)",
         unit: "mg/kg/h",
-        startDose: 1,
-        minDose: 0.5,
         maxDose: 1.5,
         perKg: true,
         notes:
@@ -699,7 +699,8 @@ export const icuInfusionGroups: InfusionGroup[] = [
         maxDose: 125,
         perKg: false,
         notes:
-          "TRAUMA regimen (not postpartum haemorrhage — see the Obstetric topic for that regimen): 1 g over 10 min within 3 h of injury, then 1 g over 8 h, a fixed 125 mg/h maintenance. Direct current trauma-guideline citation pending source review. Reduce the dose in renal impairment. Never give by the intrathecal or epidural route — accidental spinal administration is fatal.",
+          "TRAUMA regimen (not postpartum haemorrhage — see the Obstetric topic for that regimen). Current UK guideline: NICE NG39 recommends IV tranexamic acid as soon as possible in major trauma with active or suspected active bleeding, and not more than 3 hours after injury unless there is evidence of hyperfibrinolysis. Dosing regimen: 1 g over 10 minutes then 1 g over 8 hours (fixed 125 mg/h maintenance), as used in the CRASH-2 randomised trial — a trial regimen, not itself a guideline; follow your local major-haemorrhage protocol. Reduce the dose in renal impairment. Never give by the intrathecal or epidural route — accidental spinal administration is fatal.",
+        sources: [CITE.niceNg39, CITE.crash2],
         topicIds: ["transfusion-coagulation", "haemorrhage"],
       },
     ],
