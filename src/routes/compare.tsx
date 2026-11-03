@@ -37,7 +37,7 @@ import {
   useDrugList,
   type DrugListItem,
 } from "@/features/drugReference/useDrugReference";
-import { drugDilutions } from "@/features/drugReference/dilutions";
+import { drugDilutions, rangeText, startText } from "@/features/drugReference/dilutions";
 import { classifySource, sourceKindLabel } from "@/features/drugReference/references";
 import type { DrugDilution, DrugReferenceRow } from "@/features/drugReference/types";
 
