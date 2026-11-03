@@ -645,7 +645,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         topicIds: ["obstetric-anaesthesia", "haemorrhage"],
       },
       {
-        drug: "Tranexamic acid",
+        drug: "Tranexamic acid (major trauma)",
         diluent: "0.9% sodium chloride",
         drawUp: "Major trauma: 1 g IV over 10 minutes, then 1 g over 8 hours (prepared per local protocol, e.g. 1 g made up to 50 mL = 20 mg/mL)",
         concentrationPerMl: 20000,

@@ -129,7 +129,8 @@ function DrugReferenceInfusions() {
                         {d.notes}
                       </p>
                     )}
-                    <SourceChips sources={standardRefs(d.drug)} label="Check against" />
+                    {d.sources && <SourceChips sources={d.sources} label="Cited" />}
+                    <SourceChips sources={standardRefs(d.drug)} label="Look up" />
                     <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
                       {d.slug && (
                         <Link

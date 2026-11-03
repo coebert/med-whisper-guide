@@ -156,6 +156,7 @@ function DilutionCard({ dilution }: { dilution: DrugDilution }) {
         </p>
       )}
       {dilution.notes && <p className="mt-3 text-sm text-muted-foreground">{dilution.notes}</p>}
+      {dilution.sources && <SourceChips sources={dilution.sources} label="Cited" />}
     </div>
   );
 }
@@ -464,7 +465,7 @@ function DrugReferenceEntry() {
           </ul>
           <p className="mt-4 text-sm">
             <Link to="/sources" className="text-primary underline">
-              See the full list of clinical sources (BNF, SPC, NICE, RCoA)
+              See the full list of clinical sources
             </Link>
           </p>
           <p className="mt-4 text-xs text-muted-foreground">
