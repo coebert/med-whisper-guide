@@ -87,13 +87,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Bedside drug reference for anaesthesia and critical care: dosing, dilutions, pump rates, pharmacokinetics, safety and therapeutic drug monitoring.",
+          "Bedside drug reference for anaesthesia and critical care: adult dosing, dilutions, pharmacokinetics, safety and therapeutic drug monitoring.",
       },
       { property: "og:title", content: "Anaesthesia & Critical Care Drugs" },
       {
         property: "og:description",
         content:
-          "Bedside drug reference for anaesthesia and critical care: dosing, dilutions, pump rates, pharmacokinetics, safety and therapeutic drug monitoring.",
+          "Bedside drug reference for anaesthesia and critical care: adult dosing, dilutions, pharmacokinetics, safety and therapeutic drug monitoring.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

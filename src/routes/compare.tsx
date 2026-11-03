@@ -12,13 +12,13 @@ export const Route = createFileRoute("/compare")({
       {
         name: "description",
         content:
-          "Pick any two anaesthetic or critical care drugs and compare their bolus doses, infusion rates, preparation, key warnings and referenced sources side by side.",
+          "Pick any two anaesthetic or critical care drugs and compare their bolus doses, infusion ranges, preparation, key warnings and referenced sources side by side.",
       },
       { property: "og:title", content: "Compare Drugs — Anaesthesia & Critical Care Drugs" },
       {
         property: "og:description",
         content:
-          "Side-by-side comparison of doses, infusion rates, preparation and sources for any two drugs in the reference.",
+          "Side-by-side comparison of doses, infusion ranges, preparation and sources for any two drugs in the reference.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -195,8 +195,7 @@ function RecipeCell({ recipes }: { recipes: DrugDilution[] }) {
       <ul className="space-y-2">
         {recipes.map((r) => (
           <li key={r.drug + r.drawUp}>
-            <span className="font-medium">{r.drawUp}</span> in {r.diluent} ={" "}
-            {r.concentrationLabel}
+            <span className="font-medium">{r.drawUp}</span> in {r.diluent} = {r.concentrationLabel}
             <br />
             <span className="text-muted-foreground">
               {r.minDose}–{r.maxDose} {r.unit} (start {r.startDose})
@@ -260,11 +259,16 @@ function ComparePage() {
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
         <h1 className="font-serif text-3xl text-foreground sm:text-4xl">Compare two drugs</h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Pick two drugs to see their doses, infusion rates, preparation and sources side by side.
+          Pick two drugs to see their doses, infusion ranges, preparation and sources side by side.
         </p>
 
         <div className="mt-6 grid grid-cols-1 items-center gap-3 sm:grid-cols-[1fr_auto_1fr]">
-          <DrugPicker label="Drug A" drugs={drugs} value={listA} onPick={(slug) => set({ a: slug })} />
+          <DrugPicker
+            label="Drug A"
+            drugs={drugs}
+            value={listA}
+            onPick={(slug) => set({ a: slug })}
+          />
           <button
             type="button"
             onClick={() => set({ a: search.b, b: search.a })}
@@ -274,7 +278,12 @@ function ComparePage() {
           >
             <ArrowLeftRight aria-hidden="true" className="h-4 w-4" />
           </button>
-          <DrugPicker label="Drug B" drugs={drugs} value={listB} onPick={(slug) => set({ b: slug })} />
+          <DrugPicker
+            label="Drug B"
+            drugs={drugs}
+            value={listB}
+            onPick={(slug) => set({ b: slug })}
+          />
         </div>
 
         {loading && drugs.length === 0 && (
@@ -284,7 +293,7 @@ function ComparePage() {
         {!both && !loading && (
           <p className="mt-6 rounded-lg border border-border bg-card p-6 text-sm text-muted-foreground">
             {search.a || search.b
-              ? (a.loading || b.loading)
+              ? a.loading || b.loading
                 ? "Loading the monographs…"
                 : "Choose a second drug to start the comparison."
               : "Choose two drugs above — for example noradrenaline and metaraminol, or fentanyl and remifentanil."}

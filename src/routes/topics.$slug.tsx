@@ -5,9 +5,9 @@ export const Route = createFileRoute("/topics/$slug")({
   head: () => ({
     meta: [
       { title: "Drug Topic — Anaesthesia & Critical Care Drugs" },
-      { name: "description", content: "Bedside points plus every monograph in this drug group with presentations, dosing, standard dilutions, pump rates, safety and blood level monitoring." },
+      { name: "description", content: "Bedside points plus every monograph in this drug group with presentations, dosing, standard dilutions, safety and blood level monitoring." },
       { property: "og:title", content: "Drug Topic — Anaesthesia & Critical Care Drugs" },
-      { property: "og:description", content: "Bedside points plus every monograph in this drug group with presentations, dosing, standard dilutions, pump rates, safety and blood level monitoring." },
+      { property: "og:description", content: "Bedside points plus every monograph in this drug group with presentations, dosing, standard dilutions, safety and blood level monitoring." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],

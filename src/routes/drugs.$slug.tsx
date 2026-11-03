@@ -5,9 +5,17 @@ export const Route = createFileRoute("/drugs/$slug")({
   head: () => ({
     meta: [
       { title: "Drug Monograph — Anaesthesia & Critical Care Drugs" },
-      { name: "description", content: "Full drug monograph: presentation, preparation, dosing, dilutions, pharmacokinetics, adverse effects, interactions, monitoring and sources." },
+      {
+        name: "description",
+        content:
+          "Full drug monograph: presentation, preparation, dosing, standard dilutions, pharmacokinetics, adverse effects, interactions, monitoring and sources.",
+      },
       { property: "og:title", content: "Drug Monograph — Anaesthesia & Critical Care Drugs" },
-      { property: "og:description", content: "Full drug monograph: presentation, preparation, dosing, dilutions, pharmacokinetics, adverse effects, interactions, monitoring and sources." },
+      {
+        property: "og:description",
+        content:
+          "Full drug monograph: presentation, preparation, dosing, standard dilutions, pharmacokinetics, adverse effects, interactions, monitoring and sources.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -22,13 +30,7 @@ import { AlertTriangle, ArrowLeft, ExternalLink, Eye } from "lucide-react";
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 import { useDrugEntry } from "@/features/drugReference/useDrugReference";
 import { topicForClass } from "@/features/drugReference/topics";
-import {
-  calculateRate,
-  dilutionsForSlug,
-  formatRate,
-  isUnitDrug,
-  round,
-} from "@/features/drugReference/dilutions";
+import { dilutionsForSlug } from "@/features/drugReference/dilutions";
 import type { DrugDilution, DrugSource } from "@/features/drugReference/types";
 import { SourceChips, sectionSources } from "@/features/drugReference/references";
 import { APPEARANCE_CAUTION, describeAppearance } from "@/features/drugReference/appearance";
@@ -59,7 +61,10 @@ function AppearancePanel({ presentation }: { presentation?: string | null }) {
         ))}
       </dl>
       <p className="mt-3 flex gap-2 text-xs leading-relaxed text-muted-foreground">
-        <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-destructive" aria-hidden="true" />
+        <AlertTriangle
+          className="mt-0.5 h-3.5 w-3.5 shrink-0 text-destructive"
+          aria-hidden="true"
+        />
         <span>{APPEARANCE_CAUTION}</span>
       </p>
     </div>
@@ -120,14 +125,8 @@ function JumpBar({ items }: { items: Array<{ id: string; label: string }> }) {
   );
 }
 
-function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg: number }) {
-  const [dose, setDose] = useState(dilution.startDose);
-  const result = useMemo(() => calculateRate(dilution, dose, weightKg), [dilution, dose, weightKg]);
-  const start = calculateRate(dilution, dilution.startDose, weightKg);
-  const min = calculateRate(dilution, dilution.minDose, weightKg);
-  const max = calculateRate(dilution, dilution.maxDose, weightKg);
-  const unitDrug = isUnitDrug(dilution.unit);
-
+function DilutionCard({ dilution }: { dilution: DrugDilution }) {
+  const unitDrug = dilution.unit.startsWith("units");
   return (
     <div className="rounded-md border border-border bg-background p-4">
       <p className="font-semibold text-foreground">{dilution.drug}</p>
@@ -137,7 +136,7 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
           <dd className="text-foreground">{dilution.drawUp}</dd>
         </div>
         <div>
-          <dt className="text-muted-foreground">Safe diluent</dt>
+          <dt className="text-muted-foreground">Diluent</dt>
           <dd className="text-foreground">{dilution.diluent}</dd>
         </div>
         <div>
@@ -145,80 +144,17 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
           <dd className="text-foreground">{dilution.concentrationLabel}</dd>
         </div>
         <div>
-          <dt className="text-muted-foreground">Dose range</dt>
+          <dt className="text-muted-foreground">Usual adult dose range</dt>
           <dd className="text-foreground">
             {dilution.minDose}–{dilution.maxDose} {dilution.unit} (start {dilution.startDose})
           </dd>
         </div>
       </dl>
-
-      <div className="mt-3 overflow-x-auto">
-        <table className="w-full text-sm sm:min-w-[420px]">
-          <caption className="sr-only">
-            Pump rates for {dilution.drug} at {weightKg} kg
-          </caption>
-          <thead>
-            <tr className="border-b border-border text-left text-xs uppercase tracking-wide text-muted-foreground">
-              <th scope="col" className="py-1.5 pr-3">
-                Point
-              </th>
-              <th scope="col" className="py-1.5 pr-3">
-                Dose
-              </th>
-              <th scope="col" className="hidden py-1.5 pr-3 sm:table-cell">
-                Per hour
-              </th>
-              <th scope="col" className="py-1.5">
-                Pump rate
-              </th>
-            </tr>
-          </thead>
-          <tbody className="text-foreground">
-            {[
-              { label: "Minimum", dose: dilution.minDose, r: min },
-              { label: "Starting", dose: dilution.startDose, r: start },
-              { label: "Maximum", dose: dilution.maxDose, r: max },
-            ].map((row) => (
-              <tr key={row.label} className="border-b border-border/60 last:border-0">
-                <td className="py-1.5 pr-3">{row.label}</td>
-                <td className="py-1.5 pr-3">
-                  {row.dose} {dilution.unit}
-                </td>
-                <td className="hidden py-1.5 pr-3 sm:table-cell">{row.r.perHourLabel}</td>
-                <td className="py-1.5 font-medium">{formatRate(row.r.mlPerHour)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <div className="mt-4 rounded-md bg-muted/50 p-3">
-        <label className="block text-xs font-medium text-muted-foreground" htmlFor={`dose-${dilution.drug}`}>
-          Work out a rate — dose in {dilution.unit}
-        </label>
-        <input
-          id={`dose-${dilution.drug}`}
-          type="number"
-          min={0}
-          step="any"
-          value={Number.isFinite(dose) ? dose : ""}
-          onChange={(e) => setDose(Number(e.target.value))}
-          inputMode="decimal"
-          className="mt-1 w-32 rounded-md border border-input bg-background px-3 py-2 text-base text-foreground sm:py-1.5 sm:text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-        />
-        <p className="mt-2 text-sm text-foreground">
-          <span className="font-semibold">{formatRate(result.mlPerHour)}</span> — delivers{" "}
-          {result.perHourLabel}
-          {dilution.perKg ? ` at ${weightKg} kg` : ""}. {round(result.mlPerDay, 1)} mL in 24 h
-          {result.syringeHours ? `; the ${result.volumeMl} mL preparation lasts ${round(result.syringeHours, 1)} h` : ""}.
+      {unitDrug && (
+        <p className="mt-2 text-xs text-muted-foreground">
+          Dosed in units — never convert units to milligrams.
         </p>
-        {unitDrug && (
-          <p className="mt-1 text-xs text-muted-foreground">
-            Dosed in units — never convert units to milligrams.
-          </p>
-        )}
-      </div>
-
+      )}
       {dilution.notes && <p className="mt-3 text-sm text-muted-foreground">{dilution.notes}</p>}
     </div>
   );
@@ -227,7 +163,6 @@ function DilutionCard({ dilution, weightKg }: { dilution: DrugDilution; weightKg
 function DrugReferenceEntry() {
   const { slug } = useParams({ strict: false }) as { slug?: string };
   const { drug, loading, error } = useDrugEntry(slug);
-  const [weightKg, setWeightKg] = useState(70);
   const dilutions = slug ? dilutionsForSlug(slug) : [];
 
   if (loading) {
@@ -292,7 +227,8 @@ function DrugReferenceEntry() {
             Topic:{" "}
             <Link
               className="text-primary underline"
-              to="/topics/$slug" params={{ slug: topicForClass(drug.drug_class).slug }}
+              to="/topics/$slug"
+              params={{ slug: topicForClass(drug.drug_class).slug }}
             >
               {topicForClass(drug.drug_class).title}
             </Link>
@@ -336,34 +272,27 @@ function DrugReferenceEntry() {
 
         {dilutions.length > 0 && (
           <Section
-            title="Standard dilutions and pump rates"
+            title="Standard dilutions"
             id="dilutions"
             refs={sectionSources(drug.sources, "dilutions")}
           >
-            <div className="rounded-md bg-muted/50 p-3">
-              <label className="text-xs font-medium text-muted-foreground" htmlFor="weight">
-                Patient weight (kg)
-              </label>
-              <input
-                id="weight"
-                type="number"
-                min={1}
-                max={250}
-                value={Number.isFinite(weightKg) ? weightKg : ""}
-                onChange={(e) => setWeightKg(Number(e.target.value))}
-                inputMode="decimal"
-                className="mt-1 block w-28 rounded-md border border-input bg-background px-3 py-2 text-base text-foreground sm:py-1.5 sm:text-sm focus:outline-none focus:ring-2 focus:ring-ring"
-              />
-            </div>
+            <p className="text-xs text-muted-foreground">
+              Static preparation reference. Check pump rates against your smart-pump drug library
+              and local protocol.
+            </p>
             <div className="mt-3 space-y-4">
               {dilutions.map((d) => (
-                <DilutionCard key={d.drug} dilution={d} weightKg={weightKg || 70} />
+                <DilutionCard key={d.drug} dilution={d} />
               ))}
             </div>
           </Section>
         )}
 
-        <Section title="Presentation" id="presentation" refs={sectionSources(drug.sources, "presentation")}>
+        <Section
+          title="Presentation"
+          id="presentation"
+          refs={sectionSources(drug.sources, "presentation")}
+        >
           <AppearancePanel presentation={drug.presentation} />
           <Prose text={drug.presentation} />
         </Section>
@@ -399,7 +328,10 @@ function DrugReferenceEntry() {
                 <h3 className="text-sm font-semibold text-foreground">Target ranges</h3>
                 <ul className="mt-2 space-y-2">
                   {tdm.targets.map((t) => (
-                    <li key={t.label} className="rounded-md border border-border bg-background p-3 text-sm">
+                    <li
+                      key={t.label}
+                      className="rounded-md border border-border bg-background p-3 text-sm"
+                    >
                       <span className="text-muted-foreground">{t.label}</span>
                       <span className="mt-0.5 block font-semibold text-foreground">{t.value}</span>
                       {t.note && <span className="mt-1 block text-muted-foreground">{t.note}</span>}
@@ -464,19 +396,35 @@ function DrugReferenceEntry() {
           </Section>
         )}
 
-        <Section title="Mechanism of action" id="mechanism" refs={sectionSources(drug.sources, "mechanism")}>
+        <Section
+          title="Mechanism of action"
+          id="mechanism"
+          refs={sectionSources(drug.sources, "mechanism")}
+        >
           <Prose text={drug.mechanism_of_action} />
         </Section>
 
-        <Section title="Pharmacokinetics" id="pharmacokinetics" refs={sectionSources(drug.sources, "pharmacokinetics")}>
+        <Section
+          title="Pharmacokinetics"
+          id="pharmacokinetics"
+          refs={sectionSources(drug.sources, "pharmacokinetics")}
+        >
           <Prose text={drug.pharmacokinetics} />
         </Section>
 
-        <Section title="Monitoring" id="monitoring" refs={sectionSources(drug.sources, "monitoring")}>
+        <Section
+          title="Monitoring"
+          id="monitoring"
+          refs={sectionSources(drug.sources, "monitoring")}
+        >
           <Prose text={drug.monitoring} />
         </Section>
 
-        <Section title="Adverse effects" id="side-effects" refs={sectionSources(drug.sources, "side_effects")}>
+        <Section
+          title="Adverse effects"
+          id="side-effects"
+          refs={sectionSources(drug.sources, "side_effects")}
+        >
           <Prose text={drug.side_effects} />
         </Section>
 
@@ -488,7 +436,11 @@ function DrugReferenceEntry() {
           <Prose text={drug.contraindications} />
         </Section>
 
-        <Section title="Interactions" id="interactions" refs={sectionSources(drug.sources, "interactions")}>
+        <Section
+          title="Interactions"
+          id="interactions"
+          refs={sectionSources(drug.sources, "interactions")}
+        >
           <Prose text={drug.interactions} />
         </Section>
 

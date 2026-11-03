@@ -5,7 +5,24 @@
  * Self-contained on purpose: no app-specific imports.
  */
 
-const PREFIX = "drugref:v1:";
+const PREFIX = "drugref:v2:";
+/** Older cache schemas. Cleared on load so stale entries never survive content corrections. */
+const LEGACY_PREFIXES = ["drugref:v1:"];
+
+function purgeLegacyCache(): void {
+  try {
+    const stale: string[] = [];
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const key = localStorage.key(i);
+      if (key && LEGACY_PREFIXES.some((p) => key.startsWith(p))) stale.push(key);
+    }
+    stale.forEach((k) => localStorage.removeItem(k));
+  } catch {
+    // storage unavailable
+  }
+}
+
+if (typeof window !== "undefined") purgeLegacyCache();
 const MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
 
 interface Envelope<T> {
@@ -36,7 +53,6 @@ export function writeCache<T>(key: string, data: T): boolean {
     return false;
   }
 }
-
 
 export function cachedMonographCount(): number {
   try {

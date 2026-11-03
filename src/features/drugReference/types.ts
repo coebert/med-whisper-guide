@@ -71,15 +71,13 @@ export type InfusionUnit =
   | "mg/kg/h"
   | "mg/h";
 
-/** A practical, ready-to-draw-up infusion recipe. */
+/** A static, ready-to-draw-up infusion recipe (reference display only). */
 export interface DrugDilution {
   /** Slug of the matching monograph, when one exists. */
   slug: string | null;
   drug: string;
   diluent: string;
   drawUp: string;
-  /** micrograms per mL, or units per mL when the unit family is "units". */
-  concentrationPerMl: number;
   concentrationLabel: string;
   unit: InfusionUnit;
   startDose: number;
@@ -88,22 +86,4 @@ export interface DrugDilution {
   perKg: boolean;
   notes?: string | undefined;
   group: string;
-  /** Total prepared volume of the recipe in mL (syringe or bag). */
-  volumeMl: number;
-}
-
-export interface RateResult {
-  /** Dose in the drug's native unit, echoed for display. */
-  doseLabel: string;
-  /** Amount delivered per hour in the base unit (micrograms or units). */
-  perHour: number;
-  perHourLabel: string;
-  /** Pump rate in mL/h. */
-  mlPerHour: number;
-  /** Millilitres delivered in 24 hours at this rate. */
-  mlPerDay: number;
-  /** Hours the prepared volume (syringe or bag) lasts at this rate (null when the rate is zero). */
-  syringeHours: number | null;
-  /** The prepared volume used for syringeHours, in mL. */
-  volumeMl: number;
 }

@@ -5,9 +5,17 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "Sources & Method — Anaesthesia & Critical Care Drugs" },
-      { name: "description", content: "How this drug reference is built and maintained: sources including the BNF, BNF for Children, product SPCs and national guidelines." },
+      {
+        name: "description",
+        content:
+          "How this drug reference is built and maintained: sources including the BNF, BNF for Children, product SPCs and national guidelines.",
+      },
       { property: "og:title", content: "Sources & Method — Anaesthesia & Critical Care Drugs" },
-      { property: "og:description", content: "How this drug reference is built and maintained: sources including the BNF, BNF for Children, product SPCs and national guidelines." },
+      {
+        property: "og:description",
+        content:
+          "How this drug reference is built and maintained: sources including the BNF, BNF for Children, product SPCs and national guidelines.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -36,12 +44,12 @@ function DrugReferenceAbout() {
         <section className="mt-6 space-y-3 rounded-lg border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground">
           <h2 className="font-serif text-lg text-foreground">Why there are no drug photographs</h2>
           <p>
-            Each monograph carries a written <strong className="text-foreground">How it looks</strong>{" "}
-            summary — form, container, the strength printed on the label, and storage — taken from
-            the manufacturer&apos;s product information. Photographs are deliberately not included:
-            a picture of one manufacturer&apos;s ampoule can look nothing like the one on your
-            trolley, and relying on colour or shape to identify a drug is a recognised cause of
-            administration error.
+            Each monograph carries a written{" "}
+            <strong className="text-foreground">How it looks</strong> summary — form, container, the
+            strength printed on the label, and storage — taken from the manufacturer&apos;s product
+            information. Photographs are deliberately not included: a picture of one
+            manufacturer&apos;s ampoule can look nothing like the one on your trolley, and relying
+            on colour or shape to identify a drug is a recognised cause of administration error.
           </p>
           <p className="text-foreground">If you do want photographs, source them safely:</p>
           <ul className="list-inside list-disc space-y-1">
@@ -79,9 +87,14 @@ function DrugReferenceAbout() {
             standards for blood level monitoring.
           </p>
           <p>
-            Standard dilutions and pump rates reflect common UK critical care practice.
-            Concentrations vary between hospitals, so they are presented as worked recipes to check
-            against your own smart-pump drug library, not as a substitute for it.
+            Standard dilutions reflect common UK adult critical care practice. Concentrations vary
+            between hospitals, so they are presented as static recipes to check against your own
+            smart-pump drug library, not as a substitute for it. This app does not calculate
+            patient-specific doses or pump rates.
+          </p>
+          <p>
+            Content is under ongoing source-level review. It is not certified or guaranteed to be
+            error-free; always check the original source.
           </p>
         </section>
 
@@ -90,7 +103,9 @@ function DrugReferenceAbout() {
           <ul className="list-inside list-disc space-y-1">
             <li>{drugs.length || "200+"} anaesthetic and critical care drug monographs.</li>
             <li>Presentation, preparation, adult dosing and infusion ranges.</li>
-            <li>Mechanism, pharmacokinetics, adverse effects, contraindications and interactions.</li>
+            <li>
+              Mechanism, pharmacokinetics, adverse effects, contraindications and interactions.
+            </li>
             <li>
               Blood level monitoring where relevant: targets, sampling timing, toxicity thresholds
               and actions, sampling practicalities and dose adjustment.
@@ -124,10 +139,10 @@ function DrugReferenceAbout() {
         <section className="mt-8 space-y-3 text-sm leading-relaxed text-muted-foreground">
           <h2 className="font-serif text-lg text-foreground">Safety</h2>
           <p>
-            This is an educational reference for trained clinicians. It does not replace clinical
-            judgement, prescribing checks or local protocols. Verify every dose, dilution and
-            monitoring target before administration, and report anything that looks wrong so it can
-            be corrected.
+            Adult UK reference. Not for paediatric use. This is an educational reference for trained
+            clinicians. It does not replace clinical judgement, prescribing checks or local
+            protocols. Verify every dose, dilution and monitoring target before administration, and
+            report anything that looks wrong so it can be corrected.
           </p>
           <p>
             <Link to="/drugs" className="text-primary underline">

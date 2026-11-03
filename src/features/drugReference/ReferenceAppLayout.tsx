@@ -23,7 +23,6 @@ const NAV = [
   { to: "/premedication", label: "Premed" },
   { to: "/monitoring", label: "Levels" },
   { to: "/infusions", label: "Infusions" },
-  { to: "/calculator", label: "Calculator" },
   { to: "/sources", label: "Sources" },
   { to: "/references", label: "References" },
   { to: "/offline", label: "Offline" },
@@ -109,13 +108,19 @@ export default function ReferenceAppLayout({ children }: Props) {
             ))}
           </ul>
         </nav>
+        <p className="border-t border-border bg-muted/40 px-4 py-1 text-center text-[11px] font-medium text-muted-foreground">
+          Adult UK reference. Not for paediatric use.
+        </p>
       </header>
 
       <div className="flex-1">{children}</div>
 
       <footer className="border-t border-border bg-card">
         <div className="mx-auto max-w-6xl px-4 py-6 text-xs leading-relaxed text-muted-foreground sm:px-6 lg:px-8">
-          <p>
+          <p className="font-semibold text-foreground">
+            Adult UK reference. Not for paediatric use.
+          </p>
+          <p className="mt-2">
             Educational reference for trained clinicians. Always check doses, dilutions and
             monitoring targets against the BNF, the product SPC, your smart-pump drug library and
             local protocols before administration.

@@ -5,9 +5,9 @@ export const Route = createFileRoute("/drugs/")({
   head: () => ({
     meta: [
       { title: "Drug Library — Anaesthesia & Critical Care Drugs" },
-      { name: "description", content: "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions and pump rates, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources." },
+      { name: "description", content: "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources." },
       { property: "og:title", content: "Drug Library — Anaesthesia & Critical Care Drugs" },
-      { property: "og:description", content: "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions and pump rates, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources." },
+      { property: "og:description", content: "Searchable anaesthetic and critical care drug reference: presentation, dosing, standard dilutions, pharmacokinetics, safety, and therapeutic drug monitoring with BNF and SPC sources." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -73,7 +73,7 @@ function DrugReferenceLibrary() {
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">
             Every drug monograph in one searchable library: presentation and preparation, adult and
-            infusion dosing, standard dilutions with pump rates in mL/h, pharmacokinetics, adverse
+            infusion dosing, standard dilutions, pharmacokinetics, adverse
             effects, interactions and — where relevant — full therapeutic drug level monitoring.
             Each entry lists its own sources (BNF, BNF for Children, the product SPC and national
             guidelines).
