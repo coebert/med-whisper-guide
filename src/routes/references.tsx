@@ -257,7 +257,7 @@ function DoseReferencesPage() {
                     </span>
                   </div>
                   <p className="mt-1 text-xs text-muted-foreground">
-                    {r.drawUp} — {r.concentrationLabel}; {r.minDose}–{r.maxDose} {r.unit}
+                    {r.drawUp} — {r.concentrationLabel}; {rangeText(r)}
                     {r.slug && (
                       <>
                         {" "}
