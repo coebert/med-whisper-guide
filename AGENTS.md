@@ -14,3 +14,5 @@
 - Adult-only scope lives in src/features/drugReference/scope.ts (excluded slugs, paediatric-source filter); every drugs query and cached read must apply it.
 - Inline citations for revised static facts come from src/features/drugReference/citations.ts; search links are marked lookup and never presented as evidence.
 - Clinical rule tests: bunx vitest run src/features/drugReference/__tests__
+- public/ios-reference-pages.json is generated from the app's static data via `bun scripts/export-ios-reference.ts` (builder: src/features/drugReference/iosExport.ts); a test fails if the file drifts from source, so regenerate after any static clinical edit.
+- Premedication content lives in src/features/drugReference/premedication.ts and the page only renders it, so web and iOS export share one source.
