@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 
-export const SUPPORT_EMAIL = "support@anaesthesiacore.app";
+const SUPPORT_EMAIL = "support@anaesthesiacore.app";
 
 export const Route = createFileRoute("/support")({
   head: () => ({
