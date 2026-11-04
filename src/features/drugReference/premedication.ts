@@ -74,10 +74,7 @@ export const premedSections: PremedSection[] = [
     id: "clonidine-oral",
     title: "Clonidine — oral",
     links: [{ slug: "clonidine", label: "Clonidine monograph" }],
-    text: "Alpha-2 agonist used off-label for sedative premedication. Bradycardia, hypotension and excessive sedation are important risks; appropriate airway and respiratory monitoring remain necessary. Slower onset than midazolam, so it suits planned rather than last-minute premedication.",
-    rows: [
-      { group: "Adult — oral", dose: "150–300 micrograms", timing: "60–90 min before induction" },
-    ],
+    text: "Alpha-2 agonist used off-label for sedative premedication. Bradycardia, hypotension and excessive sedation are important risks; appropriate airway and respiratory monitoring remain necessary. Slower onset than midazolam, so it suits planned rather than last-minute premedication. Premedication use is off-label and no claim-level source is held here for a dose or timing, so none is given: use an individualised plan under an agreed local protocol.",
     items: [
       "Avoid or reduce the dose in conduction disease, hypovolaemia or with other negative chronotropes.",
       "Reduces volatile and opioid requirements; plan induction and analgesia doses accordingly.",
@@ -102,14 +99,7 @@ export const premedSections: PremedSection[] = [
     id: "melatonin-oral",
     title: "Melatonin — oral",
     links: [{ slug: "melatonin", label: "Melatonin monograph" }],
-    text: "Used off-label as a mild anxiolytic premedication; immediate-release preparations are used.",
-    rows: [
-      {
-        group: "Adult — oral",
-        dose: "3–6 mg immediate-release",
-        timing: "60–90 min before induction",
-      },
-    ],
+    text: "Used off-label as a mild anxiolytic premedication. No claim-level source is held here for a dose or timing, so none is given: use an individualised plan under an agreed local protocol.",
     items: [
       "Effect is inconsistent — have a plan if the patient is still anxious at induction. Monitor as for any sedative premedication.",
     ],

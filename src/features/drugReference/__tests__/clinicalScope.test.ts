@@ -157,3 +157,41 @@ describe("carboprost, intranasal dexmedetomidine and insulin sources", () => {
     );
   });
 });
+
+describe("static recipe reconciliation", () => {
+  const sourced = [
+    "Alfentanil",
+    "Remifentanil (ventilated adult ICU)",
+    "Lidocaine (IV analgesia)",
+    "Magnesium sulphate",
+    "Tranexamic acid (major trauma)",
+    "Aminophylline",
+    "Dexmedetomidine",
+    "Propofol 1%",
+  ];
+  it("only source-backed recipes keep a numeric range", () => {
+    for (const d of drugDilutions)
+      if (!sourced.includes(d.drug)) expect([d.drug, d.minDose, d.maxDose]).toEqual([d.drug, undefined, undefined]);
+  });
+  it("labetalol and oxytocin cards carry no numeric dose regimen", () => {
+    for (const n of ["Labetalol", "Oxytocin"]) {
+      const r = recipe(n);
+      expect(r.startDose).toBeUndefined();
+      expect(r.notes).not.toMatch(/\d+ (mg|units)\/h/);
+    }
+  });
+  it("propofol keeps only the SmPC 0.3–4 mg/kg/h range, with no default start", () => {
+    const r = recipe("Propofol 1%");
+    expect([r.startDose, r.minDose, r.maxDose]).toEqual([undefined, 0.3, 4]);
+  });
+  it("oral clonidine and melatonin premeds have no universal dose rows", async () => {
+    const { premedSections } = await import("../premedication");
+    for (const id of ["clonidine-oral", "melatonin-oral"])
+      expect(premedSections.find((s) => s.id === id)!.rows).toBeUndefined();
+  });
+  it("labetalol recipe links its monograph's SmPC", () => {
+    expect((recipe("Labetalol").sources ?? []).map((s) => s.url)).toContain(
+      "https://www.medicines.org.uk/emc/product/10831/smpc",
+    );
+  });
+});
