@@ -34,7 +34,7 @@ export interface PremedSection {
 }
 
 export const PREMED_INTRO =
-  "For adults aged 18 years and over. Premedication is given before induction to reduce anxiety and smooth the induction itself. It is used selectively — most fit adults need none. Doses below summarise common UK practice; several uses are off-label and should follow local policy. Clinical verification of this page is in progress.";
+  "For adults aged 18 years and over. Premedication is given before induction to reduce anxiety and smooth the induction itself. It is used selectively — most fit adults need none. Where no claim-level source is held, no dose or timing is given; several uses are off-label and should follow local policy. Clinical verification of this page is in progress.";
 
 export const PREMED_FOOTNOTE =
   "Adult UK reference. Not for paediatric use. This page summarises common practice and is not a substitute for local policy or the product literature. Several regimens are off-label; prescribing remains the responsibility of the attending clinician.";
@@ -56,14 +56,7 @@ export const premedSections: PremedSection[] = [
     id: "midazolam-oral",
     title: "Midazolam — oral",
     links: [{ slug: "midazolam", label: "Midazolam monograph" }],
-    text: "Benzodiazepine giving anxiolysis and anterograde amnesia. Onset 15–30 minutes.",
-    rows: [
-      {
-        group: "Adult — oral",
-        dose: "7.5–15 mg (oral solution/tablet); halve in older or frail adults",
-        timing: "30–60 min before induction",
-      },
-    ],
+    text: "Benzodiazepine giving anxiolysis and anterograde amnesia. No claim-level source is held here for a universal oral premedication dose or timing, so none is given: use the product information and an individualised plan under an agreed local protocol, with lower doses in older or frail adults.",
     items: [
       "Paradoxical agitation or disinhibition can occur — observe, do not re-dose automatically.",
       "Caution with other CNS depressants (opioids, antihistamines); recovery may be delayed after day-case surgery.",
@@ -117,7 +110,7 @@ export const premedSections: PremedSection[] = [
       "Assess whether use is appropriate in older or frail adults, sleep apnoea and respiratory disease. Adjust gabapentin or pregabalin using the medicine-specific renal-function dosing table and monitor sedation and breathing; a universal 50% dose reduction is not appropriate.",
       "Additive sedation and respiratory depression with opioids; severe respiratory depression has also been reported without opioids.",
     ],
-    cited: [CITE.niceNg180, CITE.mhraGabapentin, CITE.mhraDsuFeb2021, CITE.gabapentinSpc],
+    cited: [CITE.niceNg180, CITE.mhraGabapentin, CITE.mhraDsuFeb2021, CITE.pregabalinSpc],
   },
   {
     id: "simple-analgesia",
@@ -131,15 +124,11 @@ export const premedSections: PremedSection[] = [
       {
         group: "Adult — paracetamol",
         dose: "Use the current oral product guidance and local adult weight/risk-adjusted regimen. Adults below 50 kg or with hepatic, nutritional or alcohol-related risk factors need an individualised dose and daily maximum",
-        timing: "1–2 h before surgery",
-      },
-      {
-        group: "Adult — ibuprofen",
-        dose: "400 mg oral (omit if NSAIDs contraindicated)",
-        timing: "1–2 h before surgery",
+        timing: "As set by the local enhanced recovery or pre-operative protocol",
       },
     ],
     items: [
+      "An NSAID such as ibuprofen may be included where safe; dose and timing follow the product information and local protocol.",
       "Count all oral, IV and combination-product paracetamol doses, and record the pre-operative dose clearly so the daily maximum is not exceeded.",
       "Avoid NSAIDs in renal impairment, active peptic ulceration, significant bleeding risk, severe asthma with known sensitivity and some bowel and bone-graft surgery. Check product information for use in pregnancy and breastfeeding.",
     ],
@@ -154,16 +143,7 @@ export const premedSections: PremedSection[] = [
       { slug: "sodium-citrate", label: "Sodium citrate" },
       { slug: "metoclopramide", label: "Metoclopramide" },
     ],
-    text: "Used where the risk of regurgitation is raised: emergency surgery, obstetrics, reflux, hiatus hernia, obesity, gastroparesis and difficult-airway plans.",
-    rows: [
-      { group: "Omeprazole — oral", dose: "40 mg", timing: "Evening before and/or 2–4 h pre-op" },
-      {
-        group: "Sodium citrate 0.3 M — oral",
-        dose: "30 mL",
-        timing: "Immediately before induction (obstetric RSI)",
-      },
-      { group: "Metoclopramide — oral/IV", dose: "10 mg", timing: "30–60 min before induction" },
-    ],
+    text: "Used where the risk of regurgitation is raised: emergency surgery, obstetrics, reflux, hiatus hernia, obesity, gastroparesis and difficult-airway plans. Options include a proton pump inhibitor (e.g. omeprazole), oral sodium citrate 0.3 M before obstetric general anaesthesia, and metoclopramide. No claim-level source is held here for doses or timings, so none is given: follow the local obstetric or aspiration-prophylaxis protocol and the product information.",
     lookups: [...standardRefs("Omeprazole"), rcoaGpas],
   },
   {
@@ -211,13 +191,13 @@ export const premedSections: PremedSection[] = [
       },
       {
         group: "Ametop (tetracaine 4% gel)",
-        dose: "Contents of one tube under an occlusive dressing",
-        timing: "Apply 30–45 min before; remove after 45 min",
+        dose: "Applied to intact skin under an occlusive dressing, as specified in the product information; see the tetracaine monograph for the current adult tube limits",
+        timing: "Application time differs for venepuncture and cannulation — follow the current product information and the tetracaine monograph",
       },
     ],
     items: [
       "EMLA causes vasoconstriction and can make veins harder to see; tetracaine causes vasodilatation and mild erythema, which usually helps.",
-      "Do not apply to broken skin, mucous membranes or the eye, and remove tetracaine on time to avoid blistering.",
+      "Do not apply to broken skin, mucous membranes or the eye, and remove tetracaine at the end of the stated application time to avoid blistering.",
     ],
     cited: [CITE.emlaSpc],
     lookups: standardRefs("Tetracaine"),

@@ -20,7 +20,7 @@ const URLS: Record<string, string[]> = {
   dobutamine: ["https://doi.org/10.1097/CCM.0000000000005337"],
   dopamine: ["https://doi.org/10.1097/CCM.0000000000005337"],
   epoprostenol: ["https://bnf.nice.org.uk/drugs/epoprostenol/"],
-  fentanyl: ["https://fpm.ac.uk/opioids-aware", "https://www.medicines.org.uk/emc/product/10268/smpc"],
+  fentanyl: ["https://fpm.ac.uk/opioids-aware", "https://www.medicines.org.uk/emc/product/3387/smpc"],
   "glyceryl-trinitrate": ["https://www.medicines.org.uk/emc/product/6296/smpc"],
   "insulin-actrapid": [
     "https://www.diabetes.org.uk/sites/default/files/2023-03/JBDS%2002%20DKA%20Guideline%20with%20qr%20code.pdf",
