@@ -920,12 +920,7 @@
         "text": "For adult ICU sedation use the lowest effective rate within the product's recommended range, generally 0.3–4 mg/kg/h. Review continuously and monitor for propofol infusion syndrome (lactic acidosis, rhabdomyolysis, hypertriglyceridaemia); risk increases with higher doses and prolonged use, especially above 4 mg/kg/h for more than 48 hours. Suspected toxicity requires prompt action, not waiting until 48 hours. Lipid load ~1.1 kcal/mL.",
         "sources": [
           {
-            "title": "Propofol 1% — Summary of Product Characteristics — emc",
-            "url": "https://www.medicines.org.uk/emc/product/15153/smpc",
-            "accessed": "not recorded"
-          },
-          {
-            "title": "Source listed on the propofol monograph — medicines.org.uk",
+            "title": "Propofol 10 mg/mL (1%) emulsion — Summary of Product Characteristics — emc",
             "url": "https://www.medicines.org.uk/emc/product/11295/smpc",
             "accessed": "not recorded"
           }
@@ -1076,13 +1071,13 @@
         "text": "This recipe is the neat 50 micrograms/mL syringe; some units use a diluted 1000 micrograms in 50 mL (20 micrograms/mL) syringe, so never mix the two strengths. Dose range: see the full monograph and local protocol. Accumulates markedly on prolonged infusion; wean gradually after days of therapy to avoid withdrawal.",
         "sources": [
           {
-            "title": "Source listed on the fentanyl monograph — fpm.ac.uk",
-            "url": "https://fpm.ac.uk/opioids-aware",
+            "title": "Fentanyl 50 micrograms/mL solution for injection — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/3387/smpc",
             "accessed": "not recorded"
           },
           {
-            "title": "Source listed on the fentanyl monograph — medicines.org.uk",
-            "url": "https://www.medicines.org.uk/emc/product/10268/smpc",
+            "title": "Source listed on the fentanyl monograph — fpm.ac.uk",
+            "url": "https://fpm.ac.uk/opioids-aware",
             "accessed": "not recorded"
           }
         ]
@@ -1197,12 +1192,7 @@
     ],
     "sources": [
       {
-        "title": "Propofol 1% — Summary of Product Characteristics — emc",
-        "url": "https://www.medicines.org.uk/emc/product/15153/smpc",
-        "accessed": "not recorded"
-      },
-      {
-        "title": "Source listed on the propofol monograph — medicines.org.uk",
+        "title": "Propofol 10 mg/mL (1%) emulsion — Summary of Product Characteristics — emc",
         "url": "https://www.medicines.org.uk/emc/product/11295/smpc",
         "accessed": "not recorded"
       },
@@ -1217,13 +1207,13 @@
         "accessed": "not recorded"
       },
       {
-        "title": "Source listed on the fentanyl monograph — fpm.ac.uk",
-        "url": "https://fpm.ac.uk/opioids-aware",
+        "title": "Fentanyl 50 micrograms/mL solution for injection — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/3387/smpc",
         "accessed": "not recorded"
       },
       {
-        "title": "Source listed on the fentanyl monograph — medicines.org.uk",
-        "url": "https://www.medicines.org.uk/emc/product/10268/smpc",
+        "title": "Source listed on the fentanyl monograph — fpm.ac.uk",
+        "url": "https://fpm.ac.uk/opioids-aware",
         "accessed": "not recorded"
       },
       {
@@ -2049,7 +2039,7 @@
     "id": "premedication-adult",
     "title": "Adult anaesthetic premedication",
     "category": "Premedication",
-    "summary": "For adults aged 18 years and over. Premedication is given before induction to reduce anxiety and smooth the induction itself. It is used selectively — most fit adults need none. Doses below summarise common UK practice; several uses are off-label and should follow local policy. Clinical verification of this page is in progress.",
+    "summary": "For adults aged 18 years and over. Premedication is given before induction to reduce anxiety and smooth the induction itself. It is used selectively — most fit adults need none. Where no claim-level source is held, no dose or timing is given; several uses are off-label and should follow local policy. Clinical verification of this page is in progress.",
     "sections": [
       {
         "title": "General principles",
@@ -2070,16 +2060,10 @@
       },
       {
         "title": "Midazolam — oral",
-        "text": "Benzodiazepine giving anxiolysis and anterograde amnesia. Onset 15–30 minutes.",
+        "text": "Benzodiazepine giving anxiolysis and anterograde amnesia. No claim-level source is held here for a universal oral premedication dose or timing, so none is given: use the product information and an individualised plan under an agreed local protocol, with lower doses in older or frail adults.",
         "items": [
           "Paradoxical agitation or disinhibition can occur — observe, do not re-dose automatically.",
           "Caution with other CNS depressants (opioids, antihistamines); recovery may be delayed after day-case surgery."
-        ],
-        "rows": [
-          {
-            "label": "Adult — oral",
-            "value": "7.5–15 mg (oral solution/tablet); halve in older or frail adults. Timing: 30–60 min before induction"
-          }
         ],
         "sources": [
           {
@@ -2193,7 +2177,7 @@
             "accessed": "not recorded"
           },
           {
-            "title": "Summary of Product Characteristics (emc product 15628) — emc",
+            "title": "Pregabalin 75 mg capsules — Summary of Product Characteristics (emc product 15628) — emc",
             "url": "https://www.medicines.org.uk/emc/product/15628/smpc",
             "accessed": "not recorded"
           }
@@ -2203,17 +2187,14 @@
         "title": "Pre-emptive simple analgesia",
         "text": "Oral paracetamol and an NSAID given with the pre-operative sip of water are part of most multimodal and enhanced recovery pathways.",
         "items": [
+          "An NSAID such as ibuprofen may be included where safe; dose and timing follow the product information and local protocol.",
           "Count all oral, IV and combination-product paracetamol doses, and record the pre-operative dose clearly so the daily maximum is not exceeded.",
           "Avoid NSAIDs in renal impairment, active peptic ulceration, significant bleeding risk, severe asthma with known sensitivity and some bowel and bone-graft surgery. Check product information for use in pregnancy and breastfeeding."
         ],
         "rows": [
           {
             "label": "Adult — paracetamol",
-            "value": "Use the current oral product guidance and local adult weight/risk-adjusted regimen. Adults below 50 kg or with hepatic, nutritional or alcohol-related risk factors need an individualised dose and daily maximum. Timing: 1–2 h before surgery"
-          },
-          {
-            "label": "Adult — ibuprofen",
-            "value": "400 mg oral (omit if NSAIDs contraindicated). Timing: 1–2 h before surgery"
+            "value": "Use the current oral product guidance and local adult weight/risk-adjusted regimen. Adults below 50 kg or with hepatic, nutritional or alcohol-related risk factors need an individualised dose and daily maximum. Timing: As set by the local enhanced recovery or pre-operative protocol"
           }
         ],
         "sources": [
@@ -2236,21 +2217,7 @@
       },
       {
         "title": "Aspiration prophylaxis",
-        "text": "Used where the risk of regurgitation is raised: emergency surgery, obstetrics, reflux, hiatus hernia, obesity, gastroparesis and difficult-airway plans.",
-        "rows": [
-          {
-            "label": "Omeprazole — oral",
-            "value": "40 mg. Timing: Evening before and/or 2–4 h pre-op"
-          },
-          {
-            "label": "Sodium citrate 0.3 M — oral",
-            "value": "30 mL. Timing: Immediately before induction (obstetric RSI)"
-          },
-          {
-            "label": "Metoclopramide — oral/IV",
-            "value": "10 mg. Timing: 30–60 min before induction"
-          }
-        ],
+        "text": "Used where the risk of regurgitation is raised: emergency surgery, obstetrics, reflux, hiatus hernia, obesity, gastroparesis and difficult-airway plans. Options include a proton pump inhibitor (e.g. omeprazole), oral sodium citrate 0.3 M before obstetric general anaesthesia, and metoclopramide. No claim-level source is held here for doses or timings, so none is given: follow the local obstetric or aspiration-prophylaxis protocol and the product information.",
         "sources": [
           {
             "title": "Lookup only (not claim-level evidence): Search the BNF for Omeprazole",
@@ -2319,7 +2286,7 @@
         "text": "Can be applied on the ward to potential cannulation sites before intravenous induction.",
         "items": [
           "EMLA causes vasoconstriction and can make veins harder to see; tetracaine causes vasodilatation and mild erythema, which usually helps.",
-          "Do not apply to broken skin, mucous membranes or the eye, and remove tetracaine on time to avoid blistering."
+          "Do not apply to broken skin, mucous membranes or the eye, and remove tetracaine at the end of the stated application time to avoid blistering."
         ],
         "rows": [
           {
@@ -2328,7 +2295,7 @@
           },
           {
             "label": "Ametop (tetracaine 4% gel)",
-            "value": "Contents of one tube under an occlusive dressing. Timing: Apply 30–45 min before; remove after 45 min"
+            "value": "Applied to intact skin under an occlusive dressing, as specified in the product information; see the tetracaine monograph for the current adult tube limits. Timing: Application time differs for venepuncture and cannulation — follow the current product information and the tetracaine monograph"
           }
         ],
         "sources": [
@@ -2431,7 +2398,7 @@
         "accessed": "not recorded"
       },
       {
-        "title": "Summary of Product Characteristics (emc product 15628) — emc",
+        "title": "Pregabalin 75 mg capsules — Summary of Product Characteristics (emc product 15628) — emc",
         "url": "https://www.medicines.org.uk/emc/product/15628/smpc",
         "accessed": "not recorded"
       },
