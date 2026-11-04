@@ -241,3 +241,40 @@ describe("final consistency (v9)", () => {
       }
   });
 });
+
+describe("review-status metadata", () => {
+  const page = readFileSync(
+    new URL("../../../routes/review-status.tsx", import.meta.url),
+    "utf8",
+  );
+  const chrome = [
+    "../../../routes/index.tsx",
+    "../../../routes/about.tsx",
+    "../../../routes/support.tsx",
+    "../../../routes/sources.tsx",
+    "../../../routes/references.tsx",
+    "../../../routes/drugs.$slug.tsx",
+    "../ReferenceAppLayout.tsx",
+  ]
+    .map((f) => readFileSync(new URL(f, import.meta.url), "utf8"))
+    .join("\n");
+
+  it("names the reviewer, role and date on the review-status page", () => {
+    expect(page).toContain("Robert Coe, UK anaesthetist, 4 November 2026");
+    expect(page).toContain("Review complete");
+    expect(page).toContain("approved for release");
+  });
+  it("describes the review as user-provided, not independent certification", () => {
+    expect(page).toMatch(/user-provided review/i);
+    expect(page).toMatch(/not an independent certification/i);
+  });
+  it("no UI label still claims verification is in progress or content unapproved", () => {
+    expect(`${page}\n${chrome}`).not.toMatch(
+      /verification is in progress|review is in progress|not a clinically approved release|review still in progress/i,
+    );
+  });
+  it("keeps the instruction to check the actual product and local guidance", () => {
+    expect(page).toMatch(/smart-pump drug library/i);
+    expect(page).toMatch(/local protocols/i);
+  });
+});

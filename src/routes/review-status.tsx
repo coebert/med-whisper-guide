@@ -10,13 +10,13 @@ export const Route = createFileRoute("/review-status")({
       {
         name: "description",
         content:
-          "Scope of this adult UK drug reference and what the ongoing source-level clinical review covers. Clinical verification is in progress.",
+          "Clinically reviewed by Robert Coe, UK anaesthetist, 4 November 2026. Scope of this adult UK drug reference and what the review does and does not cover.",
       },
       { property: "og:title", content: "Source Review Status — Anaesthesia & Critical Care Drugs" },
       {
         property: "og:description",
         content:
-          "Scope of this adult UK drug reference and what the ongoing source-level clinical review covers.",
+          "Clinically reviewed by Robert Coe, UK anaesthetist, 4 November 2026 — a user-provided review by the app owner, not an independent certification.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -31,8 +31,11 @@ function ReviewStatusPage() {
       <main className="mx-auto max-w-3xl px-4 py-8 text-sm leading-relaxed text-muted-foreground sm:px-6 lg:px-8">
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">Source review status</h1>
         <p className="mt-3 rounded-md border border-primary/40 bg-primary/5 p-3 text-foreground">
-          Clinical verification is in progress. Content has not been certified, and no part of this
-          app should be treated as fully validated.
+          Clinically reviewed by Robert Coe, UK anaesthetist, 4 November 2026 —{" "}
+          <strong className="text-foreground">&ldquo;Review complete &mdash; approved for
+          release&rdquo;</strong>. This is a user-provided review by the app owner. It is not an
+          independent certification by a royal college, regulator or other external body, and it is
+          not a guarantee that every statement is free from error.
         </p>
 
         <section className="mt-8 space-y-3">
@@ -55,8 +58,14 @@ function ReviewStatusPage() {
           <h2 className="font-serif text-lg text-foreground">What the review means</h2>
           <ul className="list-inside list-disc space-y-1">
             <li>
-              A source-level review compares individual statements against named, current sources.
-              It is being carried out in passes and is not complete.
+              The review compared individual statements in the adult monographs, the static infusion
+              preparations and the topic and premedication pages against named, current sources. It
+              was carried out in passes by the reviewer.
+            </li>
+            <li>
+              The review is the app owner&rsquo;s own clinical review, provided by Robert Coe. It is
+              not an independent certification, and no part of this app is certified or guaranteed
+              accurate.
             </li>
             <li>
               Statements revised in a review pass show a{" "}
@@ -72,26 +81,78 @@ function ReviewStatusPage() {
               Sources listed on a monograph are those stored with it. A listed source does not mean
               every statement on the page has been checked against it.
             </li>
-            <li>Monograph text is being corrected separately and may change.</li>
+            <li>
+              Infusion cards show a numeric starting dose or range only where a specific cited
+              source supports it; other cards send the reader to the full monograph and local
+              protocol. Sources listed on a recipe are those held for it and its monograph; their
+              presence is not certification.
+            </li>
+            <li>
+              The reviewed content is the snapshot in this release. Individual statements may still
+              be corrected in a later update, so a statement that matters clinically should be
+              checked at source.
+            </li>
           </ul>
         </section>
 
         <section className="mt-8 space-y-3">
-          <h2 className="font-serif text-lg text-foreground">Review progress</h2>
+          <h2 className="font-serif text-lg text-foreground">Review record</h2>
+          <dl className="divide-y divide-border overflow-hidden rounded-md border border-border">
+            <div className="grid grid-cols-[7.5rem_minmax(0,1fr)] gap-3 px-3 py-2">
+              <dt className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                Reviewer
+              </dt>
+              <dd className="text-foreground">Robert Coe, UK anaesthetist (app owner)</dd>
+            </div>
+            <div className="grid grid-cols-[7.5rem_minmax(0,1fr)] gap-3 px-3 py-2">
+              <dt className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                Date
+              </dt>
+              <dd className="text-foreground">4 November 2026</dd>
+            </div>
+            <div className="grid grid-cols-[7.5rem_minmax(0,1fr)] gap-3 px-3 py-2">
+              <dt className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                Outcome
+              </dt>
+              <dd className="text-foreground">
+                &ldquo;Review complete &mdash; approved for release&rdquo;
+              </dd>
+            </div>
+            <div className="grid grid-cols-[7.5rem_minmax(0,1fr)] gap-3 px-3 py-2">
+              <dt className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                Covered
+              </dt>
+              <dd className="text-foreground">
+                Adult (18+) UK monographs, static infusion preparations and dilutions, and the
+                topic, premedication and blood-level monitoring pages.
+              </dd>
+            </div>
+            <div className="grid grid-cols-[7.5rem_minmax(0,1fr)] gap-3 px-3 py-2">
+              <dt className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                Not covered
+              </dt>
+              <dd className="text-foreground">
+                Independent external certification; verification of every statement against every
+                listed source; paediatric use, which is out of scope.
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <section className="mt-8 space-y-3">
+          <h2 className="font-serif text-lg text-foreground">Before you act on a dose</h2>
           <p>
-            Monograph and infusion source checks are still in progress. This is not a clinically
-            approved release. Infusion cards show a numeric starting dose or range only where a specific
-            cited source supports it; other cards send the reader to the full monograph and local
-            protocol. Sources listed on a recipe are those held for it and its monograph; their
-            presence is not certification. The bedside point on prolonged sedation and failure to wake is a
-            general, conservative safety statement.
+            Always check doses, dilutions and monitoring targets against the BNF, the product SPC
+            for the brand your department stocks, your smart-pump drug library and local protocols
+            before administration. Guidance is revised regularly &mdash; where a dose or threshold
+            matters, open the source and confirm the current version.
           </p>
         </section>
 
         <section className="mt-8 space-y-3">
           <h2 className="font-serif text-lg text-foreground">Reporting a problem</h2>
           <p>
-            If something looks wrong, do not use it — check the original source and your local
+            If something looks wrong, do not use it &mdash; check the original source and your local
             guidance. See{" "}
             <Link to="/sources" className="text-primary underline">
               Clinical sources
