@@ -140,8 +140,7 @@ function DoseReferencesPage() {
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">Dose references</h1>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           The sources listed with each adult monograph and infusion recipe, drug by drug. A listed
-          source is not evidence that every statement has been checked against it; clinical
-          verification is in progress (see{" "}
+          source is not evidence that every statement has been checked against it (see{" "}
           <Link to="/review-status" className="text-primary underline">
             Source review status
           </Link>

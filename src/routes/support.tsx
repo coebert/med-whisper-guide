@@ -49,7 +49,8 @@ function SupportPage() {
             relying on any entry.
           </p>
           <p>
-            Source-level clinical review is in progress; see{" "}
+            Clinically reviewed by Robert Coe, UK anaesthetist, 4 November 2026 &mdash; a
+            user-provided review by the app owner, not an independent certification. See{" "}
             <Link to="/review-status" className="text-primary underline">
               source review status
             </Link>

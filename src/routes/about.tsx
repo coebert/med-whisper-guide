@@ -94,8 +94,9 @@ function DrugReferenceAbout() {
             patient-specific doses or pump rates.
           </p>
           <p>
-            Content is under ongoing source-level review and clinical verification is in progress.
-            It is not certified or guaranteed to be error-free; always check the original source.{" "}
+            Content was clinically reviewed by Robert Coe, UK anaesthetist, on 4 November 2026. The
+            review was provided by the app owner; it is not an independent certification and does
+            not guarantee the content is error-free. Always check the original source.{" "}
             <Link to="/review-status" className="text-primary underline">
               Source review status
             </Link>

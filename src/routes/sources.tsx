@@ -207,8 +207,7 @@ function ClinicalSourcesPage() {
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">Clinical sources</h1>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           The main publishers cited across this adult UK reference. A source appearing here or on a
-          monograph does not mean every statement has been verified against it — clinical
-          verification is in progress (see{" "}
+          monograph does not mean every statement has been verified against it (see{" "}
           <Link to="/review-status" className="text-primary underline">
             Source review status
           </Link>

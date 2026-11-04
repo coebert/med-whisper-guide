@@ -135,7 +135,7 @@ export default function ReferenceAppLayout({ children }: Props) {
             </Link>{" "}
             ·{" "}
             <Link to="/review-status" className="underline hover:text-foreground">
-              Source review status (verification in progress)
+              Source review status (reviewed 4 November 2026)
             </Link>{" "}
             ·{" "}
             <Link to="/support" className="underline hover:text-foreground">

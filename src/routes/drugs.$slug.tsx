@@ -448,7 +448,7 @@ function DrugReferenceEntry() {
         <Section title="Sources" id="sources">
           <p className="mb-3 text-xs text-muted-foreground">
             Sources listed with this monograph. Listing a source does not mean every statement has
-            been verified against it — clinical verification is in progress.
+            been verified against it.
           </p>
           <ul className="space-y-2 text-sm">
             {[...drug.sources, ...(tdm?.sources ?? [])].map((s) => (
