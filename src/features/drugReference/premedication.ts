@@ -90,18 +90,12 @@ export const premedSections: PremedSection[] = [
     id: "dexmedetomidine-intranasal",
     title: "Dexmedetomidine — intranasal",
     links: [{ slug: "dexmedetomidine", label: "Dexmedetomidine monograph" }],
-    text: "Selective alpha-2 agonist used off-label by this route. Bradycardia and hypotension are important adverse effects; respiratory depression, airway obstruction and apnoea can also occur, so cardiac and respiratory monitoring are required. The IV solution (100 micrograms/mL) is used undiluted via an atomiser.",
-    rows: [
-      {
-        group: "Adult — intranasal (selected cases)",
-        dose: "1–1.5 micrograms/kg",
-        timing: "30–45 min before induction",
-      },
-    ],
+    text: "Off-label specialist use only, under an agreed local protocol. The IV product SmPC does not support intranasal use, so this app gives no standard intranasal dose or preparation. Bradycardia and hypotension are important adverse effects; respiratory depression, airway obstruction and apnoea can also occur, so cardiac and respiratory monitoring are required.",
     items: [
       "Avoid in heart block, severe ventricular dysfunction and hypovolaemia, and use caution with other rate-slowing drugs.",
+      "Context only: one adult randomised trial used 1 microgram/kg given 45–60 minutes before surgery. This is a trial regimen, not a general UK recommendation.",
     ],
-    cited: [CITE.dexmedSpc],
+    cited: [CITE.dexmedSpc, CITE.dexmedIntranasalRct],
     lookups: standardRefs("Dexmedetomidine"),
   },
   {

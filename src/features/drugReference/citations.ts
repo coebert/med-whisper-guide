@@ -210,4 +210,22 @@ export const CITE = {
     "emc",
     "https://www.medicines.org.uk/emc/product/14262/smpc",
   ),
+  hemabateSpc: c(
+    "SmPC",
+    "Hemabate (carboprost) — Summary of Product Characteristics",
+    "emc",
+    "https://www.medicines.org.uk/emc/product/1084/smpc",
+  ),
+  dexmedIntranasalRct: c(
+    "Adult RCT (context only)",
+    "Intranasal dexmedetomidine premedication in adults: randomised trial (PLOS ONE 2016) — trial context, not a UK recommendation",
+    "PLOS ONE",
+    "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0154192",
+  ),
+  periopDiabetes2026: c(
+    "UK/Ireland consensus 2026",
+    "Perioperative management of adults with diabetes — UK and Ireland consensus (Anaesthesia, 2026)",
+    "Association of Anaesthetists",
+    "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/10.1111/anae.70181",
+  ),
 } satisfies Record<string, DrugSource>;

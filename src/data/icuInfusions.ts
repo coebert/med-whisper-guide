@@ -399,6 +399,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
         perKg: false,
         notes:
           "There is no universal starting rate. Dose according to the written, indication-specific local protocol, including its blood glucose and potassium monitoring. Flush the line first — insulin adsorbs to plastic.",
+        sources: [CITE.periopDiabetes2026],
         topicIds: ["diabetic-emergencies"],
       },
       {

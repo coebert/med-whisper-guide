@@ -342,10 +342,16 @@
         "items": [
           "Escalate through the uterotonic ladder while treating the other causes of postpartum haemorrhage — tone, tissue, trauma and thrombin.",
           "Oxytocin bolus causes vasodilatation and tachycardia: give slowly, and follow with an infusion rather than repeated boluses.",
-          "Ergometrine is contraindicated in hypertension and pre-eclampsia; carboprost is contraindicated in asthma.",
+          "Ergometrine is contraindicated in hypertension and pre-eclampsia.",
+          "Carboprost can cause bronchospasm. Active pulmonary disease is contraindicated in the Hemabate SmPC; a history of asthma requires careful benefit–risk assessment and senior obstetric/anaesthetic guidance. Follow local restrictions.",
           "Postpartum haemorrhage (separate from the trauma regimen): for clinically diagnosed PPH, give tranexamic acid 1 g IV over 10 minutes as soon as possible and within 3 hours of birth, alongside standard haemorrhage care. A second 1 g dose may be given if bleeding continues after 30 minutes or restarts within 24 hours."
         ],
         "sources": [
+          {
+            "title": "Hemabate (carboprost) — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/1084/smpc",
+            "accessed": "not recorded"
+          },
           {
             "title": "WHO recommendation on tranexamic acid for the treatment of postpartum haemorrhage — World Health Organization",
             "url": "https://iris.who.int/bitstream/handle/10665/259379/WHO-RHR-17.21-eng.pdf",
@@ -360,6 +366,11 @@
       }
     ],
     "sources": [
+      {
+        "title": "Hemabate (carboprost) — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/1084/smpc",
+        "accessed": "not recorded"
+      },
       {
         "title": "WHO recommendation on tranexamic acid for the treatment of postpartum haemorrhage — World Health Organization",
         "url": "https://iris.who.int/bitstream/handle/10665/259379/WHO-RHR-17.21-eng.pdf",
@@ -1087,7 +1098,14 @@
             "value": "0.1–10 units/h"
           }
         ],
-        "text": "There is no universal starting rate. Dose according to the written, indication-specific local protocol, including its blood glucose and potassium monitoring. Flush the line first — insulin adsorbs to plastic."
+        "text": "There is no universal starting rate. Dose according to the written, indication-specific local protocol, including its blood glucose and potassium monitoring. Flush the line first — insulin adsorbs to plastic.",
+        "sources": [
+          {
+            "title": "Perioperative management of adults with diabetes — UK and Ireland consensus (Anaesthesia, 2026) — Association of Anaesthetists",
+            "url": "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/10.1111/anae.70181",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Heparin (unfractionated)",
@@ -1157,6 +1175,11 @@
       }
     ],
     "sources": [
+      {
+        "title": "Perioperative management of adults with diabetes — UK and Ireland consensus (Anaesthesia, 2026) — Association of Anaesthetists",
+        "url": "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/10.1111/anae.70181",
+        "accessed": "not recorded"
+      },
       {
         "title": "Heparin sodium — Summary of Product Characteristics — emc",
         "url": "https://www.medicines.org.uk/emc/product/1682/smpc",
@@ -1776,20 +1799,20 @@
       },
       {
         "title": "Dexmedetomidine — intranasal",
-        "text": "Selective alpha-2 agonist used off-label by this route. Bradycardia and hypotension are important adverse effects; respiratory depression, airway obstruction and apnoea can also occur, so cardiac and respiratory monitoring are required. The IV solution (100 micrograms/mL) is used undiluted via an atomiser.",
+        "text": "Off-label specialist use only, under an agreed local protocol. The IV product SmPC does not support intranasal use, so this app gives no standard intranasal dose or preparation. Bradycardia and hypotension are important adverse effects; respiratory depression, airway obstruction and apnoea can also occur, so cardiac and respiratory monitoring are required.",
         "items": [
-          "Avoid in heart block, severe ventricular dysfunction and hypovolaemia, and use caution with other rate-slowing drugs."
-        ],
-        "rows": [
-          {
-            "label": "Adult — intranasal (selected cases)",
-            "value": "1–1.5 micrograms/kg. Timing: 30–45 min before induction"
-          }
+          "Avoid in heart block, severe ventricular dysfunction and hypovolaemia, and use caution with other rate-slowing drugs.",
+          "Context only: one adult randomised trial used 1 microgram/kg given 45–60 minutes before surgery. This is a trial regimen, not a general UK recommendation."
         ],
         "sources": [
           {
             "title": "Dexmedetomidine — Summary of Product Characteristics — emc",
             "url": "https://www.medicines.org.uk/emc/product/4783/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Intranasal dexmedetomidine premedication in adults: randomised trial (PLOS ONE 2016) — trial context, not a UK recommendation — PLOS ONE",
+            "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0154192",
             "accessed": "not recorded"
           },
           {
@@ -2048,6 +2071,11 @@
       {
         "title": "Dexmedetomidine — Summary of Product Characteristics — emc",
         "url": "https://www.medicines.org.uk/emc/product/4783/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Intranasal dexmedetomidine premedication in adults: randomised trial (PLOS ONE 2016) — trial context, not a UK recommendation — PLOS ONE",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0154192",
         "accessed": "not recorded"
       },
       {
