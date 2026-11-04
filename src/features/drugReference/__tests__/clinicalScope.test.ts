@@ -195,3 +195,33 @@ describe("static recipe reconciliation", () => {
     );
   });
 });
+
+describe("source integrity pass (v8)", () => {
+  it("unsourced premed regimens carry no dose rows", async () => {
+    const { premedSections } = await import("../premedication");
+    for (const id of ["midazolam-oral", "aspiration-prophylaxis"])
+      expect(premedSections.find((s) => s.id === id)!.rows).toBeUndefined();
+    const analgesia = premedSections.find((s) => s.id === "simple-analgesia")!;
+    expect(analgesia.rows!.some((r) => /ibuprofen/i.test(r.group))).toBe(false);
+  });
+  it("no static source cites the sublingual fentanyl or 2% propofol SmPC", () => {
+    const src = ["../monographSources.ts", "../citations.ts"]
+      .map((f) => readFileSync(new URL(f, import.meta.url), "utf8"))
+      .join("\n");
+    expect(src).not.toContain("emc/product/10268/");
+    expect(src).not.toContain("emc/product/15153/");
+  });
+  it("fentanyl and propofol 1% cards cite the verified IV / 1% products", () => {
+    expect((recipe("Fentanyl").sources ?? []).map((s) => s.url)).toContain(
+      "https://www.medicines.org.uk/emc/product/3387/smpc",
+    );
+    expect((recipe("Propofol 1%").sources ?? []).map((s) => s.url)).toContain(
+      "https://www.medicines.org.uk/emc/product/11295/smpc",
+    );
+  });
+  it("offline cache is at v8 with v7 purged", () => {
+    const c = readFileSync(new URL("../cache.ts", import.meta.url), "utf8");
+    expect(c).toContain('"drugref:v8:"');
+    expect(c).toMatch(/LEGACY_PREFIXES = \[[^\]]*"drugref:v7:"/);
+  });
+});

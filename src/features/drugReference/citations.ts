@@ -122,9 +122,9 @@ export const CITE = {
   ),
   propofolSpc: c(
     "SmPC",
-    "Propofol 1% — Summary of Product Characteristics",
+    "Propofol 10 mg/mL (1%) emulsion — Summary of Product Characteristics",
     "emc",
-    "https://www.medicines.org.uk/emc/product/15153/smpc",
+    "https://www.medicines.org.uk/emc/product/11295/smpc",
   ),
   dexamethasoneSpc: c(
     "SmPC",
@@ -162,9 +162,9 @@ export const CITE = {
     "MHRA",
     "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/962557/Feb-2021-DSU-PDF_final.pdf",
   ),
-  gabapentinSpc: c(
-    "SmPC",
-    "Summary of Product Characteristics (emc product 15628)",
+  pregabalinSpc: c(
+    "Pregabalin SmPC",
+    "Pregabalin 75 mg capsules — Summary of Product Characteristics (emc product 15628)",
     "emc",
     "https://www.medicines.org.uk/emc/product/15628/smpc",
   ),
@@ -185,6 +185,12 @@ export const CITE = {
     "CRASH-2: tranexamic acid in bleeding trauma patients (Lancet 2010) — trial, not a guideline",
     "CRASH-2 collaborators, LSHTM",
     "https://crash2.lshtm.ac.uk/CRASH2_Lancet.pdf",
+  ),
+  fentanylIvSpc: c(
+    "SmPC",
+    "Fentanyl 50 micrograms/mL solution for injection — Summary of Product Characteristics",
+    "emc",
+    "https://www.medicines.org.uk/emc/product/3387/smpc",
   ),
   alfentanilSpc: c(
     "SmPC",
