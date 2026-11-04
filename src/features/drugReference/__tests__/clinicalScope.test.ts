@@ -138,3 +138,22 @@ describe("opioid, aminophylline and insulin corrections", () => {
     expect(r.notes).not.toMatch(/tighter ranges/);
   });
 });
+
+describe("carboprost, intranasal dexmedetomidine and insulin sources", () => {
+  const all = allReferenceTopics.flatMap((t) => t.keyPoints.map(keyPointText)).join("\n");
+  it("carboprost is not stated as absolutely contraindicated in asthma", () => {
+    expect(all).not.toContain("carboprost is contraindicated in asthma");
+    expect(all).toContain("Active pulmonary disease is contraindicated in the Hemabate SmPC");
+  });
+  it("intranasal dexmedetomidine has no standard dose row or atomiser recipe", async () => {
+    const { premedSections } = await import("../premedication");
+    const s = premedSections.find((x) => x.id === "dexmedetomidine-intranasal")!;
+    expect(s.rows).toBeUndefined();
+    expect(s.text).not.toMatch(/atomiser|1–1\.5/);
+  });
+  it("insulin cites the 2026 UK/Ireland consensus", () => {
+    expect((recipe("Insulin (Actrapid)").sources ?? []).map((x) => x.url)).toContain(
+      "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/10.1111/anae.70181",
+    );
+  });
+});
