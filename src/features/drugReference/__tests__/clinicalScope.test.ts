@@ -116,3 +116,25 @@ describe("iOS reference export", () => {
     expect(text).not.toMatch(/[^.]1 mg\/kg\/h|0\.5/);
   });
 });
+
+describe("opioid, aminophylline and insulin corrections", () => {
+  it("alfentanil ventilated maintenance is 30–60 micrograms/kg/h", () => {
+    const r = recipe("Alfentanil");
+    expect([r.minDose, r.maxDose, r.startDose]).toEqual([30, 60, undefined]);
+    expect(r.notes).not.toMatch(/120|peaks/);
+  });
+  it("aminophylline maintenance is 0.5–0.7 mg/kg/h with no 12 h step-down", () => {
+    const r = recipe("Aminophylline");
+    expect([r.minDose, r.maxDose]).toEqual([0.5, 0.7]);
+    expect(r.notes).not.toMatch(/12 h/);
+  });
+  it("remifentanil ICU recipe starts at 0.1 and tops at 0.74, not 2", () => {
+    const r = recipe("Remifentanil (ventilated adult ICU)");
+    expect([r.startDose, r.minDose, r.maxDose]).toEqual([0.1, 0.006, 0.74]);
+  });
+  it("insulin has no universal starting rate or intra-operative claim", () => {
+    const r = recipe("Insulin (Actrapid)");
+    expect(r.startDose).toBeUndefined();
+    expect(r.notes).not.toMatch(/tighter ranges/);
+  });
+});

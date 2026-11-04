@@ -24,7 +24,7 @@ const SLUG_BY_INFUSION_NAME: Record<string, string | null> = {
   "Clonidine (750 micrograms/50 mL)": "clonidine",
   Fentanyl: "fentanyl",
   Alfentanil: "alfentanil",
-  Remifentanil: "remifentanil",
+  "Remifentanil (ventilated adult ICU)": "remifentanil",
   Ketamine: "ketamine",
   "Insulin (Actrapid)": "insulin-actrapid",
   "Heparin (unfractionated)": "unfractionated-heparin",

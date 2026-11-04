@@ -958,17 +958,24 @@
           },
           {
             "label": "Starting dose",
-            "value": "30 micrograms/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "10–120 micrograms/kg/h"
+            "value": "30–60 micrograms/kg/h"
           }
         ],
-        "text": "Light analgesia from about 10 micrograms/kg/h; ventilated patients: 0.5–1 micrograms/kg/min equals 30–60 micrograms/kg/h; the upper end of the listed range is 2 micrograms/kg/min (120 micrograms/kg/h) — brief intra-operative peaks above this for intensely stimulating surgery are an anaesthetist-titrated bolus decision, not a maintenance rate. Useful in renal failure (inactive metabolites); still accumulates with very long infusions but less than fentanyl."
+        "text": "Ventilated adults (Rapifen UK SmPC): after a loading dose of 50–100 micrograms/kg over 10 minutes, maintain at 0.5–1 micrograms/kg/min (30–60 micrograms/kg/h) and titrate to response. Follow the product information and local protocol.",
+        "sources": [
+          {
+            "title": "Rapifen (alfentanil) — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/6427/smpc",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
-        "title": "Remifentanil",
+        "title": "Remifentanil (ventilated adult ICU)",
         "rows": [
           {
             "label": "Diluent",
@@ -984,14 +991,21 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.05 micrograms/kg/min"
+            "value": "0.1 micrograms/kg/min"
           },
           {
             "label": "Usual adult range",
-            "value": "0.006–2 micrograms/kg/min"
+            "value": "0.006–0.74 micrograms/kg/min"
           }
         ],
-        "text": "ICU sedation 0.006–0.75 micrograms/kg/min; general anaesthesia 0.025–2 micrograms/kg/min. Esterase-metabolised — no accumulation and predictable offset (context-sensitive half-time ~4 min) whatever the infusion length. Plan post-stop analgesia before discontinuing."
+        "text": "Ventilated adult ICU only (UK SmPC); general anaesthesia dosing is different and is not shown here. Start at 0.1–0.15 micrograms/kg/min and adjust in steps of 0.025 micrograms/kg/min no more often than every 5 minutes. If 0.2 micrograms/kg/min is reached without adequate sedation, add an appropriate sedative rather than increasing further. Rates of 0.006–0.74 micrograms/kg/min were used in ICU studies. No bolus doses in ICU. Use for more than 3 days is not recommended. Plan the next analgesia before stopping.",
+        "sources": [
+          {
+            "title": "Remifentanil — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/14262/smpc",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Ketamine",
@@ -1030,6 +1044,16 @@
         "title": "Dexmedetomidine — Summary of Product Characteristics — emc",
         "url": "https://www.medicines.org.uk/emc/product/4783/smpc",
         "accessed": "not recorded"
+      },
+      {
+        "title": "Rapifen (alfentanil) — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/6427/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Remifentanil — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/14262/smpc",
+        "accessed": "not recorded"
       }
     ]
   },
@@ -1056,14 +1080,14 @@
           },
           {
             "label": "Starting dose",
-            "value": "2 units/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
             "value": "0.1–10 units/h"
           }
         ],
-        "text": "Typical range 0.1–10 units/h (as low as 0.05 units/h in some protocols), titrated to a written blood-glucose protocol (commonly target 6–10 mmol/L on ICU; tighter ranges intra-operatively). Flush the line first — insulin adsorbs to plastic."
+        "text": "There is no universal starting rate. Dose according to the written, indication-specific local protocol, including its blood glucose and potassium monitoring. Flush the line first — insulin adsorbs to plastic."
       },
       {
         "title": "Heparin (unfractionated)",
@@ -1550,14 +1574,26 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.5 mg/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.1–0.5 mg/kg/h"
+            "value": "0.5–0.7 mg/kg/h"
           }
         ],
-        "text": "Give the 5 mg/kg loading dose over 20 min ONLY if the patient is not already on oral theophylline. Maintenance 0.5 mg/kg/h for the first 12 h, then 0.3 mg/kg/h; 0.1–0.3 mg/kg/h in the elderly, heart failure or liver disease. Narrow therapeutic index — check theophylline levels and watch for arrhythmias, vomiting and seizures."
+        "text": "BTS/SIGN acute asthma guideline: for refractory life-threatening asthma, only after senior review. If not already taking theophylline, load with 5 mg/kg over 20 minutes, then 0.5–0.7 mg/kg/h using ideal body weight. Guide by theophylline levels and clinical response. Use lower doses in older patients and in cardiac or hepatic impairment. Narrow therapeutic index — watch for arrhythmias, vomiting and seizures. The product SmPC uses a different loading dose (6 mg/kg); follow one protocol and do not combine them.",
+        "sources": [
+          {
+            "title": "BTS/SIGN British guideline on the management of asthma (SIGN 158, 2019) — British Thoracic Society / SIGN",
+            "url": "https://www.brit-thoracic.org.uk/document-library/guidelines/asthma/btssign-guideline-for-the-management-of-asthma-2019-sign-158/",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Aminophylline injection — Summary of Product Characteristics — emc",
+            "url": "https://www.medicines.org.uk/emc/product/6560/smpc",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Oxytocin",
@@ -1633,6 +1669,16 @@
       {
         "title": "Hypertension in pregnancy: diagnosis and management — NICE",
         "url": "https://www.nice.org.uk/guidance/ng133/chapter/recommendations",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "BTS/SIGN British guideline on the management of asthma (SIGN 158, 2019) — British Thoracic Society / SIGN",
+        "url": "https://www.brit-thoracic.org.uk/document-library/guidelines/asthma/btssign-guideline-for-the-management-of-asthma-2019-sign-158/",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Aminophylline injection — Summary of Product Characteristics — emc",
+        "url": "https://www.medicines.org.uk/emc/product/6560/smpc",
         "accessed": "not recorded"
       },
       {
