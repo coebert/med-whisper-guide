@@ -279,6 +279,7 @@ export const icuInfusionGroups: InfusionGroup[] = [
       },
       {
         drug: "Fentanyl",
+        sources: [CITE.fentanylIvSpc],
         diluent: "Undiluted, or dilute in 0.9% sodium chloride or 5% glucose",
         drawUp: "2500 micrograms in 50 mL — neat (50 mL of 50 micrograms/mL ampoules)",
         concentrationPerMl: 50,
