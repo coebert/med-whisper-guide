@@ -5,7 +5,8 @@
  */
 import { icuInfusionGroups } from "@/data/icuInfusions";
 
-import { rangeText, startText } from "./dilutions";
+import { SLUG_BY_INFUSION_NAME, rangeText, startText } from "./dilutions";
+import { withMonographSources } from "./monographSources";
 import { PREMED_FOOTNOTE, PREMED_INTRO, premedSections } from "./premedication";
 import { adultSources } from "./scope";
 import { allReferenceTopics, keyPointSources, keyPointText } from "./topics";
@@ -89,7 +90,10 @@ function infusionPages(): IosPage[] {
       ];
       const section: IosSection = { title: inf.drug, rows };
       if (inf.notes) section.text = inf.notes;
-      return withSources(section, toIos(inf.sources));
+      return withSources(
+        section,
+        toIos(withMonographSources(inf.sources, SLUG_BY_INFUSION_NAME[inf.drug] ?? null)),
+      );
     });
     const sources = dedupe(sections.flatMap((s) => s.sources ?? []));
     return withSources(

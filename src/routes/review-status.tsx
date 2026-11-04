@@ -80,7 +80,10 @@ function ReviewStatusPage() {
           <h2 className="font-serif text-lg text-foreground">Review progress</h2>
           <p>
             Monograph and infusion source checks are still in progress. This is not a clinically
-            approved release. The bedside point on prolonged sedation and failure to wake is a
+            approved release. Infusion cards show a numeric starting dose or range only where a specific
+            cited source supports it; other cards send the reader to the full monograph and local
+            protocol. Sources listed on a recipe are those held for it and its monograph; their
+            presence is not certification. The bedside point on prolonged sedation and failure to wake is a
             general, conservative safety statement.
           </p>
         </section>

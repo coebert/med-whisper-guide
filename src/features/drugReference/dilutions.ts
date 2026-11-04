@@ -1,11 +1,12 @@
 import { icuInfusionGroups } from "@/data/icuInfusions";
+import { withMonographSources } from "./monographSources";
 import type { DrugDilution, InfusionUnit } from "./types";
 
 /**
  * Infusion recipe drug name -> monograph slug in the `drugs` table.
  * Names that have no monograph map to null so the recipe still displays.
  */
-const SLUG_BY_INFUSION_NAME: Record<string, string | null> = {
+export const SLUG_BY_INFUSION_NAME: Record<string, string | null> = {
   "Noradrenaline (4 mg/50 mL)": "noradrenaline",
   "Noradrenaline (8 mg/50 mL)": "noradrenaline",
   "Noradrenaline (16 mg/50 mL)": "noradrenaline",
@@ -61,7 +62,7 @@ export const drugDilutions: DrugDilution[] = icuInfusionGroups.flatMap((group) =
     maxDose: infusion.maxDose,
     perKg: infusion.perKg,
     notes: infusion.notes,
-    sources: infusion.sources,
+    sources: withMonographSources(infusion.sources, SLUG_BY_INFUSION_NAME[infusion.drug] ?? null),
     group: group.title,
   })),
 );
@@ -72,6 +73,7 @@ export function dilutionsForSlug(slug: string): DrugDilution[] {
 
 /** Display text for a recipe's dose range (formatting only, no arithmetic). */
 export function rangeText(d: Pick<DrugDilution, "minDose" | "maxDose" | "unit">): string {
+  if (d.maxDose === undefined) return "No range given here: see the full monograph and local protocol";
   return d.minDose === undefined
     ? `Up to ${d.maxDose} ${d.unit}`
     : d.minDose === d.maxDose

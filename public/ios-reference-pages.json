@@ -437,18 +437,23 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.05 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.01–1.5 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Single-strength syringe (80 micrograms/mL) — usual starting concentration; suits low to moderate doses and smaller patients. Double (8 mg/50 mL) and quadruple (16 mg/50 mL) strengths are listed separately for escalating requirements; label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+        "text": "Single-strength syringe (80 micrograms/mL). Double (8 mg/50 mL) and quadruple (16 mg/50 mL) strengths are listed separately; label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Dose range: see the full monograph and local protocol. Watch for reflex bradycardia and limb and gut ischaemia at high doses.",
         "sources": [
           {
             "title": "Noradrenaline — Summary of Product Characteristics — emc",
             "url": "https://www.medicines.org.uk/emc/product/13172/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the noradrenaline monograph — doi.org",
+            "url": "https://doi.org/10.1097/CCM.0000000000005337",
             "accessed": "not recorded"
           }
         ]
@@ -470,18 +475,23 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.05 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.01–1.5 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Double-strength syringe (160 micrograms/mL) — the common ICU default. Label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Usual maintenance 0.05–1 micrograms/kg/min; rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+        "text": "Double-strength syringe (160 micrograms/mL). Label clearly and never mix strengths on one pump. First-line vasopressor in septic shock. Dose range: see the full monograph and local protocol. Watch for reflex bradycardia and limb and gut ischaemia at high doses.",
         "sources": [
           {
             "title": "Noradrenaline — Summary of Product Characteristics — emc",
             "url": "https://www.medicines.org.uk/emc/product/13172/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the noradrenaline monograph — doi.org",
+            "url": "https://doi.org/10.1097/CCM.0000000000005337",
             "accessed": "not recorded"
           }
         ]
@@ -503,18 +513,23 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.05 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.01–1.5 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Quadruple-strength syringe (320 micrograms/mL) for high-dose requirements or fluid restriction. Central access essential; label clearly and never mix strengths on one pump. Rates above 1 micrograms/kg/min are high-dose and should prompt a second agent (vasopressin) and review. Watch for reflex bradycardia, limb and gut ischaemia at high doses.",
+        "text": "Quadruple-strength syringe (320 micrograms/mL) for high requirements or fluid restriction. Central access essential; label clearly and never mix strengths on one pump. Dose range: see the full monograph and local protocol. Watch for reflex bradycardia and limb and gut ischaemia at high doses.",
         "sources": [
           {
             "title": "Noradrenaline — Summary of Product Characteristics — emc",
             "url": "https://www.medicines.org.uk/emc/product/13172/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the noradrenaline monograph — doi.org",
+            "url": "https://doi.org/10.1097/CCM.0000000000005337",
             "accessed": "not recorded"
           }
         ]
@@ -536,14 +551,26 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.05 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.01–1 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Second-line inotrope/vasopressor; 0.01–0.1 micrograms/kg/min usual, up to 1 microgram/kg/min in critical care. Causes tachycardia, hyperlactataemia (β₂ effect) and hyperglycaemia. Also used undiluted 1:10,000 in cardiac arrest."
+        "text": "Second-line inotrope/vasopressor. Dose range: see the full monograph and local protocol. Causes tachycardia, hyperlactataemia and hyperglycaemia.",
+        "sources": [
+          {
+            "title": "Source listed on the adrenaline monograph — doi.org",
+            "url": "https://doi.org/10.1097/CCM.0000000000005337",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the adrenaline monograph — resus.org.uk",
+            "url": "https://www.resus.org.uk/media/337/download?attachment=",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Vasopressin",
@@ -566,7 +593,7 @@
           },
           {
             "label": "Usual adult range",
-            "value": "0.01–0.04 units/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
         "text": "Fixed (non-weight-based) dose. Shock dosing is product- and protocol-specific: use the local critical-care vasopressin regimen; a common starting dose is 0.03 units/min. The UK argipressin 20 IU/mL products cited here are licensed for diabetes insipidus and oesophageal variceal bleeding, so shock use is off-label for those products. Higher rates cause coronary, splanchnic and digital ischaemia.",
@@ -584,6 +611,11 @@
           {
             "title": "Argipressin 20 IU/mL — Summary of Product Characteristics — emc",
             "url": "https://www.medicines.org.uk/emc/product/10362/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the vasopressin monograph — doi.org",
+            "url": "https://doi.org/10.1097/CCM.0000000000005337",
             "accessed": "not recorded"
           }
         ]
@@ -605,14 +637,26 @@
           },
           {
             "label": "Starting dose",
-            "value": "20 micrograms/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "8–83 micrograms/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Predominantly α₁ agonist with indirect action. Usual infusion 0.5–5 mg/h (≈8–83 micrograms/min). Often run peripherally short-term; handy bridge while central access is established. Also given as 0.5–1 mg boluses."
+        "text": "Predominantly alpha-1 agonist with indirect action. Infusion and bolus doses: see the full monograph and local protocol. Peripheral use only as permitted by local policy.",
+        "sources": [
+          {
+            "title": "Source listed on the metaraminol monograph — doi.org",
+            "url": "https://doi.org/10.1097/CCM.0000000000005337",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the metaraminol monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/7111/smpc",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Phenylephrine",
@@ -631,14 +675,21 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.5 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.25–3 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Pure α₁ agonist — useful when tachycardia limits other agents, and in vasoplegia after cardiac surgery. Common theatre dilution is 10 mg in 100 mL = 100 micrograms/mL. Usual range 0.25–3 micrograms/kg/min (≈18–210 micrograms/min at 70 kg) — which brackets the 35–180 micrograms/min quoted in the monograph; rates up to 6 micrograms/kg/min are described in refractory vasoplegia. High requirements may need a more concentrated preparation per local protocol, or a change to noradrenaline. May drop cardiac output by reflex bradycardia and afterload rise."
+        "text": "Alpha-1 agonist, useful when tachycardia limits other agents and in vasoplegia after cardiac surgery. Dose range: see the full monograph and local protocol. May reduce cardiac output through reflex bradycardia and increased afterload.",
+        "sources": [
+          {
+            "title": "Source listed on the phenylephrine monograph — doi.org",
+            "url": "https://doi.org/10.1097/CCM.0000000000005337",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Dopamine",
@@ -657,20 +708,37 @@
           },
           {
             "label": "Starting dose",
-            "value": "5 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "2–20 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Largely superseded by noradrenaline for shock (more arrhythmia). 'Renal-dose' dopamine has no evidence base and should not be used."
+        "text": "Largely superseded by noradrenaline for shock (more arrhythmia). 'Renal-dose' dopamine has no evidence base and should not be used.",
+        "sources": [
+          {
+            "title": "Source listed on the dopamine monograph — doi.org",
+            "url": "https://doi.org/10.1097/CCM.0000000000005337",
+            "accessed": "not recorded"
+          }
+        ]
       }
     ],
     "sources": [
       {
         "title": "Noradrenaline — Summary of Product Characteristics — emc",
         "url": "https://www.medicines.org.uk/emc/product/13172/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the noradrenaline monograph — doi.org",
+        "url": "https://doi.org/10.1097/CCM.0000000000005337",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the adrenaline monograph — resus.org.uk",
+        "url": "https://www.resus.org.uk/media/337/download?attachment=",
         "accessed": "not recorded"
       },
       {
@@ -686,6 +754,11 @@
       {
         "title": "Argipressin 20 IU/mL — Summary of Product Characteristics — emc",
         "url": "https://www.medicines.org.uk/emc/product/10362/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the metaraminol monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/7111/smpc",
         "accessed": "not recorded"
       }
     ]
@@ -713,14 +786,21 @@
           },
           {
             "label": "Starting dose",
-            "value": "5 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "2.5–20 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "β₁-predominant; causes vasodilatation and tachycardia — may need co-infusion of noradrenaline to support MAP. Standard inotrope for low-output heart failure."
+        "text": "β₁-predominant; causes vasodilatation and tachycardia — may need co-infusion of noradrenaline to support MAP. Standard inotrope for low-output heart failure.",
+        "sources": [
+          {
+            "title": "Source listed on the dobutamine monograph — doi.org",
+            "url": "https://doi.org/10.1097/CCM.0000000000005337",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Milrinone",
@@ -739,14 +819,21 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.375 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.375–0.75 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "PDE-3 inhibitor; inodilator useful in pulmonary hypertension/right ventricular failure. Long half-life — accumulates in renal failure; often started without a loading dose in ICU to avoid hypotension."
+        "text": "PDE-3 inhibitor; inodilator useful in pulmonary hypertension/right ventricular failure. Long half-life — accumulates in renal failure; often started without a loading dose in ICU to avoid hypotension.",
+        "sources": [
+          {
+            "title": "Source listed on the milrinone monograph — doi.org",
+            "url": "https://doi.org/10.1097/CCM.0000000000005337",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Levosimendan",
@@ -765,14 +852,38 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.1 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.05–0.2 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Calcium sensitiser given as a 24 h infusion; active metabolite persists ~7 days. Skip the loading bolus in hypotensive patients. Avoid in severe renal/hepatic failure."
+        "text": "Calcium sensitiser given as a 24 h infusion; active metabolite persists ~7 days. Skip the loading bolus in hypotensive patients. Avoid in severe renal/hepatic failure.",
+        "sources": [
+          {
+            "title": "Source listed on the levosimendan monograph — doi.org",
+            "url": "https://doi.org/10.1097/CCM.0000000000005337",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the levosimendan monograph — docetp.mpa.se",
+            "url": "https://docetp.mpa.se/LMF/Simdax%20concentrate%20for%20solution%20for%20infusion%20ENG%20SmPC_09001bee807a76cd.pdf",
+            "accessed": "not recorded"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "Source listed on the dobutamine monograph — doi.org",
+        "url": "https://doi.org/10.1097/CCM.0000000000005337",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the levosimendan monograph — docetp.mpa.se",
+        "url": "https://docetp.mpa.se/LMF/Simdax%20concentrate%20for%20solution%20for%20infusion%20ENG%20SmPC_09001bee807a76cd.pdf",
+        "accessed": "not recorded"
       }
     ]
   },
@@ -799,7 +910,7 @@
           },
           {
             "label": "Starting dose",
-            "value": "1 mg/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
@@ -811,6 +922,11 @@
           {
             "title": "Propofol 1% — Summary of Product Characteristics — emc",
             "url": "https://www.medicines.org.uk/emc/product/15153/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the propofol monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/11295/smpc",
             "accessed": "not recorded"
           }
         ]
@@ -832,14 +948,21 @@
           },
           {
             "label": "Starting dose",
-            "value": "30 micrograms/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "30–200 micrograms/kg/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Monograph range 0.03–0.2 mg/kg/h (30–200 micrograms/kg/h); BNF suggests 0.03–0.1 mg/kg/h under 60 years. Accumulates with prolonged infusion (context-sensitive half-time rises), especially in renal failure and obesity — not ideal beyond 48–72 h. Status epilepticus doses are higher."
+        "text": "Dose range: see the full monograph and local protocol. Accumulates with prolonged infusion, especially in renal failure and obesity. Status epilepticus dosing is different.",
+        "sources": [
+          {
+            "title": "Source listed on the midazolam monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/15365/smpc",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Dexmedetomidine",
@@ -891,11 +1014,11 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.5 micrograms/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.2–2 micrograms/kg/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
         "text": "Standard-strength syringe (30 micrograms/mL). A half-strength 750 micrograms/50 mL syringe is also listed — check which your unit uses and label the strength clearly. α₂ agonist adjunct for sedation, withdrawal and agitation; useful in opioid/benzodiazepine weaning. Bradycardia and hypotension are dose-limiting — give loading doses slowly. Do not stop abruptly after prolonged use (rebound hypertension)."
@@ -917,11 +1040,11 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.5 micrograms/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.2–2 micrograms/kg/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
         "text": "Half-strength syringe (15 micrograms/mL); never mix the two on one pump. Same indications and cautions as the standard-strength recipe: bradycardia and hypotension are dose-limiting, and avoid abrupt withdrawal after prolonged use."
@@ -943,14 +1066,26 @@
           },
           {
             "label": "Starting dose",
-            "value": "1 micrograms/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.7–10 micrograms/kg/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Rates shown are for the NEAT 50 micrograms/mL syringe. Critical care sedation 0.7–10 micrograms/kg/h; peri-operative analgesia 0.5–2 micrograms/kg/h. Some units run a diluted 1000 micrograms in 50 mL (20 micrograms/mL) syringe — never mix the two strengths. Lipophilic with marked accumulation on prolonged infusion; wean gradually after days of therapy to avoid withdrawal."
+        "text": "This recipe is the neat 50 micrograms/mL syringe; some units use a diluted 1000 micrograms in 50 mL (20 micrograms/mL) syringe, so never mix the two strengths. Dose range: see the full monograph and local protocol. Accumulates markedly on prolonged infusion; wean gradually after days of therapy to avoid withdrawal.",
+        "sources": [
+          {
+            "title": "Source listed on the fentanyl monograph — fpm.ac.uk",
+            "url": "https://fpm.ac.uk/opioids-aware",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the fentanyl monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/10268/smpc",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Alfentanil",
@@ -981,6 +1116,11 @@
           {
             "title": "Rapifen (alfentanil) — Summary of Product Characteristics — emc",
             "url": "https://www.medicines.org.uk/emc/product/6427/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the alfentanil monograph — fpm.ac.uk",
+            "url": "https://fpm.ac.uk/opioids-aware",
             "accessed": "not recorded"
           }
         ]
@@ -1015,6 +1155,16 @@
             "title": "Remifentanil — Summary of Product Characteristics — emc",
             "url": "https://www.medicines.org.uk/emc/product/14262/smpc",
             "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the remifentanil monograph — fpm.ac.uk",
+            "url": "https://fpm.ac.uk/opioids-aware",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the remifentanil monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/794/smpc",
+            "accessed": "not recorded"
           }
         ]
       },
@@ -1035,14 +1185,14 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.5 mg/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.05–4.5 mg/kg/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Adjunct for analgosedation, especially with opioid tolerance or severe bronchospasm. Analgesic (opioid-sparing) doses are 0.05–0.2 mg/kg/h; sedation and anaesthesia 0.5–4.5 mg/kg/h. Psychotomimetic effects less prominent at infusion rates."
+        "text": "Adjunct for analgosedation, especially with opioid tolerance or severe bronchospasm. Analgesic and sedative dose ranges differ: see the full monograph and local protocol."
       }
     ],
     "sources": [
@@ -1052,8 +1202,28 @@
         "accessed": "not recorded"
       },
       {
+        "title": "Source listed on the propofol monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/11295/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the midazolam monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/15365/smpc",
+        "accessed": "not recorded"
+      },
+      {
         "title": "Dexmedetomidine — Summary of Product Characteristics — emc",
         "url": "https://www.medicines.org.uk/emc/product/4783/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the fentanyl monograph — fpm.ac.uk",
+        "url": "https://fpm.ac.uk/opioids-aware",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the fentanyl monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/10268/smpc",
         "accessed": "not recorded"
       },
       {
@@ -1064,6 +1234,11 @@
       {
         "title": "Remifentanil — Summary of Product Characteristics — emc",
         "url": "https://www.medicines.org.uk/emc/product/14262/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the remifentanil monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/794/smpc",
         "accessed": "not recorded"
       }
     ]
@@ -1095,7 +1270,7 @@
           },
           {
             "label": "Usual adult range",
-            "value": "0.1–10 units/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
         "text": "There is no universal starting rate. Dose according to the written, indication-specific local protocol, including its blood glucose and potassium monitoring. Flush the line first — insulin adsorbs to plastic.",
@@ -1103,6 +1278,11 @@
           {
             "title": "Perioperative management of adults with diabetes — UK and Ireland consensus (Anaesthesia, 2026) — Association of Anaesthetists",
             "url": "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/10.1111/anae.70181",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the insulin actrapid monograph — diabetes.org.uk",
+            "url": "https://www.diabetes.org.uk/sites/default/files/2023-03/JBDS%2002%20DKA%20Guideline%20with%20qr%20code.pdf",
             "accessed": "not recorded"
           }
         ]
@@ -1124,11 +1304,11 @@
           },
           {
             "label": "Starting dose",
-            "value": "18 units/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "12–25 units/kg/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
         "text": "Adjust the infusion using the indication-specific local nomogram and aPTT or anti-Xa results. There is no universal 45,000-unit daily ceiling; unexpectedly high requirements need senior review for heparin resistance and monitoring problems. Assess urgently for HIT if suspected.",
@@ -1136,6 +1316,11 @@
           {
             "title": "Heparin sodium — Summary of Product Characteristics — emc",
             "url": "https://www.medicines.org.uk/emc/product/1682/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the unfractionated heparin monograph — nice.org.uk",
+            "url": "https://www.nice.org.uk/guidance/ng89",
             "accessed": "not recorded"
           }
         ]
@@ -1157,11 +1342,11 @@
           },
           {
             "label": "Starting dose",
-            "value": "5 nanograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "2–20 nanograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
         "text": "Preparation is brand-specific. Veletri is reconstituted and further diluted with sterile water for injections or 0.9% sodium chloride; a glycine-buffer recipe must identify the matching product explicitly. Dosed in NANOGRAMS/kg/min (1 microgram = 1000 nanograms) — a common source of 1000-fold errors. Inhaled/IV pulmonary vasodilator also used as extracorporeal-circuit anticoagulant. Very short half-life — interruptions cause rebound pulmonary hypertension; hypotension limits IV use.",
@@ -1169,6 +1354,11 @@
           {
             "title": "Veletri (epoprostenol) — Summary of Product Characteristics — emc",
             "url": "https://www.medicines.org.uk/emc/product/3112/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the epoprostenol monograph — bnf.nice.org.uk",
+            "url": "https://bnf.nice.org.uk/drugs/epoprostenol/",
             "accessed": "not recorded"
           }
         ]
@@ -1181,13 +1371,28 @@
         "accessed": "not recorded"
       },
       {
+        "title": "Source listed on the insulin actrapid monograph — diabetes.org.uk",
+        "url": "https://www.diabetes.org.uk/sites/default/files/2023-03/JBDS%2002%20DKA%20Guideline%20with%20qr%20code.pdf",
+        "accessed": "not recorded"
+      },
+      {
         "title": "Heparin sodium — Summary of Product Characteristics — emc",
         "url": "https://www.medicines.org.uk/emc/product/1682/smpc",
         "accessed": "not recorded"
       },
       {
+        "title": "Source listed on the unfractionated heparin monograph — nice.org.uk",
+        "url": "https://www.nice.org.uk/guidance/ng89",
+        "accessed": "not recorded"
+      },
+      {
         "title": "Veletri (epoprostenol) — Summary of Product Characteristics — emc",
         "url": "https://www.medicines.org.uk/emc/product/3112/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the epoprostenol monograph — bnf.nice.org.uk",
+        "url": "https://bnf.nice.org.uk/drugs/epoprostenol/",
         "accessed": "not recorded"
       }
     ]
@@ -1215,14 +1420,21 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.3 mg/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.3–0.6 mg/kg/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Aminosteroid NMBA; largely hepatic elimination so accumulates in liver failure and, to a lesser extent, renal failure. Sugammadex can reverse rocuronium block; the dose depends on block depth — follow the SmPC and confirm recovery with neuromuscular monitoring. Titrate to 1–2 twitches on train-of-four."
+        "text": "Aminosteroid NMBA; largely hepatic elimination so accumulates in liver failure and, to a lesser extent, renal failure. Sugammadex can reverse rocuronium block; the dose depends on block depth — follow the SmPC and confirm recovery with neuromuscular monitoring. Titrate to 1–2 twitches on train-of-four.",
+        "sources": [
+          {
+            "title": "Source listed on the rocuronium monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/13173/smpc",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Atracurium",
@@ -1241,14 +1453,14 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.3 mg/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.3–0.9 mg/kg/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Usual 0.3–0.6 mg/kg/h, up to 0.9 mg/kg/h if required. Hofmann elimination and ester hydrolysis — organ-independent, so the drug of choice in combined hepatic and renal failure. Histamine release can cause flushing and hypotension at higher doses. Store the ampoules in a fridge."
+        "text": "Dose range: see the full monograph and local protocol. Hofmann elimination and ester hydrolysis are organ-independent, so it is often chosen in combined hepatic and renal failure. Histamine release can cause flushing and hypotension. Store ampoules in a fridge."
       },
       {
         "title": "Cisatracurium",
@@ -1267,14 +1479,14 @@
           },
           {
             "label": "Starting dose",
-            "value": "3 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.5–10 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Isomer of atracurium with Hofmann elimination and no clinically significant histamine release; the usual choice for severe ARDS. Dosed in MICROGRAMS/kg/min — 3 micrograms/kg/min is roughly 0.18 mg/kg/h; ICU maintenance is often 0.5–2 micrograms/kg/min within an overall 0.5–10 range. Keep refrigerated."
+        "text": "Isomer of atracurium with Hofmann elimination and no clinically significant histamine release. Dosed in micrograms/kg/min; for the range, see the full monograph and local protocol. Keep refrigerated."
       },
       {
         "title": "Vecuronium",
@@ -1293,14 +1505,21 @@
           },
           {
             "label": "Starting dose",
-            "value": "1 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.8–1.4 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
         "text": "Aminosteroid with an active 3-desacetyl metabolite that accumulates in renal failure and can cause prolonged paralysis — avoid prolonged infusion in renal impairment. Reversible with sugammadex."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Source listed on the rocuronium monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/13173/smpc",
+        "accessed": "not recorded"
       }
     ]
   },
@@ -1327,14 +1546,21 @@
           },
           {
             "label": "Starting dose",
-            "value": "10 micrograms/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "10–200 micrograms/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Fixed-dose (not weight-based) infusion titrated to blood pressure or chest pain: start 10–20 micrograms/min, usual range 10–200 micrograms/min, with up to 400 micrograms/min for short periods. Predominantly venodilator at low rates; headache is common and tachyphylaxis develops within 24–48 h. Avoid with phosphodiesterase-5 inhibitors and in severe aortic stenosis or hypovolaemia."
+        "text": "Fixed-dose (not weight-based) infusion titrated to blood pressure or chest pain. Dose range: see the full monograph and local protocol. Headache is common and tolerance develops with continuous use. Avoid with phosphodiesterase-5 inhibitors and in severe aortic stenosis or hypovolaemia.",
+        "sources": [
+          {
+            "title": "Source listed on the glyceryl trinitrate monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/6296/smpc",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Sodium nitroprusside",
@@ -1353,14 +1579,14 @@
           },
           {
             "label": "Starting dose",
-            "value": "0.5 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "0.2–1.5 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Immediate-onset arterial and venous dilator for hypertensive emergencies and controlled hypotension. BNF: start 0.5–1.5 micrograms/kg/min, increase in 500 nanograms/kg/min steps every 5 min; usual 0.5–8 micrograms/kg/min, maximum 8 (stop if no response within 10 min at maximum). Rates shown here are capped at 1.5 micrograms/kg/min — the controlled-hypotension ceiling and a sensible maintenance limit because cyanide toxicity rises with dose and duration; watch for unexplained metabolic acidosis and rising lactate. Discard if the solution discolours."
+        "text": "Immediate-onset arterial and venous dilator for hypertensive emergencies and controlled hypotension. Dose range and maximum: see the full monograph and local protocol. Cyanide toxicity risk rises with dose and duration; watch for unexplained metabolic acidosis and rising lactate. Discard if the solution discolours."
       },
       {
         "title": "Labetalol",
@@ -1379,14 +1605,21 @@
           },
           {
             "label": "Starting dose",
-            "value": "20 mg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "20–160 mg/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Combined α₁ and β blocker; first-line for hypertension in pre-eclampsia and aortic dissection. UK practice is a fixed rate: start 20 mg/h, doubling every 30 min to a usual maximum of 160 mg/h; the BNF regimen of 2 mg/min (120 mg/h) is for acute hypertensive emergencies. The BNF quotes a usual total dose of 50–200 mg (up to 300 mg) for the short infusion regimen; continuous infusions in dissection or pre-eclampsia run longer under senior review with continuous BP monitoring. Avoid in asthma, decompensated heart failure and heart block."
+        "text": "Combined alpha-1 and beta blocker used in severe hypertension, including pre-eclampsia. Regimens are indication-specific: see the full labetalol monograph and local protocol. Use continuous blood pressure monitoring. Avoid in asthma, decompensated heart failure and heart block.",
+        "sources": [
+          {
+            "title": "Source listed on the labetalol monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/10831/smpc",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Esmolol",
@@ -1405,14 +1638,14 @@
           },
           {
             "label": "Starting dose",
-            "value": "50 micrograms/kg/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "25–200 micrograms/kg/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Ultra-short-acting cardioselective β blocker (half-life ~9 min) — ideal when β blockade may need to be withdrawn quickly. Dosed in MICROGRAMS/kg/min, usual 25–200 with up to 300 for short periods in life-threatening situations. Hypotension is the main limitation; extravasation can cause skin necrosis."
+        "text": "Ultra-short-acting cardioselective beta blocker, useful when beta blockade may need to be withdrawn quickly. Dosed in micrograms/kg/min; for the range, see the full monograph and local protocol. Hypotension is the main limitation; extravasation can cause skin necrosis."
       },
       {
         "title": "Hydralazine",
@@ -1431,14 +1664,14 @@
           },
           {
             "label": "Starting dose",
-            "value": "200 micrograms/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "50–300 micrograms/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Direct arteriolar dilator used mainly in severe pre-eclampsia. Fixed-dose infusion: start 200–300 micrograms/min, maintenance usually 50–150 micrograms/min. Monitor maternal blood pressure and, where appropriate, fetal response. In the antenatal period, NICE advises considering up to 500 mL crystalloid before or with the first IV hydralazine dose. Avoid automatic fluid loading: severe pre-eclampsia requires careful fluid balance because of pulmonary oedema risk.",
+        "text": "Direct arteriolar dilator used mainly in severe pre-eclampsia. Dose regimen: see the full monograph and local protocol. Monitor maternal blood pressure and, where appropriate, fetal response. In the antenatal period, NICE advises considering up to 500 mL crystalloid before or with the first IV hydralazine dose. Avoid automatic fluid loading: severe pre-eclampsia requires careful fluid balance because of pulmonary oedema risk.",
         "sources": [
           {
             "title": "Hypertension in pregnancy: diagnosis and management — NICE",
@@ -1449,6 +1682,16 @@
       }
     ],
     "sources": [
+      {
+        "title": "Source listed on the glyceryl trinitrate monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/6296/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the labetalol monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/10831/smpc",
+        "accessed": "not recorded"
+      },
       {
         "title": "Hypertension in pregnancy: diagnosis and management — NICE",
         "url": "https://www.nice.org.uk/guidance/ng133/chapter/recommendations",
@@ -1479,14 +1722,21 @@
           },
           {
             "label": "Starting dose",
-            "value": "20 micrograms/kg/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "10–100 micrograms/kg/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Roughly 1–7 mg/h in an average adult (the monograph quotes 0.8–10 mg/h post-operatively; higher rates need senior review). The active metabolite morphine-6-glucuronide accumulates in renal impairment — reduce the rate and consider fentanyl or alfentanil instead. Nurse-controlled or patient-controlled analgesia is preferred where the patient can use it."
+        "text": "Dose range: see the full monograph and local protocol. Morphine and its active metabolites can accumulate in renal impairment; adjust using renal guidance and monitor closely for sedation and respiratory depression. Nurse- or patient-controlled analgesia is preferred where the patient can use it.",
+        "sources": [
+          {
+            "title": "Source listed on the morphine monograph — fpm.ac.uk",
+            "url": "https://fpm.ac.uk/opioids-aware",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Lidocaine (IV analgesia)",
@@ -1517,6 +1767,11 @@
           {
             "title": "International consensus statement on the peri-operative use of intravenous lidocaine — Anaesthesia (Association of Anaesthetists)",
             "url": "https://onlinelibrary.wiley.com/doi/10.1111/anae.15270",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the lidocaine monograph — associationofanaesthetists-publications.onlinelibrary.wiley.com",
+            "url": "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/epdf/10.1111/anae.15270",
             "accessed": "not recorded"
           }
         ]
@@ -1551,6 +1806,11 @@
             "title": "Hypertension in pregnancy: diagnosis and management — NICE",
             "url": "https://www.nice.org.uk/guidance/ng133/chapter/recommendations",
             "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the magnesium sulphate monograph — medicines.kentpharma.co.uk",
+            "url": "https://medicines.kentpharma.co.uk/wp-content/uploads/2023/01/uk-spc-50-clean.pdf",
+            "accessed": "not recorded"
           }
         ]
       },
@@ -1571,14 +1831,31 @@
           },
           {
             "label": "Starting dose",
-            "value": "5 micrograms/min"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "3–20 micrograms/min"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Intravenous rescue in life-threatening asthma when nebulised therapy is failing. Fixed-dose infusion. Causes tachycardia, tremor, lactic acidosis and hypokalaemia — check potassium and lactate regularly."
+        "text": "Intravenous rescue in life-threatening asthma when nebulised therapy is failing. Fixed-dose infusion. Causes tachycardia, tremor, lactic acidosis and hypokalaemia — check potassium and lactate regularly.",
+        "sources": [
+          {
+            "title": "Source listed on the salbutamol monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/10257/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the salbutamol monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/10256/smpc",
+            "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the salbutamol monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/853/smpc",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Aminophylline",
@@ -1627,7 +1904,7 @@
           },
           {
             "label": "Draw up",
-            "value": "40 units made up to 40 mL (1 unit/mL). If using the alternative 40 units in 500 mL bag (0.08 units/mL), infuse over 4 hours per local protocol"
+            "value": "40 units made up to 40 mL (1 unit/mL). If using the alternative 40 units in 500 mL bag (0.08 units/mL), follow the local obstetric protocol"
           },
           {
             "label": "Final concentration",
@@ -1635,14 +1912,21 @@
           },
           {
             "label": "Starting dose",
-            "value": "10 units/h"
+            "value": "Per local protocol"
           },
           {
             "label": "Usual adult range",
-            "value": "5–10 units/h"
+            "value": "No range given here: see the full monograph and local protocol"
           }
         ],
-        "text": "Post-partum haemorrhage maintenance after the initial slow 5 unit bolus: 40 units over 4 h (10 units/h). Give boluses slowly — rapid injection causes profound vasodilatation, hypotension and tachycardia. Watch for hyponatraemia with prolonged high-volume infusions."
+        "text": "Postpartum haemorrhage regimens are product- and protocol-specific: see the full oxytocin monograph and local obstetric protocol. Give boluses slowly, as rapid injection causes profound vasodilatation, hypotension and tachycardia. Watch for hyponatraemia with prolonged high-volume infusions.",
+        "sources": [
+          {
+            "title": "Source listed on the oxytocin monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/13359/smpc",
+            "accessed": "not recorded"
+          }
+        ]
       },
       {
         "title": "Tranexamic acid (major trauma)",
@@ -1668,7 +1952,7 @@
             "value": "125 mg/h (fixed)"
           }
         ],
-        "text": "TRAUMA regimen (not postpartum haemorrhage — see the Obstetric topic for that regimen). Current UK guideline: NICE NG39 recommends IV tranexamic acid as soon as possible in major trauma with active or suspected active bleeding, and not more than 3 hours after injury unless there is evidence of hyperfibrinolysis. Dosing regimen: 1 g over 10 minutes then 1 g over 8 hours (fixed 125 mg/h maintenance), as used in the CRASH-2 randomised trial — a trial regimen, not itself a guideline; follow your local major-haemorrhage protocol. Reduce the dose in renal impairment. Never give by the intrathecal or epidural route — accidental spinal administration is fatal.",
+        "text": "TRAUMA regimen (not postpartum haemorrhage — see the Obstetric topic for that regimen). Current UK guideline: NICE NG39 recommends IV tranexamic acid as soon as possible in major trauma with active or suspected active bleeding, and not more than 3 hours after injury unless there is evidence of hyperfibrinolysis. Dosing regimen: 1 g over 10 minutes then 1 g over 8 hours (fixed 125 mg/h maintenance), as used in the CRASH-2 randomised trial — a trial regimen, not itself a guideline; follow your local major-haemorrhage protocol. Adjust in renal impairment per the product information and local protocol. Never give by the intrathecal or epidural route — accidental spinal administration is fatal.",
         "sources": [
           {
             "title": "Major trauma: assessment and initial management — recommendations — NICE",
@@ -1679,19 +1963,54 @@
             "title": "CRASH-2: tranexamic acid in bleeding trauma patients (Lancet 2010) — trial, not a guideline — CRASH-2 collaborators, LSHTM",
             "url": "https://crash2.lshtm.ac.uk/CRASH2_Lancet.pdf",
             "accessed": "not recorded"
+          },
+          {
+            "title": "Source listed on the tranexamic acid monograph — medicines.org.uk",
+            "url": "https://www.medicines.org.uk/emc/product/1077/smpc",
+            "accessed": "not recorded"
           }
         ]
       }
     ],
     "sources": [
       {
+        "title": "Source listed on the morphine monograph — fpm.ac.uk",
+        "url": "https://fpm.ac.uk/opioids-aware",
+        "accessed": "not recorded"
+      },
+      {
         "title": "International consensus statement on the peri-operative use of intravenous lidocaine — Anaesthesia (Association of Anaesthetists)",
         "url": "https://onlinelibrary.wiley.com/doi/10.1111/anae.15270",
         "accessed": "not recorded"
       },
       {
+        "title": "Source listed on the lidocaine monograph — associationofanaesthetists-publications.onlinelibrary.wiley.com",
+        "url": "https://associationofanaesthetists-publications.onlinelibrary.wiley.com/doi/epdf/10.1111/anae.15270",
+        "accessed": "not recorded"
+      },
+      {
         "title": "Hypertension in pregnancy: diagnosis and management — NICE",
         "url": "https://www.nice.org.uk/guidance/ng133/chapter/recommendations",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the magnesium sulphate monograph — medicines.kentpharma.co.uk",
+        "url": "https://medicines.kentpharma.co.uk/wp-content/uploads/2023/01/uk-spc-50-clean.pdf",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the salbutamol monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/10257/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the salbutamol monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/10256/smpc",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the salbutamol monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/853/smpc",
         "accessed": "not recorded"
       },
       {
@@ -1705,6 +2024,11 @@
         "accessed": "not recorded"
       },
       {
+        "title": "Source listed on the oxytocin monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/13359/smpc",
+        "accessed": "not recorded"
+      },
+      {
         "title": "Major trauma: assessment and initial management — recommendations — NICE",
         "url": "https://www.nice.org.uk/guidance/ng39/chapter/recommendations",
         "accessed": "not recorded"
@@ -1712,6 +2036,11 @@
       {
         "title": "CRASH-2: tranexamic acid in bleeding trauma patients (Lancet 2010) — trial, not a guideline — CRASH-2 collaborators, LSHTM",
         "url": "https://crash2.lshtm.ac.uk/CRASH2_Lancet.pdf",
+        "accessed": "not recorded"
+      },
+      {
+        "title": "Source listed on the tranexamic acid monograph — medicines.org.uk",
+        "url": "https://www.medicines.org.uk/emc/product/1077/smpc",
         "accessed": "not recorded"
       }
     ]
@@ -1767,17 +2096,11 @@
       },
       {
         "title": "Clonidine — oral",
-        "text": "Alpha-2 agonist used off-label for sedative premedication. Bradycardia, hypotension and excessive sedation are important risks; appropriate airway and respiratory monitoring remain necessary. Slower onset than midazolam, so it suits planned rather than last-minute premedication.",
+        "text": "Alpha-2 agonist used off-label for sedative premedication. Bradycardia, hypotension and excessive sedation are important risks; appropriate airway and respiratory monitoring remain necessary. Slower onset than midazolam, so it suits planned rather than last-minute premedication. Premedication use is off-label and no claim-level source is held here for a dose or timing, so none is given: use an individualised plan under an agreed local protocol.",
         "items": [
           "Avoid or reduce the dose in conduction disease, hypovolaemia or with other negative chronotropes.",
           "Reduces volatile and opioid requirements; plan induction and analgesia doses accordingly.",
           "Longer sedation than midazolam — allow for a slower recovery in day-case pathways."
-        ],
-        "rows": [
-          {
-            "label": "Adult — oral",
-            "value": "150–300 micrograms. Timing: 60–90 min before induction"
-          }
         ],
         "sources": [
           {
@@ -1829,15 +2152,9 @@
       },
       {
         "title": "Melatonin — oral",
-        "text": "Used off-label as a mild anxiolytic premedication; immediate-release preparations are used.",
+        "text": "Used off-label as a mild anxiolytic premedication. No claim-level source is held here for a dose or timing, so none is given: use an individualised plan under an agreed local protocol.",
         "items": [
           "Effect is inconsistent — have a plan if the patient is still anxious at induction. Monitor as for any sedative premedication."
-        ],
-        "rows": [
-          {
-            "label": "Adult — oral",
-            "value": "3–6 mg immediate-release. Timing: 60–90 min before induction"
-          }
         ],
         "sources": [
           {
