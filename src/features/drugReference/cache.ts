@@ -5,9 +5,9 @@
  * Self-contained on purpose: no app-specific imports.
  */
 
-const PREFIX = "drugref:v8:";
+const PREFIX = "drugref:v9:";
 /** Older cache schemas. Cleared on load so stale entries never survive content corrections. */
-const LEGACY_PREFIXES = ["drugref:v1:", "drugref:v2:", "drugref:v3:", "drugref:v4:", "drugref:v5:", "drugref:v6:", "drugref:v7:"];
+const LEGACY_PREFIXES = ["drugref:v1:", "drugref:v2:", "drugref:v3:", "drugref:v4:", "drugref:v5:", "drugref:v6:", "drugref:v7:", "drugref:v8:"];
 
 function purgeLegacyCache(): void {
   try {

@@ -219,9 +219,25 @@ describe("source integrity pass (v8)", () => {
       "https://www.medicines.org.uk/emc/product/11295/smpc",
     );
   });
-  it("offline cache is at v8 with v7 purged", () => {
+  it("offline cache is at v9 with v8 purged", () => {
     const c = readFileSync(new URL("../cache.ts", import.meta.url), "utf8");
-    expect(c).toContain('"drugref:v8:"');
-    expect(c).toMatch(/LEGACY_PREFIXES = \[[^\]]*"drugref:v7:"/);
+    expect(c).toContain('"drugref:v9:"');
+    expect(c).toMatch(/LEGACY_PREFIXES = \[[^\]]*"drugref:v8:"/);
+  });
+});
+
+describe("final consistency (v9)", () => {
+  const verified = [
+    "Alfentanil", "Remifentanil (ventilated adult ICU)", "Lidocaine (IV analgesia)",
+    "Magnesium sulphate", "Tranexamic acid (major trauma)", "Aminophylline",
+    "Dexmedetomidine", "Propofol 1%", "Vasopressin",
+  ];
+  const doseRate = /\d\s*(micrograms|mg|units|nanograms|g)(\/kg)?\/(min|h)\b/i;
+  it("non-verified card notes carry no numeric dose rates", () => {
+    for (const d of drugDilutions)
+      if (!verified.includes(d.drug)) {
+        expect([d.drug, doseRate.test(d.notes ?? "")]).toEqual([d.drug, false]);
+        expect([d.drug, d.startDose, d.minDose, d.maxDose]).toEqual([d.drug, undefined, undefined, undefined]);
+      }
   });
 });
