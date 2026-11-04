@@ -255,7 +255,11 @@ export const referenceTopics: ReferenceTopic[] = [
     keyPoints: [
       "Escalate through the uterotonic ladder while treating the other causes of postpartum haemorrhage — tone, tissue, trauma and thrombin.",
       "Oxytocin bolus causes vasodilatation and tachycardia: give slowly, and follow with an infusion rather than repeated boluses.",
-      "Ergometrine is contraindicated in hypertension and pre-eclampsia; carboprost is contraindicated in asthma.",
+      "Ergometrine is contraindicated in hypertension and pre-eclampsia.",
+      {
+        text: "Carboprost can cause bronchospasm. Active pulmonary disease is contraindicated in the Hemabate SmPC; a history of asthma requires careful benefit–risk assessment and senior obstetric/anaesthetic guidance. Follow local restrictions.",
+        sources: [CITE.hemabateSpc],
+      },
       {
         text: "Postpartum haemorrhage (separate from the trauma regimen): for clinically diagnosed PPH, give tranexamic acid 1 g IV over 10 minutes as soon as possible and within 3 hours of birth, alongside standard haemorrhage care. A second 1 g dose may be given if bleeding continues after 30 minutes or restarts within 24 hours.",
         sources: [CITE.whoTxaPph, CITE.whoPph],

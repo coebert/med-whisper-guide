@@ -78,13 +78,11 @@ function ReviewStatusPage() {
 
         <section className="mt-8 space-y-3">
           <h2 className="font-serif text-lg text-foreground">Known open items</h2>
-          <ul className="list-inside list-disc space-y-1">
-            <li>
-              The bedside point on prolonged sedation and failure to wake is conservative safety
-              wording awaiting specialist sign-off.
-            </li>
-            <li>Remaining monographs and recipes are awaiting their review pass.</li>
-          </ul>
+          <p>
+            Monograph and infusion source checks are still in progress. This is not a clinically
+            approved release. The bedside point on prolonged sedation and failure to wake is a
+            general, conservative safety statement.
+          </p>
         </section>
 
         <section className="mt-8 space-y-3">
