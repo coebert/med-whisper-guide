@@ -80,10 +80,6 @@ function ReviewStatusPage() {
           <h2 className="font-serif text-lg text-foreground">Known open items</h2>
           <ul className="list-inside list-disc space-y-1">
             <li>
-              Tranexamic acid major trauma regimen: a direct current trauma-guideline citation is
-              still pending.
-            </li>
-            <li>
               The bedside point on prolonged sedation and failure to wake is conservative safety
               wording awaiting specialist sign-off.
             </li>

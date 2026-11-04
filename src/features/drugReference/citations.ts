@@ -186,4 +186,28 @@ export const CITE = {
     "CRASH-2 collaborators, LSHTM",
     "https://crash2.lshtm.ac.uk/CRASH2_Lancet.pdf",
   ),
+  alfentanilSpc: c(
+    "SmPC",
+    "Rapifen (alfentanil) — Summary of Product Characteristics",
+    "emc",
+    "https://www.medicines.org.uk/emc/product/6427/smpc",
+  ),
+  btsSignAsthma: c(
+    "BTS/SIGN 158",
+    "BTS/SIGN British guideline on the management of asthma (SIGN 158, 2019)",
+    "British Thoracic Society / SIGN",
+    "https://www.brit-thoracic.org.uk/document-library/guidelines/asthma/btssign-guideline-for-the-management-of-asthma-2019-sign-158/",
+  ),
+  aminophyllineSpc: c(
+    "SmPC",
+    "Aminophylline injection — Summary of Product Characteristics",
+    "emc",
+    "https://www.medicines.org.uk/emc/product/6560/smpc",
+  ),
+  remifentanilSpc: c(
+    "SmPC",
+    "Remifentanil — Summary of Product Characteristics",
+    "emc",
+    "https://www.medicines.org.uk/emc/product/14262/smpc",
+  ),
 } satisfies Record<string, DrugSource>;
