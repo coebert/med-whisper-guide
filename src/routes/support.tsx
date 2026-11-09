@@ -7,17 +7,17 @@ const SUPPORT_EMAIL = "support@anaesthesiacore.app";
 export const Route = createFileRoute("/support")({
   head: () => ({
     meta: [
-      { title: "Support — Anaesthesia & Critical Care Drugs" },
+      { title: "Support — Anaesthesia Drug Guide" },
       {
         name: "description",
         content:
-          "Support for Anaesthesia & Critical Care Drugs, an adult (18+) UK professional drug reference. Contact support@anaesthesiacore.app.",
+          "Support for Anaesthesia Drug Guide, the native adult (18+) UK professional drug reference app. Contact support@anaesthesiacore.app.",
       },
-      { property: "og:title", content: "Support — Anaesthesia & Critical Care Drugs" },
+      { property: "og:title", content: "Support — Anaesthesia Drug Guide" },
       {
         property: "og:description",
         content:
-          "Help and contact details for the adult UK anaesthesia and critical care drug reference.",
+          "Help and contact details for Anaesthesia Drug Guide, the native adult UK professional drug reference app.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -35,7 +35,9 @@ function SupportPage() {
         <section className="mt-6 space-y-3">
           <h2 className="font-serif text-lg text-foreground">What this app is</h2>
           <p>
-            Anaesthesia &amp; Critical Care Drugs is a reference for trained healthcare
+            This page supports{" "}
+            <strong className="text-foreground">Anaesthesia Drug Guide</strong>, the native iOS
+            adult UK professional drug reference app. It is a reference for trained healthcare
             professionals caring for{" "}
             <strong className="text-foreground">adults aged 18 and over</strong>, based on UK
             guidance and UK product information. It is not for paediatric use and does not replace
