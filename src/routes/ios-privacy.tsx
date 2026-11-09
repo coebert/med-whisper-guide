@@ -5,20 +5,20 @@ import ReferenceAppLayout from "@/features/drugReference/ReferenceAppLayout";
 export const Route = createFileRoute("/ios-privacy")({
   head: () => ({
     meta: [
-      { title: "iOS App Privacy Policy — Anaesthesia & Critical Care Drugs" },
+      { title: "iOS App Privacy Policy — Anaesthesia Drug Guide" },
       {
         name: "description",
         content:
-          "Privacy policy for the native offline iOS app: no login, no patient data entry, no analytics, advertising or tracking SDKs, and no network requests.",
+          "Privacy policy for Anaesthesia Drug Guide, the native offline iOS drug reference app: no login, no patient data entry, no analytics, advertising or tracking SDKs, and no network requests.",
       },
       {
         property: "og:title",
-        content: "iOS App Privacy Policy — Anaesthesia & Critical Care Drugs",
+        content: "iOS App Privacy Policy — Anaesthesia Drug Guide",
       },
       {
         property: "og:description",
         content:
-          "How the native offline iOS drug reference app handles data: favourites stay on your device.",
+          "How Anaesthesia Drug Guide, the native offline iOS drug reference app, handles data: favourites stay on your device.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -34,7 +34,7 @@ function IosPrivacyPage() {
         <h1 className="font-serif text-2xl text-foreground sm:text-3xl">iOS app privacy policy</h1>
         <p className="mt-3 rounded-md border border-border bg-muted/40 p-3 text-foreground">
           This policy applies to the forthcoming <strong>native, offline iOS app</strong>{" "}
-          Anaesthesia &amp; Critical Care Drugs. It does not describe this website.
+          Anaesthesia Drug Guide. It does not describe this website.
         </p>
 
         <section className="mt-8 space-y-3">
